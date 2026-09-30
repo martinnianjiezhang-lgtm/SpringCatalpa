@@ -1,8 +1,8 @@
 ---
-title: 欢迎来到我的学习笔记
+title: Welcome to SpringCatalpa
 ---
 
-这里记录我学习过程中的所有笔记和思考。
+![[Gemini_Generated_Image_d2jn7od2jn7od2jn.jpeg]]                                Diligently, tirelessly and endlessly growing
 
 ## 目录
 
