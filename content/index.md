@@ -5,16 +5,16 @@ title: Welcome to SpringCatalpa
 ![[Gemini_Generated_Image_d2jn7od2jn7od2jn.jpeg]]                                Diligently, tirelessly and endlessly growing
 
 <div class="topic-cards">
-<div class="topic-card">
-<img src="attachments/banner-san-jose.jpg" alt="San Jose skyline at dusk" />
-<a class="tc-link" href="#一-专题optical-communication-光通信"><span class="tc-title">Optical Communication</span></a>
-<a class="tc-credit" href="https://commons.wikimedia.org/wiki/File:SJ_skyline_at_night_horizontal_(cropped).jpg">San Jose · Ben Loomis · CC BY 2.0</a>
-</div>
-<div class="topic-card">
+<a class="topic-card" href="#一-专题optical-communication-光通信">
+<img src="attachments/banner-paris.jpg" alt="Paris panorama from Tour Montparnasse" />
+<span class="tc-title">Optical Communication</span>
+<span class="tc-credit">Paris · Stefan Krause · CC BY-SA 3.0</span>
+</a>
+<a class="topic-card" href="#二-专题无线与wifi通信">
 <img src="attachments/banner-stockholm.jpg" alt="Stockholm City Hall across Riddarfjärden at dusk" />
-<a class="tc-link" href="#二-专题无线与wifi通信"><span class="tc-title">Wireless Communication</span></a>
-<a class="tc-credit" href="https://commons.wikimedia.org/wiki/File:Sweden,_Stockholm,_View_Across_Riddarfjarden_From_Sodermalm_(Stockholm_City_Hall,_Center),_Panorama_150628-88.jpg">Stockholm · Richard Maack · CC BY 4.0</a>
-</div>
+<span class="tc-title">Wireless Communication</span>
+<span class="tc-credit">Stockholm · Richard Maack · CC BY 4.0</span>
+</a>
 </div>
 
 
