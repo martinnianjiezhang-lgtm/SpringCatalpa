@@ -23,7 +23,7 @@ title: Welcome to SpringCatalpa
 
 #### 1. [[Optical Communication/01. Conference/2026 ECOC/index|洞察：2026年 ECOC 专题洞察]]
 
-ECOC 2026（Málaga，9 月 20–24 日），445 篇讲稿笔记。另见 [[Optical Communication/01. Conference/2026 ECOC/00. ECOC 2026的十条技术判断|十条跨方向技术判断]]。
+ECOC 2026（Málaga，9 月 20–24 日），445 篇讲稿笔记。另见 [[Optical Communication/01. Conference/2026 ECOC/00. ECOC 2026的十条技术判断|十条跨方向技术判断]] · [[Optical Communication/01. Conference/2026 ECOC/专题洞察/2026 光互连五大专题深度洞察|五大专题深度洞察]]（Scale Across、OpenAI 芯片、NVIDIA×iPronics OCS、Slow & Wide、Cerebras CS-4 与光学晶圆级）。
 
 **1. 光通信应用场景专题洞察**
 
