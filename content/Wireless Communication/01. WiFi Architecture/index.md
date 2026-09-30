@@ -11,6 +11,7 @@ tags:
 |---|---|
 | [[Wireless Communication/01. WiFi Architecture/01. Academic Research\|1）各技术领域最新学术研究]] | 天线 → FEM → 射频 → 混合信号 → PHY → MAC → 多 AP，以及芯片、感知、安全、AI、毫米波、低功耗六个跨层方向；每层列研究焦点、代表论文和跟踪入口 |
 | [[Wireless Communication/01. WiFi Architecture/02. Industry Landscape\|2）设备商、芯片商、射频与天线厂商]] | 主芯片、射频前端、天线、企业与家庭设备、运营商 CPE、测试仪表；2026 年 Wi‑Fi 8 首批芯片与重大并购 |
+| [[Wireless Communication/01. WiFi Architecture/02. Industry Insight 2025-2026/index\|2+）产业深度洞察 2025–2026]] | 十条判断、大事记，以及市场、芯片、射频与天线、设备商与运营商、政策频谱与供应链五个专题 |
 | [[Wireless Communication/01. WiFi Architecture/03. Standards and Evolution\|3）标准组织、代际演进与新技术]] | IEEE 802.11 各 TG 进度、Wi‑Fi 4→8（→9）代际、Wi‑Fi Alliance / WBA / 频谱监管 |
 
 ## 交互架构图
