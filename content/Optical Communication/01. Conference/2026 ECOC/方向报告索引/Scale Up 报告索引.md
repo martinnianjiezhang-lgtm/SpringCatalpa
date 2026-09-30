@@ -56,7 +56,7 @@ ECOC 2026 中主归属 **Scale Up** 的报告 77 篇，另有 73 篇次相关。
 | [[B24_DAY2_Mo12-A-开幕与大会报告#0921-Mo12-A5-华为-从光创新到NPO与CPO.pdf（共14页，单讲）\|0921-Mo12-A5-华为-从光创新到NPO与CPO（共14页，单讲）]] | 从光创新到 NPO 与 CPO（照片版原题页未清晰拍到；主线为 NPO vs CPO "多回合"辩论，结论 "NPO is the Optimal Solution for the 200G/Lane Era!"；最末页标题 "The Ubiquitous Optical Interconnect: Illuminating the Entire AI Network"） |
 | [[B29_DAY2_Mo3-I-AI互连之争-第一场#0921-Mo3-待定-Corning-AI互连的纵向与横向扩展路径.pdf\|0921-Mo3-待定-Corning-AI互连的纵向与横向扩展路径]] | Fiber Bundle Connector Solutions for VCSEL-Based Optical Scale-Up Interconnects |
 | [[B29_DAY2_Mo3-I-AI互连之争-第一场#0921-Mo3-待定-Tyndall-AI互连路径.pdf\|0921-Mo3-待定-Tyndall-AI互连路径]] | Glass Wafer-Level Packaging（含后续 Electro-Optical Interposer） |
-| [[B30_DAY2_Mo4-I-AI互连之争-第二场#0921-Mo4-待定-Arista-题目未公布.pdf（第1–24页；p10/p11/p16为另一版重复页）\|0921-Mo4-待定-Arista-题目未公布（第1–24页；p10/p11/p16为另一版重复页）]] | 未公布（内容为 XPO 模块与 AI 互连五类场景，英文原题看不到） |
+| [[B30_DAY2_Mo4-I-AI互连之争-第二场#0921-Mo4-待定-Arista-题目未公布.pdf（第1–24页；p10/p11/p16为另一版重复页）\|0921-Mo4-待定-Arista-题目未公布（第1–24页；p10／p11／p16为另一版重复页）]] | 未公布（内容为 XPO 模块与 AI 互连五类场景，英文原题看不到） |
 | [[B30_DAY2_Mo4-I-AI互连之争-第二场#0921-Mo4-待定-Broadcom-为AI扩展光互连-走向大规模CPO集群.pdf（第1–17页；p9与p8内容相同）\|0921-Mo4-待定-Broadcom-为AI扩展光互连-走向大规模CPO集群（第1–17页；p9与p8内容相同）]] | Scaling Optical Interconnects for AI: Manufacturing Pathways to Massive CPO-Enabled Clusters |
 | [[B30_DAY2_Mo4-I-AI互连之争-第二场#0921-Mo4-待定-Cerebras-题目未公布.pdf（第1、9–16页；p2–p8为另一版重复页）\|0921-Mo4-待定-Cerebras-题目未公布（第1、9–16页；p2–p8为另一版重复页）]] | Heterogeneous Hybrid Bonding: A Path to Wafer-Scale Optical Systems |
 | [[B30_DAY2_Mo4-I-AI互连之争-第二场#0921-Mo4-待定-MicrosoftAzure-AI纵向扩展与通用算力的光互连用例.pdf（第1–10页）\|0921-Mo4-待定-MicrosoftAzure-AI纵向扩展与通用算力的光互连用例（第1–10页）]] | 未见原题（文件名：AI 纵向扩展与通用算力的光互连用例；英文原题看不到） |
@@ -93,7 +93,7 @@ ECOC 2026 中主归属 **Scale Up** 的报告 77 篇，另有 73 篇次相关。
 | [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第55–63页）\|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第55–63页）]] | Open CPX 相关（Open CPX supporting broad NPO and CPO use cases / Diablo-1 6.4T Open CPX engine），标题栏被裁切 |
 | [[B57_DAY4_We-F-标准化专场#0923-We-F-00-标准化专场II连拍.pdf（第11–19页）\|0923-We-F-00-标准化专场II连拍（第11–19页）]] | Optical Scale-Up AI Systems: progress in Standards |
 | [[B71_DAY4_We5-B-光发射机与VCSEL#0923-We5-B-Arista-光发射机与收发.pdf（第1–9页）\|0923-We5-B-Arista-光发射机与收发（第1–9页）]] | Industry's First 12.8T 8×DR8 High-Density Liquid-Cooled 64-Channel Pluggable XPO Optical Module for Scale-Up |
-| [[B71_DAY4_We5-B-光发射机与VCSEL#0923-We5-B-NVIDIA-高速VCSEL与共封装.pdf（第1–31页，其中 p18/p20/p28 为重复页）\|0923-We5-B-NVIDIA-高速VCSEL与共封装（第1–31页，其中 p18/p20/p28 为重复页）]] | Progress of High-speed VCSELs and VCSEL-based Co-Packaging for Short Reach Communications |
+| [[B71_DAY4_We5-B-光发射机与VCSEL#0923-We5-B-NVIDIA-高速VCSEL与共封装.pdf（第1–31页，其中 p18/p20/p28 为重复页）\|0923-We5-B-NVIDIA-高速VCSEL与共封装（第1–31页，其中 p18／p20／p28 为重复页）]] | Progress of High-speed VCSELs and VCSEL-based Co-Packaging for Short Reach Communications |
 | [[B73_DAY4_We5-I VESEL#We5-I Coherent.pdf（第1–12页）\|We5-I Coherent（第1–12页）]] | 2.3 Tbit/s Backside-Emitting 1060 nm VCSEL Array on Silicon Interposer for CPO Applications（Paper ID #504） |
 | [[B73_DAY4_We5-I VESEL#We5-I Lumentum.pdf（第1–18页）\|We5-I Lumentum（第1–18页）]] | 1060nm VCSEL Arrays for Scale-Up |
 | [[B73_DAY4_We5-I VESEL#We5-I 博升.pdf（第1–20页）\|We5-I 博升（第1–20页）]] | 1060 nm Back-Emitting VCSEL Modulated at 106 Gbps PAM4 Transmission over 100 m OM3 MMF for NPO Applications |

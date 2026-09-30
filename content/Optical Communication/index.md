@@ -17,6 +17,13 @@ tags:
 | 5 | [[Optical Communication/07. AccessNetwork/index\|Access]] | PON、FTTR、RoF、FSO/星地 | 75 |
 | 6 | [[Optical Communication/09. New Applications/index\|新应用]] | QKD/量子网络、光纤感知 | 32 |
 
+## 产业链与研究机构
+
+| 索引 | 划分方式 |
+|---|---|
+| [[Optical Communication/08. Industry Chain/index\|厂商（Industry Chain）]] | AIDC客户 / 运营商客户 / 设备商 / 模块与器件商 / 芯片商 |
+| [[Optical Communication/10. Research Institutes/高校与研究机构索引\|高校与研究机构]] | 六大场景 × 网络 / 光系统 / 算法 / 器件 / 芯片 |
+
 ## 会议
 
 - [[Optical Communication/01. Conference/2026 ECOC/index|ECOC 2026]]：十条技术判断、厂商地图、六个方向的综合洞察、445 篇讲稿笔记

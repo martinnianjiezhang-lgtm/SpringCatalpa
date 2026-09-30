@@ -12,6 +12,8 @@ ECOC 2026，Málaga，9 月 20–24 日。现场拍摄 399 份讲稿、7,060 页
 
 - [[Optical Communication/01. Conference/2026 ECOC/00. ECOC 2026的十条技术判断|十条跨方向技术判断]]
 - [[Optical Communication/01. Conference/2026 ECOC/01.  ECOC厂商地图与与技术方向|厂商地图与技术方向]]
+- [[Optical Communication/08. Industry Chain/index|厂商五层索引]]：AIDC客户 / 运营商 / 设备商 / 模块与器件商 / 芯片商
+- [[Optical Communication/10. Research Institutes/高校与研究机构索引|高校与研究机构索引]]：六大场景 × 网络 / 光系统 / 算法 / 器件 / 芯片
 
 ## 六大方向
 

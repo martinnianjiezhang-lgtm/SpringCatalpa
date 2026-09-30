@@ -16,7 +16,7 @@ ECOC 2026 中主归属 **Transport** 的报告 138 篇，另有 87 篇次相关�
 | [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su2-B-03-AIST-从余量到有效吞吐.pdf\|0920-am-Su2-B-03-AIST-从余量到有效吞吐]] | Pushing Optical Network Efficiency to the Limit for the AI Era: From QoT Margins to Goodput-Aware Operation |
 | [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su2-B-04-Nokia-海缆可插拔功耗.pdf\|0920-am-Su2-B-04-Nokia-海缆可插拔功耗]] | Power efficient submarine pluggable transceivers |
 | [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su2-B-06-ASN-空芯光纤与海缆能效.pdf\|0920-am-Su2-B-06-ASN-空芯光纤与海缆能效]] | Can hollow-core fibers improve the power efficiency in SDM submarine systems? |
-| [[B05_DAY1_A2-Su3-Su4-无中继空芯光纤#0920-pm-Su3-B-01-长飞YOFC-长跨空芯光纤设计.pdf（第1–6页，Workshop 开场/组织者页）\|0920-pm-Su3-B-01-长飞YOFC-长跨空芯光纤设计（第1–6页，Workshop 开场/组织者页）]] | Could 100s-km long unrepeatered HCF links redefine the economics & design of terrestrial and submarine optical networks? |
+| [[B05_DAY1_A2-Su3-Su4-无中继空芯光纤#0920-pm-Su3-B-01-长飞YOFC-长跨空芯光纤设计.pdf（第1–6页，Workshop 开场/组织者页）\|0920-pm-Su3-B-01-长飞YOFC-长跨空芯光纤设计（第1–6页，Workshop 开场／组织者页）]] | Could 100s-km long unrepeatered HCF links redefine the economics & design of terrestrial and submarine optical networks? |
 | [[B05_DAY1_A2-Su3-Su4-无中继空芯光纤#0920-pm-Su3-B-01-长飞YOFC-长跨空芯光纤设计.pdf（第7–18页）\|0920-pm-Su3-B-01-长飞YOFC-长跨空芯光纤设计（第7–18页）]] | Paradigm Shift in Hollow Core Fiber: From Technology-Push to Application-Driven |
 | [[B05_DAY1_A2-Su3-Su4-无中继空芯光纤#0920-pm-Su3-B-01-长飞YOFC-长跨空芯光纤设计.pdf（第19–37页；同讲另见 B-02 文件）\|0920-pm-Su3-B-01-长飞YOFC-长跨空芯光纤设计（第19–37页；同讲另见 B-02 文件）]] | Development of AR-HCF for long haul networks |
 | [[B05_DAY1_A2-Su3-Su4-无中继空芯光纤#0920-pm-Su3-B-02-Linfiber-长跨空芯光纤设计.pdf（第1–22页，同上讲的完整版）\|0920-pm-Su3-B-02-Linfiber-长跨空芯光纤设计（第1–22页，同上讲的完整版）]] | Development of AR-HCF for long haul networks |
