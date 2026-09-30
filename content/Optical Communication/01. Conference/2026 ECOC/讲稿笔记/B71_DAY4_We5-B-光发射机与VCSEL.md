@@ -34,7 +34,7 @@ tags:
   - 华为 850 nm 多模 VCSEL（35 GHz BW）：240 Gb/s PAM-6 BTB（225 Gb/s 净）；212 Gb/s PAM-6 60 m OM4（200 Gb/s 净，KP4 FEC），Rx 用 201 tap Volterra + 噪声消除 + MLSE [p7]
   - PAM-8 记录 288 Gb/s（850 nm，6–7 µm OA，8 mA，23 GHz BW，100 m OM4，RNN 均衡，20% SD-FEC 后 240 Gb/s 净）；Berxel 相关 [p8]
   - 商用 200G VCSEL 表（RT 带宽 / 距离）：850 nm：Broadcom 44 GHz、50 m OM4+；Coherent 45 GHz、80 m OM4；Sony >40 GHz、100 m OM4；华为 35 GHz、60 m OM4；Berxel 41 GHz BTB。1060 nm：FujiFilm 35 GHz；Berxel >44 GHz、30 m OM2 / 50 m OM5；PicoJool 980 nm 37 GHz [p11]
-  - IBM MOTION（arpa-e）：Phase1 16ch@56G NRZ、SiGe、400 µm 间距、4 pJ/bit、25¢/Gig；Phase2 32ch@112G PAM4、CMOS、2 波长、300 µm 间距、13×13 mm 玻璃载板，能耗写为 "3* pJ/bit"（星号含义看不清），成本 TBD 但 <25¢/Gig；首批完全对准功能件计划 2026 年 Q4 [p14]
+  - IBM MOTION（arpa-e）：Phase1 16ch@56G NRZ、SiGe、1 波长、400 µm 间距、4 pJ/bit、25¢/Gig；Phase2 32ch@112G PAM4、CMOS、2 波长、300 µm 间距、13×13 mm 玻璃载板、15×15 mm 可焊 CPO，能耗写为 "3* pJ/bit"（星号含义幻灯未注明），成本 TBD 但 <25¢/Gig；2026 年进展：子组件已制成、收发 IC 电测通过，首批完全对准功能件计划 2026 年 Q4（看图核实）[p14]
   - Aperion 3.2T MM VCSEL NPO（106 Gb/s/ch）：1.5 pJ/bit（PAM-4）；<0.1 FIT / 5T VCSEL 器件小时；21×33 mm OIF 兼容封装，<1 W/cm²；约 60 Tb/s xPU 逃逸带宽 [p16]
   - 未具名厂商 32ch@128G NPO/CPO：106–128 Gbps/lane，850 nm，1.4 pJ/bit，17×25 mm，4×MPO16 [p17]
   - 新光纤提案：约 26/80 µm（芯径/包层）、1060 nm 下 EMB ~5 GHz；理由：50/125 芯径对 200G PD（<=20 µm）过大，80 µm 包层可更小弯曲 [p19]
@@ -42,13 +42,13 @@ tags:
   - ams OSRAM 850 nm 薄膜 VCSEL（Si-TSV）：25 µm 间距；32 Gbps NRZ 无误码，Q ~10；3 mA×2.6 V=7.8 mW，~0.25 pJ/b（仅 VCSEL）；150 °C 结温过应力 2000 h 无失效 [p22]
   - LightXcelerate 1060 nm：19 芯 MCF、每芯一颗 VCSEL、每芯 56 Gb/s PAM，合计 1 Tb/s/根光纤 [p23]
   - Coherent 1060 nm 六角 µVCSEL 阵列：37 发射体、70 µm 间距（含背面透镜）；32 Gbit/s（6 mA，Vpp 0.4 V，无 DSP，ER 3.9 dB）；106 Gbit/s（12 mA，7 taps Rx&Tx，TDECQ 2.52 dB）；单发射体带宽可达 100 Gbit/s PAM4，带宽密度 >9 Tbit/s/mm² [p24]
-  - NVIDIA 研究概念（"不是产品计划"，仅建模目标、测量待定）：50 Gb/s NRZ/光纤，~3.0 pJ/bit（host-to-host 建模），10 m，raw BER 目标 <10^-?（看不清指数），每 GPU 57.6 Tb/s TX + 57.6 Tb/s RX（12 引擎×4.8 Tb/s/方向；16 ribbon×6 光纤×50G）[p26]
+  - NVIDIA 研究概念（"Exploratory NVIDIA concept. Not a product plan"，仅建模目标、测量待定）：50 Gb/s NRZ/光纤，~3.0 pJ/bit（host-to-host 建模），10 m，raw BER 目标 <10^-12，每 GPU 57.6 Tb/s TX + 57.6 Tb/s RX（12 引擎×4.8 Tb/s/方向；16 ribbon×6 光纤×50G）；CMOS 光背板 + 带透镜 VCSEL/PD 芯片 + 垂直光纤连接器（看图核实）[p26]
 - 提到的公司/客户/产品/标准：Institute of Science Tokyo、Huawei、Berxel、Broadcom、Coherent、Sony、FujiFilm、PicoJool、Adtran（1060 nm 单模 VCSEL Tx 阵列，<1 W，SMF-28 2 km）、IBM（MOTION/POWER10）、Fujitsu Optical Components（MCF CPO/收发结构，ECOC2025 论文：16 路 50G NRZ、2 km MCF）、Aperion、Eliyan、ams OSRAM、LightXcelerate、OM4/OM5、OIF、KP4 FEC、XPO
 - 与业界对比或记录声明：VCSEL 直调记录：256G PAM-4、275G PAM-6（Science Tokyo，BTB，无 BER）[p6]；PAM-8 288 Gb/s [p8]；PAM-6 240G BTB 有 BER（华为）[p7]。
 - 推荐配图页：p5（>100G MMF VCSEL 速率-距离总览散点图）；p11（商用 200G VCSEL 厂商对比表）；p14（IBM MOTION Phase1/2 参数表）；p21（Eliyan Wide-n-Slow 与 PAM 对比）；p24（Coherent 六角 µVCSEL 阵列）
 
 ### 0923-We5-B-ST-光发射机与收发.pdf（第1–29页）
-- 讲者/机构：F. Boeuf 等，STMicroelectronics（与 CEA-Leti 合作内容）| 题目：（题目页 OCR 乱码，未打开；内容为 STMicroelectronics 300 mm 硅光平台 PIC100 及面向 CPO/NPO 的异质集成，英文原题看不清）| 类型：邀请报告
+- 讲者/机构：Frederic Boeuf（报告人）等，STMicroelectronics（Crolles）与 CEA-Leti（Grenoble）| 题目：Advanced Industrial Silicon Photonics Platform on 300mm wafers for Optical Interconnect and Beyond（p1 看图核实）| 类型：邀请报告
 - 方向归属（主/次）：主 3 Scale-out 224G（硅光调制器/PD，PIC100 面向 800G/1.6T 可插拔）；次 4 Scale-up/in CPO（TSV、紧凑调制器、InP D2W 光源）
 - 核心主张：
   1. 300 mm 硅光自 2013 年起在 ST 为工业现实；PIC100 平台满足 800G/1.6T 可插拔光学需求。
@@ -61,10 +61,10 @@ tags:
   - 相移器 PIC25G→PIC100G：调制效率 2x（24.6°/mm @1.8 V，损耗 2.3 dB/mm @1.8 V）；RC 乘积降 3x；1/(R^0.5·C·L^0.5) 提高 2.2x（Lmod 对应 ER=4.5 dB）；低损耗传输线驱动下 50 GHz 带宽 [p13]
   - Scale-up CPO 概念：光 I/O 1 mm×3 mm 对应 1~2 Tbps，~10 fiber/mm，约 15 个 IO 合计 ~100 Tbps（围绕 xPU/HBM）；需要紧凑调制器、TSV、µ光学集成 [p14]
   - 微环调制器 Gen1：R=8 µm，深脊+角结；35 pm/V @-1.5 V；Q ~2900；Feo ~70 GHz @-1 V [p16]
-  - GeSi EAM（C 波段）Gen1：L=40 µm，Vdc=-1.5 V/2 Vpp；EO 带宽 >>110 GHz（-0.5 V 与 -1.5 V 曲线）；1550 nm 处 IL/ER 数值看不清 [p17]
-  - 波导损耗：SiN 波导 O 带 ~0.6 dB/cm、C 带 ~0.6 dB/cm；Si 长距离布线波导 0.6 dB/cm（w=0.4 µm），调制器处波导 1–1.4 dB/cm（据 OCR，未看图核对）[p10]
-  - TSV：Middle pitch 45 µm、深 100 µm、直径约 10 µm（据 OCR，未看图核对）[p18]
-  - InP/Si 异质：300 mm SOI 上放 100 mm InP 完成激光/SOA/OPA 器件设计验证；InP D2W 键合于 PIC100 背面 [p24][p28]（细节看不清）
+  - GeSi EAM（C 波段）Gen1：L=40 µm，Vdc=-1.5 V/2 Vpp；EO 带宽 >>110 GHz（-0.5 V 与 -1.5 V 曲线，至 100 GHz 仍在 -3 dB 以内）；1550 nm 处读图约 IL 7.5 dB、ER 2.8 dB、LPP 12.5 dB（读图估计，看图核实）[p17]
+  - 波导损耗：SiN 波导 O 带 ~0.6 dB/cm、C 带 ~0.6 dB/cm；Mid RIB（150 nm slab）长距离布线波导 0.6 dB/cm（w=0.4 µm）；Deep RIB（50 nm）调制器处波导 1–1.4 dB/cm（看图核实）[p10]
+  - TSV：Middle pitch 45 µm、深 100 µm、直径 10 µm；O 波段 MRIB 单模波导传播损耗约 0.055–0.065 dB/mm（看图核实）[p18]
+  - InP/Si 异质：300 mm SOI 上放 100 mm InP 完成激光/SOA/OPA 器件设计验证（8.5 mm×0.7 mm 芯片：激光器、2×SOA、16 通道 OPA 调制器与天线）；InP D2W 键合于 PIC100 背面（G. Bruel 等投稿中，看图核实）[p24][p28]
 - 提到的公司/客户/产品/标准：STMicroelectronics、CEA-Leti、Science 相关合作（U-Tokyo/ST、MPQ/C2N）；引用 IEDM 2013/2019/2021、OFC 2026（S. Cremer）、G. Bruel（ST/LETI，submitted）；应用含 LiDAR、光子传感
 - 与业界对比或记录声明：无明确 SOTA/record 声明；引用自家 PIC100G 已在 OFC 2026 量产报道 [p4]
 - 推荐配图页：p4（ST 硅光平台代际路线图）；p13（相移器 PIC25G vs PIC100G 对比）；p14（可插拔 vs Scale-up CPO 示意）；p12（Ge PD 带宽曲线与参数）
@@ -86,7 +86,7 @@ tags:
   - Tx OSNR：S 波段 6.75 THz + 无缝 C+L 12.35 THz，全带 >35 dB（峰值 38.3 dB，S 波段短波端 35.0 dB）；B2B OSNR 容限约 24.5–24.9 dB（C/L 与 S 长波 4 THz 一致），S 波段最短波长处 25.67 dB（差近 1 dB，因尚未做 ABC 算法校准）；平均 FEC 门限 3.7×10^-2 [p14]
   - 演进：2023 实时 S 波段相干收发器；首款 S 波段 nano-ITLA 17.5 dBm；全硅光 S+C+L 15.75 THz 1.2T 板载收发器；本工作为 19.1 THz 800G CFP2（OFC26 W3.1、W1E.3 引用）[p9]
 - 提到的公司/客户/产品/标准：ZTE、China Unicom、Microsoft、Google、OpenAI、NVIDIA（引用）、EPOCH AI；ZR/ZR+、CFP2、OSFP、DCI-BOX、FST、OMC、PCS-16QAM、空芯光纤（研究方向，"部分场景无收益"）
-- 与业界对比或记录声明：自称 19.1 THz 为 CFP2 可插拔宽带范围；未见明确"首次/record"字样（p9 标"This work"）；OCR 标题写 19.1-THz 宽带 [p1][p15]
+- 与业界对比或记录声明：自称 19.1 THz 为 CFP2 可插拔宽带范围（S+C+L，800G PS-16QAM，0 dBm 输出、Tx OSNR >35 dB、节省光纤 74.8%）；未见明确"首次/record"字样（p9 时间线标 "This work"）；标题页英文原题含 19.1-THz 宽带（看图核实）[p1][p9][p15]
 - 推荐配图页：p5（LLM 训练流量模型与带宽估算表）；p11（TFLN 与 SiPh 调制损耗曲线及 COSA 结构）；p14（Tx OSNR 与 B2B 容限 BER 曲线）；p15（结论与产品方向）
 
 ## 本批小结

@@ -39,26 +39,26 @@ tags:
 - 推荐配图页：p7（IM-DD vs 相干 200G PON ONU 成本构成表）；p3（相干/混合/IM-DD 三方案空间）
 
 ### 0920-am-Su2-G-01-Sorbonne-待定议题.pdf
-- 讲者/机构：未见题目页与讲者姓名（含 Sorbonne 大学量子网络团队 / Welinq；致谢页 OCR 可见 E. Diamanti 等名字，无法确认讲者） | 题目：未见（内容为 Telecom-Heralded Repeater Segment / 冷原子量子存储 / Paris 区域量子网络） | 类型：邀请报告
+- 讲者/机构：未见题目页与讲者姓名（Sorbonne 大学量子网络团队 / Welinq；p1 看图核实为 ParisRegionQCI 测试床页，引用 Diamanti 组与 Laurat 等工作，无法确认讲者） | 题目：未见（内容为 Telecom-Heralded Repeater Segment / 冷原子量子存储 / Paris 区域量子网络） | 类型：邀请报告
 - 方向归属（主/次）：主 6 QKD/量子 | 次 无
 - 核心主张：
   1. 演示由电信波段宣告（heralding）的量子中继段：两个独立本地节点（冷原子 Rb 量子存储器）+ 电信 50 km 中间宣告站；需要监控工具与电信基础设施集成 [p3]
   2. 冷原子系综量子存储器效率已达 90%，并已产品化（QDRIVE）[p8, p10]
   3. 光子接口可编程，用于连接异质平台（超导、离子、光子）[p12]
 - 关键数据：
-  - 2018 年存储器：极化量子比特保真度 >99%，存取效率 70% [p7 OCR]
+  - 2018 年存储器（3 cm 长 MOT，OD>400，Nature Communications，Vernaz-Gris…Laurat）：极化量子比特保真度 >99%，存取效率 70% [p7，看图核实]
   - 新实验：单光子（g2=0.1）存取效率 90%；两存储器间纠缠存取整体转移 85%（concurrence 比）；Optica 7, 1440 (2020) [p8]
   - QDRIVE：19 英寸机架，室温运行，Rb 原子 EIT 型；保真度 >99%，效率 >90%；2025 年发布、可商购；效率随存储时间衰减曲线，起点约 85%，约 400 µs 降至接近 0（读图估计）[p10]
   - 任意波形存储与转换：超导→离子 η=87(1)%，Ic=79.7(2)%；光子→离子 η=86(1)%，Ic=82.3(2)%；纠缠产生率较滤波方案 ×60（讲者标注）；波形目标取自 Innsbruck 单 Ca 离子 [p12]
-  - 巴黎测试床：24 km 光纤环路穿越巴黎市中心，White Rabbit 精确授时 + 单光子干涉相位稳定，Refimeve+；关联直方图峰值约 600 counts，峰位约 -120 µs [p14]；50 km 骨干与多拓扑（ParisRegionQCI）[p1 OCR]
+  - 巴黎测试床：24 km 光纤环路穿越巴黎市中心，White Rabbit 精确授时 + 单光子干涉相位稳定，Refimeve+；关联直方图峰值约 600 counts，峰位约 -120 µs [p14]；50 km 骨干与多拓扑（ParisRegionQCI，节点 N1 Orange Chatillon 可信节点 至 N10 Welinq）[p1，看图核实]
   - 高效纠缠光子对源（Welinq）：19 英寸 3U，室温，腔内 SPDC，光纤内宣告效率 >60%，线宽 1–5 MHz，795 nm 与 C 波段非简并，2026 年发布并已交付客户 [p15]
-  - 5p 可读 OCR：量子货币方案需存储器高效率、极低噪声 [p9 OCR]
-- 提到的公司/客户/产品/标准：Welinq（QDRIVE、光子对源）；Sorbonne University；Université Paris Cité；Orange Labs、Thales、Nokia Bell Labs（测试床节点，p1 OCR）；ParisRegionQCI；White Rabbit；Refimeve+；Innsbruck
+  - 量子货币（不可伪造量子货币，Diamanti 组 npj QI 4, 5 (2018)；含存储的理论 PRA 99, 022336 (2019)；Mamann et al., Science Advances 11, eadx3223 (2025)）：引入中间量子存储层需存储器高效率、极低噪声 [p9，看图核实]
+- 提到的公司/客户/产品/标准：Welinq（QDRIVE、光子对源）；Sorbonne University；Université Paris Cité；Orange Labs、Thales、Nokia Bell Labs、LIP6、C2N、MPQ、Laboratoire Kastler Brossel（测试床节点，p1 看图核实）；ParisRegionQCI；France QCI；White Rabbit；Refimeve+；Innsbruck
 - 与业界对比或记录声明（SOTA/首次/record）：QDRIVE 被称为 "World record quantum memory turned into a product" [p10]
 - 推荐配图页：p10（QDRIVE 产品与效率/保真度）；p3（电信宣告中继段架构）；p14（巴黎 24 km 环路实验）
 
 ### 0920-am-Su2-G-02-中科大-城域多路复用量子中继.pdf
-- 讲者/机构：USTC 郭光灿团队（署名 Zhou、Li、Guo；讲者姓名未见，p28 团队页列 GC Guo、CP Li 等） | 题目：未见完整题目（内容为 Metropolitan multiplexed quantum repeaters, XingHan 2.0/2.1 与气球链） | 类型：邀请报告
+- 讲者/机构：USTC 郭光灿团队（署名 Zhou、Li、Guo；讲者姓名幻灯片未显示，p28 团队页列 GC Guo、CF Li，另 C. Zhang、YF Huang、JM Cui；招聘链接指向 zhouzongquan 主页，看图核实） | 题目：未见完整题目（内容为 Metropolitan multiplexed quantum repeaters, XingHan 2.0/2.1 与气球链） | 类型：邀请报告
 - 方向归属（主/次）：主 6 QKD/量子 | 次 无
 - 核心主张：
   1. XingHan 2.0：基于 MQR-TM（多路复用、时间测量型量子中继协议）的城域多路复用量子中继，两个 Eu:YSO 存储器相距 14.5 km（光纤 17.9 km），首次对城域量子中继链路做 Bell 检验 [p10, p14]
@@ -67,12 +67,12 @@ tags:
 - 关键数据：
   - 背景：单颗 LEO 卫星 1200 km；光纤 404 km [p2]；此前城域中继 SPI 型最大保真度 0.64，无法违反 Bell 不等式，EDR 约 10 mHz @10 km；TPI 型 Bell 检验仅 1.3 km、EDR 0.3 mHz [p4, p5]
   - XingHan 2.0：HOM 可见度 95.9(2)%（独立光子对源）；AFC 存储 M=1205 模；纠缠存储效率 16.6% @100 µs（通信延迟 99 µs）；腔增强 SPDC 带宽 10 MHz；无光纤稳定 [p10, p11]
-  - 宣告纠缠（前馈）保真度 F+ = 78.6(2.0)%；CHSH S = 2.22(0.06) > 2；宣告速率 23.6 kHz，仅 107 Hz 事件被 TPC 分析（3 mW 泵浦，20 ns 窗口）[p13]。交换后光子纠缠保真度 76.3(1.1)% 与 77.0(1.2)%（两项基准，标签未看清）[p12 OCR]
+  - 宣告纠缠（前馈）保真度 F+ = 78.6(2.0)%；CHSH S = 2.22(0.06) > 2；宣告速率 23.6 kHz（SPI 可接近 50 kHz），仅 107 Hz 事件被 TPC 分析 [p13]。交换后光子纠缠（延迟选择，580 nm 光子先于 BSM 探测，3 mW 泵浦、20 ns 窗口）保真度 F+ = 76.3(1.1)%、F− = 77.0(1.2)% [p12，看图核实]
   - 最大 EDR 0.94 Hz @14.5 km，较此前 SPI 工作高两个数量级；同期其他单原子工作：Nature 652, 51 (2026) 2.2 Hz @10 km 光纤；Science 391, 592 (2026) 0.7 Hz @11 km [p14]
-  - XingHan 2.1：存储时间 Alice 端 99 µs、Bob 端 180 µs（OCR）；输入量子比特用平均 0.01 光子弱相干脉冲；同保真度（约73%）下纠缠速率比 2.0 提高 3 倍；隐形传态保真度 0.760±0.015，超过严格经典界 0.7014，隐形传态速率 0.68 mHz；无前馈平均 0.611±0.015 [p17/p18]
+  - XingHan 2.1：存储时间 Alice 端 99 µs、Bob 端 180 µs（看图核实）；输入量子比特用平均 0.01 光子弱相干脉冲；同保真度（约73%）下纠缠速率比 2.0 提高 3 倍；隐形传态保真度 0.760±0.015，超过严格经典界 0.7014，隐形传态速率 0.68 mHz；无前馈平均 0.611±0.015 [p17/p18]
   - 隐形传态距离由 3 m（Delft）扩展至 14.5 km，零信道距离；在自由运行的城市光纤网络中稳定运行（相位校准约 12 h 稳定，图）[p19]
   - 异质纠缠：囚禁离子 Yb⁺–Eu³⁺:YSO 存储器，纠缠存储效率 42%，保真度 89.2(2.3)%，CHSH 违反 [p20]
-  - 骨干信道 10⁴ km 损耗对比：光纤 2000 dB；GNSS 卫星 84 dB；真空光束导 1 dB；卫星链 33 dB；气球链 21 dB（成本：光纤低，气球链 High/Medium?）；气球链比卫星链低 12 dB（30 中继器时优化）[p22, p23 OCR]
+  - 骨干信道 10⁴ km 损耗对比：光纤 2000 dB（低成本）；GNSS 卫星 84 dB（很高）；真空光束导 1 dB（很高）；卫星链 33 dB（高）；气球链 21 dB（高/中?）；优化后的气球链比卫星链低 12 dB（波束腰位置优化 + 级联 AO；Liu…Zhou, Li, Guo, PRA 113, 022614 (2026)）[p22, p23，看图核实]
   - 仿真 EDR 1 Hz @10⁴ km，用 Eu:YSO 存储器：效率 80.3%，寿命 27.6 s（计算值取 80%、1 s），依赖模式 1097（取1000）、独立模式 11（取10）[p25]
 - 提到的公司/客户/产品/标准：无企业；引用 Delft、Harvard、MPQ、Innsbruck 等对比工作 [p14]；XingHan 命名（星汉/银河）[p29]
 - 与业界对比或记录声明（SOTA/首次/record）：稀土离子体系"最长存储器间隔（14.5 km）与首个城域中继链路 Bell 检验" [p14]；隐形传态距离由 3 m 增至 14.5 km [p19]。核实：Nat. Photonics 20, 812 (2026) [p14]

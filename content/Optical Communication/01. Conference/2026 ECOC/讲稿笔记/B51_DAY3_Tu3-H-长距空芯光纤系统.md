@@ -6,7 +6,7 @@ tags:
 ---
 
 ### 0922-Tu3-H1-MicrosoftAzureFiber-空芯光纤传输系统从城域到长距.pdf
-- 讲者/机构：Microsoft Azure Fiber（页内含 UCL Optical Networks 标识；讲者姓名题目页未核对，看不清） | 题目：HCF transmission systems from metro to long-haul（英文原题未逐字核对，据议程页"HCF-based metro transmission / multi-span and long-haul"概括） | 类型：邀请报告（Tu3-H 场首讲，综述性）
+- 讲者/机构：Y. Hong（Yang Hong）等 / Microsoft Azure Fiber（Romsey, UK）（p1 看图核实；页内含 UCL Optical Networks 标识） | 题目：Hollow-Core Fibre Transmission Systems: From Metro to Long-Haul Applications | 类型：邀请报告（Tu3-H 场首讲，综述性）
 - 方向归属（主/次）：主 1 相干/海缆/长途/DCI；次 2 Scale-across（400G ZR 延伸）
 - 核心主张：
   1. HCF 已不是实验品："production-deployed, operationally proven, scaling using standard network practices"[p29]。
@@ -38,7 +38,7 @@ tags:
   - CUT B，2128 km，10 dB 深陷波：16 子载波比 4 子载波损失约 10% 容量（4MC≈995 Gbps，16MC≈约 900 Gbps，读自曲线）[p9]
   - 单载波 CUT A：DP-64QAM 起点约 1350 Gbps；1000 km 内 >1.2T/载波（4 个中继）；2128 km 约 1.1T（DP-64QAM）、约 1T（DP-16QAM）；">1T over 2100 km with just 8 repeaters"[p11]
   - 单载波 CUT B（3 条 GLA 线）：>1T 至 1500 km 以外；2128 km 时 DP-16QAM 与 DP-64QAM 均约 930 Gbps；">900G feasible even in GLA over 2100 km"[p12]
-  - 均衡器：RRC 0.06 时 <30 taps 在 1596 km 恢复 1 Tbps（DP-64QAM）；RRC 0.01 时仍 <40 taps；意味着可把 150 GHz 栅格压到 137.5 GHz 同时保持 1 Tbps（GLA 下）[p13，据 OCR 文本，未看图]
+  - 均衡器：RRC 0.06 时 <30 taps 在 1596 km 恢复 1 Tbps（DP-64QAM）；RRC 0.01 时仍 <40 taps；意味着可把 150 GHz 栅格压到 137.5 GHz 同时保持 1 Tbps（GLA 下）；设计准则：优先单载波或少子载波（看图核实）[p13]
 - 提到的公司/客户/产品/标准：Nokia Bell Labs、YOFC、引用 PDP OFC2026 Th4B.7（266 km 超长跨段 21.7 Tbps 净速率跨洋传输）、OFC2026 M2J.1（Peng Li，低 IMI 低损 HCF）
 - 与业界对比或记录声明（SOTA/首次/record）：无本讲自身 record 声明；引用 PDP 的 21.7 Tbps、266 km 跨段成果 [p6]
 - 推荐配图页：p6（满载谱与 CUT A/B 陷波位置）；p11（单载波容量-距离，>1T/2100 km）；p12（GLA 下 DP-16QAM/64QAM 收敛至 930 Gbps）
@@ -54,7 +54,7 @@ tags:
   - 仿真设定：294×32 GBaud，33 GHz 间隔；TRx SNR C 波段 23.5 dB、L 波段 22 dB；NF 5/5.5 dB；HCF 含 ASE、TRx、GLA、IMI（忽略 PMD 与非线性）；GLA 按 HITRAN Voigt/洛伦兹线型建模，0.2 bar、1000 ppm CO2，HWHM 约 0.5 GHz；HCF C 波段基线 0.07 dB/km，L 波段 0.65 dB/km，IMI -52 dB/km [p11–p12]
   - 单跨 1×100 km：SMF 最优发射功率 20/21 dBm（C/L），HCF 两波段均 27 dBm；GLA 吹扫（相对 1000 ppm CO2）：C 波段最大 SNR 增益 2.6 dB、吞吐增益 0.8 Tb/s（1.4%）；L 波段 4.9 dB、3.6 Tb/s（6.3%）[p14]
   - 1000 km SMF 参考（C/L，Tb/s；最优功率 dBm）：25 km 跨 49.7/56.7（15/16）；50 km 49.0/55.8（16.5/17.5）；100 km 42.2/48.1（20/21）；125 km 37.4/42.3（21.5/22.5）；200 km 19.8/21.7（26.5/27.5）[p15]
-  - C 波段：HCF 在 100 km 跨、27 dBm、1000 ppm CO2 下比 SMF 多 3.4 Tb/s（8%），可减少 2.7× 中继器；400 ppm CO2 下多 4.2 Tb/s（10%）；理想 GLA 抑制下多 8.0 Tb/s（19%）[p15, p17, p18，后者据 OCR 文本]
+  - C 波段：HCF 在 100 km 跨、27 dBm、1000 ppm CO2 下比 SMF 多 3.4 Tb/s（8%），可减少 2.7× 中继器；400 ppm CO2 下多 4.2 Tb/s（10%）；理想 GLA 抑制（0 ppm）下多 8.0 Tb/s（19%）；1000 km SMF C/L 基线（跨长 25/50/100/125/200 km）吞吐 49.7/56.7、49.0/55.8、42.2/48.1、37.4/42.3、19.8/21.7 Tb/s（看图核实）[p15, p17, p18]
   - L 波段：GLA 为主导限制；8×125 km 的 SMF 优于更短跨段 HCF（1000 ppm/400 ppm）即使提高发射功率；400 ppm CO2 下 HCF 增益 5.3 Tb/s（13%）；理想抑制下 L 波段平均增益 17.9 Tb/s，最大吞吐 59.2 Tb/s（约 1.5×），最多 3.3× 少中继器（27 dBm）[p20–p23]
   - GLA 缓解手段列举：接收端谱预均衡（Sillekens OFC2026 Th2A.50）、发射预加重（C. Li OFC2026 W2A.50）、谱避让、多载波与熵加载 OFDM（Sampaio ECOC2025；X. Wang Opt. Lett. 2025）[p5, p7]
 - 提到的公司/客户/产品/标准：UCL、TRANSNET、HITRAN 数据库、DNANF（Petrovich Nat. Photon. 2025）
@@ -89,7 +89,7 @@ tags:
   - Shannon 与 Gordon-Holevo 容量对比：短链路无放大时有量子增益；短链路 HCF > 硅、PIA > PSA；长链路 PSA > PIA；长链路无量子增益（曲线在约 10^3 km 后汇合）[p18]
   - 参考 HCF 损耗：OFC2024 Th4A.8（Y. Chen）0.08 ± 0.03 dB/km 对比硅 SMF 0.14 dB/km（二十年）；论及"长期影响取决于规模化生产能力"，并预告 ECOC2026 workshop"Could 100s-km long unrepeatered HCF links redefine the economics..."[p9]
   - L = 5000 km 单路：交叉点约 10^2–10^3 光子/符号（硅约 5×10^2，HCF 约 1.5×10^2，读自曲线，粗略），低于该点 PSA>PIA，高于该点 PIA>PSA；功率轴按 300 GBaud C 波段 Tx 换算（-40 至 0 dBm）[p19]
-  - 优化并行路径数 M：PSA > PIA，与跨段和光纤类型无关；HCF 总容量远高于硅；M 受限（M<256）时，PSA>PIA 只在一定总能量以下成立，跨段越短阈值越高，HCF 优势保持[p22, p23 OCR]
+  - 优化并行路径数 M：PSA > PIA，与跨段和光纤类型无关；HCF 总容量远高于硅（L = 5000 km，300 GBaud C 波段）；M 受限（M≤256）时，PSA>PIA 只在一定总能量以下成立，跨段越短阈值越高，HCF 优势保持（看图核实）[p22, p23]
 - 提到的公司/客户/产品/标准：Nokia Bell Labs、Gordon-Holevo 极限（Gordon 1962；Giovannetti Nat. Photon. 2014）、Łukanowski JLT 41(15) 2023
 - 与业界对比或记录声明（SOTA/首次/record）：无实验 record；为理论容量优化。
 - 推荐配图页：p18（Shannon vs Gordon-Holevo 容量-距离，四种配置）；p22（并行路径优化后 PSA > PIA 与 HCF 优势）；p24（结论）

@@ -6,7 +6,7 @@ tags:
 ---
 
 ### 0921-Mo4-待定-Arista-题目未公布.pdf（第1–24页；p10/p11/p16为另一版重复页）
-- 讲者/机构：讲者姓名未见 / Arista | 题目：未公布（内容为 XPO 模块与 AI 互连五类场景，英文原题看不到） | 类型：邀请报告（Mo4 AI互连之争）
+- 讲者/机构：讲者姓名页面未显示 / Arista | 题目：未公布（p1 看图核实为 "Five Different Categories and Requirements"：机架级 scale-up 2 m、多机架 scale-up 10–20 m、数据中心 scale-out 500 m–2 km、园区 scale-across 2–20 km、城域 scale-across 100+ km；内容为 XPO 模块与 AI 互连五类场景） | 类型：邀请报告（Mo4 AI互连之争）
 - 方向归属（主/次）：主 4（Scale-up/in：XPO，可插拔与CPO之外的新形态）；次 3（Scale-out 224G/448G）
 - 核心主张：
   1. AI 互连分五类场景，每类都要求最低功耗、成本与失效率 [p1]。
@@ -34,10 +34,10 @@ tags:
   3. OCI-MSA 的动机：电/光 200G→400G→800G 路线，光侧分 Gen1 200G、Gen2 400G、Gen3 800G [p14]。
 - 关键数据：
   - 各方案定位：可插拔"灵活但距离/功耗/性能受限"；NPO/OBO"面板密度与热改善"；CPO"相比可插拔 10x 可靠性提升"；第四行（被遮挡，疑为 OCI）"最低时延、功耗、成本，可靠性与铜相当" [p4]
-  - TH6-Davisson 光链路：稳定；完全兼容 IEEE 802.3dj 光规范；图为 32x200G PAM-4 BER 与 KP4 FEC 链路余量，具体 BER 数值看不清 [p8]
+  - TH6-Davisson 光链路：稳定；完全兼容 IEEE 802.3dj 光规范；图为 32x200G PAM-4 BER 与 OE0/OE1 FEC 尾部 16.5 小时 KP4 FEC 链路余量，具体 BER 数值看图仍不可读 [p8]
   - CPO 挑战：PIC 到 EIC 高密度高质量贴合（图示 COUPE 贴合）、为 400G 直驱做使能；每个芯片封装需连接超过 1k 根光纤，需可分离光纤连接以支持封装回流；量产需行业领先良率和自动化，配自动点胶装卸载 [p10]
   - OCI-MSA 表：电 200G PAM-4 / 400G PAM-4/6/8 / 800G ?；光 200G PAM-4 / 400G PAM-4 / 800G ?；线性(Linear)：200G YES、400G MAYBE、800G UNLIKELY；OCI-MSA 支持 NRZ、DWDM、Bi-Di，Gen1 200G/Gen2 400G/Gen3 800G；NRZ 是最低时延路径 [p14]
-  - p13 OCR 见 "Founding Members / Optical Scale" 字样（OCI-MSA 创始成员页，成员名单未看图，不记录）
+  - p13 看图核实：OCI-MSA（2026 年 3 月成立）创始成员 logo 为 Meta、Microsoft、OpenAI、AMD、Broadcom、NVIDIA；目标"把 scale-up 从机架内扩到多排"（横幅部分遮挡）
 - 提到的公司/客户/产品/标准：Tomahawk 6 "TH6-Davisson" CPO、IEEE 802.3dj、KP4 FEC、OCI-MSA、COUPE、LPO/LRO/DSP、NPO/OBO
 - 与业界对比或记录声明：CPO 相对可插拔 10x 可靠性提升（讲者声明）[p4]
 - 推荐配图页：p4（DSP/NPO/CPO/OCI 光互连选项对比图）；p10（CPO 三大挑战）；p14（OCI-MSA 世代路线表）
@@ -46,21 +46,21 @@ tags:
 - 讲者/机构：Jean-Philippe Fricker（Co-Founder & Chief System Architect）/ Cerebras Systems | 题目：Heterogeneous Hybrid Bonding: A Path to Wafer-Scale Optical Systems | 类型：邀请报告
 - 方向归属（主/次）：主 4（WSE/CPO 类晶圆级光 I/O）；次 3（光源/电芯片）
 - 核心主张：
-  1. 异质混合键合把集成能力从单一计算晶圆扩展到逻辑、存储、光子等异质技术（p10 OCR 可见，图未看）。
+  1. 异质混合键合把集成能力从单一计算晶圆扩展到逻辑、存储、光子等异质技术（p10 看图核实：晶圆级系统已具备量产级良率韧性晶圆集成、垂直供电、集成冷却、晶圆级机械热控、测试制造设施；叠层示意 Optical I/O + WSE + DRAM，标注 "Forward-looking extension"）。
   2. 晶圆表面 E/O 转换可在每个计算区域附近进行，低损耗波导把信号从晶圆中心送到边缘，避免电信号跨晶圆传输的功耗损失与带宽密度限制 [p11]。
   3. 集成光 I/O 改变优化问题，需要在带宽密度、激光器位置、SerDes、热、可测试性/良率等维度重新权衡 [p14]。
 - 关键数据：
   - CS-6：晶圆级 SRAM + 3D 堆叠 DRAM，"在 HotChips'26 发布"；称世界最快推理速度、数量级更小占地；WSE、DRAM 分层 [p9]
   - 堆叠图含 Optical Wafer / WSE / DRAM 三层 [p11]
   - 五个设计维度：带宽密度（光 I/O BW/mm 晶圆边；电 I/O BW/mm² 穿过键合晶圆表面）；激光器（集成或外置，可靠性与热隔离）；SerDes（针对晶圆键合通道重新优化模拟前端）；热兼容（光子与大功率计算共存）；可测试性与良率（"足够好"晶圆策略、光测试接入、修复与冗余）[p14]
-  - p15 OCR 还出现"可服务性与标准/可更换性与互操作边界"一行，图未看，仅供参考
+  - p15 看图核实：集成光 I/O 改变优化问题——带宽密度（晶圆边 BW/mm 与键合面 BW/mm²）、激光位置（集成或外置、可靠性与热隔离）、SerDes 集成（为键合通道重优化模拟前端）、热兼容、可测性与良率（known-good-enough 晶圆、光测试接入、修复冗余）、可服务性与标准（可更换性与互操作边界位置）
   - 无具体带宽、功耗数值（讲稿中看到的页均为定性）
 - 提到的公司/客户/产品/标准：Cerebras CS-6、WSE、HotChips'26
 - 与业界对比或记录声明：称 CS-6 为"世界最快推理速度"（营销声明，无对比数据）[p9]
 - 推荐配图页：p11（含光晶圆的三层晶圆堆叠与 E/O 逃逸）；p14（集成光 I/O 五维权衡表）
 
 ### 0921-Mo4-待定-Marvell-每一层都用硅光.pdf（第1–9页）
-- 讲者/机构：讲者姓名未见 / Marvell | 题目：未见完整原题（OCR/图中为 "AI is everywhere" 起始；文件名概括为"每一层都用硅光"） | 类型：产业发布/邀请报告
+- 讲者/机构：讲者姓名页面未显示 / Marvell | 题目：未见完整原题（p1 看图核实为 "AI is everywhere" 开场页；文件名概括为"每一层都用硅光"） | 类型：产业发布/邀请报告
 - 方向归属（主/次）：主 3（Scale-out 光源/调制器，硅光）；次 4（Scale-up）
 - 核心主张：
   1. AI 规模是新约束：XPU 从 128 增到 1M，互连数量从 128 增到 >10M [p3]。
@@ -68,14 +68,14 @@ tags:
   3. 硅光市场量持续增长、"room for all"，新调制器技术将从高端切入 [p9]。
 - 关键数据：
   - 规模阶梯：128 XPU/128 互连；1K/2K；25K/75K；100K XPU（2024）/500K；1M XPU/>10M 互连 [p3]
-  - 铜到光过渡（单机架带宽 vs 铜距离）：100G 5 m；200G 2.5 m（标"TODAY"）；400G 1.25 m；800G 0.6 m；最后一档标 "1.6T"（看不清，读作 1.67/1.6T）0.3 m [p6]
+  - 铜到光过渡（单机架带宽 vs 铜距离）：100G 5 m；200G 2.5 m（标"TODAY"）；400G 1.25 m；800G 0.6 m；1.6T 0.3 m；机架 2.5–7 m 与封装 <10 mm 仍用铜（看图核实）[p6]
   - 光调制器/光器件市场（Sales \$M，2022–2031）：2026 约 \$37–38B（纵轴 \$0–\$80,000 M，读图估计），2031 约 \$68–70B；分层为硅光(最大)、InP、GaAs、TFLN/LiNbO3 bulk 及其他；来源 LightCounting, May 2026, Silicon Photonics, LPO/LRO and CPO/NPO [p9]
 - 提到的公司/客户/产品/标准：Marvell、LightCounting、硅光/InP/GaAs/TFLN
 - 与业界对比或记录声明：无 SOTA 声明
 - 推荐配图页：p6（铜到达距离随速率缩短的曲线）；p9（各材料体系光器件市场堆叠柱图）
 
 ### 0921-Mo4-待定-MicrosoftAzure-AI纵向扩展与通用算力的光互连用例.pdf（第1–10页）
-- 讲者/机构：讲者姓名未见 / Microsoft Azure | 题目：未见原题（文件名：AI 纵向扩展与通用算力的光互连用例；英文原题看不到） | 类型：邀请报告
+- 讲者/机构：讲者姓名页面未显示 / Microsoft Azure | 题目：未见原题（p1 为倒拍的 "Key messages" 页，看图核实：近期聚焦 AI scale-up 与通用算力内存解耦；OCI 规范提供多代通用 PHY；Wave 1 引入 OCI 光学用于 scale-up，Wave 2 更紧集成并扩展到内存解耦，VCSEL 成为选项） | 类型：邀请报告
 - 方向归属（主/次）：主 4（Scale-up，OCI）；次 3（Scale-out）
 - 核心主张：
   1. 平台连接包含多种用例，近期光学机会是 AI scale-up（A）与通用计算内存解耦（D）[p3]。
@@ -102,7 +102,7 @@ tags:
   - DWDM 性能：8λ MUX / x32 功分器，在引擎 PIC 上；200 GHz 波长间隔；间隔变化 <±20 GHz；功率变化 <±0.5 dB；约 60 dB SMSR；FWM 极小 [p11]
   - 8λ x 32 Gb/s NRZ DWDM 链路，COUPE 引擎：所有通道开启并锁定，PRBS31，16 小时测量无误码 [p11]
   - 选项对比（best / next best 打勾）：Ethernet PAM4 SiPho 在成熟度、距离、光纤/装配成本、OCS 兼容性等打勾；DWDM NRZ SiPho 在岸线带宽密度、光纤带宽可扩展、时延、OCS 兼容等打勾；VCSEL 与 μLED 在功耗、芯片成本、时延上占优（勾的深浅见图，未逐格核实）[p8]
-- 提到的公司/客户/产品/标准：NVIDIA CPO、TSMC COUPE、SOI N65 SiPho、SoIC、OCS；p11 引用同会议论文 Tu1-C5（A. Rekhi 等，Static and Dynamic Ring Assignment in a Clock-Forwarded DWDM Optical Link）与 Th2-E1（N. Mehta 等，8λ 4-λ x 64 Gb/s Polarization-diverse Silicon Photonic DWDM Receiver）——引用标注看图，细节看不清
+- 提到的公司/客户/产品/标准：NVIDIA CPO、TSMC COUPE（8λ×32 Gb/s NRZ DWDM 链路，200 GHz 间隔，16 小时无误码）、SOI N65 SiPho、SoIC、OCS；p11 引用同会议论文 Tu1-C5（A. Rekhi 等，Static and Dynamic Ring Assignment in a Clock-Forwarded DWDM Optical Link）与 Th2-E1（N. Mehta 等，A 4-λ x 64 Gb/s Polarization-diverse Silicon Photonic DWDM Receiver）；8λ MUX 谱：波长间隔偏差 <±20 GHz、功率偏差 <±0.5 dB、SMSR 约 60 dB（看图核实，照片较糊）
 - 与业界对比或记录声明：212.5 Gbps "Measured (in production)" [p5]；无 record 措辞
 - 推荐配图页：p5（212.5G 眼图与 COUPE 结构）；p8（Scale-up CPO 四方案对比表）；p11（DWDM 光谱与 8λx32G NRZ 链路实测）
 

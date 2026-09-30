@@ -16,7 +16,7 @@ tags:
   1. 部分面向 AI 的用例只有拥有边缘计算资源的电信运营商才能提供 [p14]
   2. 主要驱动力：变现（Monetization）、网络资源优化、数据主权（Data Sovereignty）[p14]
 - 关键数据（本讲无定量数据，均为架构示意）：
-  - 开场页给出 Workshop 形式：9:00–12:30，两个 90 分钟单元，8 个 15 分钟邀请报告，末尾 11:45–12:30 小组讨论 [p2, p5, p6，OCR]
+  - 开场页给出 Workshop 形式：9:00–12:30，两个 90 分钟单元（含 10:30–11:00 茶歇），8 个 15 分钟邀请报告，末尾 11:45–12:30 小组讨论；联合组织者 Salvatore Spadaro（UPC）、Paola Parolari（PoliMi）、Michela Svaluto Moreolo（CTTC）、Jérémy Potet（Orange）[p2, p5, p6，看图核实]
   - Telco Edge 架构：企业/医院/银行的客户边缘 DC 通过 PON（ONT）或 P2P/P2MP 光连接，接入 Edge-AI OLT / Optical PE，经汇聚环连到 Telco Edge IT 与 Telco Core IT，标注"Distributed GPUs" [p8]
   - 四种 Zero Trust / Trusted Edge LLM 推理场景：客户本地推理（无特殊连接需求）、分布式推理（客户与运营商边缘 AI DC 联合，联邦学习）、解耦推理（存储/计算，客户侧无计算，需"高容量、零丢包"连接）、解耦+分布式（微型数据中心间基于光连接做负载均衡，标注 RDMA）[p9–p12，OCR，图未细看]
   - Trusted Edge LLM：大量推理数据（如机器人控制视频流）传到 Telco Edge [p13，OCR]
@@ -44,7 +44,7 @@ tags:
 - 推荐配图页：p15（Doze/循环睡眠/警觉睡眠时序图 + 节电柱状图）；p11（分光比与 50G-PON 引入的 CO2 曲线）
 
 ### 0920-am-Su1-I-04-Nokia-下一代PON架构.pdf
-- 讲者/机构：Rene Bonk（Nokia Bell Labs，据 p5 议程页；标题页看不清）| 题目：Next generation PON architectures and systems for sustainable connected intelligence | 类型：邀请报告（Workshop）
+- 讲者/机构：Rene Bonk / Nokia Bell Labs（据主席开场 WS Part 1 议程页，看图核实；本 PDF p5 为技术页）| 题目：Next generation PON architectures and systems for sustainable connected intelligence | 类型：邀请报告（Workshop）
 - 方向归属（主/次）：主 [5 固定与无线接入 PON/FTTR/AI-FAN/RoF/FSO]；次 无
 - 核心主张（p13 Key takeaways）：
   1. 固定宽带生命周期足迹以运行能耗为主；PON 因大量无源基础设施已是能效最高的宽带接入架构之一
@@ -54,10 +54,10 @@ tags:
   - 固定网络产品生命周期 GHG：使用阶段 89%，生产 10%，运输 2%，报废 -1% [p2]
   - 每有用比特能耗估计（欧盟 JRC 宽带设备行为准则 v9.1，2025；25GS-PON 为估算值）：GPON 约 55 nJ/bit（读图）→ XGS-PON 约 -70% → 25GS-PON 再 -55% → 50GS-PON 再 -30% [p5]
   - 每用户功耗（EU Code of Conduct v9.0/9.1）：VDSL 17a vectored 4.7 W；GPON 3.0 W（1:64）；XGS-PON 4.6 W（1:64）；固定无线 5G FR1 5.6 W（不含基站）；2026 年 PON 占全球 16 亿固定宽带用户约 73% [p7]
-  - 光局域网/数据中心 OOBM：Optical LAN 布线少 70%、寿命 50+ 年、功耗低 40%；OOBM 用 PON 比 P2P 传输能效约 5 倍，功耗最多低 50%（OCR 提取，图未核对）[p8]
+  - 光局域网/数据中心 OOBM：Optical LAN 布线少 70%、寿命 50+ 年、功耗低 40%；OOBM 用 PON 比 P2P 传输能效约 5 倍，功耗最多低 50%（看图核实）[p8]；每有用比特能耗 GPON 约 55 nJ/bit → XGS-PON 降约 70% → 25GS-PON 再降约 55% → 50GS-PON 再降约 30%（JRC CoC v9.1）[p5]
   - 节能手段：关闭未用端口/ONU 打盹与睡眠、近零负载休眠、按负载调整资源、调整分光比（引 L. Breyne "Optical switching in PON", OFC 2026；G.Suppl.45, 2022）[p9]
-  - ITU-T SG15/Q2 新增补充 G.sup.PONcoop（Combo OLT/ONU 协作机制），目标定稿日期 2028 年 7 月，研究内容含 ONU 切换与启动的节能机制（OCR）[p10]
-  - AI 使能网络能效：遥测→AI 预测→控制（OCR）[p12]
+  - ITU-T SG15/Q2（蒙特利尔全会）新增补充 G.sup.PONcoop（Combo OLT/ONU 协作机制，如 GPON+XGS-PON 或 XGS-PON+50G-PON），目标定稿日期 2028 年 7 月，研究内容含 ONU 切换与启动的节能机制（看图核实）[p10]
+  - AI 使能网络能效：遥测→AI 分析（业务识别与流量预测）→控制（AI for PON）；PON 作为 AI 连接与分布式算力的使能网络（PON for AI）（看图核实）[p12]
 - 提到的公司/客户/产品/标准：Nokia；ITU-T G.Suppl.45、G.sup.PONcoop；EU Broadband Equipment Code of Conduct；GPON/XGS-PON/25GS-PON/50GS-PON；Optical LAN；OOBM
 - 与业界对比或记录声明：无
 - 推荐配图页：p5（GPON→XGS→25GS→50GS 每比特能耗逐代下降 70%/55%/30%）；p9（流量波动与功耗静态对比 + 四类节能手段）
@@ -78,7 +78,7 @@ tags:
   - 数据分布：容量公式 C=B·log2(1+SNR)，分成 m 根光纤 SNR_m=(1+SNR_1)^(1/m)-1；50 km 跨距→150 km 跨距，约 40% 节省 [p13]
   - 陆地长途"跳站（hut skipping）"：1→2 根光纤（或双芯光纤），3000 km 链路机房间距 80→193 km，节省 45% 放大器、72% 机房；500 km 链路 80→247 km，节省 64% 放大器、80% 机房 [p16]
   - 网络运营商数据：光层功耗（节点、EDFA 输出、收发）随光纤对数变化，10 对基准 1.0，约 18 对时最低约 0.57，>40% 降低；之后随对数增加回升到约 0.73（32 对）[p18]
-  - 海缆 wet plant 成本模型（Hedeboe 等，SubOptic 2025）：至 11000 km，16–24 光纤对比 12 对便宜（中继器与 EDFA 少）；11000–13000 km，16 对最便宜 [p14，OCR]
+  - 海缆 wet plant 成本模型（Hedeboe 等，SubOptic 2025，Meta 巴黎海缆部门模型）：至 11000 km，16–24 光纤对比 12 对便宜（中继器与 EDFA 少）；11000–13000 km，16 对最便宜；32 对在全长度均高于 12 对（约 1.13–1.62 倍）[p14，看图核实]
 - 提到的公司/客户/产品/标准：Ericsson、Rejoose、SPOC、ISO 14040、ITU-T L.1410、ADEME PCR、Meta（海缆成本模型页）、ASN/OMS/Orange Marine/NEC（海缆碳足迹合作者）；论文 S. Swain 等 JLT 2025；Gudmundsdottir 等
 - 与业界对比或记录声明：海缆碳强度较 2009 年低 1000 倍 [p7]
 - 推荐配图页：p16（跳站示意 + 3000 km/500 km 节省放大器与机房比例）；p18（光层功耗随光纤对数的下凹曲线，>40% 降低）
@@ -92,20 +92,20 @@ tags:
   3. 模块化、偏振无关的 WDM 波长交叉连接（WCS）交换，迈向 PLC-SiN/InP 混合集成
 - 关键数据：
   - X-haul 分割需求：Split 5：21.4–40.3 Gbps/RU，<100 km，1 ms；Split 7.2：38–142.8 Gbps/RU，<20 km，200 µs；Split 8：200–850 Gbps/RU，<20 km，200 µs；Split 8 在 1.6 GHz 带宽下每个 horseshoe 子网约 30.6 Tbps [p2]
-  - 新一代城域接入挑战：带宽 25–800 Gbps 可变，聚合多 Tbps [p3，OCR]
-  - 400G 快速受控光交换实现 RU-DU 动态重构，论文 Mo3.A-4（A. Bahari 等）[p4，OCR]
+  - 新一代城域接入挑战：每波长带宽 25–800 Gbps 可变，聚合多 Tbps；需低成本低功耗（光子集成）、快速光交换与控制（频谱效率、异构流量带宽自适应、东西向通信）[p3，看图核实]
+  - 400G 快速受控光交换实现 RU-DU 动态重构：CU 按时延与波长约束决定 RU–DU 映射，OSC 控制路径，本地 FPGA 执行时间关键交换，论文 Mo3.A-4（A. Bahari 等）[p4，看图核实]
   - InP 集成 OADM：芯片尺寸 4.6 mm x 4 mm，8 波，通道间隔 2.4 nm；40 Gb/s NRZ-OOK（PRBS 2^15-1），开关比 >30 dB，估计片上增益约 10 dB；8 通道 BER 曲线在 -4 dBm 附近与背靠背有功率代价，读图 BER 达 1e-8 需约 -5 至 -4 dBm，B2B 在 -6 dBm 时约 1e-11 [p8, p9]
   - 3 µm 硅光 OADM：1x12 AWG，覆盖 S 至 L 波段，插损 7.1 dB，平均消光比约 18.5 dB，上升 4.2 ns、下降 2.4 ns，芯片 10 mm x 7.9 mm [p10, p12]
   - InP/SiPh 混合 1xM WDM 交换：8 通道 BER 在约 -32 至 -24 dBm 范围，通道之间偏差约 1 dB 量级（读图，未提供定量指标）[p15]
   - 32x32x8λ 混合 PLC/III-V WDM 交叉连接（O 波段，100 Gbps/λ）：非阻塞，SOA 补偿，PLC 平顶 AWG 串扰 <45 dB；图中 BER 以 KP4 FEC 2e-4 为门限，32x32x8λ WCS 的 BER 在 ROP 约 -8 dBm 附近触及门限，其后平坦在约 4e-5，对比 BTB 更低（论文 We4-P，B. Zheng 等）[p16]
   - 混合集成 WSC（PLC/SiN + InP SOA 阵列）：光纤到光纤增益最高 12 dB；KP4 处功率代价 <0.65 dB [p17, p18]
-  - 演示：Tu2-Ex11 展台演示"Telemetry-assisted QoS-aware scheduler over SOA-based time-slotted optical metro-access networks"（S. Ghasrizadeh），主节点 + 可重构快速 WDM 交叉连接 [p6, p7，OCR]
+  - 演示：Tu2-Ex11 展台演示"Telemetry-assisted QoS-aware scheduler over SOA-based time-slotted optical metro-access networks"（S. Ghasrizadeh），城域主节点（调度器+Master Node）+ 可重构快速 WDM 交叉连接，两个接入点承载 6G RAN 前传/中传队列 [p6, p7，看图核实]
 - 提到的公司/客户/产品/标准：TU/e、SONL（smart optical network lab）、PhotonDelta、Horizon Europe（grant 101070178）、KP4 FEC、O-RAN 分割 5/7.2/8
 - 与业界对比或记录声明：无 record 声明
 - 推荐配图页：p16（32x32x8λ 混合 PLC/III-V WDM 交叉连接架构与 BER）；p17（混合集成 SOA 阵列：最高 12 dB 增益、<0.65 dB 功率代价）
 
 ### 0920-am-Su2-I-01-NVIDIA-面向AI工厂的光子技术.pdf
-- 讲者/机构：议程列 Bakopoulos（NVIDIA，名字前半看不清；本讲首页未拍清）| 题目：Photonics-enabled technologies for AI factories | 类型：邀请报告（Workshop）
+- 讲者/机构：Paraskevas Bakopoulos / NVIDIA（p1 标题页看图核实）| 题目：Photonics-enabled technologies for AI factories | 类型：邀请报告（Workshop）
 - 方向归属（主/次）：主 [4 Scale-up/in CPO/NPO/XPO/WSE/OCS]；次 [3 Scale-out 224G/448G/光源/调制器/电芯片/OCS]
 - 核心主张（p10 Recap、p20 Outlook）：
   1. 数据中心受可用功率限制，需要光学创新做到节能且可靠的数据生成，以及自动拓扑自适应以绕开故障并匹配流量
@@ -142,9 +142,9 @@ tags:
   - 首个 3D 混合键合（HBI）EIC-PIC 收发器：496 fJ/bit（含 8:1 SerDes 与调谐），18 Gb/s，总 8.933 mW；可扩展到 1 Tb/s/光纤；12 nm FinFET EIC；另两组含激光驱动的链路总功耗：22.705 mW，1.261 pJ/bit；30.345 mW，1.686 pJ/bit（18 Gb/s，Chang 等 JLT 2023；Samanta JSTQE 2026）[p12]
   - 接收灵敏度：总输入电容 28 fF（PD 约 9 fF，DBI 封装约 5 fF，放大器 14 fF）时 OMA 灵敏度 -19 dBm（估计，PD 响应度 0.8 A/W，跨阻极限）；100 fF 时 -12.9 dBm；3D 混合键合带来 6.1 dB 光功率降低，新型 nanoPD 再增益 11.3 dB [p13]
   - 总结：混合键合降低光功率 4 倍，配合 nanoPD 与优化 EIC 为 20 倍；激光墙插效率 30%→10% 可再降 3–10 倍；光电脉冲神经网络能效 10^6 倍（讲者总结页）[p21]
-  - nanoPD（GF 45SPCLO 单片）：记录低电容 0.08 fF，暗电流 0.72 nA，量子效率 91%（OCR，来自 p14）
+  - nanoPD（GF 45SPCLO 单片）：记录低电容 0.08 fF，暗电流 0.72 nA，量子效率 91%；弱谐振非对称 FP 腔（前反射 <10%、DBR 后反射 >90%，约 2 µm 腔长），与 TIA 单片集成（M. Fu & S. J. Ben Yoo, OFC 2024；看图核实，来自 p14）
 - 提到的公司/客户/产品/标准：UC Davis；GlobalFoundries 45SPCLO；HBM2/FGDRAM；AWGR、LION、Flex-LION；SC'20 论文（Gengchen Liu 等）
-- 与业界对比或记录声明："The first 3D Hybrid-Bonding Integrated (HBI) EIC-PIC Transceivers at 496 fJ/bit" [p12]；nanoPD "Record Low Capacitance (0.08 fF) and Dark Current (0.72 nA)" [p14，OCR]
+- 与业界对比或记录声明："The first 3D Hybrid-Bonding Integrated (HBI) EIC-PIC Transceivers at 496 fJ/bit（含 8:1 SerDes、调谐等），可扩展至 1 Tb/s/fiber"（JLT 2023）[p12]；nanoPD "Record Low Capacitance (0.08 fF) and Dark Current (0.72 nA) with 91% QE" [p14，看图核实]
 - 推荐配图页：p12（首个 3D 混合键合 EIC-PIC 收发器 496 fJ/bit 架构、照片与功耗饼图）；p8（3D Hyper-FleX-LION 功耗 3 倍改善）；p21（总结）
 
 ### 0920-am-Su2-I-03-iPronics-可扩展光子集成ScaleUp.pdf
@@ -161,7 +161,7 @@ tags:
   - "行业首个"结果：经增益受控的硅光 OCS（iPronics ONE32，增益 10 dB）传输 1.6 Tbps（2x DR4，200G/lane）收发器，VOA1 0–3 dB、VOA2 0–10 dB 网络损耗仿真；BER 较 1e-12 基线仅降低 1 个数量级，对前后网络损耗稳健 [p12]
   - 功耗：30 W（系统）+ 0.78 W/激活通道；电交换机功耗随代际上升到 64x1600G 约 3500 W，iPronics <100 W（2027 年目标 <150 W）[p13]
   - 链路成本降低 2 倍；皮秒级集群重构（p16 原文 "ps-time"，p14 称微秒级响应，两处表述不一致）[p14, p16]
-- 提到的公司/客户/产品/标准：iPronics（ONE32/ONE64、ONE Series）、OCP、NCCL、SDN、CPO/NPO、DR4/LWDM/CWDM、MEMS（对比）、Global Foundries（GF 10 出现在曲线图例，OCR）
+- 提到的公司/客户/产品/标准：iPronics（ONE32/ONE64、ONE Series，1U OCS）、OCP、NCCL、SDN、CPO/NPO、DR4/LWDM/CWDM（p8 看图核实：3dB 分光器实测 IL 0.060–0.104 dB，交叉 IL 0.014–0.016 dB、XT <−50 dB，"比代工厂 PDK 好 10 倍"）、MEMS（对比）、GlobalFoundries（"GF 10" 为损耗曲线图例）
 - 与业界对比或记录声明："Industry-first results of link-quality of 1.6 Tbps transceivers ... over gain-controlled silicon-photonics OCS" [p12]；"10x better performance than foundry blocks available today"（分路器/交叉损耗）[p7]
 - 推荐配图页：p12（OCS 上 1.6T 收发器 BER 曲线与测试结构）；p3（三种 scale-up 拓扑与功耗排序）；p13（电交换机功耗演进 vs iPronics <100W）
 

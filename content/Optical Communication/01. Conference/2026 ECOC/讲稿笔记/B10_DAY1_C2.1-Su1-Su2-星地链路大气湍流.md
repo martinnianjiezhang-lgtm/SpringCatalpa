@@ -21,11 +21,11 @@ tags:
   - 2026-09-17：传输 1.62 Tb，error-free，r0 > 25 cm [p7]
   - 链路仰角约 20° 起，Aug 05 峰值仰角约 46°、Sep 15 约 34°（读自曲线，粗略）；调制编码在 1/2 SF8、1/2 SF1、9/10 SF1 间切换 [p5]
 - 提到的公司/客户/产品/标准：CNES、Airbus (ADS)、Safran DS、Bertin Alpao、OGS Technologies；CO3D、LASIN、FrOGS、SOLIS（未来）、TELEO；CCSDS 141.0-B2/142.0-B-2 O3K
-- 与业界对比或记录声明：未见 record 声明；讲者称 LEO 下行 AO 性能"already excellent" [p8]
+- 与业界对比或记录声明：未见 record 声明；讲者称 LEO 下行 AO 性能"already excellent"，SMF 注入已可转向 100+ Gbps 相干检测；上行方向提出 MEO 预补偿中继、预测式预补偿、收发天线分离 [p8，看图核实]
 - 推荐配图页：p7（Aug 05 与 Sep 17 两次过境的 ROP 时间曲线与 Tb 级传输量）；p2（LASIN 星上架构与过境几何）
 
 ### 0920-am-Su2-F-05-SAFRAN-自适应光学加发射分集.pdf
-- 讲者/机构：Safran（与 CNES、Bertin Alpao、FrOGS 联盟合作；讲者姓名看不清） | 题目：AO + 发射分集用于 LEO 直连链路，英文原题看不清（议程含 Introduction & context / Previous work to prepare LEO IOD LASiN / Lab results / First on sky results / What's next） | 类型：学术论文
+- 讲者/机构：Safran（与 CNES、Bertin Alpao、FrOGS 联盟合作；讲者姓名幻灯片未显示） | 题目：AO + 发射分集用于 LEO 直连链路（英文原题幻灯片未显示；议程：Introduction & context / Previous work to prepare LEO IOD LASiN / Lab results / First on sky results / What's next / Conclusion & perspectives，看图核实） | 类型：学术论文
 - 方向归属（主/次）：主 5（FSO 星地激光链路）；次 1（相干 DSP/交织与信道容量）
 - 核心主张：
   1. 大气信道降低可用度；对策为自适应光学、空间分集（MIMO）、时间分集（纠删码/交织/ARQ），但时间分集带来时延。
@@ -34,9 +34,9 @@ tags:
 - 关键数据：
   - 仿真条件：望远镜 50 cm，仰角 20°–86°，闪烁指数 0.69，Fried r0 4.1 cm，横向风速 65 m/s，AO 算法带来链路余量增益 4 dB；含 AO 插入损耗 + SMF 静态耦合损耗 3.18 dB [p3]
   - 注入 ROP 随交织额外时延与仰角变化（Hard profile）：无湍流 -48.6 dBm；20° 时 47 ms -35.13 dBm、94 ms -38.33 dBm；30° 时 17 ms -35.65、47 ms -40.65、94 ms -41.2 dBm；45° 时 47 ms -45.2、94 ms -45.6 dBm；86° 时 17 ms -45.17、47 ms -45.72、94 ms -46.1 dBm（Medium profile：45° 11 ms -46.5、17 ms -46.22；86° 50 µs -44.8、11 ms -46.9 dBm）[p4]
-  - 容量分析：DP-QPSK @ 50 Gbaud，目标 1 bit/symbol（FEC R=1/2），目标中断概率 0.001；LEO 下行 20° 仰角、50 cm 望远镜、r0 = 4.1 cm、闪烁指数 0.69、风速 65 m/s；时序 5 s，采样 14.68 kHz（146800 点）；1 个衰落样本 0.06812 ms；比较三种 AO 控制策略（leaky integrator 基线 / LQG / RL）；OCR 提示 SNR 约 4.5 时延上界 < 10 ms（此句 OCR 不清，未核图）[p5]
+  - 容量分析：DP-QPSK @ 50 Gbaud，目标 1 bit/symbol（FEC R=1/2），目标中断概率 0.001；LEO 下行 20° 仰角、50 cm 望远镜、r0 = 4.1 cm、闪烁指数 0.69、风速 65 m/s；时序 5 s，采样 14.68 kHz（146800 点）；1 个衰落样本 0.06812 ms（= 222 个 O3K 码字/偏振）；比较三种 AO 控制策略（leaky integrator 基线 / LQG / RL）；结论：最差 20° 剖面下 SNRe 4.5 时约 47 ms，50 GBd 双偏振上界 <10 ms，低时延亦可作为目标（看图核实）[p5]
   - 实测 2026-08-05：r0 ≈ 20 cm、θ0 ≈ 14 µrad、σx² ≈ 0.01；30° 以上余量充足，9 Gbps 载荷数据；CCSDS 带内信令使会话开始时即可得 125 Mbps 数据 [p8]
-  - 另一过境（条件：r0 约 5 cm、风速 9 m/s，OCR 读数，未核图）：湍流较差 + PAT 测试下，20° 仰角 3.5 s 内载入 4 GB [p9]
+  - 另一过境（2026-07-07，r0 约 5 cm、Θ0 约 12 µrad、σ²χ 约 0.03、风速 9 m/s）：湍流较差 + PAT 测试下，20° 仰角 3.5 s 内载入 4 GB；LASiN 仍在在轨验证中（看图核实）[p9]
 - 提到的公司/客户/产品/标准：Safran、CNES、Bertin Alpao（ACE 仿真器、Fast TT）、FrOGS、LASIN、CCSDS 带内信令、COTS 收发机
 - 与业界对比或记录声明：无 record 声明；LASIN 仍处于在轨验证阶段，完整序列待分析 [p9]
 - 推荐配图页：p4（ROP 对交织时延与仰角的数据表）；p8（30° 以上 9 Gbps 余量的 ROP 曲线）

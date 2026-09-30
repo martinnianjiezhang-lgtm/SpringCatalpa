@@ -21,7 +21,7 @@ tags:
   - 实验：58 GBaud 2D-PAM12（带宽 34.8 GHz），2 km SMF，AWG/DSO 均 256 GSa/s，MZM+EDFA，OBPF+VOA+PD，DSP 与均匀 M-PAM 相同 [p13]
   - SC-PAM12 的 GMI 为 3.45 bit/symbol，信息速率 >200 Gbit/s（58 GBaud，2 km SMF）[p14]
   - DSQ 因需要 16 个幅度电平，更大符号距离的收益被抵消，2 km 时 SNR 在 ROP 约 0 dBm 处明显低于另两种（约 16 vs 约 20 dB，图读数）[p15]
-  - BER 图标出 20% HD-FEC 与 6.25% HD-FEC 线；ROP 6 dBm 附近 Cross/SC 逼近 6.25% HD-FEC，具体数值看不清 [p16]
+  - BER 图标出 20% HD-FEC（约 1.5e-2）与 6.25% HD-FEC（约 4.5e-3）线；ROP 6 dBm 时 Cross 约 5.5e-3、SC 约 4.5e-3（触及 6.25% HD-FEC），DSQ 约 2.5e-2 未过 20% 门限；Cross 映射 SER 最低，但因非全格雷编码 BER 不是最好（看图核实，读图估计）[p16]
   - 香农曲线：PAM12 饱和约 3.5 bit/s/Hz，需 SNR 约 27 dB 才达99%极限（图读数）[p6]
 - 提到的公司/客户/产品/标准：无企业产品；引用 T. Prinz ISTC 2021（PAM-6 编码调制）、F. Villenas ECOC 2025（5-bit 2D 符号调制）[p11]；QSFP/OSFP
 - 与业界对比或记录声明：未声明 SOTA/record；结论为 >200 Gbit/s 信息速率、3.45 bit/symbol GMI [p14]
@@ -58,10 +58,10 @@ tags:
   - 系统：31 GHz 相位调制器产生梳线，f1-f2=62 GHz，与 AWG 用 10 MHz 同步；带预加重，输出频谱宽 138 GHz [p8]
   - OE 前端频响：校准后的 PE-AWG→PE-ADC 到 140 GHz 平坦；PE-AWG→示波器（113 GHz）在约 113 GHz 陡降；未校准时约 100 GHz 处约 -10 dB 且有波动 [p10]
   - 电学背靠背：224 GBd PAM4（OSC）BER 8.5x10^-4；224 GBd PAM8（OSC）BER 1.5x10^-2；276 GBd PAM4（PE-ADC，140 GHz）BER 3.4x10^-3；SNDR 图中 PE-AWG→OSC 在约 220 GBd 约 20 dB，PE-AWG→PE-ADC 在约 276 GBd 约 16 dB（图读数）[p12]
-  - 光学 IM/DD：O 波段激光 1326 nm，MZM+PDFA+BP+PD+电放大+OSC；C 波段 1553 nm；232 GBd PAM4 眼图；BER-波特率图标注 20% SD-FEC 与 7% HD-FEC 线，PAM4 O 波段约在 232 GBd 触及 7% HD-FEC 附近，PAM2 O 波段可达更高波特率（图读数，精确值看不清）[p13]
+  - 光学 IM/DD：O 波段激光 1326 nm，MZM+PDFA+BP+PD+电放大+OSC；C 波段 1553 nm（MZM+PD+OSC）；232 GBd PAM4 眼图；BER-波特率图标注 20% SD-FEC 与 7% HD-FEC 线：PAM4 O 波段约在 232 GBd 触及 7% HD-FEC（约 4e-3），PAM4 C 波段约 225 GBd 时约 1e-3，PAM2 O 波段约 260 GBd 触及 7% HD-FEC（读图估计，看图核实）[p13]
   - 总结：光学 260 GBd PAM4，BER 2.9x10^-2；电学 276 GBd PAM4，BER 3.4x10^-3；使用 HyperLight TFLN-MZM [p15]
 - 提到的公司/客户/产品/标准：Teragear GmbH（商业化，booth 1268）、HyperLight（TFLN-MZM）、Nokia Bell Labs（合作者）、Keysight UXR 与 M8199B AWG（图例）、Anritsu 部件（照片）；引 Füllner Nat Commun 16, 8318 (2025)；Drayss LSA 14, 353 (2025)；Fang LSA 14, 241 (2025)；资助 ERC、EIC、DFG
-- 与业界对比或记录声明：题目即声明 276 GBd 电学、260 GBd 光学 PAM4；未见 "record" 字样；与 113 GHz 示波器对比，PE-ADC 前端 140 GHz [p10]
+- 与业界对比或记录声明：题目即声明 276 GBd 电学、260 GBd 光学 PAM4；未见 "record" 字样；OE 前端校准后 PE-AWG→PE-ADC 平坦至约 140 GHz，而 PE-AWG→113 GHz 示波器在 113 GHz 截止（看图核实）[p10]
 - 推荐配图页：p8（PE-AWG 完整架构与频谱 A/B/C，138 GHz、276 GBd PAM4）；p12（电学背靠背 SNDR 与 224/276 GBd 眼图 BER）；p13（O/C 波段 IM/DD BER-波特率）
 
 ### 0923-We3-D-00-全场连拍.pdf 第40–约58页（We3-D4，Nokia Bell Labs，峰值受限线性预均衡）

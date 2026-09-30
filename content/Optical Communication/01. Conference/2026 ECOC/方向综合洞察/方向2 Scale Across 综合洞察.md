@@ -14,7 +14,7 @@ tags:
 **一句话结论：** Scale-across 的部署单位正从"波长"转为"光纤对"，相干可插拔（800ZR+ 量产、1.6T ZR/ZR+ 与 Coherent-Lite 跟进）负责单波长成本与功耗，全谱转发器（FST）+ 多rail线路系统负责光纤对/机房/功耗的规模化，空芯光纤（HCF）与 OCS/OTN 协议层则从时延与利用率两端争取跨楼到区域尺度的训练效率；瓶颈已从模块转移到线路系统、光纤数量与热设计。
 
 **判断1：需求已从"DCI 的一个增量"变成"云可插拔带宽的主体"，且由线路系统而非模块决定成本结构。**
-- Cignal AI（预测）：scale-across 占云可插拔带宽比例 2025 年 5%，2030 年 72%，2028 年超过 metro/前端 DCI；2030 年 scale-across 支出 8.7B USD，线路系统占 55%（2025 年 32%）；线路系统部件交期 12–18 个月，产能受 InP 晶圆限制〔0922-MF-am-1140-CignalAI p7, p8, p9（p9 为 OCR）〕。
+- Cignal AI（预测）：scale-across 占云可插拔带宽比例 2025 年 5%，2030 年 72%，2028 年超过 metro/前端 DCI；2030 年 scale-across 支出 8.7B USD，线路系统占 55%（2025 年 32%，累计过半；Raman 约占累计支出五分之一）；线路系统部件交期 12–18 个月，产能受 InP 晶圆限制〔0922-MF-am-1140-CignalAI p7, p8, p9〕。
 - 机制：路由变长、1600ZRx 压低每比特相干价格、Raman 普及；模块 \$/G 下降（可插拔现低于 \$6/G，2027 年降至 \$5/G 以下）而放大器/泵浦/线路系统价格持平或上涨〔0922-MF-am-1140-CignalAI p6, p8〕。
 - 客户侧印证：Google 自报十年光学创新使类 scale-across 网络功耗降约 90%，但线路系统功耗几乎不变，现占总功耗预算约 50%〔0920-am-Su2-B-01-Google p4〕。
 
@@ -49,7 +49,7 @@ tags:
 | 带宽估算 | 数据并行：GPT-4 1.8T 有重叠 >3.1 Tb/s，无重叠 61.7~308.8 Tb/s；10T 模型有重叠 >17.3 Tb/s，无重叠 343.1 Tb/s~1.7 Pb/s（表中行标签"GPT-3 3T"疑为标注错误，照录） | 仿真估算（ZTE） | 〔0923-We5-B-中兴 p5〕 |
 | 园区结构 | 每 AI 园区 4–12 栋楼；1.6T 下园区间隙 2–40 km；光纤时延 5 μs/km；百万级 XPU 集群；约 190 GW 超大规模容量已宣布；"园区光纤数量已成危机" | Nokia 自报/引用 | 〔0920-Su3Su4-A全场扫描 p111〕〔0920-pm-Su4-A-04-Nokia p1（核心主张）〕 |
 | 系统规模 | 每站点数百对光纤（C&L），每对 64×800G，即 20 Pb/s 用例；传统 DCI ~200 Tb/s → scale-across >10 Pb/s，扩容粒度 per wavelength → per fiber，rails ~10 → >100 | Ciena/Huawei 自报 | 〔0920-am-Su2-B-02-Ciena p10〕〔0920-pm-Su4-C-03-华为 p5〕 |
-| 模块出货 | 800ZRx 全球已出货 >100,000 端口（2Q26）；Acacia 唯一季度出货 >25,000 个 800ZR+ 的供应商；某超大规模发布预测 2026 年 200,000+ 800ZRx，2027 年 >350,000；Acacia 自报累计 >75,000 个 800ZR+ | Cignal（OCR）/自报 | 〔0922-MF-am-1140-CignalAI p10〕〔0920-pm-Su4-A-03-Acacia p3〕 |
+| 模块出货 | 800ZRx 全球已出货 >100,000 端口（2Q26）；Acacia 唯一季度出货 >25,000 个 800ZR+ 的供应商；某超大规模发布预测 2026 年 200,000+ 800ZRx，2027 年 >350,000；Acacia 自报累计 >75,000 个 800ZR+ | Cignal/自报 | 〔0922-MF-am-1140-CignalAI p10〕〔0920-pm-Su4-A-03-Acacia p3〕 |
 | 市场 | 相干模块 2026 年近 7B USD，2030 年近 10B USD；1600ZRx 2030 年 2.9B USD 成最大单一类别；2026 年预计 >200k 800ZR 级单元；800G ZR 级 2025–2029 CAGR 145% | 预测 | 〔0922-MF-am-1140-CignalAI p6, p7〕〔0920-pm-Su4-A-04-Nokia p6〕 |
 | 运营商 | BT 核心流量 >34 Tbit/s；AI 流量尚无显著体现；推理约"一波长"级用现有 ROADM，训练需 scale-across | 自报 | 〔0920-am-Su1-C-00-上半场速记 p19, p20, p25〕 |
 
@@ -61,7 +61,7 @@ tags:
 | Nokia | scale-out 100 m–10 km，约 2 km 起 Coherent-lite（OCS 损耗预算在此出现）；scale-across 10–1000+ km，ZR/ZR+，含园区边缘；CL 2 km/OCS 4–8 dB，CL 10 km 约 6.3 dB，CL 园区 WDM 20 km 12–14 dB（8 通道 O-band） | 〔0920-pm-Su4-A-04-Nokia p4〕〔0920-Su3Su4-A全场扫描 p123〕 |
 | XPO/Marvell 系 | scale-across 园区 2–20 km，城域 100+ km；scale-out 500 m–2 km | 〔0923-MF-Marvell等连拍 p23〕 |
 | OVHcloud | <10 km 无需线路系统（长距可插拔如 2x400G LR，多对直连光纤，无放大器、无复用器）；>10 km 800G ZR/ZR+ + 线路系统（WSS、L/C 带放大、Raman、ILA，跨段约 100 km） | 〔0920-am-Su1-C-00-上半场速记 p15, p16〕 |
-| Oracle OCI | 区域 DWDM 互连约 60 km 跨段，400ZR→800ZR→1600ZR；参与 1600ZR/1600ZR+/CMIS，已启动 1.6T 相干可插拔 MACsec 支持项目（OCR） | 〔0920-pm-Su3-A-03-Oracle p12〕 |
+| Oracle OCI | 区域 DWDM 互连约 60 km 跨段，400ZR→800ZR→1600ZR；参与 1600ZR/1600ZR+/CMIS，已启动 1.6T 相干可插拔 MACsec 支持项目 | 〔0920-pm-Su3-A-03-Oracle p12〕 |
 | Ciena | Campus 10–20 km，Metro 100 km，Backbone 2,000 km+，Submarine 10,000 km+ | 〔0923-MF连拍 p66〕 |
 | NICT/UCLA 图 | DR <500 m，FR <2 km，LR <10 km，ER <40 km，ZR <120 km，ZR+ >120 km；园区/短距 DCI 约 20 km | 〔0920-Su3Su4-A全场扫描 p130〕 |
 | OIF CMIS | 应用覆盖：DC 内单模 500 m 与 2 km；园区单模 10 km；户外相干 40 km→3000+ km | 〔0923-MF连拍 p56〕 |
@@ -73,7 +73,7 @@ tags:
 3. **光层可重构**：中国电信提出 OCS 从 DC 内扩展到城域，Type I 环（每环通道 1 波长/光纤，每节点 O/E/O）与 Type II Mesh（约 M²/8 波长/光纤，M=5 示例）〔0923-MF-中国电信 p10〕；KDDI 的 OCS 网关使 25 个集群（5×5）全连接仅需 12 芯光缆〔0922-Tu1-G1-KDDI p5〕。
 4. **站点形态**：Ciena ILA 机房 Existing → Next Gen Large → X-Large：机架 4–10 → 9 → 18；EDFA/Raman rails 40/40 → 864/432 → 1,728/864；站点功率 30–50 kW → 200 kW → 400 kW；Next Gen 最多 12 个 X-Large 机房，每站点最多 20,736 个 EDFA rails，供电最高 4 MW/5,000 A（自报，条件：3P、480V）〔0920-pm-Su4-C-04-Ciena p2〕。
 5. **边缘/运营商**：Telefonica 提出部分面向 AI 的用例只有拥有边缘计算资源的电信运营商才能提供，驱动力为变现、网络资源优化、数据主权；解耦推理需"高容量、零丢包"连接（架构示意，无定量）〔0920-am-Su1-I-01+02-Telefonica p9, p14（OCR）〕。
-6. **协议层**：跨区域 RDMA 使 RTT 变长、流控与丢包检测变慢，限制 MFU；Huawei OTN-Proxy 以 XPU proxy 方式支持 >100 Tb/s，使吞吐与 DCI 距离基本无关（曲线数值看不清，RTT 约 2.5 ms 场景为 OCR）〔0920-pm-Su4-C-03-华为 p2, p6〕。
+6. **协议层**：跨区域 RDMA 使 RTT 变长、流控与丢包检测变慢，限制 MFU；Huawei OTN-Proxy 以 XPU proxy 方式支持 >100 Tb/s，使吞吐与 DCI 距离（0–500 km）基本无关（动机场景 240 km、RTT 约 2.5 ms；曲线小字数值不可读）〔0920-pm-Su4-C-03-华为 p2, p6〕。
 7. **时延物理限**：Corning：光纤时延 D/v 与带宽无关，NIC 升至 400G–1.6T 后串行化项变小，光纤时延成为数据并行重叠的主导因素〔0924-Th1-G1-Corning p5〕。
 
 ## 2. 技术路线与关键指标
@@ -160,7 +160,7 @@ tags:
 | 机构 | 方案 | 关键指标（带条件） | 口径 | 索引 |
 |---|---|---|---|---|
 | KDDI | OCS 网关多集群测试床 | 4 个虚拟化集群，间距 20–40 km；集群 A、C 各 2 块 H100 + 2 块 NIC，波长预配置 400G ZR 做 RDMA-over-Ethernet；RDMA 时延 = 14.514 + 9.836x µs（x 为 km，0–40 km）；All-to-All/All-Reduce 在 0/20/30 km 作业完成时间几乎无差异 | 实验 | 〔0922-Tu1-G1-KDDI p7, p8, p9, p10〕 |
-| Huawei | OTN-Proxy | 支持 >100 Tb/s，作为 XPU proxy；带 proxy 时吞吐与 DCI 距离基本无关（曲线数值看不清） | 自报（OCR） | 〔0920-pm-Su4-C-03-华为 p6〕 |
+| Huawei | OTN-Proxy | 支持 >100 Tb/s，作为 XPU proxy；带 proxy 时吞吐与 DCI 距离（0–500 km）基本无关（曲线小字数值不可读） | 自报 | 〔0920-pm-Su4-C-03-华为 p6〕 |
 | Huawei | 实网分布式训练/推理 | 首末层本地卡、中间层云端；部分场景算力效率损失 <5% | 现网测试 | 〔0920-pm-Su4-C-03-华为 p7〕 |
 | Huawei | OCS+SW super-pod | 动态时延 500 ns+；网络时延 -30%、推理性能 +10%；super-pod 扩展至 16K | 自报 | 〔0920-pm-Su4-C-03-华为 p4〕 |
 | 中国电信 | 跨城多 DC 训练 | 训练效率 >97%，最多 3 个跨城 DC、1024 GPU；WSON 50 ms：8 节点实验室 + 4 节点现网，最大路由长度 640 km，恢复 <50 ms，单波 400/800 Gb/s | 现网/实验 | 〔0923-We-F-00-标准化专场II p31〕 |
@@ -182,7 +182,7 @@ tags:
 
 - **Google Cloud**：功耗是终极约束，转向 HyperRail 多rail 线路系统，以"二值化"（够用 SNR）可插拔闭合追求最低 TCO；不可妥协的是覆盖距离与路由器利用率；1.6T ZR++ <45 W 为风冷天花板〔0920-am-Su2-B-01-Google p4, p5, p7〕。
 - **Microsoft Azure**：主推 HCF + 400G ZR 跨长距（3 跨 427.97 km，记录），要求熔接 <0.1 dB、OTDR 动态范围约 50 dB、连接器反射 <-60 dB；论点为降 CapEx/OpEx、节省机架、简化云原生光层〔0922-Tu3-H4-Azure p13〕〔0920-pm-Su4-B-05-Azure p7, p9〕。
-- **Oracle OCI**：区域 DWDM 约 60 km 跨段，400ZR→800ZR→1600ZR；已启动 1.6T 相干可插拔 MACsec 项目（OCR）；集群 2020→2026 从 16,384 GPU 增至 131,072 GPU（8x）〔0920-pm-Su3-A-03-Oracle p2, p12〕。
+- **Oracle OCI**：区域 DWDM 约 60 km 跨段，400ZR→800ZR→1600ZR；已启动 1.6T 相干可插拔 MACsec 项目；集群 2020→2026 从 16,384 GPU 增至 131,072 GPU（8x）〔0920-pm-Su3-A-03-Oracle p2, p12〕。
 - **OVHcloud**：一组区域共享一套服务栈，区域 Fabric 环；<10 km 直连长距可插拔，>10 km 800G ZR+ + 线路系统；光保护开关考虑 2027 年；IP 层保护〔0920-am-Su1-C-00-上半场速记 p14–p16〕。
 - **BT**：AI 流量在消费者流量中暂无显著体现，核心流量 >34 Tbit/s，核心传输 2025 年 400G、约 2029 年 800G、2030+ 可能 1.6T；训练互联为多光纤×多波长（C+L）固定滤波器点对点 WDM，"光纤岛"，未来在转发器/CPO 与相干可插拔间选择〔0920-am-Su1-C-00-上半场速记 p19, p25, p26〕。
 - **中国电信**：G.654.E 光纤 ≤0.172 dB/km、192/288 芯光缆、时延优化约 -10%；50 ms WSON、OCS 城域池化；训练效率 >97%（3 DC、1024 GPU）〔0923-MF连拍 p6, p8〕〔0923-We-F-00-标准化专场II p31〕。
@@ -192,20 +192,20 @@ tags:
 ### 3.2 设备商
 
 - **Ciena**：FST（WL6 1600G）+ RLS C&L HyperRail；Metro 51.2T→76.8T（+50%）与海缆 +16% 的转发器论证；同时推 Coherent-Lite OSFP（2×1.6T）与 12.8T CL XPO；主张"部署单位从波长转向光纤对"〔0920-pm-Su4-C-04-Ciena p3, p4〕〔0923-MF连拍 p70〕〔0920-pm-Su4-A-02-Ciena p7〕。
-- **Nokia**：DSP 套件路线（400ZR→800ZR→1600ZR/ZR+/CL），主张"按覆盖选引擎而非峰值波特率"；1830 GX Multi-Rail（OCR）；公开市场信号 800G ZR 级 CAGR 145%〔0920-pm-Su4-A-04-Nokia p6, p7〕〔0922-MF-am-1140-CignalAI p10〕。
+- **Nokia**：DSP 套件路线（400ZR→800ZR→1600ZR/ZR+/CL），主张"按覆盖选引擎而非峰值波特率"；1830 GX Multi-Rail（Cignal 称其重夺超大规模线路系统份额并获 multi-rail 设计中标）；公开市场信号 800G ZR 级 CAGR 145%〔0920-pm-Su4-A-04-Nokia p6, p7〕〔0922-MF-am-1140-CignalAI p10〕。
 - **Huawei**：FST + 多rail（25.6T/光纤、C96+L96 51.2T）、OCS、HCF、OTN-Proxy 四件套；强调算网一体〔0920-pm-Su4-C-03-华为 p5, p6〕。
 - **ZTE**：19.1 THz S+C+L 800G CFP2，DCI-BOX（FST+OMC）；自称"部分场景 HCF 无收益"〔0923-We5-B-中兴 p9, p15〕。
 - **Cisco/Acacia**：兼具设备商与模块商角色，见 3.3。
 
 ### 3.3 模块/器件商
 
-- **Acacia（Cisco）**：自报 >75,000 个 800ZR+ 已发货；Cignal 称其为唯一季度出货 >25,000 个 800ZR+ 的供应商；"800ZR+ 是历史上增长最快的相干技术"（引 Cignal AI）；推 XPO〔0920-pm-Su4-A-03-Acacia p3〕〔0922-MF-am-1140-CignalAI p10（OCR）〕。
+- **Acacia（Cisco）**：自报 >75,000 个 800ZR+ 已发货；Cignal 称其为唯一季度出货 >25,000 个 800ZR+ 的供应商；"800ZR+ 是历史上增长最快的相干技术"（引 Cignal AI）；推 XPO〔0920-pm-Su4-A-03-Acacia p3〕〔0922-MF-am-1140-CignalAI p10〕。
 - **Aperion**：XPO 内 EDFA+MUX/DEMUX，800G ZR 跨段 80→180 km〔0923-MF-Marvell等连拍 p30〕。
 - **YOFC/领纤（光纤）**：YOFC 支撑管 HCF <0.1 dB/km，O 波段 HA-HCF 首次实现超短距单模 HCF；领纤 0.052 dB/km（40 km）〔0921-A1厅连拍-Mo3-A2 p7〕〔0921-Mo5-YOFC p10〕〔0921-Mo3-B1-领纤 p12〕。
 
 ### 3.4 芯片商
 
-- **Marvell**：Libra 800G ZR/ZR+ DSP、Electra 1.6T ZR/ZR+ DSP（2 nm，均集成 MACsec，自报）；Cignal 称其 800ZR 早期量产落后（OCR）；同时推 Coherent-Lite 分层与等离子体调制器（3 dB EO 带宽 990 GHz）〔0923-MF-Marvell等连拍 p3, p4, p7〕〔0922-MF-am-1140-CignalAI p10〕。
+- **Marvell**：Libra 800G ZR/ZR+ DSP、Electra 1.6T ZR/ZR+ DSP（2 nm，均集成 MACsec，自报）；Cignal 称其错过 800ZR 早期量产；同时推 Coherent-Lite 分层与等离子体调制器（3 dB EO 带宽 990 GHz）〔0923-MF-Marvell等连拍 p3, p4, p7〕〔0922-MF-am-1140-CignalAI p10〕。
 - **Nokia（DSP）**：见 3.2，DSP 代际表〔0920-Su3Su4-A全场扫描 p120〕。
 
 ## 4. 学术关键突破
@@ -257,7 +257,7 @@ tags:
 
 **5.5 "多rail"一词的歧义。** NVIDIA Spectrum-X 多平面多 rail（8 平面 4 rail，节省 1.7x 交换机）是 scale-out 拓扑；Ciena/Google/Huawei 的 Hyper Rail 是并行放大/线路光子 rail（4 → 128 rails/机架）〔0921-MF-pm-1340-NVIDIA p9, p10〕〔0920-pm-Su4-C-04-Ciena p4〕。两者共享的机制是"用并行度换单通道速率"，但对象（交换机 vs ILA）不同。
 
-**5.6 出货口径的落差。** Acacia 自报累计 >75,000 个 800ZR+；Cignal（OCR）称 800ZRx 已 >100,000 端口，且 Acacia 是唯一季度 >25,000 的供应商；某超大规模预测 2026 年 200,000+、2027 年 >350,000；Nokia 引市场信号 2026 年预计 >200k 800ZR 级。累计 vs 年度 vs 端口 vs 模块口径未统一，且 Cignal 数字为 OCR〔0920-pm-Su4-A-03-Acacia p3〕〔0922-MF-am-1140-CignalAI p10〕〔0920-pm-Su4-A-04-Nokia p6〕。
+**5.6 出货口径的落差。** Acacia 自报累计 >75,000 个 800ZR+；Cignal 称 800ZRx 已 >100,000 端口（截至 2Q26），且 Acacia 是唯一季度 >25,000 的供应商；某超大规模预测 2026 年 200,000+、2027 年 >350,000；Nokia 引市场信号 2026 年预计 >200k 800ZR 级。累计 vs 年度 vs 端口 vs 模块口径未统一，〔0920-pm-Su4-A-03-Acacia p3〕〔0922-MF-am-1140-CignalAI p10〕〔0920-pm-Su4-A-04-Nokia p6〕。
 
 **5.7 光纤对数量：危机还是规模化红利？** Nokia 称园区光纤数量已成危机，需提高每波长速率（1.6T/λ）；Ciena 则认为部署单位应转向光纤对，靠 FST 把线路端口从 60–120 个插件降到 1 个；KDDI 选择 SDM（12 芯）+ O 波段扩容；ZTE 用 19.1 THz 单纤宽带节省光纤 74.8%。三条路径（提高单波速率、频谱扩展、空间复用）并行，并无统一结论〔0920-pm-Su4-A-04-Nokia p1〕〔0920-am-Su2-B-02-Ciena p8〕〔0922-Tu1-G1-KDDI p30〕〔0923-We5-B-中兴 p1〕。
 
@@ -268,10 +268,10 @@ tags:
 
 | 技术 | 成熟度 | 依据 |
 |---|---|---|
-| 800ZR/ZR+ 可插拔 | 量产爬坡 | >100,000 端口（Cignal, OCR）；DSP 3 nm 大规模爬坡〔0922-MF-am-1140-CignalAI p10〕〔0920-Su3Su4-A全场扫描 p120〕 |
+| 800ZR/ZR+ 可插拔 | 量产爬坡 | >100,000 端口（Cignal，截至 2Q26）；DSP 3 nm 大规模爬坡〔0922-MF-am-1140-CignalAI p10〕〔0920-Su3Su4-A全场扫描 p120〕 |
 | 1600ZR/ZR+ | 样品/IA 阶段（2026 年中） | Nokia IA ~Q2/Q3 2026；Marvell Electra 展示；Ciena 1600 ZR/ZR+ OSFP 功耗 34–42 W 为 2027 预测〔0920-Su3Su4-A全场扫描 p120〕〔0920-am-Su2-B-02-Ciena p7〕 |
 | Coherent-Lite（1.6T/3.2T，O 波段） | 演示/规范化阶段 | Ciena 2×1.6T OSFP 与 12.8T XPO 展示；1600CL 波特率"待定"〔0920-pm-Su4-A-02-Ciena p6, p7〕〔0920-Su3Su4-A全场扫描 p120〕 |
-| FST + 多rail | 产品发布，现网规模未披露 | 均为厂商自报；Cignal 提到有 hyperscaler multi-rail 设计/订单公告（OCR）〔0922-MF-am-1140-CignalAI p10〕 |
+| FST + 多rail | 产品发布，现网规模未披露 | 均为厂商自报；Cignal 列出 Ciena 首个超大规模 multi-rail 采购订单、Nokia multi-rail 设计中标、Cisco RON-MOFN 订单〔0922-MF-am-1140-CignalAI p10〕 |
 | HCF DCI | 实验室与选择性商用 | 见 5.3 |
 | O 波段 / S+C+L 宽带 | 实验/现网试验 | 19.1 THz CFP2 实验；S+C+L 现网试验（中国电信）〔0923-We5-B-中兴 p14〕〔0923-MF连拍 p7〕 |
 | OCS + OTN 跨 DC 训练 | 测试床/小规模现网 | ≤40 km、≤1024 GPU 量级〔0923-We-F-00-标准化专场II p31〕〔0922-Tu1-G1-KDDI p7〕 |

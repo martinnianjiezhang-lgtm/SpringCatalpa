@@ -10,7 +10,7 @@ tags:
 说明：页码 pN 为 PDF 页码（非讲者幻灯片页号）。图中读数标"约"者为读图估值。NEC（0920-am-Su2-B-05）已由主分析师处理，本批跳过。
 
 ### 0920-am-Su1-B-01-Meta-AI数据中心功耗.pdf
-- 讲者/机构：讲者姓名幻灯片未见 / Meta（OCR与图中均未显示署名，机构依文件名） | 题目：Standard Optic's Perspective on Power Savings（首页标题；无独立总题页） | 类型：Workshop 邀请报告
+- 讲者/机构：讲者姓名幻灯片未显示（p1 看图核实，无署名）/ Meta（机构依文件名） | 题目：Standard Optic's Perspective on Power Savings（首页标题；无独立总题页） | 类型：Workshop 邀请报告
 - 方向归属（主/次）：主 4 Scale-up/in（CPO/NPO/OCI） / 次 3 Scale-out
 - 核心主张：
   1. 链路功耗"主要取决于 SerDes"，按 SerDes 个数计，集成光学（OCI）相对重定时可插拔可省约 5x/端口；400G SerDes 功耗趋势"走错方向"。
@@ -28,7 +28,7 @@ tags:
 - 推荐配图页：p1（各链路方案SerDes功耗条形图）；p5（网络省电杠杆清单）
 
 ### 0920-am-Su1-B-02-OpenAI-ScaleUp还能用铜吗.pdf
-- 讲者/机构：讲者姓名幻灯片未见 / OpenAI | 题目：AI scale-up – Does copper still do the job? | 类型：Workshop 邀请报告
+- 讲者/机构：Sara Zebian / OpenAI（p1 标题页看图核实） | 题目：AI scale-up – Does copper still do the job? | 类型：Workshop 邀请报告
 - 方向归属（主/次）：主 4 Scale-up/in / 次 3 Scale-out（XPO形态、448G）
 - 核心主张：
   1. 铜在今天的scale-up里仍很好用（NVL72、OpenAI Jalapeno均以铜背板为核心）。
@@ -46,7 +46,7 @@ tags:
 - 推荐配图页：p4（铜缆可达距离随lane rate缩短曲线）；p5（端口速率演进与XPO）
 
 ### 0920-am-Su1-B-03-amsOSRAM-慢而宽互连.pdf
-- 讲者/机构：Seyedi（页脚署名）/ ams OSRAM | 题目：How Can We Overcome The Optical Power Wall?（首页；OCR为"Overcome the Optical Power Wall"） | 类型：Workshop 邀请报告
+- 讲者/机构：Ashkan Seyedi, Ph.D.（VP/GM, Digital Photonics Interconnects）/ ams OSRAM（p1 标题页看图核实） | 题目：How Can We Overcome The Optical Power Wall?（ECOC 2026 Workshops） | 类型：Workshop 邀请报告
 - 方向归属（主/次）：主 3 Scale-out/光源（micro-emitter） / 次 4 Scale-up（CPO/NPO成本-功耗）
 - 核心主张：
   1. 光学从OSFP到NPO到CPO主要是缩短电通道；"光学从未变低功耗，只是去掉了DSP"；胜负手是机械问题（光纤耦合、连接器、多芯光纤）。
@@ -58,7 +58,7 @@ tags:
   - Rubin IO功耗现状表：内存(Cu on interposer, 208 Tbps, 1 pJ/b) 0.208 kW/GPU；scale-up(Cu twin-ax背板, 14.4 Tbps, 3 pJ/b) 0.043 kW；scale-out(TRO可插拔, 3.2 Tbps, 10 pJ/b) 0.032 kW；合计0.283 kW/GPU、机架41 kW，\$1,600/GPU、\$230,400/机架 [p4]
   - 光学scale-up(SiPho CPO/NPO, 4 pJ/b, \$0.2/Gbps)：合计0.298 kW/GPU、机架43 kW，\$4,048/GPU、\$582,912/机架，每GPU成本增约180% [p4]
   - uEmitter NPO/CPO情景(uEmitter 4 pJ/b, \$0.08/Gbps；SiPho CPO 4 pJ/b, \$0.2/Gbps)：0.278 kW/GPU、机架40 kW，\$2,000/GPU、\$288,000/机架，每GPU成本增约25%；可覆盖2–4排的scale-up域 [p5]
-  - 幻灯片表内SiPho CPO行功率0.013 kW/GPU、2 kW/机架，其与NPO行的分配方式看不清 [p5]
+  - 幻灯片表（看图核实）：光学 scale-up 方案中 uEmitter NPO/CPO 行 4 pJ/b、0.058 kW/GPU、8 kW/机架、\$1,152/GPU；SiPho CPO 行 4 pJ/b、0.013 kW/GPU、2 kW/机架、\$640/GPU；两行与 Cu on interposer 合计 0.278 kW/GPU、40 kW/机架、\$2,000/GPU（对比今日 0.283 kW、41 kW、\$1,600）[p5]
 - 提到的公司/客户/产品/标准：NVIDIA Rubin（IO功耗表）、InP/SiPho、micro-emitter(uEmitter)、多芯光纤、OSFP/NPO/CPO、LRO/TRO
 - 与业界对比或记录声明：无SOTA声明；为成本/功耗情景推算，非实测 [p5]
 - 推荐配图页：p4（光学scale-up的功耗/成本对比表）；p5（uEmitter降低成本增幅）
@@ -83,7 +83,7 @@ tags:
 - 推荐配图页：p13（400G讨论与CPO产品时间线）；p9（LRO眼图与脉冲响应，BER<1e-13）
 
 ### 0920-am-Su1-B-05-Arista-超密度可插拔XPO.pdf
-- 讲者/机构：Sunil Priyadarshi（OCR为"Sunil/Priyadarshi"）/ Arista，Senior Director, AI & Cloud Network Architect | 题目：Pluggable Forever: Power-Efficient, Ultra-Dense XPO — Breaking the AI Network Power & Density Wall | 类型：Workshop 邀请报告/产业发布
+- 讲者/机构：Sunil Priyadarshi / Arista，Senior Director, AI & Cloud Network Architect（p1 标题页看图核实） | 题目：Pluggable Forever: Power-Efficient, Ultra-Dense XPO — Breaking the AI Network Power & Density Wall | 类型：Workshop 邀请报告/产业发布
 - 方向归属（主/次）：主 4 Scale-up/in（XPO） / 次 3 Scale-out 224G/448G
 - 核心主张：
   1. XPO（12.8T，64x200G，集成液冷，可插拔）以"CPO级密度而不放弃可插拔性"缓解AI网络的功耗与密度墙。
@@ -100,7 +100,7 @@ tags:
 - 推荐配图页：p3（XPO/NPO系统级模块/交换机/机架对比表）；p8（12.8T XPO LRO实测）
 
 ### 0920-am-Su1-B-06-AttoTude-介质波导做ScaleUp.pdf
-- 讲者/机构：讲者姓名幻灯片未见 / AttoTude | 题目：AttoTude Thesis – ASICs over Dielectrics（p2标题；DiAx介质增强双绞线） | 类型：Workshop 产业发布
+- 讲者/机构：讲者姓名幻灯片未显示（p2 看图核实）/ AttoTude | 题目：AttoTude Thesis – ASICs over Dielectrics（p2标题；DiAx介质增强双绞线） | 类型：Workshop 产业发布
 - 方向归属（主/次）：主 4 Scale-up/in / 次 3 Scale-out 448G电芯片
 - 核心主张：
   1. 介质波导（DiAx）填补twinax与光纤之间的空白：无需额外电子器件、无上变频，速率与线规无关，可对接twinax连接器生态。
@@ -186,20 +186,20 @@ tags:
 - 推荐配图页：p5（嵌入式 vs 可插拔的pJ/bit与机架单元对比）；p8（ICE-X现场试验结果与星座图）
 
 ### 0920-am-Su2-B-06-ASN-空芯光纤与海缆能效.pdf
-- 讲者/机构：Alexis Carbo Meseguer（OCR "Alexis Garbo: Meseguer"，拼写不确定）/ ASN（Alcatel Submarine Networks） | 题目：Can hollow-core fibers improve the power efficiency in SDM submarine systems? | 类型：Workshop 邀请报告
+- 讲者/机构：Alexis Carbo Meseguer（p1 标题页看图核实）/ ASN（Alcatel Submarine Networks） | 题目：Can hollow-core fibers improve the power efficiency in SDM submarine systems? | 类型：Workshop 邀请报告
 - 方向归属（主/次）：主 1 海缆（SDM/空芯光纤能效） / 次 无
 - 核心主张：
   1. 无空间限制时，空芯光纤(HCF)可把每比特能耗降2x、容量潜在翻倍（低衰减、可忽略非线性）；但实际受光缆外径/空间(SDM)限制，今天的HCF设计仅"边际竞争"，无清晰优势。
   2. 在跨太平洋(约9,000 km)且SDM并行度合适时，HCF的能效优势可显现；容量增长需至少C+L带宽。
   3. 缩小外径或拓宽带宽是HCF被采用的关键；需在光纤设计与SDM潜力间权衡，技术仍需成熟。
 - 关键数据：
-  - 需求：带宽需求增速25–33%，平均26%（TeleGeography）；每3年翻倍；2026年多条24 FP/500 Tbps系统投产；全球国际带宽2024–31年CAGR约26%（幻灯片"226 percent"为OCR误读，看不清）[p2]
+  - 需求：带宽需求增速25–33%，平均26%（TeleGeography）；每3年翻倍；2026年多条24 FP/500 Tbps系统投产，市场需要 Pb 级与多 Pb 级海缆；全球国际带宽2024–31年CAGR约26%（非洲方向最快约33%）（看图核实）[p2]
   - 参考系统：Anjana 20 Tbps x 24 FP = 480 Tbps；Amitié 23 Tbps x 16 FP = 370 Tbps [p4]
   - 6,000 km跨大西洋、无空间约束、18 kW端到端供电：等效C带空间路径数SCF 300、2芯C+L 128、4芯/2芯C+L 60、HCF C带 520；潜在容量约3.2 / 2.6 / 2.4 / 6.3 Pbps（读图估计）[p6]
   - 6,000 km、实际空间约束下(<=48 FP，HCF C带为2x16 FP)：HCF C+L(SDM x2)仅约2 Pbps量级，限制来自SDM可扩展性（读图，不精确）[p8]
   - 9,000 km跨太平洋，1 Pbps目标：18 kW时仅HCF C+L 2x16 FP（约1.45）超过1 Pbps，其余约0.85–0.95；21 kW时2芯C+L约1.2；24 kW和30 kW时2芯/4芯C+L约1.4和1.7，HCF C+L约1.7和1.8（读图）[p11]
   - 6,000 km长期情景：目标3和4 Pbps，供电18/24/36 kW；今天的HCF设计约1.1 Pbps；HCF C+L 2x32FP在18 kW约3.3、24 kW约3.7、36 kW约4（SDM x3、x4）；4芯/2芯C+L在36 kW约3.95（读图）[p13]
-  - 仿真参数：SCF衰减0.15 dB/km跨距60 km；HCF衰减0.10 dB/km跨距90 km等；光纤对最高48 FP（HCF 16/32 FP）；放大器噪声系数4.6/5/6 dB；带宽 SCF 4.5 THz 类、HCF最高15 THz（表格文字模糊，看不清）[p7]
+  - 仿真参数（看图核实）：SCF 0.15 dB/km、跨距 60 km；2 芯/4 芯 MCF 0.16/0.17 dB/km、60 km、XT −62/−55 dB/跨；HCF 0.10 dB/km、跨距 90 km、IMI −60 dB/km、支持双向传输；等效有效面积 SCF/MCF 110 µm²；线缆耦合损耗 SCF 0.1 dB、其余 0.5 dB；放大器噪声系数 4.6 dB（HCF 另算 5/6 dB）；光纤对 SCF 48 FP、MCF 最高 48 FP、HCF 16/32 FP；放大带宽 5 THz（HCF 另算 10/15 THz）[p7]
 - 提到的公司/客户/产品/标准：ASN、TeleGeography、Undersea Fiber Communication Systems 第3版（2025.7）、SCF/2芯/4芯MCF、C+L、HCF；关联演讲Su4-B（数百km无中继HCF链路）
 - 与业界对比或记录声明：无SOTA声明 [p14]
 - 推荐配图页：p6（无空间约束下HCF容量与每比特能耗）；p11（9,000 km跨太平洋不同供电下容量对比）

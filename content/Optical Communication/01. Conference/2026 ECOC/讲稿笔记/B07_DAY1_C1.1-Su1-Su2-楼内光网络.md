@@ -6,7 +6,7 @@ tags:
 ---
 
 ### 0920-am-Su1-D-01-主席-开场.pdf
-- 讲者/机构：Workshop 主席（姓名未见于开场页；议程页含 Andreas Gladisch/DT 等讲者名单） | 题目：Optical In-Building Networks（ECOC 2026 Workshop，9月20日 09:00–12:30，Conference room C1.1） | 类型：Workshop
+- 讲者/机构：Workshop 主席 Christian Bluemm / Huawei、Philippe Chanclou / Orange、Volker Jungnickel / Fraunhofer HHI（p1 看图核实；议程页含 Andreas Gladisch/DT 等讲者名单） | 题目：Optical In-Building Networks - More than higher speed: Quality of experience, centralized coordination and decentralized AI（ECOC 2026 Workshop Su-1D，9月20日 09:00–12:30，Conference room C1.1） | 类型：Workshop
 - 方向归属（主/次）：主 5 固定与无线接入（FTTR/楼内光网络）；次 无
 - 核心主张：
   1. 户内是流量主体，Wi-Fi 是最后一跳主体，而一致性体验并不随 FTTH/B 覆盖提升。
@@ -15,9 +15,9 @@ tags:
 - 关键数据：
   - 全球数据流量 >80% 在室内产生与消费；约 70% 的最后一跳流量由 Wi-Fi 承载 [p2]
   - 每户 Wi-Fi 设备数：2020 年 13 台，2025 年 25 台，2030 年 44 台（World Broadband Association WBBA 2024）[p2]
-  - 欧洲各国 Q4/2025 户内体验柱图（OpenSignal，2026年5月）：下载速率如法国 182.5 Mbps、丹麦 151.1 Mbps、土耳其 43.5 Mbps；上传如法国 135.3 Mbps；数值取自图，小字部分部分看不清 [p2]
+  - 欧洲各国 Q4/2025 户内 Wi-Fi 体验（OpenSignal，2026年5月）：下载速率法国 182.5、丹麦 151.1、挪威 132.8 … 德国 76.8、希腊 48.7、土耳其 43.5 Mbps；上传法国 135.3、德国 27.5、土耳其 16.3 Mbps；一致质量 61–84%；FTTH/B 普及率德国 13.8% 至西班牙 90.0%，体验趋势与 FTTH/B 普及不一致（看图核实）[p2]
   - 现场 slido 投票（"connecting to the Internet at home 最重要的是什么，单选"）：高可靠性 63%、高下载速率 19%、低价 13%、客服 6%、高上传速率约 0%（参与人数约16，右上角小字，不确定）[p4]
-  - 全球 FTTR 市场规模预测 ~20.8% CAGR（2025–2030），美元数值看不清 [p3]
+  - 全球 FTTR 市场规模预测 ~20.8% CAGR（2025–2030）：2025 \$2.77B → 2026 \$3.35B → 2027 \$4.02B → 2028 \$4.89B → 2029 \$5.92B → 2030 \$7.07B（看图核实）[p3]
 - 提到的公司/客户/产品/标准：OpenSignal、World Broadband Association、Deutsche Telekom、Maxlinear、Nokia、DeepSig、Huawei、Fraunhofer HHI、UPF；技术清单：ETH Wi-Fi Mesh、FTTO、POL、5G/FWA、mmWave、LiFi、FTTR
 - 与业界对比或记录声明（SOTA/首次/record）：无 [p2]
 - 推荐配图页：p2（欧洲户内宽带体验与光纤覆盖对比图）；p4（可靠性最重要的投票结果）
@@ -31,7 +31,7 @@ tags:
   3. 提出关键问题：如何管理日益复杂的接入与楼内域，并建议尽早为运营商定义新角色。
 - 关键数据：
   - 德国住宅楼龄（Zensus 2022）：1990年前建成 71.3%，2010年后建成 7.7%；各年代占比 <1919 13.1%、1919–49 11.8%、1950–59 10.3%、1960–69 13.1%、1970–79 13.0%、1980–89 10.1%、1990–99 12.2%、2000–09 8.9%、2010–15 3.8%、2016+ 3.8% [p4]
-  - 德国住宅数量按楼内户数分类的柱图（含 13.50 Mio. 标注，具体对应类别看不清）[p3]
+  - 德国住宅按楼内户数分类（Zensus 2022）：单户楼 13.50 百万栋/13.50 百万户；2 户楼 2.82/5.57；3–6 户 2.40/9.69；7–12 户 0.97/8.46；13+ 户 0.26/5.88（百万，看图核实）[p3]
 - 提到的公司/客户/产品/标准：Deutsche Telekom；FTTH、GPON/XGPON、FTTC+G.fast、FTTLp（Fiber to the Lamppost）+SmallCell、FTTR+SC(RAN)、Wi-Fi 2.4 GHz、5G/6G、BEP/BD/FD/OTO 楼内光纤层级 [p2, p6]
 - 与业界对比或记录声明（SOTA/首次/record）：无 [p4]
 - 推荐配图页：p4（德国住宅楼龄分布柱图）；p2（多住户楼内光纤入户层级示意）；p7（四维异质性）
@@ -50,8 +50,8 @@ tags:
   - 三频 Wi-Fi 7（2.4G/5G LB/5G HB）已成熟，支撑 3000M 宽带；理论速率：Wi-Fi 6 5.2G/160 MHz 2402 Mbps；Wi-Fi 7 MLO 2.4G+5.2G（40+160 MHz）3570 Mbps；Wi-Fi 7 MLO 5.2G+5.8G（160+80 MHz）4323 Mbps [p9]
   - 10G FTTR 物理层 Ra / Ra+：功率预算 0–18 dB / 0–21 dB；MFU 发射 1 至 5 dBm，过载 2.5 dBm，灵敏度 -19.5 / -22.5 dBm；SFU 发射 -1.5 至 2.5 dBm，过载 5 dBm，灵敏度 -20 dBm；Ra+ 支持直连与最高 1:32 分光比；PHY 指标在 CCSA 达成共识 [p9]
   - 工业 PON 需求：100 μs 确定性低时延、99.999% 可靠性；方案为 10G 通道作为注册窗口（专用激活波长）与 10G/50G 双通道保护倒换 [p10]
-  - 算力总线：OLT 边缘算力，端到端 RTT 时延 <20 ms（基于 OMCI 扩展，专用 Wi-Fi 7 5.8 GHz 频段）；具身 AI 端侧算力需求"5–6 T"（文字模糊，不确定）[p16]
-  - 场景需求：ToC 时延 50 ms→10 ms @99.99%，ToB 5 ms→1 ms @99.9999%；上行占比将升至 40%–50%（OCR 数据，未逐字核对）[p5]
+  - 算力总线：OLT 边缘算力 200 T，具身 AI 端侧算力需求 5–6 T；OLT 向 FTTR 通告模型能力与算力、FTTR 向 OLT 请求算力（基于 OMCI 扩展新增 ME 实体）；专用 Wi-Fi 7 5.8 GHz 频段 + PON/FTTR 协同调度保证端到端 RTT <20 ms（看图核实）[p16]
+  - 场景需求：ToC 时延 50 ms→10 ms @99.99%，ToB 5 ms→1 ms @99.9999%；上行占比将升至 40%–50%；算力需求端侧 0.5–1 TFLOPS、边缘 100 TFLOPS（看图核实）[p5]
   - RFID over FTTR 现场试验（工厂仓库）：覆盖 >1000 m²，标签 >2000 个，盘点时间由 1 天缩短到分钟级，1 人即可完成 [p17]
 - 提到的公司/客户/产品/标准：China Mobile/CMRI、CCSA、ITU-T G.sup.PONcoop（中国移动联合发起）、50G PON（ITU-T G.9804）、XGS-PON、GPON、Wi-Fi 7、RFID、OMCI、MFU/SFU/OLT、瓷器博物馆场景试验（图注 Porcelain Museum）
 - 与业界对比或记录声明（SOTA/首次/record）：万兆 PON 端口与千兆用户规模为国内统计数据，非技术 record [p4]
@@ -105,7 +105,7 @@ tags:
   3. 结论："The time is right to bring AI-Native technology into WLAN standards!!"
 - 关键数据：
   - 5G 已验证：业界首个 AI/ML 神经接收机在现网 5G 宏网络运行（OmniPHY，O-RAN，越南），某些情况上行吞吐 2–3 倍（基于 Intel FlexRAN DU）[p5]
-  - 学到的星座：1024-QAM（Rayleigh）、4096-QAM（CDL-A）；图中另有 BLER 等小字看不清 [p6]
+  - 学到的星座：1024-QAM（Rayleigh，1x1 LMMSE，SE 8.794 b/s/Hz，BLER 0.068）、4096-QAM（CDL-A，1x4 LMMSE，SE 10.55 b/s/Hz，BLER 0.010）；映射器 residual-MLP，与 NR 矩形星座对照（看图核实）[p6]
   - 当前 AIML 工作"潜力为两位数吞吐提升"（无量化基线）[p11]
   - 802.11 AIML TIG/SC 已收集大量研究；3GPP 已有多项 Work Item/Study Item [p11]
 - 提到的公司/客户/产品/标准：DeepSig OmniPHY、Intel FlexRAN、O-RAN、3GPP、IEEE 802.11 AIML TIG/SC、802.11k/u/v、MPTCP/QUIC
@@ -140,7 +140,7 @@ tags:
   - 多户住宅（10 BSS，40 RU，100 STA）：吞吐 参考 41 / A 41 / B 38 / C 67 Mbps（+63%）；平均时延 6/6/7/4 ms；1%-worst 时延 20/20/15/12 ms [p12]
   - 独栋住宅（1 BSS，4 RU，10 STA）：吞吐 41/41/35/72 Mbps（C +75%）；平均时延 3/3/3/1 ms；1%-worst 时延 9/9/3（B，-66%）/3 ms [p13]
   - 开放办公（2 BSS，8 RU，20 STA）：吞吐 42/73（A，+73%）/67/77 Mbps；平均时延 4/3/3/3 ms；1%-worst 时延 20/17/8（B，-60%）/3（C，-85%）ms [p14]
-  - 参考方案为 Split A + CSMA/CA 与 Wi-Fi 6 OBSS PD 调整；ED 阈值 -82/-62 dBm 场景相关（取自 p11 OCR，未核对）[p11]
+  - 参考方案为 Split A + CSMA/CA 与 Wi-Fi 6 OBSS PD 调整；Split A 仿真流程 Geometry→QuaDRiGa→校准 ED 门限→Split A/B/C 仿真；ED 门限：SFH、MDU −82 dBm，OPO −62 dBm（看图核实）[p11]
 - 提到的公司/客户/产品/标准：Fraunhofer HHI、QuaDRiGa 信道模拟器、EDCA/DCF/PCF/HCF、Wi-Fi 6 HE-SU/HE-TB
 - 与业界对比或记录声明（SOTA/首次/record）：无；纯仿真结果 [p15]
 - 推荐配图页：p5（三种 MAC-PHY 切分位置示意）；p14（开放办公吞吐/时延对比表与柱图）

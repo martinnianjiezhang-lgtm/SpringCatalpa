@@ -15,7 +15,7 @@ tags:
 - 核心主张：
   - GenAI流量不同于传统流量：训练为“大象流”、推理为“小鼠流”，对规模、时延、鲁棒性要求不同。
   - 超算/云厂商与电信运营商角色不同：云厂商自有骨干与DCI，"fiber is the new wavelength"；运营商拥有大量光纤与边缘站点，靠近用户可降时延。
-- 关键数据：无具体数字（p2为端到端编排分层架构图，文字被OCR破坏，看不清细节）[p1–p2]
+- 关键数据：无具体数字（p1 列 genAI 流量特征（训练"大象流"vs 推理"老鼠流"、规模、时延、鲁棒性）与"超大规模云商把光纤当新波长、电信运营商拥有光纤与边缘站点"；p2 为端到端编排分层架构图：scale up/out/across、DCI、DCA、Telco PoP，"超大规模云商与运营商都承载 AI 流量"，看图核实）[p1–p2]
 - 提到的公司/客户/产品/标准：hyperscalers、telcos（泛称）
 - 与业界对比或记录声明：无
 - 推荐配图页：p1（对比“AI流量特性”与“云厂商/运营商差异”的开场页）
@@ -29,7 +29,7 @@ tags:
 - 关键数据：
   - 图示光网络分层：接入(FTTR/FTTO/PON, far-edge AI)、城域(edge-OTN/OXC, near-edge AI)、骨干与DC内(OCS+POD, cloud AI)，速率标注“400G/800G/1.6Tb/s … per λ”[p8]
   - 关联交付物：GSTR-ION-2030；面向数据中心GSTR.ION-aiDC、宽带G.Sup.ION-aiBB、家庭G.Sup.ION-aiHome、6G GSTR.ION-TN6G、企业G.Sup.ION-aiBusiness[p9]
-  - 页4显示美国数据中心建设支出与AI相关进口占比的图（来源标注The Globe and Mail, 2026-06-13），具体数值看不清[p4]
+  - 页4显示美国数据中心建设支出（2026 年约 500 亿美元年化，首次超过通用办公楼）与美国 AI 相关进口占比（2026 年 1 月约 21%，加拿大约 3–4%）的图（来源 The Globe and Mail, 2026-06-13；读图估计，看图核实）[p4]
 - 提到的公司/客户/产品/标准：ITU-T SG15（Q2/Q3/Q5/Q6/Q8/Q10–Q14等）、GSTR-ION-2030、OTN、OCS、PON
 - 与业界对比或记录声明：无
 - 推荐配图页：p8（ION-2030三层网络+AI分布的全景架构图）
@@ -94,7 +94,7 @@ tags:
   - AI基础设施交期从约2021年的约10周升至2025年约40周（读图估值）[p5]
   - 欧洲初创融资约\$800M对美国\$4.7B（2026，来源Dealroom）[p10]
   - 今年79家公司申请EuroCDP的accelerate/incubate项目[p10]
-  - 页11为资助方案（含最小/最大补贴），具体金额看不清[p11]
+  - 页11为资助方案：企业最低出资 30%、EuroCDP 最高 35%、成员国最高 35%，仅限 EDA/IP 授权、DET 服务、云等合格费用；合作伙伴含 imec、Fraunhofer、TU/e、IHP、AGH、Tampere、CEA、INL、CSIC、Chips-IT、CTU Prague、SAL（看图核实）[p11]
 - 提到的公司/客户/产品/标准：NVIDIA、Microsoft、Google、Meta（大玩家）；QBLOX、Vertical Compute、Akronic等入选初创；imec、Fraunhofer、chips-JU
 - 与业界对比或记录声明：无
 - 推荐配图页：p5（产能瓶颈：99%/1%与40周交期曲线）
@@ -117,7 +117,7 @@ tags:
 - 推荐配图页：p7（PIC100三项硅创新及带宽/耦合损耗指标）；p8（PIC+EIC+MCU先进封装结构）
 
 ### 0920-am-Su1-C-05-Tyndall-封装在产品化中的角色.pdf
-- 讲者/机构：未见讲者名，Tyndall National Institute | 题目：（封面题目文字OCR乱码，主题为封装在光子产品化中的角色；页2标题“Why is packaging so important?”） | 类型：Workshop
+- 讲者/机构：讲者名封面未显示，Tyndall National Institute | 题目：The Role of Packaging in Photonic Product Development（p1 封面看图核实；页2标题“Why is packaging so important?”） | 类型：Workshop
 - 方向归属（主/次）：主[4 CPO/封装] / 次[3]
 - 核心主张：
   - 封装是产品与外界的连接，装好后才开始真实评估；应早期介入，封装是产品架构的一部分。
@@ -131,7 +131,7 @@ tags:
 - 推荐配图页：p4（封装成本占比饼图与50–80%结论）
 
 ### 0920-am-Su2-C-01-Cadence-光电协同设计.pdf
-- 讲者/机构：未见讲者名，Cadence；案例作者为Yonsei University & Cadence | 题目：（无标题页；主题为电光协同设计；案例论文A 4-λ × 32-Gb/s Silicon Micro-Ring-Resonator-Based DWDM Receiver with On-Chip Temperature Controller） | 类型：Workshop
+- 讲者/机构：讲者名幻灯片未显示，Cadence；案例作者为Yonsei University & Cadence | 题目：（无标题页；p1 为 "Fictional Company A: Photonics Startup" 叙事页，看图核实；主题为电光协同设计；案例论文A 4-λ × 32-Gb/s Silicon Micro-Ring-Resonator-Based DWDM Receiver with On-Chip Temperature Controller） | 类型：Workshop
 - 方向归属（主/次）：主[3 电芯片/调制器（设计）] / 次[4 CPO]
 - 核心主张：
   - 应尽早（When）、跨团队（Who）、跨流程（How）地把光子与电子设计放在一起，而非事后补救。
@@ -159,7 +159,7 @@ tags:
 - 推荐配图页：p3（收发器速率与达产年数：4年到1000万件/年）
 
 ### 0920-am-Su2-C-03-GhentImec-可编程光子做原型.pdf
-- 讲者/机构：未见讲者名，Ghent University–imec（NOVA论文作者Yu Zhang, Xiangfeng Chen, Lukas Van Iseghem, Iman Zand, Hasan Salmanian, Antonio Ribeiro, Wim Bogaerts） | 题目：（封面OCR乱码；主题为Programmable photonics for prototyping，ECOC 2026, Malaga, 20 Sept 2026） | 类型：Workshop
+- 讲者/机构：Wim Bogaerts，Ghent University–imec Photonics Research Group（p1 封面看图核实；NOVA论文作者Yu Zhang, Xiangfeng Chen, Lukas Van Iseghem, Iman Zand, Hasan Salmanian, Antonio Ribeiro, Wim Bogaerts） | 题目：Programmable Photonics: A shortcut to PIC-based innovation?（ECOC 2026, Malaga, 20 Sept 2026） | 类型：Workshop
 - 方向归属（主/次）：主[3 调制器/光源（原型平台）] / 次[6 传感]
 - 核心主张：
   - 新光子产品从想法到产品需6–7年；一次原型周期1–2年（设计6–9个月、晶圆制造6个月、测试封装6个月），通常需3–4个原型周期。
@@ -174,7 +174,7 @@ tags:
 - 推荐配图页：p4（6–7年产品化时间线）；p8（NOVA芯片与单环/三环谱）
 
 ### 0920-am-Su2-C-04-BrightPhotonics-快速原型板.pdf
-- 讲者/机构：未见讲者名，页脚为VLC Photonics, S.L.（a Hitachi Group Company）；文件名标Bright Photonics | 题目：（无明确题目页；议程为Why Photonic Integration / Idea-to-Product Map / Walking the Stages / Why Products (and Startups) Stall） | 类型：Workshop
+- 讲者/机构：讲者名幻灯片未显示，页脚为VLC Photonics, S.L.（a Hitachi Group Company）；文件名标Bright Photonics | 题目：（无明确题目页；p1 为议程页，看图核实：Why Photonic Integration / The Idea-to-Product Map / Walking the Stages / Why Products (and Startups) Stall） | 类型：Workshop
 - 方向归属（主/次）：主[3 调制器/光源（PIC产品化）] / 次[4 CPO]
 - 核心主张：
   - PIC产品化沿着电子学数十年前的路径（分立微光学→集成），模仿CMOS的fabless、EDA、设计公司与IP、通用工艺、封装测试标准。

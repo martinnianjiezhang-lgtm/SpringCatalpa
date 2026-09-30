@@ -13,7 +13,7 @@ tags:
   - 实现依靠多芯光纤链路 + 主动相位稳定 [p8]。
   - 展望：降低光纤-芯片耦合损耗以提高速率/距离；扩展到高维态 [p8]。
 - 关键数据：
-  - 硅光螺旋波导 SFWM 产生光子对；泵浦 625 MHz [p2]；页面另有“3% pair generation rate”，条件看不清 [p2]。
+  - 硅光螺旋波导 SFWM 产生光子对；泵浦 625 MHz、对产生率 3% [p2，看图核实]；首次在 80 km 上不经编码转换直接分发路径编码纠缠态（多芯光纤主动稳定）[p1]。
   - MCF 芯间串扰 -62 dB（80 km）；芯间噪声高度相关，差分相位漂移在 Hz 量级 [p4]。
   - 相位稳定：泵浦光少量共传作相位参考，光电二极管+PLL 驱动光纤移相器 [p5]。
   - 态层析保真度：同芯片基线 94±0.1%；4 m 约 0.92（读图，无标注）；80 km 85.7±0.2% [p6]。
@@ -26,7 +26,7 @@ tags:
 - 推荐配图页：p7（QBER 表、码率-距离曲线与 44.4 dB 损耗分解）；p6（保真度直方图）。
 
 ### 0923-We1-I2-1353-城域光纤弱相干偏振态量子隐形传态.pdf
-- 讲者/机构：T-Labs（Deutsche Telekom；讲者姓名未见） | 题目：现网城域光纤上弱相干偏振态量子隐形传态（英文原题看不清；首页 OCR 乱码，内容为 quantum teleportation over live carrier-grade fiber in Berlin） | 类型：邀请报告
+- 讲者/机构：Zofia A. Borowska（报告人）等 / T-Labs（Deutsche Telekom），合作 Qunnect、Paderborn University（p1 看图核实） | 题目：Quantum Teleportation on a Metropolitan Fiber Network in Coexistence with Classical Traffic（2026-09-23） | 类型：邀请报告
 - 方向归属（主/次）：主 6 QKD/量子；次 2（30 km 城域现网、与 100G 经典业务共纤，非跨楼园区）
 - 核心主张：
   - 在真实运营商在网光纤（柏林两个 Telekom 站点间 30 km 环路，非光纤盘）上实现量子隐形传态 [p13, p25]。
@@ -46,7 +46,7 @@ tags:
 - 推荐配图页：p20（分态保真度柱状图，含共传对比）；p22（保真度-距离 SOTA 对比散点图）。
 
 ### 0923-We1-I3-797-四用户纠缠分发网络现网试验.pdf
-- 讲者/机构：Sarah Sommermeier（邮箱 sarah.sommermeier@hhi.fraunhofer.de），Fraunhofer HHI（与 Deutsche Telekom、QR.N 项目） | 题目：四用户纠缠分发网络现网试验（英文原题看不清；页脚为 ECOC 2026 We1-I3，内容为 metropolitan four-user entanglement-based QKD network field trial） | 类型：邀请报告
+- 讲者/机构：Sarah Sommermeier（邮箱 sarah.sommermeier@hhi.fraunhofer.de），Fraunhofer HHI（与 Deutsche Telekom、QR.N 项目） | 题目：Field Trial of a Four-User Entanglement Distribution Network for QKD over Deployed Metropolitan Fiber Using a Commercial Photon Source（p1 看图核实，We1-I3） | 类型：邀请报告
 - 方向归属（主/次）：主 6 QKD/量子；次 无
 - 核心主张：
   - 在部署的城域无中继纠缠分发网络（EDN）上获得正码率，24 h 稳定，多用户对同时支持 [p14]。
@@ -58,7 +58,7 @@ tags:
   - 多用户方式：中心节点（TPS 光子对源）+ DWDM 复用，信号/idler 光谱分给不同用户 [p9]；柏林 HHI 楼层 15/10 层与 Telekom 站点间地图链路，6.9 km 段 [p6, p12]。
   - 独立 TDC 时钟由 WR（10 MHz+1PPS 经 SMF）对齐，重合峰 [p11]。
   - 24 h 连续运行：Alice-Bob 平均 QBER 1.95%、SKR 40 bit/s；Diana-Freddy 平均 QBER 2.41%、SKR 54 bit/s；QBER 低于 11% 安全阈值 [p12]。
-  - 新 256-bit 密钥间隔：约 6.4 s（Alice-Bob）、约 4.7 s（Diana-Freddy）（OCR 读数，图中较小，待核）[p13]。
+  - 24 小时连续运行：QBER 平均 Alice-Bob 1.95%、Diana-Freddy 2.41%（低于 11% 安全门限）；SKR 约 40 与 54 bit/s；新 256-bit 密钥间隔约 6.4 s（Alice-Bob）、约 4.7 s（Diana-Freddy）（看图核实）[p13]。
   - 展望：扩展时钟对齐、BBM92 改进、作为纠缠源/量子存储器/SDN 的测试床 [p14]。
 - 提到的公司/客户/产品/标准：Fraunhofer HHI、Deutsche Telekom、QR.N（Quantenrepeater.Net，联邦研究部资助）、White Rabbit、商用光子对源（TPS）、SNSPD、Time Tagger、DWDM。
 - 与业界对比或记录声明：未见 record/首次声明。
@@ -85,7 +85,7 @@ tags:
 - 推荐配图页：p12（可见度 vs 经典发射功率，蒸馏 vs 2D）；p13（SKR vs 拉曼噪声）。
 
 ### 0923-We1-I5-1432-固态量子节点的量子互联网.pdf
-- 讲者/机构：Arq Quantum Technologies（2025 年成立，巴塞罗那；CEO Samuele Grandi，CTO Emanuele Distante；讲者姓名未见） | 题目：固态量子节点的量子互联网（英文原题：Enabling the Quantum Internet，首/尾页） | 类型：产业发布（初创公司介绍+技术）
+- 讲者/机构：Arq Quantum Technologies（2025 年成立，巴塞罗那；CEO Samuele Grandi，CTO Emanuele Distante；讲者姓名页面未显示，p1 为公司标志页，看图核实） | 题目：固态量子节点的量子互联网（英文原题：Enabling the Quantum Internet，首/尾页） | 类型：产业发布（初创公司介绍+技术）
 - 方向归属（主/次）：主 6 QKD/量子；次 无
 - 核心主张：
   - 以稀土掺杂晶体（Pr3+:Y2SiO5）多模量子存储器构建量子中继器/量子节点 [p7, p13]。

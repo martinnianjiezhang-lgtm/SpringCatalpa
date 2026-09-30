@@ -20,7 +20,7 @@ tags:
   - XPM 相位噪声带宽在 ±5 GHz 内，用低通滤波（LPF）提取；测试条件 16 span×80 km SSMF，3 dBm/ch，10 信道 64 Gbaud [p3]
   - 设计参数（缩减因子 R、LPF 带宽 B）做二维网格搜索，距离越长所需 R、B 越小（R 约 0.06–0.12，B 约 0.55–0.8 GHz，读图估计）[p6]
 - 提到的公司/客户/产品/标准：无（LCoS 可编程滤波器用于实验）
-- 与业界对比或记录声明：对比仅 CDC 与常规 DBP（1/2/4 sps）；未见 record 声明。文献综述称现有 XPM 补偿方案（利用相邻信道幅度）结构复杂、算力高 [p2]
+- 与业界对比或记录声明：对比仅 CDC 与常规 DBP（1/2/4 sps）；未见 record 声明。文献综述：利用相邻信道幅度的 XPM 补偿（Liga 2014、Mateo 2010、Civelli 2021、Inoue 2022、Castro 2025）适用 WDM 但结构复杂、算力高；仅用本信道幅度的方案（Tao 2011、Sidelnikov 2021、Xiao 2025）只补偿一次 XPM 相移、性能有限（看图核实）[p2]
 - 推荐配图页：p7（Q 值 vs 传输距离，含 Q 限 6.25 dB 及 13 圈 vs 16 圈对比）
 
 ### 0924-Th1-H3-华为加拿大-非平稳条件下用分布变换函数预测FEC后性能.pdf
@@ -34,13 +34,13 @@ tags:
   - 实验：200G 相干 / DP-16QAM，1550 nm C 波段 SSMF，960 km = 12×80 km，EDFA 增益/噪声系数 20 dB / 5 dB，用收发机 FastBER 诊断，16,384 个帧级 BER 样本，每样本 655,360 bit [p8]
   - FEC：级联 SD-BCH + KP4；幂律 DTF(b)=θ·b^γ，θ=1.4979e99，γ=57.477，标定目标 post-FEC BER=1e-10 [p8]
   - 平均 pre-FEC BER 均为 1.21e-2 时，AWGN / 正常 / 非线性 / 抖动主导四种场景 post-FEC BER 差异显著（图上 post-FEC 范围约 1e-13 至 1e-7 量级，读图估计）；DTF 预测与实测吻合 [p11]
-  - 开头动机称 1.6T 在 0 裕量时后 FEC 目标需约 10 min 才能测得（OCR 页，数字未核）[p3]
+  - 开头动机称 1.6T 在 0 裕量时后 FEC 目标需约 10 min 数据才能测得（图中另标约 2000 年量级的更低门限），GN/EGN 高斯假设无法描述 EEPN、抖动、非线性等突发损伤，需新工具快速可靠预测后 FEC BER（看图核实）[p3]
 - 提到的公司/客户/产品/标准：华为；KP4、BCH、oFEC 相关；OTN 收发机 FastBER
 - 与业界对比或记录声明：无 SOTA 声明；主张静态 pre-FEC 阈值不足以保证 post-FEC 可靠性 [p11]
 - 推荐配图页：p11（相同平均 pre-FEC BER 下四种场景 post-FEC BER 与 DTF 预测对比）
 
 ### 0924-Th1-H4-NEC-GPU实时2x2MIMO均衡实现抗快速偏振变化的PDM-16QAM传输.pdf
-- 讲者/机构：NEC（讲者姓名未见） | 题目：Real-time GPU-based 2×2 MIMO equalization for PDM-16QAM transmission robust against fast polarization variations（据文件名与内容概括，英文原题页面未完整识别） | 类型：学术论文
+- 讲者/机构：Manabu Arikawa（报告人）, Takahiro Odagawa, Kohei Hosokawa, Norifumi Kamiya / NEC Connected Infrastructure Research Laboratories（p1 看图核实） | 题目：Demonstration of PDM-16QAM Transmission Robust to Fast SOP Variations Using Real-Time 2×2 MIMO Equalization on a GPU（Th1-H4） | 类型：学术论文
 - 方向归属（主/次）：主 1（oDSP）；次 无
 - 核心主张：
   1. 在 GPU 工作站上以实时 DSP（2×2 MIMO 均衡）实现 5 Gbaud PDM-16QAM 传输 [p6]

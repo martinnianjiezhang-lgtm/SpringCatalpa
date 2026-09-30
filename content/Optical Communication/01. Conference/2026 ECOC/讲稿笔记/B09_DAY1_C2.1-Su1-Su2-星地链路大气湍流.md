@@ -32,11 +32,11 @@ tags:
   2. LEO 提前角（PAA）大导致显著的非等晕误差，AO 增益受限。
   3. 激光导星中钠导星最佳但昂贵、需空域安全流程，对 LEO 馈电链路多半不具商业可行性；Rayleigh 导星便宜且更稳定，有时低中断概率更好。
 - 关键数据：
-  - 实例：Starlink 过顶，最大仰角 40°，过境约 10 min，10° 以上约 6 min [p15，数字来自OCR，图上小字未核]
-  - 提前角：GEO 18 µrad；LEO 20–50 µrad；曲线上 GEO 18 µrad 处 Strehl 约 0.6（读图估计，看不清精确值）[p22]
+  - 实例：Starlink（STARLINK-3790）当天早上过马拉加上空，最大仰角 40°，过境约 10 min，10° 以上约 6 min [p15，看图核实]
+  - 提前角：GEO 18 µrad；LEO 20–50 µrad；曲线上 GEO 18 µrad 处 Strehl 约 0.5、50 µrad 处约 0.2（HV5/7@550 nm，波束 1550 nm；读图估计）[p22，看图核实]
   - CNN 波前传感（WFS）：40 cm 望远镜，r0=5 cm @1550 nm，12×12 子孔径 SH，无噪声、非闭环；低仰角(约5°, Rytov 方差约14.61)时 CNN 光纤耦合约 -3.2 dB，Shack-Hartmann 约 -8 dB；仰角≥40° 两者相近（约 -2 至 -3 dB）[p20]
   - Rayleigh vs Sodium LGS：30° 仰角，对比 TURBO/MOSPAR/HV 三种湍流剖面；Rayleigh 导星取 14 km，耦合通量 PDF/CDF 介于仅卫星信标与钠导星之间 [p26]
-  - Rayleigh 导星只在约 20 km 内可见，不能采样全部湍流 [p24，OCR]
+  - Rayleigh 导星只在约 20 km 内可见，不能采样全部湍流，但成本低得多、可用绿光 [p24，看图核实]
 - 提到的公司/客户/产品/标准：Starlink；钠/Rayleigh 激光导星；Optics Express 34.3 (2026) 5636–5656（Lognoné, Perrine, Wizinowich, Reeves）
 - 与业界对比或记录声明（SOTA/首次/record）：无
 - 推荐配图页：p20（CNN-WFS 与 Shack-Hartmann 光纤耦合 vs 仰角对比）；p26（Rayleigh/钠导星耦合通量统计）
@@ -53,7 +53,7 @@ tags:
   - 下行公开报道：MIT TBIRD 200 Gbps（2022.05）；CGSTL+BUPT/吉林一号 100 Gbps，113 s（2024.12）；GW+BUPT 1.25 Gbps，297 s（2025.09）；BUPT+中科院光电所 1 Gbps，2 h（2025.12）；中科院空天院 120 Gbps，108 s（2026.01）[p4]
   - 下行缓解表：NASA/MIT 2013 4×40 cm 阵列光子计数 622 Mbps 月地无误码；DLR+TESAT AO 相干 5.6 Gbps/LEO、2.8 Gbps/GEO；MIT AO 200 Gbps/LEO；CGSTL+BUPT 模式分集接收(MDR) 相干 100 Gbps/LEO；Cailabs IM-DD 最多45模、约10 km 外场；BUPT MDR+AO 相干 1 Gbps/IGSO，稳定下行>3 h [p7]
   - 上行缓解表：Fraunhofer HHI 4 孔径实时合并，10 Gbps OOK，18 km 外场；DLR 预失真 AO，GEO 上行损耗降 3–5 dB；IOE(CAS) 多孔径分集发射，10 Gbit/s 无误码外场 [p8]
-  - 湍流特征（OCR）：快衰落约 ms、约 30 dB；慢变（云雨雪雾）约 80 dB；上行接收孔径 0.05–0.1 m，下行 0.5–1 m [p5–p6，OCR，图未核]
+  - 湍流特征（看图核实）：快衰落约 ms、约 30 dB（湍流）；慢变（云雨雪雾，分钟~小时级）约 80 dB；南山站全天 r0@550nm 约 4–10 cm；上行卫星接收孔径 0.05–0.1 m（以闪烁为主），下行地面接收孔径 0.5–1 m（光斑破碎致 SMF 耦合效率劣化）；星地距离 500–4,000 km [p5–p6]
   - 星座规模：Starlink 约 11,000 颗在轨/规划 42,000；太空算力星座 SpaceX Starmind 约 1,000,000 颗等 [p3]
 - 提到的公司/客户/产品/标准：Starlink、Amazon Leo、GW、Spacesail、SpaceX、Blue Origin、Starcloud、Google Suncatcher、Cailabs、Tesat、Airbus/TELEO、SES、Kepler
 - 与业界对比或记录声明（SOTA/首次/record）："下行速率已达 200 Gbps；上行通信演示报道很少" [p4]；"MDR-AO 组合技术在轨与外场实验中所有湍流条件下验证" [p7]
@@ -71,14 +71,14 @@ tags:
   - 概率整形自适应调制（PS-64QAM，H=5.58，550G）：晴天瞬时速率约 460–480 Gbps（固定基线 500 Gbps 与 400 Gbps 两条线），降雨时下探到 400 Gbps 以下即 SNR 不足断链，实验为 180 min [p7，引自 JLT 2021]
   - 相干时间 Tc：强/中/弱湍流分别 5.6/5.5/4.6 ms；闪烁指数 σI² 弱 1.6×10^-1、中 9.4×10^-1、强 2.2；τ<1 ms 易处理，1–10 ms 具挑战，>10 ms 几乎不可能 [p9]
   - 反馈延迟：吞吐 vs 延迟，自适应码率 @16QAM 在 0 ms 约 106 Gbit/s，@QPSK 约 103 Gbit/s，固定 R=5/6 QPSK 约 87 Gbit/s；延迟约 1.6 ms 后自适应低于固定方案，5 ms 时约 74 Gbit/s [p11]
-  - 延迟场景表：LEO 星地传播 500–1,500 km，对应 3.33–10 ms；GEO 36,000 km，240 ms [p10，OCR]
+  - 延迟场景表（看图核实）：城市点对点 0.5–2 km/约 3.3–13 µs；城际 50–100 km/333–666 µs；UAV-地面 1–50 km/6.66–333 µs；UAV 中继 1–500 km/6.66 µs–3.3 ms；UAV-LEO 100–700 km/666 µs–4.6 ms；LEO 星地 500–1,500 km/3.33–10 ms；GEO 36,000 km/240 ms；信道相干时间强/中/弱湍流约 5.6/5.5/4.6 ms [p10]
   - 10 模 MPLC 少模接收（HG00/HG10/HG01/HG11），BER 分布随合并模数改善；论文 CSNDSP 2026 Edinburgh [p17]
 - 提到的公司/客户/产品/标准：400ZR、MPLC、PS-QAM、IEEE JLT 2021、CSNDSP 2026
 - 与业界对比或记录声明（SOTA/首次/record）：无
 - 推荐配图页：p11（吞吐 vs 反馈延迟，自适应反而劣于固定）；p9（相干时间与延迟分区）
 
 ### 0920-am-Su1-F-05-FraunhoferIOF-主镜到纤芯的光学天线.pdf
-- 讲者/机构：讲者姓名未见 / Fraunhofer IOF（耶拿光学地面站 OGS Jena） | 题目：（题目页OCR乱码，副题为从主镜到光纤纤芯的光学天线，"The optical Antenna"、"The last metre"） | 类型：Workshop
+- 讲者/机构：Dr. Matthias Goy / Fraunhofer IOF（耶拿光学地面站 OGS Jena）（p1 标题页看图核实） | 题目：From Primary Mirror to Fiber Core: The Optical Antenna and its Relay Architecture（"The optical Antenna"、"The last metre"） | 类型：Workshop
 - 方向归属（主/次）：主 [2 Scale-across/跨域]；次 [1 相干]
 - 核心主张（结论页原文）：
   1. M1（主镜）决定增益与效率，需谨慎选择。
@@ -87,7 +87,7 @@ tags:
 - 关键数据：
   - 主动光学（长期稳定）：卸载高幅漂移（Tip/Tilt、Focus），校正带宽<1 Hz；自适应光学（高动态）：校正带宽>1 kHz，补偿高阶湍流、振动、指向抖动 [p5]
   - "最后一米"装置：200 mm 无遮挡望远镜（竖直放置）+Tip/Tilt 镜、变形镜、单模光纤耦合、跟踪相机与 4Q 二极管；提出光纤参考的残差校正 [p7]
-  - 上行用途：馈电链路、深空通信、空间碎片操控的 AO 预补偿，需高鲁棒高致动数变形镜 [p9，OCR]
+  - 上行用途：馈电链路、深空通信、空间碎片操控的 AO 预补偿，需高鲁棒、高致动数变形镜（上行光场须在出射大孔径前精确整形）[p9，看图核实]
 - 提到的公司/客户/产品/标准：Fraunhofer IOF OGS Jena；变形镜（ALPAO 见图）
 - 与业界对比或记录声明（SOTA/首次/record）：无
 - 推荐配图页：p7（"最后一米"200 mm 望远镜、DM、SMF 耦合装置及局限/问题/方案）
@@ -115,19 +115,19 @@ tags:
   3. 已用 7.4 km 水平链路验证 2 Tbit/s 并推进 CubeSOTA 与 HAPS 网络。
 - 关键数据：
   - JDRS(JAXA，GEO，约1550 nm，单上行波束，仅夜间；2021-11-12/13 同一 20 s 窗口)：下行 100 cm 孔径 SI=0.0007（3σ 0.35 dB）；下行 5 cm SI=0.126（180×，3σ 4.50 dB）；上行 14 cm SI=0.234（334×，3σ 6.99 dB）[p12]
-  - 7.4 km 水平实验（NICT 小金井—电通大调布），2025 年 4 月：5 通道 × 400 Gbit/s = 2 Tbit/s，波长 1556.55–1563.05 nm；BER 平均量级约 10^-2 至 10^-1（图中读数 3.53e-02 至 6.50e-02 左右，看不清全部）；闪烁 σ≈4.0 dB [p17–p18]
+  - 7.4 km 水平实验（NICT 小金井—电通大调布），2025 年 4 月：5 通道 × 400 Gbit/s = 2 Tbit/s，波长 1556.55–1563.05 nm；五路 BER 平均 3.53e-02、3.77e-02、4.29e-02、4.63e-02、6.50e-02（看图核实）；闪烁 σ≈4.0 dB；加 LNA 后接收灵敏度提升（约 −36 → −44 dBm，小字读图）[p17–p18]
   - 引入 LNA 后调制解调器灵敏度改进：约 -44 / -42 / -36 dBm（三档速率，读图）[p18]
-  - 2024 年 2 月 10 Gbit/s 7.4 km 水平实验，比较 SMF 与 MMF 50/100 µm 跟踪 [p15–p16，OCR]
+  - 2024 年 2 月 10 Gbit/s 7.4 km 水平实验（NICT 小金井 ↔ UEC 调布）：夜间闪烁 3σ≈4 dB、日间≈15 dB；跟踪开启时 SMF 平均 −29.09 dBm（σ 5.43）、MMF 50 µm −19.85 dBm（σ 3.54）、MMF 100 µm −8.26 dBm（σ 3.04），MMF 较 SMF 分别高 9.2 dB 与 20.8 dB [p15–p16，看图核实]
   - CubeSat 光束发散对比（FWHM）：OCSD-C 2618 µrad(137.8×，-43 dB)；CLICK-A 1300 µrad(68.4×，-37 dB)；OCSD-B 1047 µrad(55.1×，-35 dB)；TBIRD 380 µrad(20×，-26 dB)；PIXL-1 120 µrad(6.3×，-16 dB)；CubeSOTA 19 µrad(1×，0 dB) [p22]
   - 捕获时间分布：LEO-OGS 约 0.1–0.8 s；LEO-HAPS 带发散控制(BDC) 约 1.4–19 s（峰值约 6.7 s）；LEO-HAPS 固定发散约 32–433 s 以上（峰值约 152–257 s）[p24]
   - CubeSOTA 上行链路预算示例：仰角 35°，上行功率 30.0 W，发散 200 µrad(捕获 500 µrad)，下行发散 54 µrad，星地距离 833.5 km(高度 512 km)，上行信标 1560 nm、通信 1558.17 nm、下行 1541.35 nm，上行足迹 166.7 m（捕获 416.7 m），下行足迹 45.0 m，Fried 参数 13.9 cm(UL)/13.7 cm(DL)，链路可用度 2σ (97.7%) [p27]
-  - 1 m OGS(小金井) 带 MPLC AO [p26，OCR]；HICALI 多波束上行：波束数 1/2/4/8/16 时归一化强度概率密度收窄（图示，无数值）[p28]
+  - 1 m OGS(小金井) 带 MPLC 与 AO 两个 Nasmyth 平台 [p26，看图核实]；HICALI 多波束上行（4 路捕获信标，波束间距 >r0）：波束数 1/2/4/8/16 时归一化强度概率密度收窄（16 束峰值约 1.9）[p28]
 - 提到的公司/客户/产品/标准：NICT、JAXA(JDRS)、ETS-VI/OICETS/SOTA/VSOTA/SOLISS/CubeSOTA/HICALI(ETS-IX)、Tamron（波束发散控制）、TBIRD/CLICK-A/OCSD/PIXL-1、HAPS
 - 与业界对比或记录声明（SOTA/首次/record）：CubeSOTA 19 µrad 发散为对比 CubeSat 中最窄 [p22]；水平 2 Tbit/s 7.4 km 自由空间（未称 record） [p17]
 - 推荐配图页：p12（JDRS 上下行闪烁指数对比表与时间序列）；p22（CubeSat 光束发散对比）；p17（2 Tbit/s 7.4 km 实验）
 
 ### 0920-am-Su2-F-02-ANU-澳国立激光通信计划.pdf
-- 讲者/机构：讲者姓名未见 / Australian National University（Quantum Optical Ground Station, QOGS） | 题目：（无标题页；内容为 ANU 光通信计划、Artemis II 月地激光、DSOC 深空） | 类型：Workshop
+- 讲者/机构：Professor Francis Bennet / Australian National University（Quantum Optical Ground Station, QOGS）（p1 倒拍标题页看图核实） | 题目：Australian National University Laser Communication Program: An overview of laser propagation and correction through atmospheric turbulence | 类型：Workshop
 - 方向归属（主/次）：主 [2 Scale-across/跨域]（深空/月地光链路）；次 [6 QKD/量子]
 - 核心主张：
   1. QOGS 用于光通信与空间应用，已参与 NASA Artemis II 月地激光通信（O2O）。

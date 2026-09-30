@@ -6,7 +6,7 @@ tags:
 ---
 
 ### 0921-Mo3-A1-iPronics-可编程光子在AI数据中心.pdf
-- 讲者/机构：讲者姓名未见；iPronics | 题目：Photonics to scale AI datacenters（首页题；副标题未见） | 类型：产业发布/邀请报告
+- 讲者/机构：讲者姓名页面未显示；iPronics | 题目：Photonics to scale AI datacenters（p1 看图核实为架构图页而非独立题目页：光交换用于 scale-up 扩展，每 1U 3–4 台、约 \$100/端口、亚 ms 重构） | 类型：产业发布/邀请报告
 - 方向归属（主/次）：主 [3 Scale-out ... OCS]；次 [4 Scale-up/in ... OCS]
 - 核心主张：
   1. 光互连在数据中心网络中占比持续上升（光纤、收发器、CPO），OCS 可缓解主要瓶颈并支持跨机架扩展计算域（结论页 p16）。

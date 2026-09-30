@@ -6,7 +6,7 @@ tags:
 ---
 
 ### 0923-We1-E2-743-耦合芯MCF纵向空间模色散.pdf
-- 讲者/机构：讲者不详（页脚 Università di Parma，页面标注 ECOC 2026, Malaga, We1-E2） | 题目：英文原题看不清（中文文件名意为"耦合芯MCF纵向空间模色散"；内容为利用FWM功率测量检测耦合芯多芯光纤中SMD系数的纵向分布） | 类型：学术论文
+- 讲者/机构：Chiara Lasagni（报告人）, Paolo Serena, Lucas A. Zischler, Giammarco Di Sciullo, Antonio Mecozzi, Cristian Antonelli, Alberto Bononi / University of Parma 与 University of L'Aquila（p1 看图核实） | 题目：Detecting Longitudinal Variations of Spatial Mode Dispersion in Coupled-Core Multicore Fibers via Four-Wave Mixing（We1-E2） | 类型：学术论文
 - 方向归属（主/次）：主 1 相干/海缆/长途/DCI（SDM光纤表征）；次 无
 - 核心主张：
   1. 提出检测耦合芯多芯光纤（CC-MCF）中空间模色散（SMD）系数纵向变化的方法。
@@ -45,7 +45,7 @@ tags:
 - 备注：p7/p9 页码为文件页序，页面自带角标为6/9、9/9；OCR全为乱码，本节均基于图片。
 
 ### 0923-We1-E4-819-现网非耦合芯光纤长程双折射.pdf
-- 讲者/机构：L. Romero 等（Università di Padova；合作方含 Università dell'Aquila，p6页标） | 题目：英文原题看不清（中文文件名意为"现网非耦合芯光纤长程双折射"；内容为现网4芯非耦合芯光纤(UCF)的分布式双折射表征） | 类型：学术论文
+- 讲者/机构：L. Romero 等（Università di Padova；合作方 Università degli Studi dell'Aquila，p6 页标看图核实） | 题目：英文原题页未拍到（中文文件名意为"现网非耦合芯光纤长程双折射"；内容为现网 L'Aquila 4 芯非耦合芯光纤(UCF)的分布式双折射表征，We1-E4） | 类型：学术论文
 - 方向归属（主/次）：主 1 相干/海缆/长途/DCI（SDM光纤表征）；次 6 QKD/量子/光纤传感DAS（Rayleigh OFDR分布式测量）
 - 核心主张：
   1. 偏振敏感光频域反射（PS-OFDR）可在现网部署的UCF中实现分布式双折射表征，支持真实SDM链路中的芯间偏振分析。

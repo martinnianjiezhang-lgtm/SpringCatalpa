@@ -27,7 +27,7 @@ tags:
 - 推荐配图页：p12（PTP 与四种网络场景的 IIR 对比）；p14（GMI 与吞吐损失随记忆长度曲线）；p13（各波长所需记忆）
 
 ### 0922-Tu1-B3-南安普顿大学-空芯光纤带来的光网络新机会.pdf
-- 讲者/机构：南安普顿大学（Optoelectronics Research Centre；讲者姓名幻灯片中看不清） | 题目：空芯光纤（HCF）带来的光网络新机会（Tu1-B3，英文原题看不清；讲稿主题为 Hollow-core fibre opportunities for optical networks） | 类型：邀请报告
+- 讲者/机构：Periklis Petropoulos 等，南安普顿大学 Optoelectronics Research Centre（合作 Riga TU、Keysight、Microsoft Azure Fibre、Univ. West Attica、DTU Electro）（p1 看图核实） | 题目：New Opportunities in Optical Networks Enabled by Hollow-Core Fibres（Tu1-B3） | 类型：邀请报告
 - 方向归属（主/次）：主 3（Scale-out 光源/调制器，含 IM/DD 高速）；次 1（长途/DCI 传输）
 - 核心主张：
   1. 空芯光纤可简化光传输：高容量 IM/DD、借 2D 映射（PAM12）提升 PAM 阶数、用光学处理减轻 DSP 负担。
@@ -37,7 +37,7 @@ tags:
   - HCF 相对 SMF 延迟降低 30%；5 km 距离约节省 ~8 µs [p5]
   - 反谐振 HCF 损耗演进：50 dB/km（Kolyadin 2013）→ 1.3 dB/km（ECOC2018 PDP）→ 0.22 dB/km（OFC2021 PDP）→ 0.09 dB/km（Nature Photon. 2025）；讲者称 YOFC 报道约 0.03 dB/km [p6, p7]
   - 仿真：NANF 在 1400–1600 nm 带宽超过 SSMF 的 2 倍；相对 NZ-DSF 除 1460 nm 附近 60 nm 外带宽更大 [p8]
-  - SiP 调制器 256 GBaud OOK，光背靠背；PAM4 290、PAM6 300 Gb/s 量级、约 3.4 km HCF（表格数值看不清）[p9]
+  - SiP 调制器：OOK 256、PAM4 290、PAM6 300 Gb/s（毛速率）；256 GBaud OOK 光背靠背约 3.5 dBm、3.1 km HCF 约 8 dBm 达 HD-FEC（55 前馈 + 55 反馈抽头；引 D. Cirjulina, ECOC 2025 Tu.04.07.2）（看图核实）[p9]
   - 4.96 Tbit/s DWDM IM/DD：31 路 WDM，11.6 km HCF；80 GBaud PAM4（BW 44 GHz）、64 GBaud PAM6（35.2 GHz）、44 GBaud PAM8（24.2 GHz）；BER 在 6.25% HD-FEC 门限内（OECC 2026 Mo1A-2）[p10]
   - PAM12 二维映射：两符号时间交织，7 bit/两符号 = 3.5 bit/symbol；Cross-PAM12 调制 58 GBaud [p12]
   - 202 km 单跨 HCF：34.5 dBm EYDFA 输出，11 段光纤（约 15.5–21.6 km 每段），总插损约 51 dB；双嵌套反谐振无节点设计，第一反谐振窗口；C 波段 CD 约 3.8–4 ps/nm/km [p18]
@@ -58,7 +58,7 @@ tags:
   2. 解析模型生成 12,000 合成样本预训练，再用少量实测样本微调。
   3. 仅 91 个现网样本即可捕获实网微畸变。
 - 关键数据：
-  - 方法：解析模型残差提取器（功率预算 ΔP，解耦确定性设备效应）；四层 MLP；双学习率策略（前端物理特征层与高阶输出层不同学习率，具体数值看不清）[p8, p9]
+  - 方法：解析模型残差提取器（功率预算 ΔP = P_launch + ΣG_OA − ΣA_WSS − P_rec，解耦确定性设备效应，残差隔离 HCF 微结构形变带来的动态 WDL）；四层 MLP（5→64→32→16→1），12,000 个解析模型合成样本预训练，91 个现网实测样本微调；双学习率：前端物理特征层 5×10^-6、高阶输出层 5×10^-4（看图核实）[p8, p9]
   - 数据：107 个现网样本，91 个用于适配，16 个独立盲测；12,000 合成样本 [p10]
   - 结果：MAE 由 0.478 dB（解析）与 0.434 dB（纯数据驱动）降至 0.328 dB；RMSE 由 1.075 与 0.717 dB 降至 0.388 dB；95% 绝对误差边界 0.6 dB 以内（CDF 图读数 0.566 dB，对比 0.921 与 1.121 dB）；RMSE 降低 64% [p11]
 - 提到的公司/客户/产品/标准：中国电信研究院；引用 Fokoua et al., Adv. Opt. Photon. 15 (2023) [p8]

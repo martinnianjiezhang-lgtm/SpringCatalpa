@@ -17,12 +17,12 @@ tags:
   - 开销：P=32时导频开销3.13%（1/P） [p8]
   - P=32、DSP时钟1 GHz、16QAM：所提方法在偏振"线宽"δf_D=10 kHz–1 MHz范围内BER稳定，10 kHz时SNR≈22 dB处BER约10^-5量级（曲线读数，近似）；传统导频法（导频间隔32×P）在快速偏振波动下BER几乎无改善 [p10]
   - 更新式最大电路延迟：含除法55.2 ns → 无除法5.7 ns（约1/10），可支持DSP时钟>100 MHz [p13]
-  - 更新延迟仅6、4、3个时钟周期，分别对应MIMO、p、q抽头 [p12，据OCR，未看图]
+  - 更新延迟仅 6、4、3 个时钟周期，分别对应 MIMO、p、q 抽头（按关键路径只在必要处插寄存器并对齐更新时序）[p12，看图核实]
   - 行为模型（AMD Vivado）验证：32 Gbaud，P=32，导频开销1/32，16QAM；有偏振波动（δf_D=100 kHz）时BER高于无波动，与数值仿真一致（无波动曲线约SNR 20 dB处BER≈6×10^-6，近似读数） [p14]
   - 资源对比（并行度P=1–15，对比全通道判决导向法）：LUT与FF几乎不随P增长（约0.5×10^4量级），传统P=15时LUT约6×10^4、FF约4.7×10^4；DSP片数P=15时传统约7×10^3、所提约3.5×10^3，即减少50% [p15]
-  - 仿真模型：16QAM，2 sample/symbol，Nyquist成形，50 taps（OCR，未看图确认） [p9]
+  - 仿真模型：32 GBaud DP 16QAM，PRBS 2^15−1，2 sample/symbol，Nyquist 成形，MIMO 50 taps，时变偏振旋转按 Czegledi 模型（偏振线宽 δf_D），DSP 时钟 32/P GHz（看图核实） [p9]
 - 提到的公司/客户/产品/标准：AMD Vivado Design Suite；AMD VCU128 FPGA评估板；Python数值仿真；引用Haykin、Savory、Mori(2012)、Beppu(JLT 2022, Opt. Express 2020)、Yang(2021)、Miura & Igarashi OECC2025
-- 与业界对比或记录声明（SOTA/首次/record）：未见record声明；对比对象为传统导频法与全通道判决导向法（LUT/FF显著减少，DSP减半） [p10][p15]
+- 与业界对比或记录声明（SOTA/首次/record）：未见record声明；对比对象为传统导频法（P=32、DSP 时钟 1 GHz 时几乎无改善）与全通道判决导向法（本方法 LUT/FF 显著减少，DSP 减半） [p10][p15，看图核实]
 - 推荐配图页：p8（导频汇聚并行MIMO架构概念图）；p10（P=32下所提方法与传统导频法BER对比）；p15（LUT/FF/DSP资源对比）
 
 ## 本批小结

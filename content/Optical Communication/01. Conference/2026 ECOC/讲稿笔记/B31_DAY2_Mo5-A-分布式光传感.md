@@ -6,7 +6,7 @@ tags:
 ---
 
 ### 0921-Mo5-A1-EPFL-分布式光纤传感-优雅物理如何长成智能系统.pdf
-- 讲者/机构：Prof. Luc Thévenaz（荣休），EPFL 光纤光学组，瑞士洛桑 | 题目：Tutorial: Distributed Optical Fibre Sensing（页眉所示；PDF文件名意译“优雅物理如何长成智能系统”，英文原题以首页为准，未见完整标题） | 类型：邀请报告（教程）
+- 讲者/机构：Prof. Luc Thévenaz（荣休），EPFL 光纤光学组（GFO），瑞士洛桑 | 题目：Tutorial ECOC'2026 Mo5-A1: Distributed Optical Fibre Sensing — Where Elegant Physics Gives Rise to Smart Systems（p1 看图核实） | 类型：邀请报告（教程）
 - 方向归属（主/次）：主 6 QKD/量子/光纤传感DAS；次 无
 - 核心主张（1–3条，用讲者自己的结论页原意）：
   - 文末为 φ-OTDR 相关页（p32–p34），未见明确的总结页，以下为各页论点：
@@ -19,10 +19,10 @@ tags:
   - Brillouin传感的耦合增益约2.5%（1 m空间分辨率、100 mW峰值泵浦） [p11]
   - 激活脉冲峰值功率上限：调制不稳定性（反常色散）约100 mW，前向Raman（正常色散）约300 mW，均为超长光纤 [p12]
   - CW探测光上限：受激自发Brillouin约1 mW，激活脉冲耗尽与频谱畸变约0.3 mW，均为超长光纤 [p12]
-  - Raman斯托克斯位移约13.2 THz（Raman）、11 GHz（Brillouin）；Raman约12.5 THz/100 nm@1550 nm [p19, p20]（数值来自OCR，未经图核对）
-  - Raman测温灵敏度@300 K：0.8 %/K（OCR，未核对）；Brillouin温度系数约1 MHz/℃（OCR，未核对）[p20, p24]
+  - Raman斯托克斯位移约13.2 THz（平均声子数 0.14，反斯托克斯 < 斯托克斯）、Brillouin 11 GHz（平均声子数 570，二者相当）；Raman 反斯托克斯与瑞利间隔约12.5 THz/100 nm@1550 nm [p19, p20，看图核实]
+  - Raman测温灵敏度@300 K：0.8 %/K；Brillouin温度系数约1 MHz/℃（-25/30/90 ℃ 时布里渊峰约 11.45/11.52/11.58 GHz）（看图核实）[p20, p24]
   - Brillouin光时域分析演示：5 cm空间分辨率，5 cm段νB约10.303 GHz，其余约10.4019 GHz，位置约4557 m [p29]
-  - 图p12噪声曲线：横轴输入功率-35至-5 dBm，噪声标准差在约-15 dBm以上上升；具体数值看不清 [p12]
+  - 图p12噪声曲线：横轴输入功率-35至-5 dBm，噪声标准差约 3.9×10^-7 A 平坦至约 -15 dBm，之后上升至 -5 dBm 时约 4.35×10^-7 A（实测与计算吻合，看图核实）；配置要点：泵浦峰值功率止于调制不稳定（约 100 mW）或前向拉曼（约 300 mW）出现前，CW 探测光低于放大自发布里渊（约 1 mW）与泵浦耗尽（约 0.3 mW）门限 [p12]
 - 提到的公司/客户/产品/标准：Omnisens（Marc Niklés 图源）；British Telecom Research Labs（Peter Healey，1980年代Rayleigh背向散射脉冲响应）；R. Feynman《Lectures on Physics II》
 - 与业界对比或记录声明（SOTA/首次/record）：无（教程，无record声明）
 - 推荐配图页：p12（激活脉冲功率上限与检测噪声优化配置，含噪声-输入功率曲线）；p4（两类分布式传感分类）；p29（Brillouin OTDA 5 cm分辨率实测）
@@ -42,7 +42,7 @@ tags:
   - 电信接收：20 nm带宽（1542–1562 nm），传感陷波位于约1550 nm；总数据率15.1 Tb/s；单信道GMI约345–350 Gb/s量级、译码后约330–335 Gb/s量级，OSNR约18–24 dB范围（读图估计） [p11]
   - 结论页：第14跨（约680–688 km）可见应变信号，20 m gauge；理论SNR随距离锯齿下降，红虚线3 dB阈值；DAS峰值功率1.6/3.6/5.6 dBm下，电信SNR约14 dB（OFF）降至约12.5–13 dB（5.6 dBm，有cycle slip） [p12]
 - 提到的公司/客户/产品/标准：NICT；Zuyuan He组（上海交大，非匹配滤波DAS，2019）；Pastor-Graells 2016（首个相关型DAS）；Hartog US 9,170,149；Wang 2015；E. Ip OFC2022（dummy脉冲抑制XPM）；R. S. Luis ECOC2025（软判FEC）；Fan Photon. Res. 2023与Vidal-Moreno Opt. Express 2023（SNR模型）
-- 与业界对比或记录声明（SOTA/首次/record）：题目强调在688 km有中继链路上实现Rayleigh指纹DAS，并与15 Tb/s WDM共传；未见讲者明写“record/首次”字样（p1, p11）
+- 与业界对比或记录声明（SOTA/首次/record）：题目 "Rayleigh Fingerprint-Based DAS over a 688-km Repeatered Link with Co-Propagating 15-Tb/s WDM Transmission"（Padova/NICT/Campinas）；共传总速率 15.1 Tb/s（1542–1562 nm，20 nm 带宽，中间留传感陷波）；未见讲者明写“record/首次”字样（p1, p11，看图核实）
 - 推荐配图页：p10（14跨链路强度/测得SNR/理论SNR三联图）；p11（电信性能：陷波频谱与15.1 Tb/s数据率）；p12（结论：应变时空图、SNR挑战、电信SNR劣化）；p4（三种DAS方案对比表）
 
 ### 0921-Mo5-待定-Sikt-在用业务纤上的L波段DAS与暗纤C波段DAS对比.pdf

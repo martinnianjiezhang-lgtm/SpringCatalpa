@@ -23,13 +23,13 @@ tags:
   - 单器件：32 Gbit/s @25°C SNR 7.37（I=6 mA，Vpp=400 mV）；@125°C SNR 6.33，ER 3.6（无DSP）；64 Gbit/s SNR 3.38（I=12 mA，Vpp=1 V，无DSP）；106.25 Gbit/s TDECQ 1.12 dB（I=10 mA）；128 Gbit/s TDECQ 2.04 dB（Rx7 tap/Tx7 tap）[p8]
   - S21 随电流（6–14 mA）与温度（65–125°C，@8 mA）曲线测到40 GHz；积分 RIN 随电流/温度曲线，25°C约-154 dB/Hz、125°C约-146 dB/Hz（曲线读数粗略）[p8]
   - 37 发射器六边形阵列，节距 70 μm（含背面透镜）；106 Gbit/s TDECQ 2.52 dB（I=12 mA，7 tap Rx&Tx）；32 Gbit/s SNR 6.68，ER 3.9 dB，margin 5.6%（I=6 mA，无DSP）[p10, p12]
-  - 前面板引用 Julie Eng OFC 2026：聚合带宽在 <2 km / <40 m 的对比（数值看不清）[p3, 仅OCR]
+  - 前面板引用 Julie Eng OFC 2026：聚合带宽在 Scale-out（<2 km）为 1x、Scale-up 机架内（<40 m）为 4x、解耦计算（<1 m?）为 >32x；需求急剧增加：能耗、带宽密度、可靠性/link flap（看图核实）[p3]
 - 提到的公司/客户/产品/标准：Coherent（自家）；引用 Julie Eng（OFC 2026）；现场 booth 有 full link 演示（BSE VCSEL–MFC–BSI PD）[p11]
 - 与业界对比或记录声明（SOTA/首次/record）：未使用"record/首次"措辞；给出 9 Tbit/s/mm² 等效带宽密度为展望值 [p12]
 - 推荐配图页：p9（16通道阵列逐通道 32G/128G 眼图+中介层照片，最能体现阵列一致性）；p8（S21/RIN/温度与眼图汇总）
 
 ### We5-I Lumentum.pdf（第1–18页）
-- 讲者/机构：讲者姓名幻灯片中未见 / Lumentum | 题目：1060nm VCSEL Arrays for Scale-Up | 类型：邀请报告（产业发布/路线）
+- 讲者/机构：Matt Peters（Senior Director R&D）/ Lumentum（p1 看图核实） | 题目：Performance, Reliability and Manufacturability of 1060nm VCSEL Arrays for AI Data Center Scale-Up（We5-I5） | 类型：邀请报告（产业发布/路线）
 - 方向归属（主/次）：主 4 Scale-up/in CPO/NPO/XPO/WSE/OCS；次 3 Scale-out 224G/448G/光源
 - 核心主张：
   1. 金属互连在带宽×距离上触顶，VCSEL/光纤/PD 阵列可以以低 pJ/bit 覆盖更长距离，是 scale-up 光互连的有吸引力方案 [p4, p18]
@@ -37,10 +37,10 @@ tags:
   3. 依托 6 英寸 GaAs 与 3D 传感(3DS) VCSEL 供应链，无需 burn-in 即可达 <50 ppm/发射器寿命失效率目标；数月内将给出倒装阵列更高速度/高温/可靠性数据 [p16, p17, p18]
 - 关键数据：
   - 第一代 VCSEL/PD 阵列示例：64 Gb/s NRZ × 256 通道（8 Tb/s），2.0 mm shoreline，2.5 pJ/bit；图中 FoM（带宽密度×能效）VCSEL/PD 阵列对光收发器约 2000x、对当前先进光约 20x（引自 G. Keeler, DARPA MTO ERI Summit 2019 的坐标图）[p4]
-  - 器件：倒装背发射，Cu pillar+焊料，光经 GaAs 衬底（150 μm n型）+集成透镜出射，倒装使热阻降低约 40%；示例 80 发射器六边形阵列匹配定制光纤束 [p6, p7, p8（OCR）]
+  - 器件：倒装背发射，Cu pillar+焊料，光经 GaAs 衬底（150 μm n型）+集成透镜出射，倒装使热阻降低约 40%；示例 80 发射器六边形阵列匹配定制光纤束，可匹配光纤盘或不同间距多芯光纤；5.5 µm OA 倒装 VCSEL 35°C 峰值约 6 mW、115°C 约 3 mW，75–115°C、4–10 mA 范围内线性（看图核实）[p6, p7, p8]
   - S21（8 mA，OA≈5 μm）：25°C 总带宽 33.8 GHz，光带宽 36.2 GHz，RIN -151 dB/Hz；85°C 总带宽 25.3 GHz，光带宽 28.6 GHz，RIN -147 dB/Hz [p9]
   - NRZ：50 Gb/s NRZ，1 m OM5 ER 4.2 dB/eye margin 18.8%；50 m/100 m/150 m 1060nm 光纤 ER 分别 4.0/3.8/3.6 dB，margin 18.6/19.6/12.7%；32 Gb/s NRZ，105°C，50 m OM5，硅子基板，ER 4.0 dB，margin 12.10% [p10]
-  - 低偏置：标准 1060nm VCSEL 低偏置电流 2.5–4.0 mA、25/85°C、1 m/30 m OM2，32 Gb/s 与 25 Gb/s 眼图表（具体数值看不清）[p11, 仅OCR]
+  - 低偏置：标准 1060nm VCSEL 低偏置电流 2.5–4.0 mA、25/85°C、1 m/30 m OM2；32 Gb/s 在 3.0–4.0 mA 下眼余量约 13–24%（2.5 mA@25°C 与 3.0 mA@85°C 为负余量），25 Gb/s 在 3.0–4.0 mA 下约 20–41%；ER 约 4.2–4.6 dB（看图核实）[p11]
   - 链路演示：OFC 26 演示为底发射 1060nm VCSEL 阵列+驱动，32 Gb/s，fan-out 封装+光纤连接器，设计可支持 1.5 Tb/s/mm shoreline 密度；ECOC 26 演示为直驱 chiplet 集成，Lumentum VCSEL+PD，与 Corning 及 Qualcomm Dragonfly 合作 [p12]
   - 磨损可靠性：1060nm ~5 μm 孔径，8 mA，115°C 烘箱→Tj 181°C，86 个单元，5000 小时无失效、漂移极小（scale-up 机架最高工作 Tj~130°C）；对比 850nm 22 个单元在类似加速应力下 >600 h 出现功率/Ith 变化、>1600 h 灾难性失效（幻灯片注：该晶圆在 8 mA 85°C 下满足 100G 20 年要求）[p13]
   - 早期失效（顶发射 1060nm 阵列）：72K 发射器（900 器件、5 片晶圆），9.0 mA/e CW 80°C 应力，T=0 h 1 个失效（14 DPPM，装配损伤），24 h 与 96 h 累计 2 个失效（28 DPPM，其中 1 个为 epi 缺陷）[p14]
@@ -61,11 +61,11 @@ tags:
   - 动机：GPU/CPU 峰值算力 20 年 60000x（3.0x/2年），DRAM 带宽 100x（1.6x/2年），互连带宽 30x（1.4x/2年）（引 Gholami, IEEE Micro 2024）；全球数据中心用电 2025 年约 485 TWh，2030 年约 950 TWh（IEA）[p4]
   - 1060 nm 优势：光纤损耗 <1 dB/km（较850nm更长链路）；小氧化孔径下可靠性更好（引 Photonics West 2026）；底发射可倒装用于 NPO/CPO（引 ECOC 2024/2025）[p5]
   - NPO/CPO 光引擎 100 Gbps/lane 能耗：VCSEL 0.90 pJ/bit（Mondal, IEEE ISSCC 2026）；SiPh-MRM 3.0–4.5 pJ/bit（de Valicourt, Opt. Express 2025）；SiPh-MZM 6.25 pJ/bit（Li, OFC 2022）[p7]
-  - 器件：In0.4Ga0.6As/GaAsP 10 QW，氧化孔径 4.2 μm，上镜 98%；-3 dBo 带宽 62 GHz（6 mA），-3 dBe 带宽 >52 GHz；另一器件孔径 4 μm，Ib=6.2 mA，chirp 参数 1.5；经 SMF(G652) 500 m/1 km 有效带宽增大，2 km 曲线亦给出 [p9（OCR）, p10]
+  - 器件：In0.4Ga0.6As/GaAsP 10 QW（40% In 应变、厚隔离层降寄生电容），氧化孔径 4.2 μm，上镜 98%；-3 dBo 带宽 >62 GHz（6 mA），-3 dBe 带宽 >52 GHz；另一器件孔径 4 μm，Ib=6.2 mA，chirp 参数 1.5；经 SMF(G652) 500 m/1 km/2 km 有效带宽增大（看图核实） [p9, p10]
   - 测量：Keysight M8199B AWG（256 GSa/s，80 GHz）+66 GHz 放大器+Bias Tee（6.5 mA）+65 GHz RF 探针；接收为 Keysight N1092A-60A DCA（>60 GHz）；均衡：200G 用 TX 5-tap/RX 5-tap，256G 用 TX 12-tap/RX 22-tap（幻灯片上下颠倒）[p11]
   - BTB 眼图：孔径 4 μm、Ib=6.4 mA：150 Gbps NRZ ER 1.8 dB；256 Gbps PAM4 TDECQ 4.97 dB，ER 2.2 dB；孔径 <3.5 μm、Ib=3.5 mA：150 Gbps NRZ ER 1.8 dB；200 Gbps PAM4 TDECQ 4.3 dB，ER 2.4 dB；"最高速率 256 Gbps"；200 Gbps 下芯片直流功耗 <50 fJ/bit [p12]
-  - 1 km SMF(G652)：100 Gbps ER=2 dB（另一 NRZ 眼图速率标注被标题遮挡，看不清）；200 Gbps PAM4 TDECQ 5.9 dB（Ib=4.1 mA）与 3.4 dB（Ib=6.4 mA）；讲者称"比传统 850 nm MMF 链路长 10 倍以上" [p13]
-  - 500 m OM4 MMF：用约 1 m SMF 模式滤波器（MFD 约 8 μm）做限模注入抑制模式色散；3 dB 横向对准容差 ±4 μm；100 Gbps NRZ ER 2.2 dB；200 Gbps PAM4 外 ER 2.3 dB，TDECQ 5.9 dB（孔径 4.0 μm，Ib=6.2 mA）；无滤波器的 500 m MMF 响应明显塌陷 [p14（OCR）, p15]
+  - 1 km SMF(G652)：100 Gbps NRZ ER=2 dB，另一 NRZ 眼图为 128 Gbps ER=2.0 dB（标题叠字，看图辨认）；200 Gbps PAM4 TDECQ 5.9 dB（Ib=4.1 mA）与 3.4 dB（Ib=6.4 mA）；讲者称"比传统 850 nm MMF 链路长 10 倍以上"（看图核实） [p13]
+  - 500 m OM4 MMF：用约 1 m SMF 模式滤波器（MFD 约 8 μm）做限模注入抑制模式色散；3 dB 横向对准容差 ±4 μm；100 Gbps NRZ ER 2.2 dB；200 Gbps PAM4 外 ER 2.3 dB，TDECQ 5.9 dB（孔径 4.0 μm，Ib=6.2 mA）；无滤波器的 500 m MMF 响应在约 3 GHz 即塌陷至 −10 至 −15 dBo（看图核实） [p14, p15]
   - 路线图：单通道 25–400 Gbps，总容量 100GbE→12.8TbE；目标 400G/lane、带宽 >70 GHz、8/16/32 通道、>500 m、EIC <1 pJ/bit [p16]
 - 提到的公司/客户/产品/标准：Ambition Photonics（合作者单位）；Keysight M8199B/N1092A；G652 SMF、OM4；NICT 资助；引用 Mondal（ISSCC 2026）、IEA、Gholami [p1, p4, p7, p11]
 - 与业界对比或记录声明（SOTA/首次/record）：256 Gbps 为"获得的最高速率"，未明说 record；1 km SMF 较 850 nm MMF 链路"长 10 倍以上"[p12, p13]
@@ -81,14 +81,14 @@ tags:
 - 关键数据：
   - VCSEL NPO/CPO 优势表：能量约 1 pJ/bit（备注：VCSEL 本身仅 50–100 fJ/bit）；带宽密度数十 Tbps/mm；单 VCSEL <0.03 FIT（Berxel 累计交付 250 亿器件小时无失效）；阵列 <0.1 FIT（备份可大幅降低 FIT）；光纤 OM2–OM5、SMF；距离 50–100 m（SMF 可达 2000 m）[p9]
   - 顶发射 vs 背发射：光束发散 vs 准直；高速可寻址 ~10 vs 100–1000；大阵列节距 >150 μm vs 30–50 μm；背发射热路径短，结温低 40°C [p10]
-  - 940 nm 背发射倒装+16 个集成 HCG 超透镜 [p11, 仅OCR]；耦合：3 dB 径向容差 ±22 μm、纵向容差 400 μm（as-cleaved MMF）；+18 μm 偏移处 TDECQ 3.3 dB，+250 μm 处 TDECQ 4.1 dB [p12]
+  - 940 nm 倒装背发射 VCSEL + 16 个集成 HCG 超透镜（看图核实）[p11]；耦合：3 dB 径向容差 ±22 μm、纵向容差 400 μm（as-cleaved MMF）；+18 μm 偏移处 TDECQ 3.3 dB，+250 μm 处 TDECQ 4.1 dB [p12]
   - 高温倒装 VCSEL：25 Gbps NRZ，5 mA，140°C，经 30 m OM2 与 100 m OM3 MMF 无误码，OMA 低于 IEEE 802.3bm 阈值；106 Gbps PAM4，110°C，30 m OM2 与 50 m OM4 MMF 眼图张开（图示 100°C/110°C）[p13]
   - 1.6 Tbps 共封装 TX：16 通道，每通道 106 Gbps PAM4 眼图均张开 [p14]
   - 1060 nm 背发射：20log S21 3 dB 带宽 >44 GHz（7.0 mA；受仪器与多模 PD 限制）；RIN 平均：3 mA -142.4、5 mA -147.3、7 mA -149.6、9 mA -150.3 dB/Hz [p15]
   - 212 Gbps PAM4：偏置 8.5 mA，ER 1.48 dB；30 m OM2 TDECQ 3.22 dB，50 m OM5 TDECQ 4.47 dB [p16]
   - 超低偏置 50G NRZ @4 mA：ER 2.5 dB；BTB TDEC 2.33 dB，30 m OM2 2.80 dB，100 m OM5+ 2.68 dB，用于 slow-and-wide [p17]
   - 可靠性：140°C、9 mA 强应力下无失效；折合 8 mA 70°C >7M 等效小时；1060 nm VCSEL 为顶发射结构器件；加速因子 Ea=1.3 eV，n=3；Wafer 1/2 功率与电压曲线在 ±20%/±10% 红线内（约 6000 k 小时等效）[p18]
-  - 带宽密度路径图：SiPh/EML 8 通道 212–424 Gbps/lane；VCSEL 8 通道 212 Gbps/lane；micro-LED 304 通道 3.3 Gbps/ch（"slow and wide"）（图内数字有 OCR 残缺，读数粗略）[p5–p8]
+  - 带宽密度路径图（B = N × R，800G–12.8T 等值线，看图核实）：SiPh/EML 8 通道 212–424 Gbps/lane（"fast and narrow"）；VCSEL 8 通道 212 Gbps/lane；micro-LED 304 通道 3.3 Gbps/ch（"slow and wide"）；博升主张背发射 VCSEL 走 "fast and wide" 路线 [p5–p8]
 - 提到的公司/客户/产品/标准：Berxel；IEEE 802.3bm；OM2/OM3/OM4/OM5；对比 EML、SiPh、micro-LED [p9, p13]
 - 与业界对比或记录声明（SOTA/首次/record）：无 record 声明；强调"250 亿器件小时无失效"与 <0.03 FIT [p9]
 - 推荐配图页：p12（背发射+超透镜耦合容差曲线，±22 μm/400 μm）；p14（1.6 Tbps 16 通道 106G PAM4 眼图墙+样机照）；p13（140°C/110°C 高温结果）
@@ -103,10 +103,10 @@ tags:
 - 关键数据：
   - 架构：室温（RT）主机/多波长发射源与接收 → MUX/DEMUX → 4 K：Cryo-PD 阵列、Cryo-VCSEL 阵列、Cryo-CMOS 驱动与串并转换 → mK：SFQ 逻辑与脉冲发生器、QPU；光纤降低导热"数量级"（幻灯片标 2.3 dB/km 衰减）[p5]
   - 背景结果：<2 μm 氧化孔径 1/2-λ 腔低温 VCSEL 在 4 K 高速，引 Z. Liu 等，APL 128, 193302 (2026)：136 Gbps 下 28 fJ/bit；80 K 质子注入高效 VCSEL（Bo Lu, PTL 1995）[p7]
-  - 温度特性：F-P 谐振红移速率从 200 K 约 -0.08 nm/K 降至 10 K 约 0.007 nm/K；增益峰红移速率从 200 K 约 -0.26 nm/K 降至 10 K 约 -0.05 nm/K [p10（OCR）]
-  - 初始设计：厚腔在阻带内可支持多个谐振，170 K 附近增益峰与谐振对齐；极低温下 EL 蓝侧出现肩峰（顶DBR 830 nm）[p11, p12（OCR）]
-  - 设计变体：870 nm @4 K（Al0.9Ga As 接触、DBR）与 910 nm @4 K（GaAs 接触、GaAs/Al0.5GaAs），注："GaAs absorbs 850 nm wavelength at 4K"；CW @8 K，I=2 mA 时 SMSR 约 45 dB（870 nm）与 40.4 dB（910 nm）（OCR，读数待核）[p14]
-  - 器件性能：3 μm 孔径 Ith=120 μA，输出至约 2.5 mW（5 K，电流约 8 mA）；4.5 μm 孔径 Ith=150 μA，输出功率轴单位标为 μW（似为标注错误，输出图上量级约 5，看不清）；斜率效率最高 0.6 W/A [p15]
+  - 温度特性：F-P 谐振红移速率从 200 K 约 -0.08 nm/K 降至 10 K 约 0.007 nm/K；增益峰红移速率从 200 K 约 -0.26 nm/K 降至 10 K 约 -0.05 nm/K；解决办法为室温失谐设计（看图核实，引 Namvar 等 IEEE PJ 2025）[p10]
+  - 初始设计：增益峰与谐振在约 170 K 对齐；厚腔在阻带内可支持多个谐振（Δλ ≈ λ²/(2 L_eff n_g)）；极低温下 EL 蓝侧出现肩峰（8 K 时 832 nm 与 868 nm 谐振）（看图核实）[p11, p12]
+  - 设计变体：870 nm @4 K（Al0.08GaAs 接触、Al0.08GaAs/Al0.9GaAs DBR）与 910 nm @4 K（GaAs 接触、GaAs/Al0.9GaAs），注："GaAs absorbs 850 nm wavelength at 4K"；CW @8 K，I=2 mA 时 SMSR 45 dB（约 872.8 nm）与 40.4 dB（约 905.5 nm）（看图核实）[p14]
+  - 器件性能：3 μm 孔径 Ith=120 μA，5 K 下输出约 2.55 mW（8 mA）；4.5 μm 孔径 Ith=150 μA，输出功率轴幻灯标为 μW（量级约 5，疑为 mW 标注错误）；斜率效率最高约 0.6 W/A，4 K 低噪单模（看图核实）[p15]
   - 3 μm 孔径：6 K 与 295 K 电压-电流及微分电阻曲线（6 K 下 2 mA 处电压约 4.7 V，295 K 约 3.6 V）；RIN（dBc/Hz）在 I=1/3/6 mA，0–15 GHz 范围，约 -110 至 -160 [p16]
   - 未完成：速度测量、传输测量、噪声测量、降低寄生、进一步降低阈值 [p18]
 - 提到的公司/客户/产品/标准：IQM 量子路线图（引 meetiqm.com）；Arm/imec 77 K cryo-CMOS 文献；Cryo-CMOS、SFQ [p4, p6]

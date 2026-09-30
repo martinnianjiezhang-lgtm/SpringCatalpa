@@ -49,7 +49,7 @@ tags:
   2. 采用 Google 提出的开放 A2A 协议（Agent Card 发现、Task ID/生命周期状态、Artifact 结构化产出）构建 Host/Strategy/DT/North/South 多智能体系统。
   3. A2A 提供标准交互层，把异构光网络智能体连成统一的自治业务开通工作流。
 - 关键数据：
-  - 验证场景：德国光网络拓扑，10对随机选取的源宿节点做业务开通；示例柏林–法兰克福（Task 2）：400G 业务、40波，工作路径柏林→莱比锡→法兰克福，保护路径柏林→汉诺威→法兰克福；DT Agent 仿真返回可行（GSNR/OSNR 数值 OCR 看不清）[p12]
+  - 验证场景：德国光网络拓扑，10对随机选取的源宿节点做业务开通；示例柏林–法兰克福（Task 2）：400G 业务、40波，工作路径柏林→莱比锡→法兰克福，保护路径柏林→汉诺威→法兰克福；DT Agent 仿真返回可行（工作路径 GSNR 18.11/OSNR 19.31，保护路径 GSNR 17.47/OSNR 18.98），North Agent 下发 5 个设备（1 光源 + 4 EDFA）配置（看图核实）[p12]
   - 10/10 任务完成；每任务 A2A 开销 58–120 ms（T1 3次调用/58 ms，T2 4次/120 ms，T7 4次/113 ms 等）；Strategy Agent 耗时约 23.8–49.9 s，DT Agent 约 2.1–5.2 s，North/South 配置下发 1–2 ms [p13]
   - 跨框架：Host 固定为 ADK；三种远端配置（全 ADK / 全 LangGraph / 混合）各10任务；均 100% 任务完成率和 100% 路由准确率；A2A 路由时间均值 0.070（混合）/0.074（全LangGraph）/0.078 s（全ADK），最大 0.120 s（全ADK）；Host 到 Agent 交互平均 16.5–23.6 ms；总耗时主要由推理和工具执行决定，协议路由开销可忽略 [p14]
   - 参考：Y. Zhang 等 ECOC 2025 首次 L4 自治现网试验；IEEE ComMag 2026 分层多智能体零接触框架 [p4]
@@ -66,7 +66,7 @@ tags:
   3. XoDWDM 具备 P4 网络可编程性和原生 SDN 管理。
 - 关键数据：
   - 三种光线路系统对比：ROADM 透明、L1、reach 1000 km+；IPoDWDM 路由器+DCO、不透明、L3、reach 100 km+；XoDWDM PDP 交换机+DCO、不透明、L1–L4 任意协议、reach 100 km+ [p2]
-  - Tofino 1：6.4 Tbps、32×QSFP28、DCO 最高 100 Gbps、reach 最高 80 km；Tofino 2：12.8 Tbps、32×QSFP-DD、DCO 最高 400 Gbps、reach 最高 400 km（OCR 表格，Tofino 编号与规格对应关系页面上排版易混，需谨慎）[p4]
+  - Tofino 1：交换 6.4 Tbps、32×QSFP28、DCO 最高 100 Gbps、reach 最高 80 km；Tofino 2：交换 12.8 Tbps、32×QSFP-DD、DCO 最高 400 Gbps、reach 最高 400 km（看图核实，Universität der Bundeswehr München，cristian.bermudez@unibw.de）[p4]
   - DCO：100G QSFP28 ZR 80 km，功耗最高 5.5 W；Tofino 1 QSFP28 口最高 6 W [p5]
   - 测试方法：100万个唯一包，10k pps，Tofino 出/入口时间戳（T1、T2）；被测设备：Polatis Series 6000 光开关（ROADM-OS）、Edgecore DCS204 L2-3 交换机（IPoDWDM 路由器）、Edgecore DCS801 Tofino 1 交换机（XoDWDM）[p11][p13]
   - 包转发时延：Tofino 493 ns（L1）约为光开关 48 ns 的10倍 [p14]；Tofino 513 ns（L3）约为路由器 969 ns 的一半；L2/L4 下 Tofino 约 500–530 ns（读图）[p15]
@@ -87,7 +87,7 @@ tags:
   - SOP：64 GBaud 符号速率下每通道最高 256 Gvalues/s；现场威胁仅需约 17 Hz 至数十 Hz；单端 SOP 累积全纤，无法定位 [p15]
   - 典型配置数据率（values/s）：SOP 子采样 17 Hz×3 Stokes = 51；OTDR 1024次平均 1.2 M；φ-OTDR L=10 km, N=10k, PRR=1 kHz = 10 M（Δx=1 m）；L=50 km, N=25k, PRR=500 Hz = 12.5 M；L=50 km, N=5k, PRR=2 kHz = 20 M；L=5 km, N=2.5k, PRR=20 kHz = 100 M；OTDR L=10 km, N=128k, PRR=10 kHz = 1 G；φ-OTDR L=10 km, N=100k, PRR=10 kHz = 2 G（Δx=10 cm）；SOP 符号速率 64 GBaud 4 Stokes = 256 G [p17]
   - 按 16 bit/值折算：SOP 子采样 816 b/s；OTDR 平均 20 Mb/s；φ-OTDR 160 M、200 M、320 M、2 G；OTDR 20 G；φ-OTDR 32 G；SOP 符号速率 4096 Gb/s [p18]
-  - 案例（XGBoost 分类 relaxed/eavesdropping/soft-bending 三类 SOP，系统1 O-band、系统2 C-band）：O→O 88.85%，C→C 98.63%，C→O（跨）60.59%，联合训练 91.11%；O→C 交叉一项文字称跨系统低至 8.1%，低于随机猜测（33%）；泛化不对称 [p24]（p24 OCR 未逐格核对图像，标注准确度以OCR为准）
+  - 案例（XGBoost 分类 relaxed/eavesdropping/soft-bending 三类 SOP，系统1 O-band、系统2 C-band）：S1 O→O 88.85%，S2 C→C 98.63%，S3 O→C（跨）8.11%（低于随机猜测 33%），S4 C→O（跨）60.59%，S5 联合训练 91.11%；泛化不对称（S3≠S4），多系统训练可恢复至 91%（引 L. Sadighi 等 ECOC 2025；看图核实）[p24]
   - 推理拆分：边缘亚毫秒轻量模型（XGBoost）、深度网络（CNN）、基础模型/零样本 LLM（秒级延迟，仅用于慢时间尺度）；架构含边缘+集中+混合部署 [p21][p22]
   - 遥测：SNMP 轮询（分钟级）→流式遥测；Telemetry-as-a-Service（EUCNC/6G Summit 2026）解耦有状态采集器与无状态注入器 [p4]
   - 开放问题：数据不平衡、泛化性、特征提取与数据最小化、动态分辨率 [p26]

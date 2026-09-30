@@ -6,7 +6,7 @@ tags:
 ---
 
 ### 0923-We2-B1-Lumentum-800G与1.6T硅光发射机量产.pdf
-- 讲者/机构：讲者姓名未见（题目页看不清），Lumentum | 题目：800G and 1.6T Silicon Photonics Transmitters in Volume Production（题目页OCR乱码，英文原题据文件名与内容推断，非逐字）| 类型：邀请报告（Workshop/专题场 We2-B，产业侧）
+- 讲者/机构：Erman Timurdogan, PhD（Director of Silicon Photonics RD）/ Lumentum（p1 看图核实，2026-09-23） | 题目：800G and 1.6T Silicon Photonic Transmitters at Scale | 类型：邀请报告（Workshop/专题场 We2-B，产业侧）
 - 方向归属（主/次）：主 3（Scale-out 224G/光源/调制器）；次 4（CPO/NPO/XPO 下一代）
 - 核心主张：
   1. AI 使数据中心网络以约每3.4个月翻倍的速度增长，要求算力与光模块同步；模块量产爬坡时间缩短，性能与质量要求上升。
@@ -16,7 +16,7 @@ tags:
   - LLM 算力需求每3.4个月翻倍；LLM 能力密度每3.5个月翻倍；GPU 算力每6个月翻倍（引自 OpenAI/Nature MI/NVIDIA 图）[p3][p4]
   - 面向 GPU 集群 scale-out 的可插拔光模块速率约每4.5年翻倍；达到1000万只/年所需年数：10G 15年、100G 10年、400G 8年、800G 5年、1.6T 4年（LightCounting, OFC 2026）[p6]
   - 可插拔模块功耗构成：DSP 49%、光学+电子 27%、激光器 12%、电源开销 12%；DSP 内部：SerDes（host侧）40%、ADC/DAC（line侧）36%、DSP 核 24% [p8]
-  - 800G-1.6T DR8 硅光发射机 PIC：马赫-曾德尔调制器（边缘耦合器+3dB分束+加热器+RF相移器）；EO S21 图显示 100G/lane 与 200G/lane 两条响应，x轴至67 GHz，具体-3 dB带宽看不清；倒装焊装配，眼图标注 112 GBd [p11]
+  - 800G-1.6T DR8 硅光发射机 PIC：马赫-曾德尔调制器（边缘耦合器+3dB分束+加热器+RF相移器）；EO S21 图显示 100G/lane 与 200G/lane 两条响应，x 轴至 67 GHz，读图 −3 dB 带宽约 37 GHz 与 45 GHz（67 GHz 处约 −8 与 −6.2 dB，读图估计）；倒装焊装配，眼图标注 112 GBd（看图核实）[p11]
   - 光纤到硅光耦合损耗：SSC->带双透镜激光器 <0.8 dB；Gen1 SSC->光纤阵列单元 <1.8 dB；Gen2 SSC->光纤阵列单元 <0.9 dB（1260–1360 nm，单位 dB/facet）[p12]
   - 片上监测PD读数随 InP 激光功率（0–约220 mW）线性，讲者称高输入光功率下线性，对减少激光器数量重要 [p12]
   - 1.6T DR8 八通道 BER 曲线：接收光功率约 -6 至 +2 dBm，BER 底约 1e-12 量级，讲者称200G PAM4下"close to error free (1e-12)" [p13]
@@ -24,7 +24,7 @@ tags:
   - 晶圆级测试：垂直耦合器只能测单偏振单通带，难测相干或CWDM PIC；新方法用硅光切割沟槽+标准FAU做边缘耦合晶圆测试，FWHM >6 um；可在O波段双偏振下扣除边缘耦合器损耗测 MZM 插损与消光比，重复性高（MZM IL 箱线图约 2.2–2.9 dB，中位约 2.4 dB；ER 约 22–26.5 dB，中位约 24.8 dB） [p15][p16][p17]
   - 能效路线：LPO、XPO、NPO 目标 <10 pJ/bit，交换机 radix 在200G/lane下由512增至1024；CPO 目标 <5 pJ/bit，采用慢而宽（50G/lane）方式，潜在 radix 4096；图中收发器功耗曲线由2016年约38降至2025年约17 pJ/bit [p19]
 - 提到的公司/客户/产品/标准：LightCounting、OpenAI、NVIDIA、Arista（引用）、XPOMSA、Samtec CPX/CPC（引用 OCP 2025）、MPI（晶圆测试）；DR8、DR4、LPO、XPO、NPO、CPO、InP 激光器、SiPho
-- 与业界对比或记录声明（SOTA/首次/record）：未见 record/首次声明；为产业量产进展汇报 [p14]
+- 与业界对比或记录声明（SOTA/首次/record）：未见 record/首次声明；为产业量产进展汇报——2xDR4 晶圆投片 2024→2025 快速爬坡，典型 1.6T DR8 晶圆级测试损耗波动 <0.5 dB（看图核实）[p14]
 - 推荐配图页：p19（收发器功耗与交换容量演进+传统/NPO·CPO/LPO 封装对比）；p6（速率与放量年数）；p13（1.6T DR8 八通道BER与眼图）
 
 ### 0923-We2-B2-80-硅微环调制器5.2THz FSR与69GHz带宽.pdf
@@ -56,9 +56,9 @@ tags:
   - 带宽：S21 测至 110 GHz，仍在 -3 dB 线之上；提取 R 约 45 ohm、C 约 11 fF，集总元件 3 dB 带宽约 150 GHz（50 um 器件） [p7]
   - 数据实验：C波段 TLS，256 GSa/s AWG，1 Vpp 驱动，100 GHz PD，示波器；100–200 GBd PAM4，BER 在 180 GBd 约 3e-3（低于 7% HD-FEC 线附近），200 GBd 约 3e-2 但低于 20% SD-FEC；展示 100 GBd 与 180 GBd 眼图；光损耗 0.075 dB/um，主要来自掺杂多晶硅 [p8]
   - 结论页展示 360 Gbps 数据率眼图（对应 180 GBd PAM4）[p10]
-  - 优化：器件长度 10–200 um 扫描，传播损耗 <0.005 dB/um（p9 标注，具体条件看不清） [p9]
+  - 优化：器件长度 10–200 µm 扫描，<200 µm 时 RF 损耗可忽略（<1 dB/mm）、速度失配可忽略，不再受 50 Ω 源阻抗失配限制；C-Si 顶层 10^18 cm^-3 时传播损耗 <0.005 dB/µm（看图核实） [p9]
 - 提到的公司/客户/产品/标准：NLM Photonics（极化方法讨论）、UGent IDLab（数据实验）；资助：ERC QAMP、HORIZON-JU-Chips STARLight、Branco Weiss Fellowship；20% SD-FEC、7% HD-FEC
-- 与业界对比或记录声明（SOTA/首次/record）：雷达图对比 plasmonic/h-SOH/v-SOH 的 VπL-损耗-带宽折中；未见明确 record 用语 [p10]
+- 与业界对比或记录声明（SOTA/首次/record）：雷达图对比 plasmonic/h-SOH/v-SOH 的 VπL-损耗-带宽折中；VπL≈150 V·µm（O 波段交联材料+几何可 <100 V·µm），插损可优化至 <1 dB，S21 平坦至 110 GHz，360 Gbps 眼图；未见明确 record 用语（看图核实）[p10]
 - 推荐配图页：p10（结论页：VπL/损耗/带宽三角雷达对比，50 um 器件至110 GHz S21 及 360 Gbps 眼图）；p8（BER 对符号率与眼图）
 
 ### 0923-We2-B4-163-激光修整微环调制器超100GBaud.pdf

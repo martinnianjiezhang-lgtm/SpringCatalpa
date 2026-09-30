@@ -85,7 +85,7 @@ tags:
   - 结构：双路残差学习（线性路径为恒等跳连），B样条基函数（2阶和3阶）[p7]
   - EVM vs RF输入功率：无DPD在约5 dBm输入时约7.5%；KAN[BOP≈10^5]在5 dBm约2.3%；GMP[BOP≈10^5]约4.1%；MLP[BOP≈10^4]约3.9%；KAN[BOP≈10^4]约2.9%（读图）[p9]
   - 结论页：BOP≈10^4时EVM较MLP低约24%、较GMP低约30%；达到平均EVM<2%所需BOP较MLP少约52%（高驱动区2–5 dBm平均）[p11]
-  - EVM≤2%平均BOP：KAN约1.32×10^4，MLP约2.75×10^4（OCR值，与52%基本吻合，未图片核对） [p10]
+  - 结论页（p10 看图核实）：10⁴ BOPs 下 EVM 比 MLP 低约 24%、比 GMP 低约 30%；达到平均 EVM<2%（高驱动 2–5 dBm 区间）所需 BOPs 比 MLP 少约 52%；此前 OCR 读到的具体 BOP 值（KAN 约 1.32×10^4、MLP 约 2.75×10^4）不在该页，未核对 [p10]
 - 提到的公司/客户/产品/标准：Ericsson、MOPA（Mobile Optical Pluggables Alliance）、5G NR TM3.1、GMP [p6]
 - 与业界对比或记录声明（SOTA/首次/record）：无record声明；对比MLP与GMP [p11]
 - 推荐配图页：p9（EVM vs 输入功率与PSD对比，含KAN/MLP/GMP不同BOP）
@@ -100,7 +100,7 @@ tags:
 - 关键数据：
   - 实验平台：4块Xilinx RFSoC FPGA板（Tx 2块、Rx 2块）；Rx DSP服务器为2颗AMD EPYC 7313 16核处理器加4块NVIDIA A100 80 GB GPU；实时、分块、数据辅助LMS复数部分MIMO均衡，10个T/2间隔抽头，带集成相位恢复（32符号一块）[p14]
   - 0.002 ms数据迹：全20×20 MIMO（双偏振10模）恢复MG1约18 dB，MG4约17 dB（读图）；使用的MG数从1增至4时，活动FIR滤波器数：MG4从约65增至160，MG1从约5增至40（读图）；全MIMO下各MG滤波器数40/80/120/160 [p16]
-  - 120秒实时迹：恢复MG1时，使用MG1–4全部的SNR约17.9 dB，MG1–3约15.3 dB，MG1–2约12.8 dB，仅MG1约8.2 dB（相差9.7 dB）；恢复MG4时，全部约16.8 dB，MG2–4约14.8 dB，MG3–4约11.1 dB，仅MG4约5.6 dB（相差11.2 dB）；SNR在120 s内稳定（部分标注读图较模糊，数值取近似） [p20]
+  - 120秒实时迹：恢复MG1时，使用MG1–4全部的SNR约17.9 dB，MG1–3约15.3 dB，MG1–2约12.8 dB，仅MG1约8.2 dB（相差9.7 dB）；恢复MG4时，全部约16.8 dB，MG2–4约14.8 dB，MG3–4约11.1 dB，仅MG4约5.6 dB（相差11.2 dB）；SNR在120 s内稳定（看图核实，照片略糊） [p20]
 - 提到的公司/客户/产品/标准：Xilinx RFSoC、AMD EPYC 7313、NVIDIA A100；引用Winter, Ryf 等ECOC 2025“Real-time GPU-based 48-km 10-mode transmission” [p14]
 - 与业界对比或记录声明（SOTA/首次/record）：称此前部分MIMO工作仅为离线数据；本工作为实时GPU 10模26 km部分均衡，未使用“首次”一词 [p11–p13]
 - 推荐配图页：p16（活动FIR滤波器数与SNR随所用模式组数）；p20（120秒SNR稳定性，MG1与MG4）

@@ -11,7 +11,7 @@ ECOC 2026 中出现的AIDC客户共 **12** 家。“主讲”= 该公司自己�
 
 | 厂商 | 主讲 | 提及 | 主讲报告的场景分布 |
 |---|---|---|---|
-| [[ECOC2026 厂商索引 · AIDC客户#Microsoft · Azure\|Microsoft · Azure]] | 13 | 21 | Scale Across 2、Scale Up 3、Transport 7、新应用 1 |
+| [[ECOC2026 厂商索引 · AIDC客户#Microsoft · Azure\|Microsoft · Azure]] | 14 | 21 | Scale Across 2、Scale Out 1、Scale Up 3、Transport 7、新应用 1 |
 | [[ECOC2026 厂商索引 · AIDC客户#Oracle OCI\|Oracle OCI]] | 10 | 1 | Scale Across 1、Scale Out 4、Scale Up 5 |
 | [[ECOC2026 厂商索引 · AIDC客户#Meta\|Meta]] | 4 | 18 | Scale Up 1、Transport 3 |
 | [[ECOC2026 厂商索引 · AIDC客户#Google\|Google]] | 2 | 19 | Scale Across 1、Scale Out 1 |
@@ -37,14 +37,15 @@ ECOC 2026 中出现的AIDC客户共 **12** 家。“主讲”= 该公司自己�
 - **立场/路线**（厂商地图，涉及方向 1）：长距双向O+C，190 µm缩径HCF
 - **关键数字**：2024 km，GMI 51.9+53.9 Tb/s
 
-**主讲报告（13）**
+**主讲报告（14）**
 
-- [[B06_DAY1_A2-Su3-Su4-无中继空芯光纤#0920-pm-Su4-B-05-MicrosoftAzure-长无中继系统要求.pdf|0920-pm-Su4-B-05-MicrosoftAzure-长无中继系统要求]] · Scale Across · Requirements for long unrepeatered HCF systems（题目大意，p1 未看图）
-- [[B26_DAY2_Mo3-B-空芯光纤制造与部署#0921-Mo3-B3-待核-空芯光纤制造与部署.pdf|0921-Mo3-B3-待核-空芯光纤制造与部署]] · Transport · 题目页未见（第1页起为 "Why Transient Pressure Is Important?"），内容为空芯光纤拉丝中瞬态压力扰动的热-粘性模型（transient thermo-viscous draw model）；英文原题看不清
-- [[B30_DAY2_Mo4-I-AI互连之争-第二场#0921-Mo4-待定-MicrosoftAzure-AI纵向扩展与通用算力的光互连用例.pdf（第1–10页）|0921-Mo4-待定-MicrosoftAzure-AI纵向扩展与通用算力的光互连用例（第1–10页）]] · Scale Up · 未见原题（文件名：AI 纵向扩展与通用算力的光互连用例；英文原题看不到）
+- [[B06_DAY1_A2-Su3-Su4-无中继空芯光纤#0920-pm-Su4-B-05-MicrosoftAzure-长无中继系统要求.pdf|0920-pm-Su4-B-05-MicrosoftAzure-长无中继系统要求]] · Scale Across · System Requirements for Long Unrepeatered HCF Links
+- [[B26_DAY2_Mo3-B-空芯光纤制造与部署#0921-Mo3-B3-待核-空芯光纤制造与部署.pdf|0921-Mo3-B3-待核-空芯光纤制造与部署]] · Transport · 题目页未拍到（p1 起为 "Why Transient Pressure Is Important?"，看图核实，7 管 AR-HCF 几何），内容为空芯光纤拉丝中瞬态压力扰动的热-粘性模型（transient thermo-viscous draw model）
+- [[B30_DAY2_Mo4-I-AI互连之争-第二场#0921-Mo4-待定-MicrosoftAzure-AI纵向扩展与通用算力的光互连用例.pdf（第1–10页）|0921-Mo4-待定-MicrosoftAzure-AI纵向扩展与通用算力的光互连用例（第1–10页）]] · Scale Up · 未见原题（p1 为倒拍的 "Key messages" 页，看图核实：近期聚焦 AI scale-up 与通用算力内存解耦；OCI 规范提供多代通用 PHY；Wave 1 引入 OCI 光学用于 scale-up，Wave 2 更紧集成并扩展到内存解耦，VCSEL 成为选项）
 - [[B32_DAY2_Mo5-B-空芯光纤设计#0921-Mo5-B1-待核-空芯光纤设计.pdf|0921-Mo5-B1-待核-空芯光纤设计]] · Transport · Hollow Core Fibres: from scientific curiosity to multi-problem solution
-- [[B46_DAY3_Tu1-E-光开关与解复用器#0922-Tu1-E3-Microsoft-宽而慢架构加microLED打破AI网络与内存墙.pdf|0922-Tu1-E3-Microsoft-宽而慢架构加microLED打破AI网络与内存墙]] · Scale Up · Wide-and-slow architecture with microLED to break AI network and memory walls（据文件名与内容概括，原题页未见）
-- [[B51_DAY3_Tu3-H-长距空芯光纤系统#0922-Tu3-H1-MicrosoftAzureFiber-空芯光纤传输系统从城域到长距.pdf|0922-Tu3-H1-MicrosoftAzureFiber-空芯光纤传输系统从城域到长距]] · Transport · HCF transmission systems from metro to long-haul（英文原题未逐字核对，据议程页"HCF-based metro transmission / multi-span and long-haul"概括）
+- [[B43_DAY3_Tu1-B-空芯光纤在光网络中的应用#0922-Tu1-B3-南安普顿大学-空芯光纤带来的光网络新机会.pdf|0922-Tu1-B3-南安普顿大学-空芯光纤带来的光网络新机会]] · Scale Out · New Opportunities in Optical Networks Enabled by Hollow-Core Fibres（Tu1-B3）
+- [[B46_DAY3_Tu1-E-光开关与解复用器#0922-Tu1-E3-Microsoft-宽而慢架构加microLED打破AI网络与内存墙.pdf|0922-Tu1-E3-Microsoft-宽而慢架构加microLED打破AI网络与内存墙]] · Scale Up · Wide-and-slow architecture with microLED to break AI network and memory walls（据文件名与内容概括，原题页未拍到；p1 看图核实为 "The talk in one slide"：互连是扩展瓶颈，光学可根本改变 AI 系统构建，需超越功耗、全栈协同优化、打破采用僵局）
+- [[B51_DAY3_Tu3-H-长距空芯光纤系统#0922-Tu3-H1-MicrosoftAzureFiber-空芯光纤传输系统从城域到长距.pdf|0922-Tu3-H1-MicrosoftAzureFiber-空芯光纤传输系统从城域到长距]] · Transport · Hollow-Core Fibre Transmission Systems: From Metro to Long-Haul Applications
 - [[B51_DAY3_Tu3-H-长距空芯光纤系统#0922-Tu3-H4-MicrosoftAzureFiber-全C波段400GZR经三跨段427.97km空芯光纤传输.pdf|0922-Tu3-H4-MicrosoftAzureFiber-全C波段400GZR经三跨段427.97km空芯光纤传输]] · Scale Across · Demonstration of Full C-band 400G ZR Transmission over 3-Span 427.97-km Hollow-Core Fibre [p1]
 - [[B57_DAY4_We-F-标准化专场#0923-We-F-00-标准化专场II连拍.pdf（第11–19页）|0923-We-F-00-标准化专场II连拍（第11–19页）]] · Scale Up · Optical Scale-Up AI Systems: progress in Standards
 - [[B70_DAY4_We3-I-空芯光纤表征与标准化#0923-We3-I-00-全场连拍-空芯表征与部署.pdf（第1–43页）|0923-We3-I-00-全场连拍-空芯表征与部署（第1–43页）]] · Transport · Ultra-high resolution and long-range OFDRs for characterizing and monitoring Hollow-core DNANFs
@@ -86,13 +87,13 @@ ECOC 2026 中出现的AIDC客户共 **12** 家。“主讲”= 该公司自己�
 
 - [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第24–38页）|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第24–38页）]] · Scale Out · Photonic interconnects for modern AI superclusters（ECOC 2026 Workshop Su3-A）
 - [[B03_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3-A-03-Oracle-AI超集群光互连.pdf|0920-pm-Su3-A-03-Oracle-AI超集群光互连]] · Scale Out · Photonic interconnects for modern AI superclusters
-- [[B22_DAY2_MF-0921-下午-模块与子系统#0921-MF-pm-1320-Oracle-GW级AI部署的经验.pdf|0921-MF-pm-1320-Oracle-GW级AI部署的经验]] · Scale Out · Lessons from GW-scale AI deployments（据文件名，标题页未看）
-- [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第1–7页）|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第1–7页）]] · Scale Across · （无题目页）首页标题 "Coherent technology foundation of scale across"
+- [[B22_DAY2_MF-0921-下午-模块与子系统#0921-MF-pm-1320-Oracle-GW级AI部署的经验.pdf|0921-MF-pm-1320-Oracle-GW级AI部署的经验]] · Scale Out · Lessons learned from GW-scale AI deployments
+- [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第1–7页）|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第1–7页）]] · Scale Across · （无题目页）首页标题 "Coherent technology foundation of scale across"（看图核实：IMDD 距离受限推动 ZR-/CL，ZR 为锚定 DCI 应用，ZR+/ZR++ 延伸更长距）
 - [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第8–13页）|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第8–13页）]] · Scale Out · What's next in datacenter optics?（p8 议程页标题）
 - [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第14–32页）|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第14–32页）]] · Scale Up · The Topic is Density, not Port Size（p14 首页）；主体为 XPO 模块介绍
 - [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第33–40页）|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第33–40页）]] · Scale Up · Reality checking 1.6T+ AI interconnect solutions
 - [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第41–45页）|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第41–45页）]] · Scale Up · Optics for NVIDIA Spectrum-X Multiplane Network Architecture
-- [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第46–54页）|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第46–54页）]] · Scale Up · （标题页未见）内容涵盖 Optical connectivity expanding / Integrated optics requires a variety of technologies / Driving the future of pluggable transceivers
+- [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第46–54页）|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第46–54页）]] · Scale Up · （标题页未拍到；p46 看图核实为 "Electrical to Photonic Transition Continues"）内容涵盖 Optical connectivity expanding / Integrated optics requires a variety of technologies / Driving the future of pluggable transceivers
 - [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第55–63页）|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第55–63页）]] · Scale Up · Open CPX 相关（Open CPX supporting broad NPO and CPO use cases / Diablo-1 6.4T Open CPX engine），标题栏被裁切
 
 > [!quote]- 被提及的报告（1）
@@ -102,14 +103,14 @@ ECOC 2026 中出现的AIDC客户共 **12** 家。“主讲”= 该公司自己�
 ## Meta
 
 - **立场/路线**（厂商地图，涉及方向 1,4）：骨干去转发器；海缆2 Pbps@TA现有供电下不可能；SerDes主导功耗
-- **关键数字**：骨干降功耗约80%；Petal（预计2029，OCR）首条大规模MCF海缆；OCI约5×/端口
+- **关键数字**：骨干降功耗约80%；Petal（预计2029，法美约7,000 km，>1 Pbps）首条大规模部署MCF的海缆；OCI约5×/端口
 - **立场/路线**（厂商地图，涉及方向 1）：实时海缆跨太平洋800G
 - **关键数字**：18 Tb/s，16,608 km
 
 **主讲报告（4）**
 
 - [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su1-B-01-Meta-AI数据中心功耗.pdf|0920-am-Su1-B-01-Meta-AI数据中心功耗]] · Scale Up · Standard Optic's Perspective on Power Savings（首页标题；无独立总题页）
-- [[B21_DAY2_MF-0921-上午-模块与子系统#0921-MF-am-T08-1220-Meta-骨干光纤基础设施扩展.pdf|0921-MF-am-T08-1220-Meta-骨干光纤基础设施扩展]] · Transport · Scaling backbone fiber infrastructure（据文件名；页内 "The network must lead"）
+- [[B21_DAY2_MF-0921-上午-模块与子系统#0921-MF-am-T08-1220-Meta-骨干光纤基础设施扩展.pdf|0921-MF-am-T08-1220-Meta-骨干光纤基础设施扩展]] · Transport · Scaling the Backbone Fabric — Physical infrastructure for the AI era（页内 "The network must lead"）
 - [[B28_DAY2_Mo3-G-海底与无中继系统#0921-Mo3-G1-Meta-超petabit海缆的技术与挑战.pdf|0921-Mo3-G1-Meta-超petabit海缆的技术与挑战]] · Transport · Technologies and Challenges for beyond Petabit Submarine Cable
 - [[B28_DAY2_Mo3-G-海底与无中继系统#0921-Mo3-待定-Ciena-无中继海缆系统.pdf|0921-Mo3-待定-Ciena-无中继海缆系统]] · Transport · Algorithmically-Optimized Real-Time 18 Tb/s Throughput over a 16,608 km Trans-Pacific Subsea Link
 
@@ -173,7 +174,7 @@ ECOC 2026 中出现的AIDC客户共 **12** 家。“主讲”= 该公司自己�
 
 **主讲报告（4）**
 
-- [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第14–23页）|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第14–23页）]] · Scale Up · AI [Cluster] Networks: Requirements for Reliable, High-Bandwidth-Density …（p14 标题 OCR 残缺，完整英文原题看不清）
+- [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第14–23页）|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第14–23页）]] · Scale Up · AI Scale-Up Networks: Requirements for Reliable, High-Bandwidth-Density Interconnects（p14 标题页，看图核实）
 - [[B03_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3-A-02-OpenAI-ScaleUp互连需求.pdf|0920-pm-Su3-A-02-OpenAI-ScaleUp互连需求]] · Scale Up · AI Scale-Up Networks: Requirements for Reliable, High-Bandwidth-Density Interconnects
 - [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su1-B-02-OpenAI-ScaleUp还能用铜吗.pdf|0920-am-Su1-B-02-OpenAI-ScaleUp还能用铜吗]] · Scale Up · AI scale-up – Does copper still do the job?
 - [[B19_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su4-I-02-OpenAI-ScaleUp需求.pdf|0920-pm-Su4-I-02-OpenAI-ScaleUp需求]] · Scale Up · Fast/Narrow or Slow/Wide? Choosing for Bandwidth Density and Reliability

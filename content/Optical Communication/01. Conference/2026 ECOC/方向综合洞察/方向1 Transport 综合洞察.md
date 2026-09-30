@@ -83,7 +83,7 @@ Meta：24FP跨大西洋约0.5 Pbps已近技术极限；1 Pbps需48FP等效方案
 | 机构 | 方案 | 关键指标（条件） | 口径 | 索引 |
 |---|---|---|---|---|
 | YOFC | GTA-ST-HCF（长途，29 µm芯/230 µm/370 µm） | 最低0.032 dB/km、典型0.08 dB/km，IMI≤-60 dB/km；45.26 km样品OSA 0.0292–0.0297 dB/km，OTDR 0.035 dB/km，标称0.032±0.003，IMI -63.6 dB/km | 讲者自报/实验室测 | 〔0920-pm-Su3-B-01-长飞YOFC p13〕 |
-| Linfiber | 大芯/中芯AR-HCF量产 | 大芯：单塔1个月967.7 km，加权平均0.068 dB/km，最小0.038；中芯：1273.59 km，≤0.1 dB/km长度999.96 km，加权平均0.088 dB/km，IMI -60 dB/km；讲者称大芯"工业应用价值有限"（OCR） | 讲者自报 | 〔0920-pm-Su3-B-01-长飞YOFC p22〕〔0920-pm-Su3-B-01-长飞YOFC p23〕 |
+| Linfiber | 大芯/中芯AR-HCF量产 | 大芯：单塔1个月967.7 km，加权平均0.068 dB/km，最小0.038；中芯：1273.59 km，≤0.1 dB/km长度999.96 km，加权平均0.088 dB/km，IMI -60 dB/km；讲者称追求超低损耗"有科学价值但工业应用价值有限"（大芯增加微/宏弯损耗、降低缆芯密度） | 讲者自报 | 〔0920-pm-Su3-B-01-长飞YOFC p22〕〔0920-pm-Su3-B-01-长飞YOFC p23〕 |
 | Linfiber | 全指标对比与产能 | HCF<0.05 dB/km对SMF 0.142；非线性<0.01对1–10 W⁻¹km⁻¹；产能每预制棒数十km对数千km；价格>\$3000–5000/km对\$20–40/km；SMF每拉丝线约1M km/年，HCF每线30,000 km/年，占SMF市场1%（8.5M km/年）需283座塔；累计产量约83 km对SCF约10000 km量级 | 讲者自报（引CRU预测） | 〔0921-Mo3-B1-领纤Linfiber p13〕〔0921-Mo3-B1-领纤Linfiber p69〕 |
 | Microsoft/Southampton | 零色散HCF（PDP） | 外管壁厚1.18→1.31 µm，D在约1.29 µm过零；HF-5 1550 nm损耗0.23 dB/km（最小0.22），HF-4 0.196 dB/km；56 GBd PAM4约15 km：BER HF-5约2–4×10⁻⁴，标准HCF约2–4×10⁻³，SMF约3×10⁻¹；30 µm芯设计仿真0.057 dB/km尚未过零 | 实验（PDP，首次） | 〔0924-PDP-A-1 p18〕〔0924-PDP-A-1 p20〕 |
 | 中国移动 | 现网稳定性与标准 | 无锡18.4 km TDNANF-4 2024/10–2026/05无充气吹扫，熔点损耗-0.19至+0.18 dB；CO2线1602.876 nm密封方案缆前0.04 dB/km、部署后0.078 dB/km；4元与5元结构混接耦合损耗最低仍>0.09 dB（G.652.D/G.654.E约0.03 dB）；CCSA已批2份技术报告，ITU-T SG15 2026.7启动GSTR.hcf | 现网+自报 | 〔0920-pm-Su4-B-03-中国移动 p6〕〔0920-pm-Su4-B-03-中国移动 p7〕 |
@@ -135,8 +135,8 @@ Meta：24FP跨大西洋约0.5 Pbps已近技术极限；1 Pbps需48FP等效方案
 
 | 机构 | 方案 | 关键指标（条件） | 口径 | 索引 |
 |---|---|---|---|---|
-| NTT | 片上LPM/PDL/NLI（ExaSPEED800，118 GBd OSFP） | 200 km（4×50 km G.654.E）：单PDL<0.5 dB，双PDL误差<1.0 dB（p15页OCR：设定3 dB，估计2.3 dB，误差0.7 dB，未逐项核图）；LPM闭式辅助内存约降99.999%（OCR）；模块功耗无可测增加 | 实验 | 〔0922-Tu4-H2-NTT p15〕〔0922-Tu4-H3-NTT p20〕 |
-| Politecnico di Torino | LPM与NLI估计（邀请报告） | 1,483 km异质链路（SSMF 65 km×8+PSCF 110 km×4+SSMF 65 km×8），18×118 GBd QPSK，Acacia CIM-8；LPM估计SNR_NLI与OSA吻合，范围约14–23 dB（OCR）；称LPM"已商业部署"，弱点为只估计SCI | 实验 | 〔0923-We1-G-00-全场连拍 p67〕〔0923-We1-G-00-全场连拍 p91〕 |
+| NTT | 片上LPM/PDL/NLI（ExaSPEED800，118 GBd OSFP） | 200 km（4×50 km G.654.E）：单PDL<0.5 dB，双PDL（50 km、150 km 处各设 3 dB）估计约 2.3 dB、误差约 0.7 dB；LPM闭式辅助内存约降99.999%；模块功耗无可测增加 | 实验 | 〔0922-Tu4-H2-NTT p15〕〔0922-Tu4-H3-NTT p20〕 |
+| Politecnico di Torino | LPM与NLI估计（邀请报告） | 1,483 km异质链路（SSMF 65 km×8+PSCF 110 km×4+SSMF 65 km×8），18×118 GBd QPSK，Acacia CIM-8；LPM估计SNR_NLI与OSA吻合（中间信道偏差<0.5 dB、边缘信道约1 dB），范围约14–23 dB；称LPM"已商业部署"，弱点为只估计SCI | 实验 | 〔0923-We1-G-00-全场连拍 p67〕〔0923-We1-G-00-全场连拍 p91〕 |
 | 北邮/信通院 | 低复杂度硬判决PPE | 1 Sps HD+5 km步长直接用RMSE 3.8 dB，所提0.32 dB，计算时间减75%；可识别0.9/2.1/5.0 dB插损 | 仿真 | 〔0923-We1-G-00-全场连拍 p19〕〔0923-We1-G-00-全场连拍 p20〕 |
 | Nokia Bell Labs | 长距/超高分辨OFDR | 首次长距OFDR测约100 km HCF（3–25 m分辨率）；首次HCF侧壁背散分布式测量（124 µm，5 km）；HCF背散比SMF低30/45 dB；热敏感比SMF小22倍；相干OFDR已测>4条海缆 | 实验（自称首次） | 〔0923-We3-I-00-全场连拍 p43〕〔0923-We3-I-00-全场连拍 p35〕 |
 | 北邮/中国电信 | 物理驱动迁移学习预测HCF DCI OSNR | 91个现网样本适配，16个盲测：MAE 0.328 dB（解析0.478、纯数据0.434），RMSE降64% | 现网数据 | 〔0922-Tu1-B4-北邮 p11〕 |
@@ -153,7 +153,7 @@ Meta：24FP跨大西洋约0.5 Pbps已近技术极限；1 Pbps需48FP等效方案
 | Adtran | MCP智能体IPoDWDM生命周期 | 演示自然语言开通E2E服务，193.1 THz、75 GHz，返回Success；性能查询Pre-FEC BER 6.980e-03，SNR 14.3 dB，OSNR 26.0 dB；GNPy估计与测量OSNR落在曲线附近；当前假设单Agent | 测试床演示 | 〔0923-We2-C4-731 p8〕〔0923-We2-C4-731 p10〕 |
 | Trinity College Dublin | AI-NNC六场景光网络控制 | 成功率（Equalize/Flatten/Hitless/Provision/Recover/Reroute，各10次）：Intent层全部10/10；Network层10/9/1/9/9/5；Device+层7/0/6/10/1/0；Device层4/0/6/9/3/0 | 测试床实验 | 〔0920-pm-Su4-H-03-Trinity p8〕 |
 | NTT | 光网络数字孪生（ONDT） | 现网试验：Galway–Dublin 280 km暗光纤，光纤与放大器设置事先未知，QoT预测误差约1 dB，整个过程约6小时；GSNR约18.3–21.5 dB（读数） | 现网试验 | 〔0920-pm-Su4-H-05-NTT p9〕〔0920-pm-Su4-H-05-NTT p10〕 |
-| Chalmers/TalTech | AI监测权衡 | 监测配置数据率跨约九个数量级；跨系统泛化：O→O 88.85%，C→C 98.63%，C→O 60.59%，联合训练91.11%（OCR未逐格核对） | 综述+案例 | 〔0924-Th1-G5-Chalmers与TalTech p17〕〔0924-Th1-G5-Chalmers与TalTech p24〕 |
+| Chalmers/TalTech | AI监测权衡 | 监测配置数据率跨约九个数量级；跨系统泛化：O→O 88.85%，C→C 98.63%，O→C 仅8.11%（低于随机33%）、C→O 60.59%，联合训练91.11%；泛化不对称 | 综述+案例 | 〔0924-Th1-G5-Chalmers与TalTech p17〕〔0924-Th1-G5-Chalmers与TalTech p24〕 |
 
 ---
 
@@ -211,7 +211,7 @@ Meta：24FP跨大西洋约0.5 Pbps已近技术极限；1 Pbps需48FP等效方案
 
 ## 5. 分歧、争议与反常识
 
-**5.1 HCF在海缆是否已有系统级优势。** ASN：今天HCF设计外径大、光纤对数受限，6000 km、≤48 FP下约1.1 Pbps对SCF约1.25 Pbps；0.05对0.08 dB/km最优跨段容量仅多约6%〔0920-pm-Su4-B-04-ASN p10〕〔0920-pm-Su4-B-04-ASN p11〕；但无空间约束时能耗降2x、容量潜在翻倍〔0920-am-Su2-B-06-ASN p2〕。对方：Meta称0.15→0.05 dB/km可使中继器减为1/3（OCR）〔0921-Mo3-G1-Meta p14〕；532 km、266 km跨段给出陆地与无中继正面证据〔0924-PDP-A-3 p24〕；Nokia称HCF仅低时延有价值〔0920-pm-Su3-D-05-Nokia p3〕。判别点：外径350 µm对200 µm，HCF约16 FP对减径SCF约48 FP〔0920-pm-Su4-B-04-ASN p8〕。
+**5.1 HCF在海缆是否已有系统级优势。** ASN：今天HCF设计外径大、光纤对数受限，6000 km、≤48 FP下约1.1 Pbps对SCF约1.25 Pbps；0.05对0.08 dB/km最优跨段容量仅多约6%〔0920-pm-Su4-B-04-ASN p10〕〔0920-pm-Su4-B-04-ASN p11〕；但无空间约束时能耗降2x、容量潜在翻倍〔0920-am-Su2-B-06-ASN p2〕。对方：Meta称0.15→0.05 dB/km可使中继器减为1/3（按20 kV PFE需440 km跨距、0.040 dB/km）〔0921-Mo3-G1-Meta p11, p14〕；532 km、266 km跨段给出陆地与无中继正面证据〔0924-PDP-A-3 p24〕；Nokia称HCF仅低时延有价值〔0920-pm-Su3-D-05-Nokia p3〕。判别点：外径350 µm对200 µm，HCF约16 FP对减径SCF约48 FP〔0920-pm-Su4-B-04-ASN p8〕。
 
 **5.2 长途HCF的GLA：光纤层根除还是系统层绕行。** Linfiber：在线去CO2使845.8 km光纤吸收中位<0.039 dB/km，称"剩余障碍是有明确解法的工程问题"〔0920-pm-Su3-B-01-长飞YOFC p29〕。Ciena：无单个样品同时满足各距离目标，GLA是长途主限制，1000 km时近1/2的L波段可能不可用〔0923-MF-Ciena-空芯光纤 p14〕。UCL仿真：L波段GLA主导，8×125 km SMF优于更短跨段HCF〔0922-Tu3-H3-UCL p20〕。Nokia Bell Labs：系统层绕行可行，GLA下>1T可到1500 km以外〔0922-Tu3-H2-NokiaBellLabs p12〕。
 
@@ -237,11 +237,11 @@ Meta：24FP跨大西洋约0.5 Pbps已近技术极限；1 Pbps需48FP等效方案
 |---|---|---|
 | 800ZR/ZR+可插拔 | 规模量产与部署 | >75,000只（Acacia自报）；ICE-X现场600G/λ 2,841 km〔0920-pm-Su4-A-03-Acacia p3〕〔0920-am-Su2-B-04-Nokia p8〕 |
 | 1600ZR/ZR+ | 2026年样品/爬坡 | IA约Q2/Q3 2026；OIF 1600ZR straw ballot〔0920-pm-Su3+Su4-A-00-全场 p120〕〔0921-MF-am-T05-1120-Nokia p6〕 |
-| Coherent-Lite（园区） | 标准讨论中，原型展示 | OIF 1600CL讨论；Ciena 12.8T XPO展示；Marvell Aquila（OCR）〔0921-MF-am-T05-1120-Nokia p6〕 |
+| Coherent-Lite（园区） | 标准讨论中，原型展示 | OIF 1600CL讨论；Ciena 12.8T XPO展示；Nokia 1.6/3.2T coherent lite <40 km、OSFP、30 W 目标〔0921-MF-am-T05-1120-Nokia p6〕 |
 | 2T/3.2T单载波 | 实验室（实时2.0T；离线3.83T） | 234 GBd实时；450 GBd离线〔0923-We2-I-00-全场连拍 p43〕 |
 | HCF在DCI/城域 | 现网商用起步 | 中国移动首个商用34 km；Microsoft Region承载〔0923-We3-I-00-全场连拍 p82〕 |
 | HCF长途/无中继 | 实验室与环路验证 | 532 km；GLA、IMI、外径未全解 |
-| MCF海缆 | 首条大规模部署预计2029（Petal，OCR） | 〔0921-Mo3-G1-Meta p15〕 |
+| MCF海缆 | 首条大规模部署预计2029（Petal，法美约7,000 km，>1 Pbps） | 〔0921-Mo3-G1-Meta p15〕 |
 | 片上LPM | 已进入芯片，OFC 2026 PDP；"已商业部署"（Politecnico di Torino称） | 〔0923-We1-G-00-全场连拍 p93〕 |
 | LLM智能体 | 原型/测试床 | Chalmers"尚未" |
 

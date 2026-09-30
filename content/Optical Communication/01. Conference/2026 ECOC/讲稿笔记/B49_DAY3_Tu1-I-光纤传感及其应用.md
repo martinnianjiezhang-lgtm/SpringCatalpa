@@ -16,14 +16,14 @@ tags:
   - 8 个现场部署应答器 + 2 个实验室背靠背应答器，采样率 2 Hz [p8]
   - 4 次地震：Event1 2025-05-22 03:19:35 UTC Mw6.2；Event2 2025-05-13 22:51:15 Mw6.0；Event3 2025-07-23 13:26:54 Mw5.1；Event4 2025-07-07 17:46:04 Mw5.1 [p8]
   - 路由距离：GAR–ROM 251 km；ATH–CHA 274 km；MAR2–PAL2 885 km；PAL1–MIL 887 km；CAT2–HAI 1879 km；CAT1–TAV 1892 km [p8]
-  - SNR 增益"最高达 16 dB"；柱图各链路/事件 anisotropy-aware SNR（dB，读柱顶）：ATH-Event1 35，CAT02-Event1 22，CHA-Event1 43，CAT01-Event2 36，CAT02-Event2 26，HAI-Event3 16，HAI-Event4 25（对应基线约 12–29 dB，个别数字看不清）[p9]
+  - SNR 增益"最高达 16 dB"；柱图各链路/事件 anisotropy-aware SNR（dB，读柱顶）：ATH-Event1 35，CAT02-Event1 22，CHA-Event1 43，CAT01-Event2 36，CAT02-Event2 26，HAI-Event3 16，HAI-Event4 25；对应基线 20、15、27、29、12、14、19 dB（看图核实）[p9]
   - 案例：2023-02-06 土叙地震双震 Mw7.8 与 Mw7.6，相距 95 km、间隔 9 h，MedNautilus 缆（Catania–Haifa）应答器记录到偏振旋转，与陆上地震仪及验潮站对时 [p14]
 - 提到的公司/客户/产品/标准：Nokia ICE6 相干转发器；Sparkle 海缆网络；MedNautilus 缆；Research Square 预印本；ECSTATIC 项目标识
 - 与业界对比或记录声明（SOTA/首次/record）：讲者称在现网（live）地中海海缆、真实地震下验证有效；SNR 增益最高 16 dB [p9,p10]
 - 推荐配图页：p9（各事件/链路 SNR 柱图，基线 vs 各向异性感知）；p8（地中海网络与四次地震位置）
 
 ### 0922-Tu1-I3-Nokia-海底网络路径积分偏振旋转特征与缆路几何.pdf
-- 讲者/机构：Nokia（讲者姓名未见）| 题目：Path-integrated polarization rotation signatures and cable geometry in subsea networks（中文题名对应；英文原题页面未见，此为据文件名推译）| 类型：邀请报告
+- 讲者/机构：Nokia（讲者姓名页面未显示）| 题目：Path-integrated polarization rotation signatures and cable geometry in subsea networks（中文题名对应；英文原题页未拍到，此为据文件名推译；p1 看图核实为 "Fiber–Seism Interaction & Analytical Model" 页）| 类型：邀请报告
 - 方向归属（主/次）：主 6；次 1
 - 核心主张：
   1. 光纤段是把三维地面运动投影到局部光纤切线方向的方向性应变计；长海缆对动态应变做非相干（平方律）累加。
@@ -33,13 +33,13 @@ tags:
   - 模型：|Γ_R,T|² = ∫A(r)² R_R,T(θ)² [(ŝ·k̂)(ŝ·p̂)]² ds，且 |Γ|² ∝ |Δφ|²（A=路径损耗，R=辐射花样）[p2]
   - 土叙双震位于 T 波灵敏度较低（约 -10 dB）区域，故预期与 R 波对应更好 [p2]
   - 灵敏度色标范围约 -15 至 +10 dB；60 s 事件与长事件的 R/T 型方向图对比，Catania(Rx)–Haifa(Tx) [p2]
-  - p3 为模型与测量对应（Rayleigh/Love 时间-幅度曲线），数值看不清 [p3]
+  - p3 为模型与测量对应：Catania–Haifa 海缆与 Mw 7.8 震中、ΔΦ 时序（0–1500 s）与频谱、Rayleigh/Love 辐射方向图及沿缆投影；小字数值看图仍不可读 [p3]
 - 提到的公司/客户/产品/标准：Nokia；地震台 ZKR 等（p1 图注）；Catania–Haifa 缆
 - 与业界对比或记录声明（SOTA/首次/record）：未见明确 record 声明
 - 推荐配图页：p2（R 型/T 型波、短/长事件下缆路灵敏度方向图）
 
 ### 0922-Tu1-I4-Aston大学-基于SOP的实时地震检测的限制与机会.pdf
-- 讲者/机构：Melo 等（Aston University；合作 L'Aquila 大学、Nokia–Sparkle；欧盟 ECSTATIC 项目）| 题目：Limits and opportunities of real-time earthquake detection from SOP data（英文原题页未清晰见到，为据文件名推译）| 类型：学术论文
+- 讲者/机构：Melo 等（Aston University；合作 L'Aquila 大学、Nokia–Sparkle；欧盟 ECSTATIC 项目）| 题目：Limits and opportunities of real-time earthquake detection from SOP data（英文原题页未拍到，为据文件名推译；p1 看图核实为动机页 "Can every submarine cable become a seismometer?"）| 类型：学术论文
 - 方向归属（主/次）：主 6；次 1
 - 核心主张：
   1. 三个限制三个答案：无标注 SOP 数据 -> 物理信息标注；检测须快 -> 短滑窗；须能在边缘运行 -> 轻量 MA/P95 检测器。
@@ -73,7 +73,7 @@ tags:
 - 推荐配图页：p12（速度剖面曲线与 MAE 表）
 
 ### 0922-Tu1-I6-中国联通-100G相干系统瞬时SOP波动的实时跟踪与定位.pdf
-- 讲者/机构：Yu Tang 等（中国联通 & 华中科技大学）| 题目：（中文题名：100G 相干系统瞬时 SOP 波动的实时跟踪与定位；英文原题页面OCR/图不清，未核对）| 类型：学术论文
+- 讲者/机构：Yu Tang 等（中国联通 & 华中科技大学，tangy186@chinaunicom.cn）| 题目：Real-time Tracking and Localization of Rapid Instantaneous SOP Fluctuations for 100G Coherent System over FPGA（p1 看图核实，2026-09-22）| 类型：学术论文
 - 方向归属（主/次）：主 6；次 1（oDSP）
 - 核心主张：
   1. 两级自适应均衡器（AEQ）：第一级补偿残余色散，第二级偏振解复用；从 AEQ 抽头提取 Stokes 矢量，加快收敛与跟踪。

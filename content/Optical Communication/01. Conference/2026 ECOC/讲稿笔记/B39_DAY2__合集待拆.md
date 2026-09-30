@@ -35,13 +35,13 @@ tags:
   - 25 Gb/s NRZ相干检测：ER=24.5 dB时-41 dBm @BER=2e-2；对比BPSK -44.2 dBm、QPSK -42.5 dBm（25 GBd）；理论上ER→∞的NRZ灵敏度接近QPSK，比BPSK低3 dB [p25]
   - 120 Gb/s NRZ相干检测（带宽受限）：ER=8.5 dB时灵敏度-23.1 dBm @BER=2e-2；20 km SMF后光功率代价<0.4 dB（ER=7.5 dB曲线）；CD补偿在定时恢复之前做 [p26]
   - ER=6 dB时，120 Gb/s相干接收灵敏度-20.8 dBm @BER=2e-2；折算最低ONU平均发射功率+8.5 dBm（29 dB光功率预算，0.3 dB CD惩罚）[p28]
-  - 对比接收机：32/64 GBd相干接收机、PIN(42 GHz)、SOA-filter-PIN(42 GHz)、EDFA-filter-PIN(42 GHz)；细节读数看不清 [p28]
+  - 对比接收机：32/64 GBd相干接收机、PIN(42 GHz)、SOA-filter-PIN(42 GHz)、EDFA-filter-PIN(42 GHz)；ER=6 dB 现实校验：120 Gb/s 相干接收灵敏度 −20.8 dBm（BER=2e-2），对应 29 dB 光预算（含 0.3 dB CD 代价）需 ONU 平均发射功率至少 +8.5 dBm（看图核实；各曲线逐点读数仍不精确）[p28]
 - 提到的公司/客户/产品/标准：Nokia Bell Labs [p25]
 - 与业界对比或记录声明：无record声明
 - 推荐配图页：p28（各接收机灵敏度-ER曲线族）；p26（120 Gb/s相干BER曲线与星座）
 
 ### 0921-合集待拆-全场-Mo5-G超高速PON连拍.pdf（第31–48页）
-- 讲者/机构：讲者姓名未见（Politecnico di Torino，页眉logo）| 题目：未见完整原题；主题为 DCPC（Digital Chromatic Dispersion Pre-Compensation）用于VHSP，含MPI与DGD评估 | 类型：学术论文
+- 讲者/机构：讲者姓名页面未显示（Politecnico di Torino，页眉logo）| 题目：未见完整原题；p31 看图核实为 Roadmap 页：DCPC（Digital Chromatic Dispersion Pre-Compensation）用于VHSP，含C波段MPI容限与O波段120 GBd可扩展性（含MPI与DGD）评估，引用 ITU-T G Suppl. 88 (10/2025) | 类型：学术论文
 - 方向归属（主/次）：主 5 固定与无线接入 PON | 次 1 oDSP
 - 核心主张：
   1. 将色散补偿移到OLT，用数字预补偿(DCPC)，保持ONU为低成本直接检测接收机 [p32–33]。
@@ -68,7 +68,7 @@ tags:
   - 背景：VHS-PON需要32–35 dB光功率预算，20–30 km链路，倾向IM/DD但需DSP [p50]
   - 下行(DS)：灵敏度-25 dBm；发射+7 dBm对应32 dB光功率预算；SD-LDPC FEC阈值；-20 dBm接收功率以下存在明显误码平层，25 km光纤后平层升高（约3e-3到4e-3，图读数）[p63]
   - DS开/关上行时灵敏度不受影响，平层随注入光纤的功率升高 [p64]
-  - 上行(US)：HD-LDPC FEC下灵敏度-31.5 dBm，对应33或38 dB OPB；以太网FEC限下-26 dBm，对应27.5或32.5 dB OPB；未见平层；开启下行通道时惩罚<1 dB（以太网FEC处）[p65]
+  - 上行(US)：HD-LDPC FEC下灵敏度-31.5 dBm，对应33或38 dB OPB；以太网FEC限下-26 dBm，对应27.5或32.5 dB OPB；未见平层；开启下行通道时惩罚<1 dB（以太网FEC处）（看图核实）[p65]
   - DS的MultiCAP带：另用两条5 GHz的DSB MultiCAP 4QAM带做20 Gbps上行概念验证；下行50 Gbps MultiCAP IM信号另有海报We4-P81 [p61]
   - 实验：120 GSa/s AWG，128 GSa/s DSO，电带宽标题为28 GHz [p49, p62, p63]
   - 标题中的200 Gb/s为PolMux总速率，DS逐项分解看不清
@@ -77,7 +77,7 @@ tags:
 - 推荐配图页：p65（上行BER-接收功率，含33/38 dB OPB）；p63（下行BER与平层）；p53（方案概览）
 
 ### 0921-合集待拆-全场-Mo5-G超高速PON连拍.pdf（第68–85页）
-- 讲者/机构：讲者姓名未见（Huawei，页脚logo）| 题目：未见原题；内容为VHSP各技术路线的色散处理对比（ODB、DCPC、SSB、SSB+DCPC）| 类型：邀请报告/学术论文（无法确认）
+- 讲者/机构：讲者姓名页面未显示（Huawei，页脚logo）| 题目：未见原题；p68 看图核实为 "Introduction: IM-DD and Coherent"（引 Acacia OFC 2022 IMDD vs Coherent 距离-速率图与 FSAN Optical Access Roadmap 3.0）；内容为VHSP各技术路线的色散处理对比（ODB、DCPC、SSB、SSB+DCPC）| 类型：邀请报告/学术论文（无法确认）
 - 方向归属（主/次）：主 5 固定与无线接入 PON | 次 1 oDSP
 - 核心主张：
   1. ITU-T VHSP supplement（2025年10月发布）覆盖>50 Gb/s PON，含直接检测、相干、IMDD-相干混合三类技术 [p72]。

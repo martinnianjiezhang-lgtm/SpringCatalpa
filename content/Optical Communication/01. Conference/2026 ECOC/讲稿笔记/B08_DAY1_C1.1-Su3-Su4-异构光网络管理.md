@@ -19,8 +19,8 @@ tags:
   - 三个团队报告的 HCF 损耗已低于任何实心光纤 [p3]
   - 带宽：66 THz（HCF）vs 25 THz（SMF），称“250% bandwidth increase” [p4]
   - 色散 1–5 ps/nm/km，覆盖整个低损窗口，可减少DSP、利用直接检测 [p4]
-  - 时延约 1.5 µs/km 优势（幻灯写“At ~1.5 µs/km”，具体对比基准未逐字核对）[p4–5]
-  - 非线性低约10^? 倍（OCR/幻灯为“10? lower”，指数看不清）；背向散射降低约10^3，可双向传输、电缆纤芯数减半 [p5]
+  - 时延约 1.5 µs/km 优势（Δt ≈ 1.5 µs/km，相对实芯光纤更快，利于分布式 AI 训练、扩大 DC 选址地理范围）（看图核实）[p4–5]
+  - 非线性低约 10^3 倍（气体或真空芯）；背向散射降低约 10^3，可双向传输、电缆纤芯数减半；带宽 66 THz vs SMF 25 THz（+250%），色散 1–5 ps/nm·km（看图核实）[p5]
   - 挑战页：熔接损耗低至 0.05 dB（L. Feng, OFC 2026）；125 µm OD HCF 损耗 0.5 dB/km；250 µm 涂覆 HCF 损耗 0.25 dB/km；Linfibre 报告近 100 km/次拉丝；YOFC 报告 10,000 km 光纤数据；Microsoft 计划 15,000 km 线缆部署；实心光纤可达 >10,000 km/次拉丝 [p6]
   - 单跨 100 km HCF 双向传输、1 Tb/s/λ 实时信号（引用 L. Feng, OFC 2025）[p5]
 - 提到的公司/客户/产品/标准：Linfibre、YOFC、Microsoft（Azure 网络已有 HCF 部署）、Relativity Networks（同场产业观点方）
@@ -46,7 +46,7 @@ tags:
 - 推荐配图页：p2（容量–距离散点图与 19芯 RC-MCF 两点）；p3（125 µm 包层芯数柱图 + 19芯环路系统、吞吐随波长、冲激响应随距离）
 
 ### 0920-pm-Su3-D-04-Aircision-自由空间光技术方.pdf（第1–7页）
-- 讲者/机构：Nourdin Kaai（幻灯OCR为 Notrdin Kzei，COO）/ Aircision | 题目：FSO: Where the fibre ends | 类型：Workshop（产业发布性质）
+- 讲者/机构：Nourdin Kaai（COO，p1 标题页看图核实，照片分辨率有限）/ Aircision | 题目：FSO: Where the fibre ends | 类型：Workshop（产业发布性质）
 - 方向归属（主/次）：主 5（FSO）；次 6（QKD/时间同步）
 - 核心主张：
   1. 光纤无法到达之处 FSO 不是竞争者而是答案（结论页“Where fibre cannot go, FSO is not a competitor. It is the answer”）。
@@ -55,7 +55,7 @@ tags:
 - 关键数据：
   - 方案：两端光学头（OH），SMF耦合，双向1–5 km，配BBU与网管；卖点：高带宽（4/5/6G）、快速部署（<6小时）、安全（不可探测）、长距（5 km 跨段）[p3]
   - 演示史：2.5 km @10 Gbps（NATO, Hague, 2021）；1 km @10 Gbps（军事基地，2021年12月）；6.1 km @10 Gbps 全双工（布拉格，2022–2023）；1.8 km @4 Tbps（Aveiro，2023）；4.8 km @10 Gbps（Eindhoven，2024）；4.6 km @7.7 Tbps（Eindhoven，2025年4月，标注World Record）[p3]
-  - 幻灯标题另写“pushing throughput to 5.7 Tbps—a World Record”，与下方 7.7 Tbps 不一致，OCR与图像均显示两个数字，未能判断哪个为准 [p3]
+  - 幻灯标题写"pushing throughput to 5.7 Tbps—a World Record"，而下方卡片为"World Record (4.6 km @ 7.7 Tbps), April 2025, Eindhoven"；看图核实两处数字确实不一致，以卡片 7.7 Tbps 为具体实验值 [p3]
   - Field Photon Loop：TU/e Flux 楼 FSO 链路4.6 km，测风速、雨、温度、闪烁指数 [p4, p7]
   - ITU-T G.641（11/2025）：面向移动回传的短距 FSO 接口；可用度以年度中断概率定义（连续10个SES开始不可用）[p5–6]
   - 混合FSO+无线：无线速率约低100倍但保持链路；在衰落前依据统计切换 [p6]
@@ -65,7 +65,7 @@ tags:
 - 推荐配图页：p3（系统结构图 + 六次演示里程碑，含World Record）；p4（Field Photon Loop 试验链路与FSO痛点：雾、湍流）
 
 ### 0920-pm-Su3-D-05-Nokia-单模光纤技术方.pdf（第1–7页）
-- 讲者/机构：Oleg Sinkin / Nokia | 题目：（SMF 技术方观点，幻灯无明确题；含“No one cancelled SSME yet”，OCR为SSMF）；p1 为承接Aircision的结论页 | 类型：Workshop
+- 讲者/机构：Oleg Sinkin / Nokia | 题目：No one cancelled SSMF yet（p1 标题页看图核实；p1 上半为承接 Aircision 的结论页） | 类型：Workshop
 - 方向归属（主/次）：主 1（长途/DCI/海缆）；次 2（DCI）
 - 核心主张：
   1. SSMF 一直获胜，当前无替代技术有足够价值主张取代；除非物理上无法扩展、替代价值过于明显、或小众应用愿付溢价。

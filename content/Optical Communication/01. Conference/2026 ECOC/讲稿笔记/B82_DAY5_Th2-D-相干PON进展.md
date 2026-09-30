@@ -26,7 +26,7 @@ tags:
 - 推荐配图页：p8（异构 ONU 四类 + SOA 三重角色 + 单一相干 OLT 架构图）；p16（OPB vs SOA 电流与 >60 dB 门控抑制谱）；p17（结论与容量-OPB 对比图）
 
 ### 0924-Th2-D2-华为-LDPC前向纠错的256Gbps相干PON突发模式接收实验.pdf
-- 讲者/机构：华为（Huawei，讲者姓名与完整题目页未拍到） | 题目：（无标题页；依文件名与内容）Soft-LDPC FEC 下 256 Gbps 相干 PON 突发模式接收实验——post-FEC BER 估计方法与动态范围 | 类型：学术论文
+- 讲者/机构：华为（Huawei；PDF 首页即第 2 张幻灯片 Dynamic Range Burst-Mode Detection in PON，无题目页，讲者姓名不详） | 题目：（依文件名与内容）Soft-LDPC FEC 下 256 Gbps 相干 PON 突发模式接收实验——post-FEC BER 估计方法与动态范围（ITU-T G.9804.3 要求 20 dB 动态范围） | 类型：学术论文
 - 方向归属（主/次）：主 5 固定与无线接入（相干PON）；次 1 oDSP
 - 核心主张：
   1. 提出两种从离线 DSP 数据估计 post-FEC BER 的方法（码字预FEC错误数直方图；码字平均信息密度直方图），二者互相一致且与直接测量的 post-FEC BER 吻合 [p15]
@@ -37,7 +37,7 @@ tags:
   - 256 Gbps DP-QPSK，SD-LDPC (17280, 14592)；pre-FEC BER 阈值 2.45×10^-2；pre-FEC 动态范围 DR = 29 dB（图中另标 DRI = 28 dB）；PON 中 post-FEC BER <10^-12 视为无错；突发长度约 10^5 比特；每个 ROP 点约 1000 个突发；直接测量 post-FEC BER 仅统计有效至约 10^-6 [p4]
   - 图中无错区间：ROP 约 -32 至 -3 dBm 附近有 "zero post-FEC errors" 标注（从曲线读出，非文字给出）[p4]
   - post-FEC 估计结果：24 dB 动态范围（ROP 轴约 -30 至 -6 dBm，BER 降至 10^-12）[p13]
-  - 方法 I：每码字 n=17280 比特；方法 II：信息密度 i(x,y)=1−log2(1+e^(−x·LLR(y)))，outage 判据 平均信息密度 < 有效码率 R_eff（图上标 0.883）则码字失败；实验信道非 AWGN，Gumbel 分布拟合较好 [p5, p7–p10 OCR，p8 OCR 数值 R_eff=0.883，图未复核]
+  - 方法 I：每码字 n=17280 比特；方法 II：信息密度 i(x,y)=1−log2(1+e^(−x·LLR(y)))，outage 判据 平均信息密度 < 有效码率 R_eff（=0.883）则码字失败；实验信道非 AWGN，Gumbel 分布拟合较好；结果（10000 码字）：ROP −31.5/−31.0/−30.0 dBm 时 pre-FEC BER 1.95e-2/1.45e-2/6.98e-3，post-FEC BER 8.19e-5/7.77e-6/约 1e-12 [p5, p7–p10，看图核实]
   - NCGR：灵敏度端 1.7 dB、过载端 1.8 dB（相对 AWGN 信道曲线，pre-FEC 阈值 2.45×10^-2）[p14]
 - 提到的公司/客户/产品/标准：ITU-T G.9804.3；引用 Koma（JLT 2022，Rx SOA 功率均衡）、Vijayan（OFC 2025 M2I.2，Tx SOA 预均衡）、Sarkis（OFC 2026 W4F.1，标准商用 ICR、静态增益 TIA、无功率均衡，29 dB 动态范围）[p3]
 - 与业界对比或记录声明（SOTA/首次/record）：未声明"首次/record"；主张相对 Rx-SOA / Tx-SOA / 突发 TIA 三种方案（"增加硬件和系统复杂度"）的简化替代 [p3]
@@ -52,7 +52,7 @@ tags:
   3. 硬件高效的突发模式相干 DSP 使实用化实时相干 PON 成为可能 [p17]
 - 关键数据：
   - 装置：25.06752 GBaud DP-QPSK，100 Gbps；4 通道 ADC 28.20096 GSa/s、8 bit；FPGA Xilinx XCVU13P；DSP 时钟 261.12 MHz；DSP 并行度 128（基准）；传输 20 km；波长 1552.5 nm；ONU 端 SOA [p13]
-  - 帧结构：TS-A（768）、TS-B（1536）、导频符号、载荷；用于帧检测、采样相位偏移估计、频偏估计、帧同步、信道估计 [p10，数字来自 OCR，未复核]
+  - 帧结构：TS-A（768）、TS-B（1536）、导频符号、载荷；TS-A 用于帧检测、采样相位偏移估计、频偏估计，TS-B 用于帧同步与信道估计；信道估计为单抽头 SOP 辅助 MMSE（W_XX、W_YY 对角）+ 插值 + 7 点平滑 [p10，看图核实]
   - MMSE 系数估计并行度 128 → 64/43/32/16，再插值平滑至 128 并行系数用于实时均衡 [p11]
   - 并行度 128/64/43/32/16 对应动态范围 22/21/21/18/17 dB（BER 门限 2E-2）；43 并行较 128 并行灵敏度劣化 0.6 dB，动态范围 22→21 dB [p14]
   - FPGA 资源（43 并行 vs 128 并行）：LUT −49.60%、FF −58.44%、DSP −35.83%、BRAM −64.91% [p15]
@@ -74,7 +74,7 @@ tags:
   - 30 GBd、15% SD-FEC 门限（10 dBm 发射）：240 Gb/s DP 16-QAM 灵敏度 -28 dBm、预算 38 dB；180 Gb/s PS-16-QAM -33 dBm、预算 43 dB；120 Gb/s QPSK -35 dBm、预算 45 dB [p15]
   - 50 GBd、57 km：200 Gb/s QPSK（熵 2 bit/符号）-32 dBm、预算 42 dB；240 Gb/s PS-16-QAM（熵 2.4）-31 dBm、预算 41 dB；300 Gb/s（页面标注"16-QAM，熵 3 bit/符号"，图例同页写 PS-16-QAM，两处表述不一致，原样记录）-29 dBm、预算 39 dB [p16]
   - 速率 vs 光路损耗：30 GBd 曲线 240G（至约 38 dB）、180G（39–43 dB）、120G（44–45 dB）；50 GBd 曲线 300G（至 39 dB）、240G（40–41 dB）、200G（42 dB）[p17]
-  - 帧时长：30 GBd 为 1.5 μs，50 GBd 为 0.9 μs；FOE 3000 符号足以可靠识别导频音；LPF 带宽最优 30 MHz；600 符号实现初始收敛、1500 符号使 BER 低于 15% SD-FEC 阈值；FFE 抽头 <20 不足、>80 引入噪声累积，取最优 41 抽头 [p12–p14；p14 的 15% SD-FEC 门限 OCR 记为 2×10^-2，图未逐点核对]
+  - 帧时长：30 GBd 为 1.5 μs，50 GBd 为 0.9 μs；FOE 3000 符号足以可靠识别导频音；LPF 带宽最优 30 MHz；600 符号实现初始收敛、1500 符号使 BER 低于 15% SD-FEC 阈值；FFE 抽头 <20 不足、>80 引入噪声累积，取最优 41 抽头 [p12–p14；p12–p13 看图核实，15% SD-FEC 门限线约 2×10^-2]
   - 稳定性：240 Gb/s（30 GBd DP 16-QAM）和 300 Gb/s（50 GBd DP PS-16-QAM）在 57 km 上 20 分钟 BER 远低于 15% SD-FEC 门限（约 1×10^-3 与约 5×10^-3 量级，读图）[p18]
   - 对比表（现场试验相干 PON）：[1] 30 km / 200.5 Gb/s / 33 dB / 实时（复旦 OFC 2026 PDP Th4C.4）；[2] 19 km / 200 Gb/s / 30.1 dB / 离线（Kovacs，PTL 2025）；[3] 40 km / 10 Gb/s / 29 dB / 实时（Luo，JOCN 2019）；本工作 57 km / 300 Gb/s / 39 dB / 离线 [p19]
 - 提到的公司/客户/产品/标准：中国电信研究院光纤光缆制造技术全国重点实验室；Keysight M8195A；ITU-T G.9804 系列/G.989 等标准演进图（引用 J. S. Wey 教程）；前序现场试验引用 [p2, p5, p6, p19]
@@ -92,10 +92,10 @@ tags:
   - 背景：ITU-T SG15 Q2 正在讨论 200 Gb/s VHSP（G.sup88 已发布）；双向 PON 中上行接收受 OLT 下行反射的瑞利背向散射干扰；现有解法（上下行频谱分离需双倍带宽；不同波长需重新设计收发器）均增加复杂度 [p2–p4]
   - 实验：ONU1 30 GBd DP-QPSK 35 GHz，ONU2 30 GBd DP-QPSK 25 GHz，EDFA 后各 4.5 dBm；支路 11.4 km / 8.4 km SSMF，2:2 耦合后 20 dB 衰减（Nu=128 模拟），25 km SSMF；下行以带 60 GHz 增益轮廓的 ASE（WSS 整形）模拟；OLT Rx 带宽 73 GHz [p9, p10]
   - [A] 无下行功率时 SD-FEC（2e-2）满足所需 ROP：ONU1 > -33.25 dBm，ONU2 > -34.65 dBm；[B] 下行发射功率最大容限：ONU1 -4.9 dBm，ONU2 -2.65 dBm [p9, p10]
-  - 仿真：VPIphotonics Design Suite 11.6 + Toolkit DSP Library 5.5；OLT 发射 2×30 GBd DSCM、guard 2 GHz，DAC 120 GSa/s 8 bit；OLT 接收 CoRx+TIA，ADC 240 GSa/s 8 bit；激光器 OLT 16 dBm / ONU 14.5 dBm，线宽 100 kHz、频偏 1 GHz；SSMF 0.195 dB/km，D=16.73 ps/(nm·km)；瑞利背向散射系数 -80 dB（1 ns 脉宽）；分光损耗 23 dB（128 用户）；馈线光纤 25 km；ONU 子带 193.084 / 193.116 THz [p12–p14 OCR，数值未逐项图上复核]
+  - 仿真：VPIphotonics Design Suite 11.6 + Toolkit DSP Library 5.5；OLT 发射 2×30 GBd DSCM、f_sep 2 GHz，DAC 120 GSa/s 8 bit、DP-IQM 35 GHz；OLT 接收 CoRx+TIA（57 GHz），ADC 240 GSa/s 8 bit；激光器 OLT 16 dBm（193.1 THz）/ ONU 14.5 dBm，线宽 100 kHz、频偏 1 GHz；SSMF 0.195 dB/km，D=16.73 ps/(nm·km)；瑞利背向散射系数 −80 dB（1 ns 脉宽）；分光损耗 23 dB（128 用户）；馈线光纤 25 km，分支光纤 11.4 km / 8.4 km；ONU 30 GBd 单载波，子带 193.084 / 193.116 THz [p12–p14，看图核实]
   - 仿真与实验在仅上行（无下行）时 BER vs ROP 吻合，SD-FEC 2e-2 [p15]
   - Q² 因子随上行/下行子带发射功率扫描（-3 至 12 dBm）：OLT Rx（US）与 ONU Rx（DS）各有等值线，交叠得到"operational region"（US 发射功率约 ≥2–3 dBm 且相对 DS 功率满足一定比例的区域，从图读出）[p16]
-- 提到的公司/客户/产品/标准：ITU-T SG15 Q2、G.sup88（VHSP）；VPIphotonics；可复用的可插拔形态 QSFP28、QSFP-DD、CFP2（相干 PON 潜在复用）；35 dB 最大 OPL 引用 [1]（具体标准未看清）[p2, p17]
+- 提到的公司/客户/产品/标准：ITU-T SG15 Q2、G.sup88（200 Gb/s VHSP，已发布）；VPIphotonics；可复用的可插拔形态 QSFP28、QSFP-DD、CFP2（相干 PON 潜在复用）；最大 OPL 35 dB 引自参考文献 [1]（即 G.sup88）[p2, p17，看图核实]
 - 与业界对比或记录声明（SOTA/首次/record）：无 SOTA/record 声明
 - 推荐配图页：p10（实验装置、频谱与 BER 曲线 [A][B]）；p16（Q² 因子随上下行发射功率的三联图与可运行区域）
 

@@ -15,7 +15,7 @@ tags:
 - 关键数据：
   - 低损 HCF 的 MFD 15–25 um，对比 SMF 约 10 um [p4]
   - NANF，纤芯 32.8 um：LP01 最小耦合损耗 0.074 dB（图中标注，MFD 约 24 um 处）；LP11 耦合 <-35 dB；讲者文字"最小耦合约 0.1 dB，取决于几何与抗谐振窗口" [p5]
-  - 玻璃-空气界面菲涅尔背反射 -15 dB / 0.15 dB 损耗 [p3]；斜角切割方案菲涅尔损耗 3.5% [p6，OCR]
+  - 玻璃-空气界面菲涅尔背反射 -15 dB / 0.15 dB 损耗 [p3]；斜角切割方案菲涅尔损耗 3.5%，附加损耗与高阶模；偏置+斜角方案 SMF-HCF 背反射低于 -60 dB（Shi et al., ACS Photonics 2024）[p6，看图核实]
   - 低温熔接+AR 镀膜：插损 0.2 dB，背反射 -29 dB；电弧偏离 AR 镀膜熔接：0.3 dB，-30 dB；胶接+AR 镀膜：0.08 dB，-40 dB [p7]
   - HCF-HCF 熔接损耗随两纤旋转错位角变化：0° 0.012 dB，12° 0.092，24° 0.099，36° 0.163，48° 0.118，60° 0.086，72° 0.059 dB（图值，Zhou et al. SPIE 2025，使用近标准切割机与熔接机）[p9]
   - 自动熔接对比：OFC2024 Kremp ≤120 s，中位 0.13 dB，成功率 100%；CLEO2026 Liu <20 s 对准，旋转精度 0.1°；OFC2026 Feng 97 s 全流程，≤0.05 dB，30/30 次 [p10]
@@ -28,7 +28,7 @@ tags:
 - 讲者/机构：Haik Mardoyan / Nokia Bell Labs（合作：YOFC 等） | 题目：Performance limits of HCF links（ECOC26 Workshop） | 类型：Workshop
 - 方向归属（主/次）：主 1 相干/海缆/长途/DCI；次 2 Scale-across/ZR
 - 核心主张：
-  1. HCF 超低损耗、超宽带、超低非线性等特性，使 DCI/城域/长途出现新架构：更少甚至无中继、双向超宽带 [p10, p14(OCR)]。
+  1. HCF 超低损耗（实验室测 0.052 dB/km）、超宽带（>50 THz @ <0.2 dB/km）、超低非线性（比 SSMF/PSCF 低 1000 倍）、低且平坦色散（低 5 倍）、低背散（低 10000 倍）、低时延（约低 30%），使 DCI/城域/长途出现新架构：更少甚至无中继、双向超宽带 [p10, p14，看图核实]。
   2. 不同场景对 HCF 设计优先级不同（"一套环结构无法通吃"）：Intra-DC 重带宽与弯曲损耗；DCI/城域重快速部署与弯曲损耗；长途重低 IMI 与低损耗 [p24]。
   3. 通过一系列实验（S+C+L 宽带、ZR 双向、混合跨段、266 km 超长跨段）展示 HCF 链路极限（结论页未单独见，据各实验页归纳）。
 - 关键数据：
@@ -37,7 +37,7 @@ tags:
   - 时延容忍包络内覆盖面积 2.25x（HCF 相对 SMF），基础设施距离增加 50%（巴黎数据中心示意）[p11]
   - S+C+L 传输 137.6 Tb/s，带宽 14.6 THz，ST-HCF 20.2 km（链路长度 40.4 km），256 GSa/s、113 GHz 示波器接收，S 段用 BDFA，"频带间无 SRS 串扰"（ECOC 2025 W.03.05.1）[p13]
   - OFC2026 M1B：2x30.4 Tb/s 双向、60.85 km HCF DCI，使用 800G ZR OSFP，Nokia 7250 IXR-6e；800G-ZR 双向 Q 因子约 7.5–8.3 dB（图读数，191–196 THz）[p15]
-  - 混合跨段环路：60.85 km ST-HCF + 101 km SSMF（拉曼泵浦）= 222 km 跨段，跨段损耗 39 dB，HCF 前置高功率 DFA 34 dBm；30 dBm 入纤 @192.396 THz；DP-16QAM/DP-64QAM 传输至约 1300+ km 时 AIR 约 700–900 Gbit/s 量级（曲线读数，精确值看不清）[p18-p19]
+  - 混合跨段环路：60.85 km ST-HCF（双向两次通过）+ 101 km SSMF（拉曼泵浦）= 222 km 跨段，跨段损耗 39 dB，HCF 前置高功率 DFA 34 dBm；30 dBm 入纤 @192.396 THz；DP-16QAM/DP-64QAM 传输至约 1350 km 时 AIR 约 750–800 Gbit/s 量级（曲线读数，看图核实）[p18-p19]
   - PDP OFC26：稀疏中继 21.7 Tb/s 净速率跨洋传输，266 km 超长跨段（266.38 km GTA-ST-HCF）；21.7 Tbps 传 6660 km、25 个中继，C 波段 [p20-p22]
   - 跨洋 C 波段对比图：容量 x 距离约 100–150 Pbps.km（本工作，跨段约 266 km）；对比之前 HCF C 波段（Hong, ECOC 2025）约 60 Pbps.km（跨段约 130 km）；SMF C+L 约 500 Pbps.km（跨段约 50 km）[p22，图读数]
   - We3-H2（ECOC 2026）：266 km 无中继（单个 booster）实时双向 2x43.2 Tb/s，GTA-ST HCF，Nokia/YOFC [p23，题目页]
@@ -46,7 +46,7 @@ tags:
 - 推荐配图页：p8（HCF 损耗演进与三种纤芯结构）；p22（跨洋 C 波段对比 SMF/HCF）；p19（混合 HCF/SSMF 长跨段环路与结果）
 
 ### 0920-pm-Su4-B-03-中国移动-空芯现网部署.pdf
-- 讲者/机构：中国移动（China Mobile）（讲者姓名未见） | 题目：Antiresonant Hollow-core Fibers in Deployed Optical Networks: Long-term Stability, Standardization, Operation and …（副标题后半部分看不清，可能含 Interoperability），2026-09-20 | 类型：Workshop
+- 讲者/机构：Dong Wang（Principle Researcher，China Mobile Research Institute）/ 中国移动（p1 标题页看图核实） | 题目：Antiresonant Hollow-core Fibers in Deployed Optical Networks: Long-term Stability, Standardization, Operation and Maintenance，2026-09-20 | 类型：Workshop
 - 方向归属（主/次）：主 1 相干/海缆/长途/DCI；次 2 Scale-across（含 Scale-up/out 场景划分）
 - 核心主张：
   1. HCF 现在即可部署：中国现网已运行，两年记录显示无退化 [p11]。
@@ -59,14 +59,14 @@ tags:
   - 无锡链路 TDNANF-4，18.4 km，2024/10/18–2026/05/26 监测两年，未充气/吹扫，衰减与熔点损耗稳定；熔点损耗变化 -0.19 至 +0.18 dB（图值），部分熔点两年后损耗下降，推测为盘绕应力释放 [p7]
   - 互操作性：4 元与 5 元结构混接耦合损耗最低仍 >0.09 dB，远高于 G.652.D/G.654.E 的约 0.03 dB；同结构不同参数，管径/芯径偏差约 ±7% 可接受 [p8]
   - 标准：CCSA 已批 2 项技术报告，3 项在研；ITU-T SG15 于 2025.10 相关活动、2026.7 启动 GSTR.hcf；IEEE 802.3 NEA "Fiber for AI" 认为 HCF 用于 448G/lane 以太网成为趋势 [p10]
-  - 首次商用部署：浙江金华 2024.11；深圳证券交易所场景（OCR，页面 p3 未看图，仅供参考）[p3，OCR]
+  - 首次商用部署：深圳证券交易所—香港证券交易所 34 km AR-HCF/SMF（4/96）光缆"今天开始部署"，最低衰减 0.066 dB/km；2024 年现网试验：2024.06 深圳-东莞 0.6 dB/km/10 km、2024.09 无锡 0.128 dB/km/18.4 km、2024.11 浙江金华 0.21 dB/km/42.7 km（看图核实）[p3]
   - 观众提问：HCF 未来市场规模（5 百万/1 百万/20 万/5 万 fiber·km）及可行价格（USD/fiber·km）[p12-p13]
 - 提到的公司/客户/产品/标准：中国移动；CCSA；ITU-T SG15 GSTR.hcf；IEEE 802.3 NEA；G.652.D、G.654.E、G.657；OTDR；NANF-5、TDNANF-4、ST-HCF（广东商用）[p6]；Ciena（OCR，看不清上下文）[p7]
-- 与业界对比或记录声明（SOTA/首次/record）：两年现网稳定性记录；"第一个商用部署"（浙江金华，2024.11）[p3，OCR]
+- 与业界对比或记录声明（SOTA/首次/record）：无锡链路两年现网稳定性记录；"中国首次商用部署"为深港证券交易所 34 km AR-HCF/SMF 光缆（金华 2024.11 为现网试验）[p3，看图核实]
 - 推荐配图页：p2（HCF 全场景应用矩阵）；p7（无锡两年监测）；p10（标准化进程）
 
 ### 0920-pm-Su4-B-04-ASN-长途传输机会.pdf
-- 讲者/机构：Alexis Carbo Meseguer / Alcatel Submarine Networks (ASN) | 题目：Challenges and opportunities of HCF in submarine networks（题目大意，第 1 页 OCR 残缺；原标题末尾看不清） | 类型：Workshop
+- 讲者/机构：Alexis Carbo Meseguer 与 Hans Bissessur / Alcatel Submarine Networks (ASN) | 题目：Challenges and opportunities for HCF in submarine networks（p1 标题页看图核实） | 类型：Workshop
 - 方向归属（主/次）：主 1 相干/海缆/长途/DCI（海缆）；次 无
 - 核心主张：
   1. HCF 的物理优势（低衰减、低色散、低非线性、低时延、双向、超宽带）明确，关键问题是能否在 SDM 海缆规则下充分利用 [p2, p15]。
@@ -85,7 +85,7 @@ tags:
 - 推荐配图页：p10（SDM 长期容量情景与结论）；p8（外径决定光纤对数）；p11（衰减与最优跨段/容量）
 
 ### 0920-pm-Su4-B-05-MicrosoftAzure-长无中继系统要求.pdf
-- 讲者/机构：Yang Hong / Microsoft Azure（讲者名据 p1 OCR） | 题目：Requirements for long unrepeatered HCF systems（题目大意，p1 未看图） | 类型：Workshop
+- 讲者/机构：Yang Hong / Microsoft Azure Fiber（Romsey, UK）（p1 看图核实） | 题目：System Requirements for Long Unrepeatered HCF Links | 类型：Workshop
 - 方向归属（主/次）：主 2 Scale-across/FST/多rail/ZR/ZR+/CL/跨楼园区；次 1 相干/长途
 - 核心主张：
   1. 长无中继 HCF 链路的关键系统单元：收发（长途转发器 vs ZR 可插拔）、放大器（常规 vs 高功率 booster）、HCF 熔接与连接器、HCF OTDR、气体吸收线（GLA）[p2]。
@@ -98,7 +98,7 @@ tags:
   - 需求：熔接损耗 <0.1 dB、速度 <97 s；连接器反射 <-60 dB；OTDR 动态范围约 50 dB、空间分辨率约 1 m [p9]
   - 200.5 km 无中继 32x800G 无损传输（Ali, OFC 2025 Th4A.3）；3 跨 442.66 km 32x800G，通过发射机功率优化应对 GLA（Hong, OFC 2026 Th1J.5）；Tu3-H4：全 C 波段 400G ZR，3 跨 427.97 km HCF [p10, p7]
   - 未来无中继可达距离示意（Copilot 生成的"illustrative"曲线）：可用跨段损耗 60/75/90 dB，衰减 0.05 dB/km 时约 1000–1500–1800 km，0.03 dB/km 时约 2000/2500/3000 km（读数，示意性质）[p13]
-- 提到的公司/客户/产品/标准：Microsoft（MSFT）、Coherent（p7 图示，具体产品看不清）、ZR/400ZR、SD-FEC/cFEC；引用 Nokia/YOFC 等多篇 OFC 论文
+- 提到的公司/客户/产品/标准：Microsoft（MSFT）、400G ZR 可插拔（p7 看图核实：以路由器直插 400G ZR 替代长途转发器机框，关联论文 Tu3-H4 "3 跨 427.97 km HCF 全 C 波段 400G ZR 传输"）、ZR/400ZR、SD-FEC/cFEC；引用 Nokia/YOFC 等多篇 OFC 论文
 - 与业界对比或记录声明（SOTA/首次/record）：p3 汇总图显示 Microsoft 多点为"实时"结果；未见自称 record
 - 推荐配图页：p3（>100 km HCF 直线传输汇总）；p6（ZR vs 长途转发器对照表）；p8（链路损耗-发射功率-OSNR 预算）
 

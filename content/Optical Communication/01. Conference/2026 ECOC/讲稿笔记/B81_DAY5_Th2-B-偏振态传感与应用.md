@@ -6,7 +6,7 @@ tags:
 ---
 
 ### 0924-Th2-B1-都柏林圣三一学院-用偏振态监测完全无监督地检测海底光缆物理接触.pdf（第1–7页）
-- 讲者/机构：Agastya Raj, Alvaro Doval, Tian Tian, Steinar Bjornstad, Marco Ruffini（Trinity College Dublin / Tampnet AS）（讲者具体是谁看不清） | 题目：Fully Unsupervised Detection of Physical Contacts on Subsea Cables via State-of-Polarization Monitoring | 类型：学术论文
+- 讲者/机构：Agastya Raj（题目页首位作者）, Alvaro Doval, Tian Tian, Steinar Bjørnstad, Marco Ruffini（Trinity College Dublin IRIS 组 / Tampnet AS） | 题目：Fully Unsupervised Detection of Physical Contacts on Subsea Cables via State-of-Polarization Monitoring | 类型：学术论文
 - 方向归属（主/次）：主 6 光纤传感（SoP 海缆监测）/ 次 1 海缆
 - 核心主张：
   1. Fast-Slow DSVDD 用无标签 SoP 数据在多时间尺度上学习"正常"，对异常录音排序供人工复核。
@@ -14,20 +14,20 @@ tags:
   3. 独立 DAS 与 AIS 复核支持存在原始接触日志之外的额外事件。
 - 关键数据：
   - 背景：全球每年报告 150–200 起海缆故障，70–80% 为渔业/抛锚等人为活动（来源 ICPC 2025）[p1]
-  - 链路：Lowestoft（英）–Lista（挪）海缆，全链路 SoP 监测，探测光 CW 激光，与在网 WDM 业务共纤；OCR 显示链路约 420 km（数字未经图片核对，存疑）；并行暗纤 DAS，本次试验 DAS 覆盖 120 km [p1–p2]
+  - 链路：Lowestoft（英）–Lista（挪）海缆，全链路 SoP 监测：CW 探测光与在网 WDM 业务经 MUX+放大器合波，经两个光节点（ROADM + 混合 EDFA/Raman）后解复用，PBS 接收 S1 = V1 − V2（44.1 kHz、16-bit）；p1–p2 幻灯片未标链路总长（原先的 420 km 无图可证，已删除）；并行暗纤 DAS 覆盖 120 km，用于独立核对接触 [p1–p2，看图核实]
   - 数据集：2025年6–8月共 122,174 条 1 分钟 SoP 记录，仅 5 次经 DAS+船舶信息确认的接触，其余无标签 [p2]
   - 每周 1 次告警预算下覆盖：Fast-Slow DSVDD 5/5；vanilla DSVDD 2/5；STA/LTA 1/5 [p5]
   - 检出全部 5 个事件所需告警数：Fast-Slow DSVDD 13（约1次/周）；STA/LTA 91（约7次/周）；vanilla DSVDD 1,219（约93次/周）[p5]
   - 15 July E02（尖锐突变）两种方法均检出；17 July E03（不规则突发）STA/LTA 漏检、Fast-Slow DSVDD 检出 [p5]
   - 17 Aug 2025 未记录事件：Fast-Slow DSVDD 检出、STA/LTA 漏检，独立 DAS 有明确信号；页面另有 3 June 与 10 June 两例，其中 10 June 无 DAS 信号（120 km 内），AIS 复核发现船舶应答器被关闭 [p6]
-  - Fast-Slow DSVDD 采用快/慢两路视图，共 8 个分支，各分支独立打分取最高排名（快路滤波频段 2–50 Hz，细节看不清）[p4]
+  - Fast-Slow DSVDD 采用快/慢两路视图（快路 1 s 窗、2–50 Hz；慢路 10 s 窗、0.1–2 Hz，同一起点、幅度分别归一），共 8 个分支，各分支独立打分：记录内取窗口最高分作为记录分，再按分支排名取最优名次 [p4，看图核实]
 - 提到的公司/客户/产品/标准：Tampnet（合作方）；ICPC；DAS；AIS；STA/LTA、DSVDD 算法
 - 与业界对比或记录声明（SOTA/首次/record）：未声称 record；对比基线为 STA/LTA 与 vanilla DSVDD [p5, p7]
 - 推荐配图页：p5（阶梯图：各方法覆盖 5 个确认事件所需告警数，13 vs 91 vs 1,219）
 - 局限（讲者结论页）：需跨其他海缆与季节验证，并区分接触与其他扰动 [p7]
 
 ### 0924-Th2-B2-华为加拿大-空芯光纤的偏振态振动敏感度与多径干扰影响.pdf（第1–7页）
-- 讲者/机构：Huawei Canada（作者名单看不清） | 题目：题目页 OCR 乱码，未开图；内容为空芯光纤（HCF/DNANF）SOP 振动敏感度评估与 MPI 伪影（英文原题看不清）| 类型：学术论文
+- 讲者/机构：Zhiping Jiang（通讯作者，题目页下划线）, Pedro Tovar, Yang Lan（Huawei Technologies Canada, Ottawa）；Xutao Wang, Xianchao Guan, Han Luo, Xingyu Zhou（Huawei 东莞） | 题目：On SOP Vibration Sensitivity in Hollow Core Fibers and the Impact of Multipath Interference（p1 看图核实；目录：光网络振动监测 → HCF 的 SOP 敏感度报告 → MPI 影响 → 输入 SOP 依赖 → DNANF vs SMF 对比方法 → 结论）| 类型：学术论文
 - 方向归属（主/次）：主 6 光纤传感（SOP 前向感知）/ 次 1 高波特率/相干（ISAC）
 - 核心主张：
   1. 多径干扰（MPI）在窄线宽相干光探测下会把相位变化伪转换为 SOP 变化，可能高估光纤真实 SOP 振动敏感度。
@@ -48,7 +48,7 @@ tags:
 - 其他：Backward sensing 需窄线宽激光、难在在网相干链路部署；Forward SOP 可复用相干接收机 DSP、零附加硬件，适合 ISAC，缺点是空间分辨率低、标准 SMF 本身敏感度低 [p2]
 
 ### 0924-Th2-B3-Tampnet-偏振态监测电力线风致共振振荡.pdf（第1–5页）
-- 讲者/机构：Alvaro Doval, Steinar Bjornstad 等（Tampnet AS；与 Svenska Kraftnät 相关，见致谢页）（完整作者名单看不清） | 题目：State-of-Polarisation Monitoring of Wind-Induced Resonance Oscillations on Power Lines | 类型：学术论文
+- 讲者/机构：Alvaro Doval, Steinar Bjørnstad（Tampnet AS, Stavanger）；Krister de Vries, Kristina Skarvang Vaskinn（Svenska kraftnät, Sundbyberg）（作者名单看图核实）| 题目：State-of-Polarisation Monitoring of Wind-Induced Resonance Oscillations on Power Lines | 类型：学术论文
 - 方向归属（主/次）：主 6 光纤传感（SoP/OPGW）/ 次 无
 - 核心主张：
   1. SoP 传感可在带电运行的电力线（OPGW）上工作；24 天停电窗口证实特征源于风致振动，尽管存在 50 Hz 主导。
@@ -60,20 +60,20 @@ tags:
   - 4 小时谱图：1 m/s 时为 2–20 Hz 内短时离散音调；4 m/s 时谱更弥散，另有明显 8.5 Hz 音调及其 17 Hz 谐波持续近 1 小时 [p3]
   - 30 天带电数据、10 分钟窗口、0.1 Hz 分辨率，标记高于窗口均值 20 dB 的峰：0.5–3.5 m/s 谐振峰最密集，集中在 2–12 Hz；2.5–5.5 m/s 峰明显减少；4.5–7.5 m/s 几乎所有离散音调消失，仅剩约 2 Hz 频带（可能为分裂导线尾流致振动经塔架传递）[p3, p4]
   - 六个月统计（1000 个峰值最高的 10 分钟窗口）：最大谐振运动发生在最低风速 [p4]
-- 提到的公司/客户/产品/标准：Tampnet；SMHI（气象数据）；Svenska Kraftnät（致谢页 logo，OCR 识别，推测为合作方）；OPGW
-- 与业界对比或记录声明（SOTA/首次/record）：讲者称既有工作仅模糊关联 SoP 活动与风，本文首次系统关联 SoP 谱与特定风致振动状态于长距在网 OPGW（页面原话：关系"has not been explored in detail"）[p2]
+- 提到的公司/客户/产品/标准：Tampnet；SMHI（逐小时风速数据）；Svenska Kraftnät（瑞典输电运营商，两位合作者所属，题目页 logo，看图核实）；ICON；OPGW（86 km 在网 OPGW，远端环回共 172 km）
+- 与业界对比或记录声明（SOTA/首次/record）：讲者称既有工作只是笼统地把 SoP 活动与有风联系起来，本文系统关联 SoP 谱与特定风致振动状态于长距在网 OPGW（页面原话：关系"has not been explored in detail"）[p2]
 - 推荐配图页：p4（结论页：三种风速区间与谐振音调演变）；p3（谱图与不同风速 PSD 叠图）
 - 未来工作：将单个音调与跨段参数关联；分析 1 Hz 以下；研究 2 Hz 与 10 Hz 分量 [p4]
 
 ### 0924-Th2-B4-DIAS与FARICE-海底光缆逐跨段微波频率光纤干涉实现深海地球物理监测.pdf（第1–7页）
-- 讲者/机构：Georgios Aias Karydis, Nicolas L. Celli, David Craig, Orn Jonsson, Andres Arnar Hlynsson, Eoin Kenny, Charis Mesaritakis, Christopher J. Bean, Adonis Bogris（DIAS、FARICE、UNIWA/RNCP、Cognilum，据 logo）（具体讲者看不清） | 题目：Per-Span Microwave Frequency Fiber Interferometry for Scalable Deep-Ocean Geophysical Monitoring | 类型：学术论文
+- 讲者/机构：Georgios Aias Karydis, Nicolas L. Celli, David Craig, Örn Jónsson, Andrés Arnar Hlynsson, Eoin Kenny, Charis Mesaritakis, Christopher J. Bean, Adonis Bogris（题目页加粗为 Adonis Bogris；RNCP/西阿提卡大学、DIAS、FARICE，看图核实） | 题目：Per-Span Microwave Frequency Fiber Interferometry for Scalable Deep-Ocean Geophysical Monitoring | 类型：学术论文
 - 方向归属（主/次）：主 6 光纤传感（海缆地球物理）/ 次 1 海缆
 - 核心主张：
   1. 逐跨 HLLB 选段 + 10 GHz 微波频率光纤干涉（MFFI）+ 模拟 I/Q 下变频，可在在网长途海缆上实现低复杂度相位敏感传感。
   2. 同一架构覆盖从多小时变化到 25 Hz 的潮汐、风暴微震、远震，跨越数个量级时间尺度。
   3. 不需要高质量光纤激光器、Gsps 电子器件与 GPU 处理，为多条海缆规模化部署提供实用基础，有望用于海啸高风险地区。
 - 关键数据：
-  - 试验缆：爱尔兰–冰岛在网海缆（IRIS），询问器装在 Galway 登陆站；1,770 km，8 个跨段（图示 8 跨/17 跨谱图，跨段总数以 p3 为准，看不清）[p3, p7]
+  - 试验缆：爱尔兰–冰岛在网海缆（IRIS），询问器装在 Galway 登陆站；1,770 km；p3 未直接写跨段总数，只给出 100 km 跨段对应 1 ms 往返（图示 8 跨/17 跨谱图，跨段数以 p7 为准）[p3, p7，看图核实]
   - 参数：重复率 50 Hz（20 ms），1770 km 往返 17.7 ms，保护带 2.3 ms；脉宽 0.5 ms（1 ms 对应 100 km 跨段往返）；激光 1565 nm，对应 FBG 反射波长；用第二台 EDFA 模拟 WDM 传输以稳定在线 EDFA [p3]
   - 模拟 I/Q 下变频后以 1 Msps 采集，FPGA 抽取至约 16 ksps；响应带宽从多小时到 25 Hz [p2]
   - 运行 8 个月，解析潮汐、风暴及 2 次远震 [p7]
@@ -83,10 +83,10 @@ tags:
 - 提到的公司/客户/产品/标准：FARICE（海缆运营方）；DIAS；Horizon Europe ECSTATIC 项目（grant 101189595）；Cognilum；HLLB；OFDR；对比文献 Marra (Science 2022)、Mazur (ECOC 2025/2026, OFC 2025/2026)、Costa (2023)、Liu (GRL 2025)
 - 与业界对比或记录声明（SOTA/首次/record）：声称首个在逐跨干涉配置中实现模拟 I/Q 下变频的 10 GHz MFFI（"First reported"）[p2]
 - 推荐配图页：p6（单一询问器覆盖多个地球物理频段的总结页）；p4（Mw 7.4 Hokkaido 远震瀑布图与面波频散）
-- 备注：p1、p3 页码所述跨段数量与图上标注需回看图片确认，本笔记未开图核对。
+- 备注：p1、p3 已看图核实（p3 未直接写跨段总数，按 1,770 km/100 km 跨段推算约 17–18 跨）。
 
 ### 0924-Th2-C1-北邮与中科院-模式分集接收与自适应光学增强的星地自由空间光链路.pdf（第1–19页）
-- 讲者/机构：Wenjie Guo, Yan Li, Ao Li, Xiaokai Li, Yaning Sun, Shuai Wei, Hongxiang Guo, Chao Liu, Ze Zhang, Jian Wu（北京邮电大学 BUPT；中科院光电所 IOE；中科院空天信息研究院 AIR）（具体讲者看不清）| 题目：Satellite to Ground FSO Communication Links enhanced by Mode Diversity Reception and Adaptive Optics | 类型：学术论文
+- 讲者/机构：Wenjie Guo, Yan Li, Ao Li, Xiaokai Li, Yaning Sun, Shuai Wei, Hongxiang Guo, Chao Liu, Ze Zhang, Jian Wu（题目页下划线为 Jian Wu；北京邮电大学 BUPT；中科院光电所 IOE；中科院空天信息研究院 AIR，看图核实）| 题目：Satellite to Ground FSO Communication Links enhanced by Mode Diversity Reception and Adaptive Optics | 类型：学术论文
 - 方向归属（主/次）：主 5 固定与无线接入（FSO）/ 次 无
 - 核心主张：
   1. 提出模式分集接收（MDR）与自适应光学（AO）联合补偿湍流，在所有湍流条件下优于单独 AO 或单独 MDR。
@@ -105,7 +105,7 @@ tags:
   - 在轨 GEO 试验：卫星发射 2 W/1550 nm，线速率 1.048 Gbps，BPSK，望远镜口径 1.8 m，3 端口 6 模 PL 作 MDR；试验持续 2024年5月至 2026年1月 [p15]
   - AO+MDR 功率：平均功率 1 模 -46.2 dBm，3 模 -42.9 dBm（提升 3.3 dB），6 模 -42.6 dBm；99% CCDF 功率 1 模 -63.4 dBm，3 模 -51.3 dBm（提升 12.1 dB），6 模 -48.1 dBm；2 kHz 记录，统计窗 10 s，共 40 分钟 [p16]
   - 无错帧比例：仅 AO（LP01 端口）77.6%；第 2 端口 28.1%；第 3 端口 93.6%；3 模合并 99.0%；仅 AO 时 6.3% 帧 BER 在 1e-3–1e-2，16.1% 帧 BER>1e-2；数据 2025年12月11日 [p18]
-- 提到的公司/客户/产品/标准：Starlink、Kuiper、AST SpaceMobile、GW、Spacesail、China Mobile、SpaceX/Blue Origin/Google（Suncatcher）等星座规划；CAST/SJ-20、Airbus/TELEO、Cailabs、Tesat、Kepler、SES、MIT Lincoln Lab/TBIRD、CGSTL 与 BUPT/Jilin-1（p6 引用列表，OCR 部分乱码）；南山 OGS
+- 提到的公司/客户/产品/标准：Starlink、Kuiper、AST SpaceMobile、GW、Spacesail、China Mobile、SpaceX/Blue Origin/Google（Suncatcher）等星座规划；p6 星地激光链路表（看图核实）：CAST/SJ-20 10 Gbps 双向、MIT LL/TBIRD 200 Gbps 下行、Airbus/TELEO 9 Gbps、Cailabs&Unseenlabs、CGSTL&BUPT/Jilin-1 100 Gbps 下行 113 s、Kepler/Tesat/Cailabs、SES&Cailabs、GW&BUPT 1.25 Gbps 297 s、BUPT&中科院光电所 1 Gbps 2 h、中科院空天院 120 Gbps 108 s；南山 OGS
 - 与业界对比或记录声明（SOTA/首次/record）：提出"MDR 与 AO 联合湍流补偿"新方案；未见明确 record 声明 [p19]
 - 推荐配图页：p18（无错帧比例：仅 AO 77.6% vs 3 模 MDR 99.0% 及吞吐时序）；p16（AO+MDR 模式数与平均/99% CCDF 功率曲线，12.1 dB 深衰落改善）；p13（GEO 下行仿真的 AO/MDR 相互增强）
 

@@ -6,7 +6,7 @@ tags:
 ---
 
 ### 0922-Tu1-C4-西湖大学-双偏振载波提取直检的448Gbps室内光无线接入.pdf
-- 讲者/机构：西湖大学（Westlake University；讲者姓名页面未见） | 题目：Dual-Polarization Carrier-Extracted Direct Detection (DP-CEDD) for 448-Gbps Indoor Optical Wireless Access（题目页OCR乱码，按目录页"DP-CEDD / 448-Gbps / 9-m FSO link"整理，非原题逐字） | 类型：学术论文
+- 讲者/机构：Haojie Zhu 等，William Shieh（通讯作者）/ 西湖大学光通信与传感实验室、西湖光电研究院 | 题目：Cost-Effective 448-Gb/s Indoor Optical Wireless Access via Dual-Polarization Carrier-Extracted Direct Detection（p1 看图核实） | 类型：学术论文
 - 方向归属（主/次）：主 5 固定与无线接入（FSO/光无线）；次 3 Scale-out 高速/相干类技术（自相干、SiP滤波器）
 - 核心主张：
   1. 载波与信号共传、接收端提取（自相干直检），无需接收端本振（LO）；SiP CROW滤波器提取载波。[p7][p11]
@@ -22,7 +22,7 @@ tags:
   - BER对ROP曲线：ROP -28到-16 dBm，CSPR=0 dB与2 dB两条；-24 dBm处约0.014–0.018，低于20% SD-FEC门限（约0.024，读图估计）[p14]
   - 载波SOP仅初始化时调整一次；去掉芯片耦合补偿EDFA后可全集成 [p12]
 - 提到的公司/客户/产品/标准：DFB激光器、DP-IQ调制器、EDFA、光学90°混频器、BPD、SiP；20% SD-FEC；人眼安全标准
-- 与业界对比或记录声明（SOTA/首次/record）：未见明确"record/首次"声明；仅对比IM/DD（结构简单但一维、受色散限制）与相干（需昂贵LO、DSP功耗高）[p6]
+- 与业界对比或记录声明（SOTA/首次/record）：未见明确"record/首次"声明；仅对比IM/DD（结构简单低成本但一维、容量受限、C波段受色散劣化）与相干（全场恢复、高灵敏度可数字补偿色散，但需昂贵LO、DSP复杂耗电）（看图核实）[p6]
 - 推荐配图页：p11（CROW滤波器芯片与传输响应，含60 dB消光、4.48 GHz带宽）；p14（BER-ROP曲线与星座图及448/355.1 Gb/s指标）
 
 ### 0922-Tu1-C5-KDDIResearch-光子晶体面发射激光器做自由空间光通信.pdf

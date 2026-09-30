@@ -13,7 +13,7 @@ tags:
 
 **一句话结论：** 固定接入正在同时走两条时间轴：50G PON+FTTR+AI-FAN 是 2026–2030 的现网商用主线（中国移动、华为、Orange、Nokia 均给出确定的预算与部署口径），而 100/200G VHSP 仍处于"三路线并存、2027–2028 才选型、2035 前后商用"的技术竞赛期；直检 SSB/DCPC/VSB 把色散问题挪到 OLT 数字侧，相干 PON 则靠 ONU 侧 SOA 门控/功率预均衡和软判决 LDPC 把突发动态范围做成"可实现"，两条线在 2026 年都拿出了>30 dB 预算的实验结果，但成本判据（百万用户每美元性能）尚无定论。
 
-**核心判断 1：VHSP 选型尚未收敛，标准时间线决定了 2026–2028 是"证据窗口"而非"产品窗口"。** Verizon 给出的时间线：2022 立项、2025 G.Sup88 批准、2027 各类别选技术、2028 最终选择、2028–2033 标准、2035+ 商用〔0920-pm-Su3-F-02-Verizon p11〕（自报）；Orange 更保守，VHS-PON 网络运营约 2040，且假定无 G-PON 共存〔0920-pm-Su4-F-01-Orange p10, p11〕；Sumitomo 引用的标准化时间线为 2027–2028 技术选择、2031–2032+ 批准与部署〔0920-pm-Su3-F-04-住友电工 p4〕。开场投票（IMDD/相干/混合三选）三个可读百分比为 42%、31%、27%，柱与选项对应看不清，不下结论〔0920-pm-Su3-F-01-主席-开场 p6〕。机制：运营商需求（100/200 Gb/s、1×128、E2 35 dB、20/30 km、20 km 差分距离）过于苛刻〔0920-pm-Su3-F-02-Verizon p5〕，任何单一技术都在成本、预算或共存上存在短板。
+**核心判断 1：VHSP 选型尚未收敛，标准时间线决定了 2026–2028 是"证据窗口"而非"产品窗口"。** Verizon 给出的时间线：2022 立项、2025 G.Sup88 批准、2027 各类别选技术、2028 最终选择、2028–2033 标准、2035+ 商用〔0920-pm-Su3-F-02-Verizon p11〕（自报）；Orange 更保守，VHS-PON 网络运营约 2040，且假定无 G-PON 共存〔0920-pm-Su4-F-01-Orange p10, p11〕；Sumitomo 引用的标准化时间线为 2027–2028 技术选择、2031–2032+ 批准与部署〔0920-pm-Su3-F-04-住友电工 p4〕。开场投票：混合 42%、相干 31%、IMDD 27%（现场听众倾向混合方案，但样本为 workshop 听众）〔0920-pm-Su3-F-01-主席-开场 p6〕。机制：运营商需求（100/200 Gb/s、1×128、E2 35 dB、20/30 km、20 km 差分距离）过于苛刻〔0920-pm-Su3-F-02-Verizon p5〕，任何单一技术都在成本、预算或共存上存在短板。
 
 **核心判断 2：直检路线的关键不是"能不能"而是"色散代价搬到哪里"。** 共存 GPON 要求 CD 容限≥120 ps/nm（1370 nm、20 km 最坏 119.3 ps/nm）〔0921-Mo5-G连拍 p4；0921-C2.2厅PON连拍 p89〕。方案谱系：DCPC 容限约翻倍、需按 CD 分组；SSB 仿真在 120 ps/nm 罚值<1.5 dB、3 dB 罚值下容限 320 ps/nm（Huawei 仿真）〔0921-C2.2厅PON连拍 p98〕；Nokia Bell Labs PDP 的 Dual-SSB 实现 224 Gb/s 单波长、170 ps/nm@3.5 dB 罚值，加静态 DCPC 后覆盖 0–340 ps/nm、预算约 33 dB（实验）〔0924-PDP-C-5-NokiaBellLabs p13–p15〕；Nokia 的 VSB 只用 DD-MZM，100 Gb/s 在 0–125 ps/nm 罚值<3 dB（实验）〔0921-Mo5-G连拍 p18〕。代价：SSB 灵敏度偏低（NTT：50 Gbaud SSB 灵敏度约 -18 dBm 时 CD 罚值<4 dB）〔0920-pm-Su4-F-04-NTT p7〕。
 
@@ -35,7 +35,7 @@ tags:
 | Orange | VHS-PON 候选 2×100 或 4×50 Gbit/s；Class C+ 必需、可能 Class D（第二级分光达 1:256）；现网 OLT 分光比 1:64–1:128 | 运营商（自报） | 〔0920-pm-Su4-F-01-Orange p11, p3〕 |
 | Orange | 1:256 需预算>35 dB，突发时序开销>30%（含 FEC）；G+XGS-PON Combo 卡+1:128 分光降低新增 OLT 卡数 | 自报 | 〔0920-am-Su1-I-03-Orange p11〕 |
 | 中国移动 | 千兆用户>2.58 亿（占 36.8%），宽带用户 6.7 亿；10G PON 端口 3286 万（2026 H1，工信部）；2025 万兆现场试验 168 处 | 国内统计/现网 | 〔0920-am-Su1-D-03-中国移动 p4〕 |
-| 中国移动 | 工业 PON：100 μs 确定性低时延、99.999% 可靠性；ToC 时延 50→10 ms@99.99%，ToB 5→1 ms@99.9999%；上行占比升至 40%–50%（OCR，未逐字核对） | 自报 | 〔0920-am-Su1-D-03-中国移动 p10, p5〕 |
+| 中国移动 | 工业 PON：100 μs 确定性低时延、99.999% 可靠性；ToC 时延 50→10 ms@99.99%，ToB 5→1 ms@99.9999%；上行占比升至 40%–50%；端侧算力 0.5–1 TFLOPS、边缘 100 TFLOPS | 自报 | 〔0920-am-Su1-D-03-中国移动 p10, p5〕 |
 | Huawei | 接入 RTT≤20 ms（=400−230 大模型−50 运营商网−100 终端）；4K AIGC ~80 Mbps，4K 3D ~160 Mbps，语音助手 ~6 Mbps；每家庭 2–5 个 Agent | 自报 | 〔0920-am-Su2-D-02-华为 p4, p1〕 |
 | Huawei | 10 Gbps 商用统计：10+ 个 10Gbps City，600+ 个 1Gbps&beyond 套餐（Lounea 40 Gbps 套餐），100+ 个 10Gbps 试点（Turkcell 三模对称 50G PON 验证） | 自报 | 〔0920-am-Su2-D-02-华为 p6〕 |
 | WBBA/Omdia | 流量至 2035：常规 4% CAGR、AI 增强 26% CAGR、全新 AI 流量 85% CAGR；343 家运营商调查（2026-03）障碍：数据质量与治理 39%、AI 人才 39%、网络安全 32% | 预测/调查 | 〔0923-We-F-00-标准化专场II连拍 p6, p8〕 |
@@ -75,7 +75,7 @@ tags:
 | Nokia Bell Labs（Houtsma） | 120G NRZ 上行 ER 罚值；COH vs DD | 120G NRZ 带宽受限 COH：ER=8.5 dB、BER 2×10⁻² 灵敏度 -23.1 dBm；DD（EDFA-滤波-PIN）-28.7 dBm；ER=6 dB 时 COH -20.8 dBm，29 dB 预算需 ONU 平均发射≥+8.5 dBm | 实验+建模 | 〔0921-C2.2厅PON连拍 p29, p30, p31〕；〔0921-Mo5-G连拍 p26, p28〕 |
 | Coherent | ONU Tx 用 IM 的相干 PON | 4 dB ER 的 EML 相对 BPSK 约 +14 dB 灵敏度代价；CPON 预算 29–35 dB vs ZR 22 dB、CL 7–14 dB；booster SOA 相干 PON（Vijayan，OFC 2025）400G 预算 29 dB、200G 41 dB | 自报+引用 | 〔0920-pm-Su3-F-05-Coherent p6, p7, p8〕 |
 | MaxLinear | DSP 计算量对比（目标 200G 净速率） | IMDD NRZ 200G：2 波长 ×120 Gbaud，21 抽头 FFE 约 5×10¹² MAC/s（略有不确定）；全相干 DP-QPSK 60 GBaud：2×2 MIMO 42 抽头约 80×10¹² MAC/s；简化相干 120 GBaud QPSK 62 抽头 60×10¹² MAC/s；全相干仿真灵敏度约 -33 dBm（32 dB C+ 预算） | 仿真 | 〔0920-pm-Su3-F-07-MaxLinear p4, p9, p10, p12〕 |
-| Altice Labs | 6 种 ONU 架构（IMDD、全相干、intradyne+IMDD Tx 等）雷达图 | 方案3（相干 Rx + IMDD Tx）评为"高灵敏下行+低成本 ONU Tx"；方案5 把复杂度移到高速 ADC 与 DSP；各轴数值看不清 | 定性评估 | 〔0920-pm-Su3-F-03-AlticeLabs p7, p8〕 |
+| Altice Labs | 6 种 ONU 架构（IMDD、全相干、intradyne+IMDD Tx 等）雷达图 | 方案3（相干 Rx + IMDD Tx）评为"高灵敏下行+低成本 ONU Tx"；方案5 把复杂度移到高速 ADC 与 DSP；雷达图为定性打分（方案3 各轴约 4–6，方案5 ADC 带宽项最高） | 定性评估 | 〔0920-pm-Su3-F-03-AlticeLabs p7, p8〕 |
 | Adtran | 200G PON 成本构成（IM-DD vs 相干） | 直接材料 82%/113%，合计 100%/146%（占 IM-DD 总成本%）；激光/LO 15%/27%，ADC/DAC+DSP 11%/27%；100G ZR 与 50G PON 收发机 ASP 差距>10×（2030，LightCounting/Omdia，来源 Nokia ONDM'26）；2032 年条件：≥3.2 Tbps 相干接口、≥480 GBaud、≤2 nm CMOS | 自算 COGS（非实测） | 〔0920-pm-Su4-F-06-Adtran p7, p6, p8〕 |
 | Nokia Bell Labs+PCRL | 首个可突发自适应光信号处理器（AOP）用于上行接收 | 4 抽头光 FIR，τ=10 ps；50 Gbaud，1340 nm，19 vs 81 ps/nm 两种突发；灵敏度差距 3 dB→约 1.5 dB；AOP 单独优于数字 FFE；约 300 mW（约 6 pJ/bit） | 实验 | 〔0923-We2-I-00-全场连拍（第6讲）p79, p80, p82, p84〕 |
 
@@ -89,7 +89,7 @@ tags:
 | CICT+烽火 | 无收敛 DSP（前馈定时+偏振，存储每 ONU 信道状态） | 25 GBaud DP-QPSK，8800 符号/突发、16 ns 训练头；单 ONU -30 dBm（无 EDFA）、OLT EDFA 后 -36 dBm，预算>30 dB；±100 ppm 时钟偏差下 BER 变化可忽略；传输 15→40 km；FPGA LUT 59.4%、DSP 51.8% | 实验（实时 FPGA） | 〔0923-We2-I-00-全场连拍（第1讲）p5–p10〕 |
 | 上海交大+中国电信 | 相干 TDM-PON 现场试验 | 上海现网 57 km 往返、OTDR 约 34 dB；50 GBd：200G QPSK 预算 42 dB、240G PS-16QAM 41 dB、300G 39 dB；30 GBd：120G 45 dB；前导优化到 30 ns；对比表：复旦 30 km/200.5 Gb/s/33 dB 实时，本工作离线 | 现场（现网光纤）+离线 DSP | 〔0924-Th2-D4-上海交大与中国电信 p8, p15–p17, p19〕 |
 | CableLabs | DC 泄漏缓解（100/200G 相干 PON 上行） | 常规相干 DSP 仅容忍约 -47.1 dBm；配置1（陷波）-31.1；配置2（IF Tx）-15.1（DP-QPSK）/-17.6（DP-16QAM）；配置3（IF+外差+边缘滤波）约 -5.1 dBm；ODN 差分路径损耗最高 15 dB | 实验（离线） | 〔0923-We1-H-00-全场连拍-PON的DSP与均衡（第47–67页）p63–p65, p50〕 |
-| Fraunhofer HHI（PONGO） | 单频带双向 FDMA，瑞利背向散射 | ONU1/2 30 GBd DP-QPSK；无下行功率时所需 ROP：ONU1>-33.25 dBm、ONU2>-34.65 dBm；下行最大容限 -4.9/-2.65 dBm；23 dB 分光（Nu=128）、35 dB 最大 OPL 可划出可运行区 | 实验+仿真（VPI，数值 OCR） | 〔0924-Th2-D5-FraunhoferHHI p9, p10, p16, p17〕 |
+| Fraunhofer HHI（PONGO） | 单频带双向 FDMA，瑞利背向散射 | ONU1/2 30 GBd DP-QPSK；无下行功率时所需 ROP：ONU1>-33.25 dBm、ONU2>-34.65 dBm；下行最大容限 -4.9/-2.65 dBm；23 dB 分光（Nu=128）、35 dB 最大 OPL 可划出可运行区 | 实验+仿真（VPI；结论页已核实，p9–p16 部分数值为 OCR） | 〔0924-Th2-D5-FraunhoferHHI p9, p10, p16, p17〕 |
 | Coherent | 相干可插拔生态与 VHSP 缺口 | ZR FEC 限 4e-3–2e-2，CPON 1e-2/2e-2；需固定但频率受控 DFB、突发 booster SOA；100G ZR QSFP28 Steelerton DSP<2 W | 自报 | 〔0920-pm-Su3-F-05-Coherent p7, p9, p4〕 |
 
 ### 2.4 50G PON / Beyond 50G：均衡、FEC、长距放大、节能
@@ -127,7 +127,7 @@ tags:
 | TU/e | 光子集成 OADM/WDM 交叉连接 | 32×32×8λ 混合 PLC/III-V，O 波段 100 Gbps/λ，KP4 门限 2e-4；混合 WSC 光纤到光纤增益最高 12 dB、KP4 处代价<0.65 dB | 实验 | 〔0920-am-Su1-I-06-TUe p16, p17, p18〕 |
 | KIT | 实时相干光子辅助 sub-THz，10 km SSMF+1.4 m 无线，FPGA | 2.048 GBaud，稳定支持±100 ppm；QPSK 净 3.99 Gbit/s（BER<1e-7），16-QAM 净 6.83 Gbit/s（BER<2×10⁻²）；中断后 CMA 收敛约 1 μs | 实验（实时） | 〔0924-Th2-H2-KIT p4, p6, p7〕 |
 | 东南大学+紫金山 | 光子辅助 306 GHz，PR-9QAM/FTN，FPGA 实时 | 15 GBaud，3 m，30 GSa/s 8 bit ADC；30 Gb/s QPSK error-free（原文）；AMBM 相对 CORDIC：LUT 411→58、DSP48E2 2→0、延迟 22→2 周期 | 实验（实时） | 〔0924-Th2-H4-东南大学与紫金山实验室 p7, p8, p5, p10〕 |
-| 复旦大学 | FPGA 均衡引导 SFO 补偿，D 波段 30.2 km | 128 GHz，16 Gbaud QPSK，32 Gb/s，距离×速率 966.4 Gb/s·km（OCR）；无补偿 BER 在约 2×10⁵ 符号升至约 2×10⁻²，补偿后约 5×10⁻³ | 外场（复旦—新河镇） | 〔0924-Th2-H5-复旦大学 p12, p14, p15〕 |
+| 复旦大学 | FPGA 均衡引导 SFO 补偿，D 波段 30.2 km | 128 GHz，16 Gbaud QPSK，32 Gb/s，距离×速率 966.4 Gb/s·km；无补偿 BER 在约 2×10⁵ 符号升至约 2×10⁻²，补偿后约 5×10⁻³ | 外场（复旦—新河镇） | 〔0924-Th2-H5-复旦大学 p12, p14, p15〕 |
 
 ### 2.8 FSO 与星地光链路
 
@@ -136,7 +136,7 @@ tags:
 | Aircision（+TU/e） | 地面 FSO 商用化，网络层解决雾/湍流 | 4.6 km@7.7 Tbps（Eindhoven，2025-04，标"World Record"）；同页标题写"5.7 Tbps"，两数不一致，未判断哪个为准；另 6.1 km@10 Gbps 全双工、1.8 km@4 Tbps；部署<6 小时；ITU-T G.641（11/2025） | 自报+现场 | 〔0920-pm-Su3-D-04-Aircision-自由空间光技术方 p3, p5〕 |
 | Cambridge（引用他人） | FSO 演示对比 | Eindhoven 4.6 km 5.7 Tb/s（van Vliet，OFC 2025，相干 WDM 22 通道）；青海湖 104.8 km 112 Gb/s；NICT 东京 7.4 km 2 Tb/s；混合 THz/FSO 一个月实测：FSO 天气事件下跌至约 15 Gbps，并行混合约 150–230 Gbps | 引用+实测（近似） | 〔0920-pm-Su4-H-02-Cambridge p4, p13〕 |
 | CNES/Airbus/Safran/OGS（LASIN/FrOGS） | LEO 直连下行，AO+SMF 注入 | CO3D 4 颗 LEO，符号率 10 Gsps；SMF 典型注入效率 40%、ROP -35 至 -25 dBm；2026-08-05 传输 1.38 Tb（r0=20 cm），09-17 传输 1.62 Tb error-free（r0>25 cm）；重捕获<15 s | 在轨实测 | 〔0920-am-Su2-F-04-OGS-低轨相干链路自适应光学 p5, p7〕 |
-| Safran | AO + 发射分集 + 交织 | 仿真：50 cm 望远镜、20°–86°、r0 4.1 cm、65 m/s，AO 算法链路余量增益 4 dB；实测 30° 以上余量充足、9 Gbps 载荷；带内信令使会话起始即得 125 Mbps；差湍流（r0 约 5 cm，OCR）下 20° 仰角 3.5 s 载入 4 GB | 仿真+在轨 | 〔0920-am-Su2-F-05-SAFRAN-自适应光学加发射分集 p3, p8, p9〕 |
+| Safran | AO + 发射分集 + 交织 | 仿真：50 cm 望远镜、20°–86°、r0 4.1 cm、65 m/s，AO 算法链路余量增益 4 dB；实测 30° 以上余量充足、9 Gbps 载荷；带内信令使会话起始即得 125 Mbps；差湍流（r0 约 5 cm、风速 9 m/s，2026-07-07 实测）下 20° 仰角 3.5 s 载入 4 GB | 仿真+在轨 | 〔0920-am-Su2-F-05-SAFRAN-自适应光学加发射分集 p3, p8, p9〕 |
 | BUPT+中科院 | 模式分集接收（6 模光子灯笼）+ AO，GEO 星地 | 仿真强湍流接收功率提升>10 dB，实验室>6 dB；GEO 在轨（2 W/1550 nm，1.048 Gbps BPSK，1.8 m 望远镜）：99% CCDF 功率 1 模 -63.4→3 模 -51.3 dBm（+12.1 dB）；无错帧比例仅 AO 77.6% vs 3 模合并 99.0%；99% CCDF 改善数据日期 2025-12-11 | 在轨试验（2024-05–2026-01） | 〔0924-Th2-C1-北邮与中科院-模式分集接收与自适应光学增强的星地自由空间光链路 p13–p18〕 |
 | KDDI Research | PCSEL 瓦级 FSO 发射机 | PCSEL 发散角<0.2°×0.2°、>1 W（EEL 约 5°×30°/100 mW）；FM+相干外差：0.5/1 Gbaud 链路预算 83/78 dB（20% OH SD-FEC，无光纤放大器）；直调直检此前 35 dB | 实验 | 〔0922-Tu1-C5-KDDIResearch-光子晶体面发射激光器做自由空间光通信 p12, p29, p34〕 |
 | 西湖大学 | 室内 DP-CEDD 光无线（自相干，SiP CROW 提取载波） | 9 m LOS，448 Gb/s（PDM-16QAM OFDM），20% SD-FEC 后净 355.1 Gb/s，灵敏度 -25 dBm，净 SE 11.84 bit/s/Hz；CROW 20-dB 带宽 4.48 GHz、消光 60 dB；仅静态对准条件下免光学 APC | 实验 | 〔0922-Tu1-C4-西湖大学-双偏振载波提取直检的448Gbps室内光无线接入 p14, p11〕 |
@@ -193,7 +193,7 @@ tags:
 
 **5.1 直检 vs 相干：哪种在"百万用户每美元"上赢？**
 - 直检一方：Nokia Houtsma 称 120G NRZ 带宽受限下 OA-DD 灵敏度 -28.7 dBm 优于相干 -23.1 dBm（ER=8.5 dB，BER 2×10⁻²），原因是 ER 惩罚小、系统带宽受限、集成相干接收机附加损耗〔0921-C2.2厅PON连拍 p29, p30〕；Coherent 也承认 4 dB ER 的 EML 相对 BPSK 约 +14 dB 灵敏度代价（对混合方案不利）〔0920-pm-Su3-F-05-Coherent p6〕。
-- 相干一方：Adtran 自算 200G 相干 COGS 为 IM-DD 的 146%，价差主因量级；2032 年具备≥3.2 Tbps 相干接口、≤2 nm CMOS 后"不再是问题"〔0920-pm-Su4-F-06-Adtran p7, p8〕。反证：同一份讲稿引 LightCounting/Omdia 认为 100G ZR 与 50G PON 收发机 ASP 差距 2030 年仍>10×〔0920-pm-Su4-F-06-Adtran p6〕；MaxLinear 算全相干均衡 80×10¹² MAC/s 对 IMDD 5×10¹² MAC/s（OCR 略不确定）〔0920-pm-Su3-F-07-MaxLinear p4, p9〕。
+- 相干一方：Adtran 自算 200G 相干 COGS 为 IM-DD 的 146%，价差主因量级；2032 年具备≥3.2 Tbps 相干接口、≤2 nm CMOS 后"不再是问题"〔0920-pm-Su4-F-06-Adtran p7, p8〕。反证：同一份讲稿引 LightCounting/Omdia 认为 100G ZR 与 50G PON 收发机 ASP 差距 2030 年仍>10×〔0920-pm-Su4-F-06-Adtran p6〕；MaxLinear 算全相干均衡 80×10¹² MAC/s（p9，OCR）对 IMDD 5×10¹² MAC/s（2×120 GBd NRZ、21 抽头 FFE + BCJR）〔0920-pm-Su3-F-07-MaxLinear p4, p9〕。
 - 结论性状态：双方都是仿真/自算/实验，无同一基准的实测成本对比。
 
 **5.2 混合方案：是"两全其美"还是"杂交不育"？**
@@ -207,7 +207,7 @@ tags:
 
 **5.4 流量增长：渐进还是 AI 驱动的爆发？**
 - Nokia：家庭固定流量至 2034 年三档预测（1,405/1,806/2,791 EB/月），"渐进而非爆发"；AI GPU 周期 2–3 年 vs 电信光网络约 10 年〔0920-am-Su1-D-05-Nokia p26, p28〕。
-- WBBA：全新 AI 流量 85% CAGR、AI 增强 26% CAGR，常规仅 4%（2025–35）〔0923-We-F-00-标准化专场II连拍 p6〕；中国移动称上行占比升至 40%–50%（OCR）〔0920-am-Su1-D-03-中国移动 p5〕。
+- WBBA：全新 AI 流量 85% CAGR、AI 增强 26% CAGR，常规仅 4%（2025–35）〔0923-We-F-00-标准化专场II连拍 p6〕；中国移动称上行占比升至 40%–50%〔0920-am-Su1-D-03-中国移动 p5〕。
 - 差异来源：Nokia 统计不含 FWA、口径为家庭固定流量；WBBA 口径为全网流量分类，二者不可直接比较。
 
 **5.5 FTTR 无线侧：MAC-PHY 联合处理 vs 分布式协商 vs 毫米波**
@@ -244,9 +244,9 @@ tags:
 
 ### 6.2 时间窗口
 
-- 2026–2027：50G PON 规模引入、10G FTTR PHY/协同管理标准化；G.Xfin 首份草案 2027；ITU-T G.sup.PONcoop 目标定稿 2028 年 7 月（OCR）〔0920-am-Su1-I-04-Nokia p10〕。
+- 2026–2027：50G PON 规模引入、10G FTTR PHY/协同管理标准化；G.Xfin 首份草案 2027；ITU-T G.sup.PONcoop 目标定稿 2028 年 7 月〔0920-am-Su1-I-04-Nokia p10〕。
 - 2027–2028：VHSP 各类别选技术与最终选择〔0920-pm-Su3-F-02-Verizon p11〕。
-- 2030+：VHS-PON 200G（FSAN，OCR）；2035+ 商用；Orange 运营约 2040〔0920-pm-Su3-F-02-Verizon p10, p11〕。
+- 2030+：VHS-PON 200G（FSAN 路线图）；2035+ 商用；Orange 运营约 2040〔0920-pm-Su3-F-02-Verizon p10, p11〕。
 - 2032：Adtran 设想的相干集成条件成熟点（≥3.2 Tbps、≤2 nm CMOS）〔0920-pm-Su4-F-06-Adtran p8〕。
 
 ### 6.3 对厂商的含义

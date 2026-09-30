@@ -27,7 +27,7 @@ tags:
   - 单波 50 GBaud PAM4：LP = 5 dBm 时 HCF 在 15% O-FEC 门限的灵敏度约 −19 dBm，SSMF 曲线始终高于门限（色散衰落）；ROP = −15 dBm 时 HCF 直至 31 dBm 入纤 BER 几乎无劣化（约 10^-3 量级）；SSMF 最佳入纤约 9 dBm [p13]
   - 32×50 GBaud PAM4：等功率加载 5–13 dBm/波，HCF 与单波接近，SSMF 最佳约 5 dBm（FWM、XPM）；混合加载：CUT = 31 dBm，其余31波各 13 dBm，HCF BER 随 CUT 功率变化很小；−19 dBm 接收功率达到 O-FEC 门限，对应 50 dB CUT 预算，总毛速率 3.2 Tb/s；讲者注明该预算是特定混合加载条件下的结果，"可推断"全部同功率时应相同 [p14]
 - 提到的公司/客户/产品/标准：YOFC 支撑管 HCF；ITU-T G.652.D；Keysight M8194A/UXR0804A；Coherent Waveshaper 4000A；TFLN MZM；OFC 2026 Workshop "How Far is Too Far?"（Arista、Ciena、Microsoft 演讲回顾）[p4–p6]
-- 与业界对比或记录声明（SOTA/首次/record）：未见"record/首次"字样；对比对象为同条件 SSMF 与 OB2B；"50 dB CUT budget"为讲者强调的结果 [p14]
+- 与业界对比或记录声明（SOTA/首次/record）：未见"record/首次"字样；对比对象为同条件 SSMF 与 OB2B；"50 dB CUT budget"为讲者强调的结果（混合加载 CUT 31 dBm、其余 31 波各 13 dBm，−19 dBm 接收即达 O-FEC 门限，总毛速率 3.2 Tb/s，看图核实）[p14]
 - 推荐配图页：p7（SSMF/HCF 参数对比表+HCF截面）；p12（SBS：后向散射与接收功率随入纤功率曲线）；p14（32波混合加载 BER 与 50 dB 预算）
 
 ### 0921-合集待拆-全场-A1厅下午上半场连拍-Mo3-A.pdf（KDDI 第15–26页，Mo3-A3）
@@ -43,7 +43,7 @@ tags:
 - 关键数据：
   - 结论页：端到端重配时延约 206 μs；光功率代价 < 3.8 dB（pre-FEC 10^-2 BER）；四个级联光子节点 [p35]
   - 功率代价：经 1 个节点 0.7 dB，经 4 个节点 3.8 dB；OSNR 降至 31.2 dB [p34]
-  - 实验：两路 400G ZR+ RU 信号，RU1 1561.42 nm、RU2 1560.61 nm，各约 −7 dBm；OSC 为 10 GbE，1550.12 nm，约 0 dBm；SOA 偏置电流 40–100 mA；FPGA HTG-830；流量发生/分析 VIAVI ONE-800；DU 侧包交换机 Edgecore DCS240；环形网络（OCR，数字未逐项核对图）[p33]
+  - 实验：两路 400G ZR+ RU 信号，RU1 1561.42 nm、RU2 1560.61 nm，各约 −7 dBm；OSC 为 10 GbE，1550.12 nm，约 0 dBm；SOA 偏置电流 40–100 mA；FPGA HTG-830；流量发生/分析 VIAVI ONE-800；DU 侧包交换机 Edgecore DCS240；4 节点环形网络（看图核实）[p33]
 - 提到的公司/客户/产品/标准：400G ZR+；CMIS（可插拔控制）；IMT-2030；VIAVI；Edgecore；P4 卸载、SDN 控制器、FPGA 监督控制（作为已有方案对比）[p29, p32]
 - 与业界对比或记录声明（SOTA/首次/record）：未见 record/首次 字样；动机页称挑战是快速、动态的多层网络重配 [p29]
 - 推荐配图页：p31（SOA 光子交换节点结构与 OSC）；p34（重配时延、级联节点 BER-ROP 曲线）
@@ -63,7 +63,7 @@ tags:
   - 现网：13,234 只 LPO，累计 25.8M 器件小时；对照组为同3家厂商同工艺 FRO [p42]
   - 功耗中位数 LPO 4.2 W vs FRO 8.1 W（降 48%）；壳温中位数 35.1 vs 45.5 °C（低 10.4 °C）[p43]
   - 模块 TX+RX 时延：LPO < 5 ns；三家主流 DSP 厂商 FRO > 100 ns（柱图约 100–160 ns）[p44]
-  - 稳定性：接收 SNR 波动 < 0.3 dB（观察约 80 天）；累计 KP4 FEC 非零 bin 最大值低于 10 [p45，OCR，图未细看]
+  - 稳定性：接收 SNR 波动 < 0.3 dB（TH5 主机侧 SNR 约 22.5–24.3 dB，观察约 80 天）；累计 KP4 FEC 非零 bin 最大值低于 10 [p45，看图核实]
   - 可靠性表：LPO 13,234 只 2.58E+07 h，RMA 7 例，MTB RMA 420 年；FRO 220,352 只 8.35E+08 h，RMA 209 例，456 年；链路抖动 LPO 178 次、MTB 17 年、日抖动率 0.017%；FRO 13,746 次、7 年、0.040%（LPO 低 58%）；7 只 LPO RMA 失效模式为污染与 ESD [p46]
 - 提到的公司/客户/产品/标准：Broadcom Tomahawk 5；QSFP112 DR4；400GBASE-DR4；CEI-112G-VSR；KP4 FEC；TDECQ；3家未具名模块商与 3家 DSP 厂商
 - 与业界对比或记录声明（SOTA/首次/record）：未见 record 字样；给出规模化现网 LPO 与 FRO 对照统计（同厂商同工艺）[p42, p46]。讲者提示 LPO MTB RMA（420 年）与 FRO（456 年）"相当"，但 FRO 器件数与器件小时量大得多 [p46]

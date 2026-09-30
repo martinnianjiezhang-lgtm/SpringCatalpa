@@ -13,11 +13,11 @@ tags:
   2. BT 主张最早现场部署相干（1988）并推动单模光纤（1980–83）及可管理波长交换网络（MWTN，1995 瑞典现场演示，称 world-first）。
   3. 展望 2030+：随速率提升 C 波段频谱已基本用满（Shannon 极限），>800 Gbit/s 需新放大器扩谱、空芯/多芯光纤，或直接并行多纤；并提及量子网络（结尾页仅列问题，无结论数字）。
 - 关键数据：
-  - Openreach FTTP 覆盖 23.4 百万户，2026 年底建至 25 百万户，网络投资 £15 billion，已覆盖户中 40% 已接入（截至 2026-06-30，OCR，未看图）[p2]
-  - 约 512,000 个（~60%）移动基站直连光纤（OCR）[p3]
-  - Kao 1966 设想损耗约 20 dB/km；Corning 1970 样品损耗 15 dB/km（送 Post Office 测得），IEEE 铭牌写 17 dB/km（OCR）[p5][p6][p7]
-  - 1977 首次 Post Office 光纤试验：渐变折射率多模，140 Mbit/s 传 5.75 km；8 Mbit/s 传 13 km 无中继；~5 dB/km @ ~840 nm（OCR）[p8]
-  - 1980 BT 37 km 无中继 140 Mbit/s 单模；1982 现场试验 140/650 Mbit/s 传 37.5 km 无中继，140 Mbit/s 传 62 km 无中继，均 1300 nm（OCR）[p9]
+  - Openreach FTTP 覆盖 23.4 百万户，2026 年底建至 25 百万户，网络投资 £15 billion，已覆盖户中 40% 已接入（截至 2026-06-30，看图核实）[p2]
+  - 移动基站：幻灯写 ">12,000 (~60%)" 个 4G/5G 基站直连光纤（看图核实；此前 OCR 读作 512,000 有误）；以微波接入交换局的基站其后段仍走光纤 [p3]
+  - Kao 1966 设想目标损耗 <20 dB/km（BPO 1966 年初设定）；Corning 1970 年 11 月 9 日送 Post Office Dollis Hill 实验室样品损耗 15 dB/km，IEEE 铭牌文字写 17 dB/km；1967 年 Post Office 首根实验室光纤损耗 30 dB/m（看图核实）[p5][p6][p7]
+  - 1977 首次 Post Office 光纤试验：渐变折射率多模，140 Mbit/s 传 5.75 km（Adastral–Kesgrave）；8 Mbit/s 传 13 km 无中继（至 Ipswich）；Corning 光纤 ~5 dB/km @ ~840 nm；同年 STL 在 Hitchin–Stevenage 9 km 部署 140 Mbit/s（3 km 中继间距）（看图核实）[p8]
+  - 1980 BT 实验室演示 37 km 无中继 140 Mbit/s 单模；1982 年 2 月 Martlesham–Woodbridge（7.5 km）现场试验：140/650 Mbit/s 传 37.5 km 无中继，140 Mbit/s 传 62 km 无中继，均 1300 nm（看图核实）[p9]
   - 1988 相干现场部署：565 Mbit/s，光学距离 176 km（图示 Bedford–St Neots–Cambridge，20.6 km + 33.7 km 段，看图）[p13]
   - EDFA：Southampton 1987 首报，BT Whitley 1988 首次激光二极管泵浦，1990 商用；现网总距离 >1000 km，约每 80 km 一个放大器，1530–1565 nm，最低损耗约 0.2 dB/km（看图）[p13]
   - 2030+ 页：ITU 50 GHz 栅格 vs 灵活栅格（37.5/50/75/100 GHz），速率 10G–800G/波；单模光纤 D/E/S/C/L/U 六个谱带衰减曲线，1200–1700 nm，最低约 0.2 dB/km（看图）[p18]

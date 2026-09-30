@@ -6,7 +6,7 @@ tags:
 ---
 
 ### 0920-pm-Su4-I-06-LightMatter-光计算路线.pdf
-- 讲者/机构：讲者姓名未见 / Lightmatter | 题目：未见题目页（页1、2 OCR为空，未查看）；讲稿主题为 "Fast and narrow has a ceiling. Slow and wide does not — when it's 3D."（回答 Workshop Question：fast, narrow channel 能否无限上升） | 类型：邀请报告（Workshop，"窄快还是宽慢"）
+- 讲者/机构：Darius Bunandar（Co-Founder, Chief Scientist）/ Lightmatter | 题目：Breaking the SerDes Ceiling with 3D Photonic DWDM（p1 现场照看图核实）；讲稿主题为 "Fast and narrow has a ceiling. Slow and wide does not — when it's 3D."（回答 Workshop Question：fast, narrow channel 能否无限上升） | 类型：邀请报告（Workshop，"窄快还是宽慢"）
 - 方向归属（主/次）：主 4 Scale-up/in CPO；次 3 Scale-out 224G/448G/光源
 - 核心主张：
   1. 单通道超过 112G 后，能耗、传输距离、时延三者都变差（"Fast and narrow has a ceiling"）。[p3, p15]
@@ -25,24 +25,24 @@ tags:
 - 推荐配图页：p6（400G/800G/1.6T 单纤窄快 vs 宽慢方案对比表）；p5（112G–448G 能耗/距离/FEC 表）；p10（EVK50 演示，注意图片上下颠倒）
 
 ### 0920-pm-Su4-I-07-Credo-电互连路线.pdf
-- 讲者/机构：讲者姓名未见（页末联系人 Mohsen Asad）/ Credo | 题目：未见完整题目页（页1 OCR 残缺，未查看）；主题为 wide-parallel（宽并行）光互连，页标题 "When Wide-Parallel Could Bring Benefit" | 类型：邀请报告（Workshop，"窄快还是宽慢"）
+- 讲者/机构：Mohsen Asad / Credo | 题目：Beyond Copper: Wide Parallel Optical Interconnect for Scale-in Networking（p1 看图核实）；页标题 "When Wide-Parallel Could Bring Benefit" | 类型：邀请报告（Workshop，"窄快还是宽慢"）
 - 方向归属（主/次）：主 4 Scale-up/in CPO/NPO；次 3 Scale-out 224G/448G
 - 核心主张：
   1. 算力随面积扩展，铜 I/O 随边缘扩展，只有光同时随两者扩展；Credo 自称是"唯一构建完整 wide-parallel 光学栈（SerDes、光引擎、光纤、封装）的厂商"。[p8]
   2. 带宽随通道数而不是单通道速率增长，二维扩展可把 GPU 域从 72 提升到 300+；简单调制加原生光源，能耗比交换式铜低 3–4 倍。[p8]
   3. 廉价冗余备用通道可无缝切换，光纤 break-out 可提高芯片连接基数。[p8]
 - 关键数据：
-  - ZeroFlap ALC（有源光缆）：Wide-Parallel Optics，覆盖 30 m，线缆体积最多减 75%，100M 小时 MTBF，"no link flap"；相比 AEC 极简 DSP 省 50% 功耗；CPO 带宽密度 >5 Tbps/mm（OCR 读数，未看原图）；"Pluggable is our first qualified product"，路线图指向 NPO/CPO。[p3]
+  - ZeroFlap ALC（有源光缆）：Wide-Parallel Optics，覆盖 30 m，线缆体积最多减 75%，100M 小时 MTBF，"no link flap"，冗余通道无损切换；相比 AEC 极简 DSP 省 50% 功耗；CPO 带宽密度路线图 >5 Tbps/mm；把 GPU 域从 72（铜极限）扩到 300+ GPU 一跳光互连；"Pluggable is our first qualified product"，路线图指向 NPO/CPO（看图核实）。[p3]
   - 场景A 机架级中心交换机铜互连（fast narrow）：单次交换穿越约 14–17 pJ/bit，最大距离 1.5–2 m；分项：XPU 出口 SerDes 约 3.4、交换机入口 SerDes 约 3.4、交换结构+SHARP 约 2–3、交换机出口 SerDes 约 3.4、XPU 入口 SerDes 约 3.4 pJ/bit（假设 112G 级最佳节点）。[p6]
   - 场景B 平坦光 mesh（wide-parallel）：单次光穿越约 4 pJ/bit；分项（25G 宽并行）：XPU SerDes 至 OE 约 3.4、E/O（VCSEL）约 0.5、光纤约 0（无源）、O/E 约 0.5、OE 至电约 1.5 pJ/bit。结论：2 SerDes + 2 E/O，比交换式铜低 3–4 倍；铜只到约 2 m，光可到 50+ m 且无需 retimer。[p6]
   - 106G DSP SerDes：4 nm = 3.4 pJ/bit，3 nm = 3.4 pJ/bit（无改善）。[p6]
-  - 拓扑动机（OCR 读数，未看原图）：Blackwell 用 MEMBAR 往返握手，Rubin 用 Counted Write Based Sync；OpenAI 半扁平两层 Clos（电）、AWS 准随机图 + 无源光 ShuffleBox、Google Virgo、Microsoft Fairwater、Meta Disaggregated Scheduled Fabric；TPU 8i Boardfly 36 组全连接、每 pod 最多 1152 芯片，3D Torus 的 hop 是时延税。[p4, p5]
+  - 拓扑动机（看图核实）：Blackwell 用 MEMBAR 往返握手，Rubin 用 Counted Write Based Sync；OpenAI 半扁平两层 Clos（电）、AWS 准随机图 + 无源光 ShuffleBox、Google Virgo 扁平高 radix 光 fabric、Microsoft Fairwater 单一扁平网络（"networking wall"）、Meta Disaggregated Scheduled Fabric；TPU 8i Boardfly 36 组全连接、每 pod 最多 1152 芯片，3D Torus 的 hop 是时延税；光互连在 50+ m 保持确定时延，使 72 GPU 的扁平拓扑扩到 300+。[p4, p5]
 - 提到的公司/客户/产品/标准：Credo ZeroFlap ALC、AEC；NVIDIA Blackwell/Rubin/SHARP；OpenAI、AWS、Google（Virgo、TPU 8i Boardfly）、Microsoft、Meta；VCSEL
 - 与业界对比或记录声明：自称唯一完整 wide-parallel 光学栈厂商 [p8]；3–4 倍能效优势为其自估算模型，非实测 [p6]
 - 推荐配图页：p6（铜交换 vs 平坦光 mesh 的 pJ/bit 分项对比）；p3（ZeroFlap ALC 产品特性）
 
 ### 0920-pm-Su4-I-08-XscapePhotonics-多波长路线.pdf
-- 讲者/机构：讲者姓名未见 / Xscape Photonics | 题目：未见完整题目页（页1、2 未查看/内容不清）；主题为 AI 互连的多波长光源（Serial Cu vs Parallel Cu、Serial vs Parallel SM optics） | 类型：邀请报告（Workshop，"窄快还是宽慢"）
+- 讲者/机构：Vivek Raghunathan, PhD（Co-Founder & CEO）/ Xscape Photonics | 题目：Escaping Scaling Limits with WDM（p1 现场照看图核实）；主题为 AI 互连的多波长光源（Serial Cu vs Parallel Cu、Serial vs Parallel SM optics） | 类型：邀请报告（Workshop，"窄快还是宽慢"）
 - 方向归属（主/次）：主 3 光源；次 4 Scale-up/in
 - 核心主张：
   1. 从铜到光的转换用 (BW × Distance) 作为品质因数 FoM；2016 年数据中心转向单模光的 FoM 约 100 Gb/s·km。[p4]
@@ -55,7 +55,7 @@ tags:
   - 并行光 vs 串行光：Cu 到 SM 光在封装内互连"1–2 代之后"，Escape 互连"现在"（slide 原话）；2–5X Higher Power 标为并行的代价。[p6]
   - 光学选择表：Scale-out 1–4λ/纤，最多约 1M XPU，串行光；Scale-up 4–8λ/纤，144–576 GPU，CPO 于 GPU+NVSwitch，串并混合（第一代）、并行为下一代；Scale-in 64λ+/波导，GPU 与内存，并行光。[p10]
   - COMBX 可编程多波长激光器：波长数量与间隔可编程；同一平台服务串行与并行。Scale out AI training：20-nm CWDM4 栅格；Scale across 大规模训练：4.5-nm LR4 栅格；Scale up AI inference：1-nm CW-WDM 栅格（约 1280–1295 nm 区间可见密集谱线）。[p8]
-- 提到的公司/客户/产品/标准：Xscape Photonics COMBX；NVLink/NVSwitch；CWDM4、LR4、CW-WDM；OIF booth #2126（OCR p11）；数据来源 Kirchain & Kimerling、Agrawal
+- 提到的公司/客户/产品/标准：Xscape Photonics COMBX、"FalconX" 8λ 高功率 ELSFP（符合 2x4 OCI MSA，每纤 25 dBm，支持 OIF CMIS 5.3，OIF 展台 #2126 现场演示，p11 看图核实）；VeEX 多协议分析仪；NVLink/NVSwitch；CWDM4、LR4、CW-WDM；数据来源 Kirchain & Kimerling、Agrawal
 - 与业界对比或记录声明：无 record 声明；FoM 图为预测线，非实测 [p5]
 - 推荐配图页：p5（Scale-out/Scale-up 的 BW×Distance FoM 年表）；p8（COMBX 可编程多波长激光与三种栅格谱）；p10（Scale-out/up/in 光学选择卡片）
 

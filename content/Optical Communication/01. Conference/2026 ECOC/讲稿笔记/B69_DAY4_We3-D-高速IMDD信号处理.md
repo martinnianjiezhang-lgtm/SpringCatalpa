@@ -6,7 +6,7 @@ tags:
 ---
 
 ### 0923-We3-D4-382-NokiaBellLabs-峰值受限线性预均衡.pdf（第1–16页；p10为p9重复）
-- 讲者/机构：W. Lanneer 等 / Nokia Bell Labs | 题目：DAC-aware peak-amplitude-constrained (L1-constrained) MMSE linear transmit pre-equalization（页面未见完整英文原题，据内容概括；场次 We3-D4） | 类型：学术论文
+- 讲者/机构：Wouter Lanneer（报告人）, Christoph Füllner, Michiel Verplaetse / Nokia Bell Labs Fixed Networks Department（欧盟共资助，VLAIO FALCON 项目 HBC.2024.0499）| 题目：Peak Amplitude Constrained Linear Pre-Equalization Design Method for Intensity Modulation and Direct Detection Systems（We3-D4，p1 看图核实） | 类型：学术论文
 - 方向归属（主/次）：主 3（Scale-out/电芯片、DAC、IMDD DSP）；次 5（100G PON 原型）
 - 核心主张：
   1. 传统预均衡直接复用 RX 滤波器，会抬高信号峰值（PAPR），需缩放/削波，带来 ER 与 SNR 代价及非线性失真（p3–p4）。
@@ -35,9 +35,9 @@ tags:
   - 300 Gb/s OFDM 32-QAM，80 km SMF，电带宽 31.5 GHz，保护带 1.5 GHz，80 GSa/s DSO；最优 PAPR 11 dB、CSPR 15 dB；24% SD-FEC 下净速率 242 Gb/s，净 ESE 7.7 b/s/Hz（-9 dBm ROP 星座图） [p10][p11]
   - 4-D DP-CADD：528 Gb/s OFDM 16-QAM，80 km SMF，线 ESE 14.67 b/s/Hz；延时偏差 ±4 ps 内无明显代价；净容量 426 Gb/s，净 ESE 11.8 b/s/Hz（24% SD-FEC） [p15]
   - Si3N4 滤波器 LO-free homodyne：单偏振 600 Gb/s OFDM 16-QAM，80 km，净速率 480 Gb/s；最优 CSPR 9 dB（滤波器插损 4.5 dB + BPD 后残余失真）；25% SD-FEC [p19]
-  - 多波长：6 波（1556–1561 nm）560 Gb/s 16-QAM 线速，80 km；4 波（约 1535 与 1565 nm 附近）448 Gb/s 16-QAM，80 km（数值取自 OCR，未核图）[p20]
-  - 最简相位分集接收机：仿真 300 GBaud 双 SSB 16-QAM，近零保护带（-0.5～0.5 Hz，OCR原样）；最优 CSPR 3 dB（30 dB OSNR 下、相移 45°）；较带 CSPR 代价的相干约有 1 dB OSNR 代价，归因于残余 SSBI [p22]
-  - 理论 ESE 上限：ESE=2log2(1+OSNR·Bref/(B·CSPR…))，Bref=12.5 GHz，OSNR 足够时归一化 ESE 上限趋近 100%（公式 OCR 不清） [p23]
+  - 多波长：6 波（1556–1561 nm）560 Gb/s 16-QAM 线速，80 km，BER 约 3.6–4.7e-2（25% SD-FEC 下）；4 波（1535.07/1535.79/1563.71/1564.50 nm）448 Gb/s 16-QAM，80 km，BER 约 2.1–2.4e-2（20% SD-FEC 下）（看图核实；Li, Su 等 LPR 2026）[p20]
+  - 最简相位分集接收机：仿真 300 GBaud 双 SSB 16-QAM，近零保护带（−0.5～0.5 Hz，幻灯原文如此）；最优 CSPR 3 dB（30 dB OSNR 下、相移 45°，对载波或信号相移结果相同）；较带 CSPR 代价的相干约有 1 dB OSNR 代价，归因于残余 SSBI（看图核实）[p22]
+  - 理论 ESE 上限：ESE = 2log2(1 + (OSNR/(1+CSPR))·(B_ref/R)·ESE)，B_ref = 12.5 GHz，R 为净速率，B 为光信号带宽；ESE 主要取决于 OSNR 与净速率，代价来自 CSPR；归一化 ESE 上限在 OSNR 20 dB 时约 72–79%（400→200 Gb/s），50 dB 约 93%，OSNR 足够时趋近 100%（看图核实） [p23]
   - 实验：46 GBaud 双 SSB 64-QAM，保护带 -3～3 GHz，100 GSa/s DAC，160 GSa/s DSO，波形整形器构造传输函数；40 km 净 228.85 Gb/s；20% FEC 阈值 2.4×10^-2、25% FEC 4×10^-2；最优 CSPR 约 12 dB（图读） [p24]
   - 汇总表（80 km，净 ESE）：SiP LO-free homodyne 150 GBaud 16-QAM 480 Gb/s 6.32；SiP Modified CADD 60 GBaud 32-QAM 242 Gb/s 7.68；最简相位分集 46 GBaud 64-QAM 229 Gb/s 8.76；SiP DP-CADD 66×2 GBaud 16-QAM 426 Gb/s 11.83 [p25]
 - 提到的公司/客户/产品/标准：Cisco（400G ZR CoRx 功耗拆分，OFC 2023）；Lumentum 类窄线宽激光作为 LO 成本项（页面仅写 Luster/OCR不清，不确定）；Bell Labs Stokes 接收机（Dong 2016、Stern OFC 2024）；McGill KK/RCC；Westlake；LightCounting 速率演进图；Si3N4 平台

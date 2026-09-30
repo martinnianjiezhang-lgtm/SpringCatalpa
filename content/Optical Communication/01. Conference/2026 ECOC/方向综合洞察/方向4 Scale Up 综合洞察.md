@@ -26,7 +26,7 @@ tags:
 - 机制：CPO无前面板热插拔，修复时间从分钟增至小时甚至数天〔0923-MF-美团-市场聚焦 p14〕。
 
 **判断4：铜的边界已到1–2 m（200G）并在400G继续缩短，但“铜+光混合”在至少400G世代仍是主流；铜与光之间出现介质波导/RF的第三条路。**
-- 数字：铜缆可达距离：200G约1 m、400G约1 m【OpenAI读图】〔0920-am-Su1-B-02-OpenAI p4〕；Marvell给出200G 2.5 m、400G 1.25 m〔0920-pm-Su4-H-04-Marvell p5〕；Ciena：混合介质使铜域从72 XPU@14 Tbps扩到256 XPU@25 Tbps，铜至少用到400G世代〔0921-Mo12-A3-Ciena p18、p33〕；AttoTude介质波导448G约10 m、DiAx+约30 m【自报】〔0920-am-Su1-B-06-AttoTude p6〕。
+- 数字：铜缆可达距离：200G约1 m、400G约1 m【OpenAI读图】〔0920-am-Su1-B-02-OpenAI p4〕；Marvell给出200G 2.5 m、400G 1.25 m〔0920-pm-Su4-H-04-Marvell p5〕；Ciena：混合介质使铜域从72 XPU@14 Tbps扩到256 XPU@25 Tbps，铜至少用到400G世代〔0921-Mo12-A3-Ciena p18、p33〕；AttoTude介质波导448G约10 m、DiAx+约35–40 m（BER 1E-5/1E-7 门限）【自报】〔0920-am-Su1-B-06-AttoTude p6〕。
 - 机制：448G干净信道带宽约90 GHz，受连接器限制〔0923-MF-00-上午连拍 p33〕。
 
 **判断5：“宽而慢”与OCS是scale-up的两个未验证变量：前者缺现场数据，后者卡在插损/端口密度/重锁定。**
@@ -65,7 +65,7 @@ tags:
 | NVIDIA | 微环调制器发射机 | 212.5 Gbps/通道；16通道在OFC 2026展会连续3天，总BER<1E-14；引擎单通道212.5G生产环境BER<1e-10 | 展台实验/自报 | 〔0920-pm-Su3-A-05-NVIDIA p13〕；〔0921-Mo4-待定-NVIDIA p5〕 |
 | Ciena | DSP/LRO/LPO/NPO/CPO（XPU海岸线约束） | 30 W(18.5)/20 W(12.5)/10 W(6.5)/8 W(5)/5 W(3 pJ/bit)；448G下PCB到前面板连接“breaks down” | 示意/自报 | 〔0920-pm-Su3-I-05-Ciena p5〕 |
 | OIF | 72 GPU Pod（100 GBd PAM4） | CPO 4、LTLR 6、RTLR 10、RTRR 15 pJ/b；Pod总功率CPO约90 kW vs 可插拔约100 kW（读图估计） | 标准组织/建模 | 〔0923-MF-00-上午连拍 p44〕 |
-| Huawei | Hi-ONE 7.2T NPO（36×224G，板载内置激光，免光纤） | 相对1.6T模块：带宽4.5×/4.6×（两处表述不一）、时延100→10 ns、功耗15→5 pJ/bit(-66%)、故障率10 A-fit→约1 A-fit（读图，需复核）；“已量产”；FIT<1（1:1备份） | 自报 | 〔0921-Mo12-00 p100〕；〔0921-Mo12-A5-华为 p9〕；〔0920-am-Su1-A-03-华为 p5〕 |
+| Huawei | Hi-ONE 7.2T NPO（36×224G，板载内置激光，免光纤） | 相对1.6T模块：带宽4.5×、时延100→10 ns（-90%）、功耗15→5 pJ/bit(-66%)、故障率10 A-fit→A-fit（-90%）（小字读图）；“已量产”；FIT<1（1:1备份） | 自报 | 〔0921-Mo12-00 p100〕；〔0921-Mo12-A5-华为 p9〕；〔0920-am-Su1-A-03-华为 p5〕 |
 | Coherent | 6.4T硅光NPO（32×200G）+ELS | 3.5 pJ/bit，15 Gb/s/mm²；ECOC展示NPO+ELSFP典型4.7 pJ/bit | 实验/自报 | 〔0922-MF-am-1000-Coherent p8〕；〔主分析师笔记03 Coherent p7〕 |
 | TeraHop | Open CPX 6.4T “Diablo-1” NPO（内置激光，无ELSFP） | 典型<35 W→<5.5 pJ/bit；ASIC到NPO通道损耗约12 dB；Arista称“Industry 1st 100Tbps交换机设计概念” | 自报/实验 | 〔0923-MF-00-Marvell与Ciena与Arista与Oracle连拍 p59、p60、p58〕 |
 | NewPhotonics | NPC505（集成激光，可维护4×DR8 6.4T） | 5.5 pJ/b（含激光）；可升级12.8T(448G)或转OCI | 自报 | 〔0922-PF-1405-NewPhotonics p14〕 |
@@ -86,10 +86,10 @@ tags:
 ### 2.3 标准与MSA（OpenCPX / OCI-MSA / XPO MSA / EBO / OIF）
 | 标准 | 内容与时间（口径） | 索引 |
 |---|---|---|
-| Open CPX MSA | 1.0规范2026-09-16：6.4/7.2 Tbps、32/36 lane、最高212.5 Gbps/lane；内置ILM/外置ELM（ELSFP）两种激光；通用socket（机械/电/光/热/CMIS）；不要求热插拔。Type-1：6.4T/socket，64 DPs，高速插座堆叠10 mm；Type-2：7.2T，单连接器7 mm堆叠。成员含Ciena、Coherent、Marvell、Molex、Samtec、TeraHop、Credo、Intel、Lumentum、Lightmatter、Amphenol等（logo识别，部分看不清）；Ciena称“70%功耗节省、8×密度”，2027 ramp、6.4T模块标准化、多厂商供应 | 〔0920-am-Su2-A-01-UBC p4〕；〔0923-MF-Semtech-市场聚焦 p8、p9〕；〔0921-MF-am-T03-1040-Ciena p6、p12〕；〔0920-pm-Su3-I-05-Ciena p9〕 |
+| Open CPX MSA | 1.0规范2026-09-16：6.4/7.2 Tbps、32/36 lane、最高212.5 Gbps/lane；内置ILM/外置ELM（ELSFP）两种激光；通用socket（机械/电/光/热/CMIS）；不要求热插拔。Type-1：6.4T/socket，64 DPs，高速插座堆叠10 mm；Type-2：7.2T，单连接器7 mm堆叠。成员含Ciena、Coherent、Marvell、Molex、Samtec、TeraHop、Credo、Intel、Lumentum、Lightmatter、Amphenol等（6家创始成员 Ciena、Coherent、Marvell、Molex、Samtec、TeraHop，另有 50+ 贡献者）；Ciena称“70%功耗节省、8×密度”，2027 ramp、6.4T模块标准化、多厂商供应 | 〔0920-am-Su2-A-01-UBC p4〕；〔0923-MF-Semtech-市场聚焦 p8、p9〕；〔0921-MF-am-T03-1040-Ciena p6、p12〕；〔0920-pm-Su3-I-05-Ciena p9〕 |
 | OCI-MSA | 2026年3月成立，创始成员Meta、Microsoft、OpenAI、AMD、Broadcom、NVIDIA（logo）；“宽并行、NRZ、双向单纤、标准激光器”；OCI v1.0（200G OCI Line Interface Spec，2026-03-11）：每方向4波长，Group A 1308.00/1310.28/1312.58/1314.88 nm，Group B 1327.69–1334.78 nm，53.125 Gbaud NRZ，单BiDi光纤共8波长；世代：Gen1 200G、Gen2 400G、Gen3 800G；Linear：200G YES、400G MAYBE、800G UNLIKELY；ELSFP：绝对波长精度±0.2 nm、间隔400 GHz、RIN -144 dB/Hz、线宽<1 MHz | 〔0920-am-Su2-A-01-UBC p5〕；〔0922-MF-pm-1400-Broadcom p19〕；〔0920-am-Su1-A-04-AMD p8〕；〔0923-We-F-00 p16、p17〕 |
 | XPO MSA | 2026-03-20成立、150成员；XPO 1.0规范2026-07-31发布；量产模块预计2027Q1；204.8T交换平台；400G/lane（25.6T/模块）路线图进行中；称“史上最大光学MSA”；50 V母线，支持500 W模块（10 A@50 V）；两块32通道paddle card背靠背共享中心冷板 | 〔0921-Mo4-待定-Arista p12、p24〕；〔0921-MF-pm-1300-Arista p11、p28〕 |
-| EBO MSA | 2026年3月成立，57成员（9家终端用户+48家供应商，据logo/OCR）；扩束到80 µm直径；12芯插芯1000次不清洁重复配接IL变化<±0.1 dB；552对随机配接（8832数据点）平均IL 0.32 dB、99.2%通道<0.7 dB；配接力约降20×；128f（8×16f）规范进行中 | 〔0922-MF-am-1220-EBOMSA p13、p14、p16–p18〕 |
+| EBO MSA | 2026年3月成立，57成员（9家终端用户 AMD、Arista、Cisco、HPE、Meta、Microsoft、Nexthop AI、Nvidia、Oracle + 48家供应商）；扩束到80 µm直径；12芯插芯1000次不清洁重复配接IL变化<±0.1 dB；552对随机配接（8832数据点）平均IL 0.32 dB、99.2%通道<0.7 dB；配接力约降20×；128f（8×16f）规范进行中 | 〔0922-MF-am-1220-EBOMSA p13、p14、p16–p18〕 |
 | OIF | 448G：CEI-448G-VSR/LR项目2026年2月启动；12.8 Tb/s NPO模块项目（新，12.8与6.4 Tb/s、200G/lane）；ELSFP（OIF-ELSFP-01.0，2023-08）；光学封装分类FPO/NPO-PCB/NPO-HDI/CPO/CPO-AP，FPO电接口>22 dB/200G，NPO-HDI 13–18 dB/200G | 〔0923-MF-00-上午连拍 p29、p31、p42、p51、p40〕 |
 
 ### 2.4 电通道与铜的边界
@@ -99,7 +99,7 @@ tags:
 | Marvell | 100G 5 m；200G 2.5 m；400G 1.25 m；800G 0.6 m；1.6T 0.3 m | 自报 | 〔0920-pm-Su4-H-04-Marvell p5〕 |
 | Broadcom | 标准BGA C2M插损32 dB@53.125 GHz；ICA/NPO-HDI通道<20 dB，可支持FP LPO并走向400G；FPO-LRO光回环BER<1e-13（参考均衡）vs标准BGA<1e-8；FPO-LPO最好约1e-10、最差约1e-4；400G下线性链路可能成“showstopper” | 实验/自报 | 〔0920-am-Su1-B-04-Broadcom p4、p5、p8、p9、p13〕 |
 | Qualcomm | L-CPO：224G下封装损耗约占40 dB链路预算的30–50%，448G下可能“effectively prohibitive”；铜有~5 m功耗与距离墙 | 自报 | 〔0920-pm-Su3-I-04-Qualcomm p4、p5〕 |
-| AttoTude | 介质波导DiAx：224G/448G均约10 m；DiAx+约30 m；损耗约0.8 dB/m（相对26AWG twinax在110 GHz约10 dB/m改善）；twinax 112G 7 m/224G 4 m/448G<1 m；SNR模型DiAx 10 m约21.5 dB（读图）；硅光上变频代价标5–7 pJ/bit、1000×故障率、30×成本（讲者对比标注） | 自报/模型 | 〔0920-am-Su1-B-06-AttoTude p4、p6、p7〕 |
+| AttoTude | 介质波导DiAx：224G/448G均约10 m；DiAx+约35–40 m（448G，BER 1E-5/1E-7 门限）；损耗约0.8 dB/m（相对26AWG twinax在110 GHz约10 dB/m改善）；twinax 112G 7 m/224G 4 m/448G<1 m；SNR模型DiAx 10 m约21.5 dB（读图）；硅光上变频代价标5–7 pJ/bit、1000×故障率、30×成本（讲者对比标注） | 自报/模型 | 〔0920-am-Su1-B-06-AttoTude p4、p6、p7〕 |
 | Credo | 中心交换机铜（fast narrow）单次穿越约14–17 pJ/bit、1.5–2 m（106G DSP SerDes 4 nm与3 nm均3.4 pJ/bit，无改善）vs平坦光mesh约4 pJ/bit、50+ m | 自估算模型 | 〔0920-pm-Su4-I-07-Credo p6〕 |
 
 ### 2.5 宽而慢：VCSEL / microLED（含1060 nm与多芯光纤）
@@ -182,12 +182,12 @@ tags:
 
 | # | 机构 | 论文号/文件 | 突破点 | 数字（条件） | 标注 | 索引 |
 |---|---|---|---|---|---|---|
-| 1 | imec | ECOC 2026（Shahin et al.） | 首个100 GHz低电压Ge/Si APD用于400G/lane传输 | GeSi FK EAM→Ge APD；425 Gbps眼图；425G(6.25% FEC)与448G(12% FEC)两点BER约1e-3–1e-2（读图）；Ge APD BW ~90 GHz、R=1.9 A/W | “World’s first”（自报） | 〔0921-Mo12-A4-IMEC p8、p12〕 |
+| 1 | imec | ECOC 2026（Shahin et al.） | 首个100 GHz低电压Ge/Si APD用于400G/lane传输 | GeSi FK EAM→Ge APD；425 Gbps眼图；425G(6.25% FEC)与448G(12% FEC)两点BER约3e-3与1e-2（读图）；Ge APD BW ~90 GHz、R=1.9 A/W | “World’s first”（自报） | 〔0921-Mo12-A4-IMEC p8、p12〕 |
 | 2 | NTT | OFC 2026 PDP Th4A.1；ECOC Tu3-D1/D4 | 4×400G/448G薄膜EML阵列（O波段，55 °C） | EAM 100 µm；3 dB带宽>100 GHz；驱动0.5–1.0 V；面积密度1.6 Tbps/mm²、岸线3.2 Tbps/mm、激光能耗0.12 pJ/bit；Tu3-D1 400G PAM4差分1.0 V | PDP（自报） | 〔0920-am-Su2-A-04-NTT p10、p11、p15〕 |
 | 3 | Coherent | We5-I Paper #504 | 2.3 Tbit/s背发射1060 nm VCSEL阵列（硅中介层，CPO） | 16通道：32G @6 mA无DSP；128G @12 mA；六边形37发射器106G TDECQ 2.52 dB；9 Tbit/s/mm²（展望） | 论文（无首次声明） | 〔We5-I Coherent p9–p12〕 |
 | 4 | Chalmers/Solinide | OFC Th2A.13 2026 | O波段光子分子微梳 | 75 mW泵浦、200 GHz、28线>1 mW、效率69%；1450–1675 nm晶圆9283谐振、效率集中~50–60%（读图） | 自报 | 〔0920-am-Su2-A-05-Chalmers p7、p9〕 |
 | 5 | Columbia | CLEO 2026 Highlight Talk（Cullen et al.） | 高功率灵活FSR Kerr梳 | 375 mW泵浦：300 GHz转换63.6%、200 GHz 48.1%、100 GHz 33.6%；眼图32/24/16 Gb/s | Highlight | 〔0920-am-Su1-A-05-Columbia p8〕 |
-| 6 | UC Davis | JLT 2023；JSTQE 2026 | 首个3D混合键合EIC-PIC收发器 | 496 fJ/bit，18 Gb/s，12 nm FinFET EIC；接收灵敏度-19 dBm（OMA，估计）；3D键合带来6.1 dB光功率降低 | “first”；nanoPD “record”（OCR：0.08 fF、0.72 nA、QE 91%） | 〔0920-am-Su2-I-02-UCDavis p12–p14〕 |
+| 6 | UC Davis | JLT 2023；JSTQE 2026 | 首个3D混合键合EIC-PIC收发器 | 496 fJ/bit，18 Gb/s，12 nm FinFET EIC；接收灵敏度-19 dBm（OMA，估计）；3D键合带来6.1 dB光功率降低 | “first”；nanoPD “record”（0.08 fF、0.72 nA、QE 91%，GF45SPCLO） | 〔0920-am-Su2-I-02-UCDavis p12–p14〕 |
 | 7 | OneTouch/InnovSemi | Tu1-E4 | 首个薄膜钽酸锂电光8×8 OCS | <4 ns切换；12开关<200 nW；IL 8.6 dB；1小时漂移-0.33 dB | “first”，“三个数量级快于现有OCS” | 〔0922-Tu1-E4-OneTouch p10、p11、p14〕 |
 | 8 | Arista+TerraHop | We5-B3 | 首个12.8T 8×DR8液冷可插拔XPO（64×212G PAM4） | 64路TX满足IEEE P802.3dj/df；RX灵敏度约-7至-7.5 dBm OMA @2.4×10⁻⁴ | “Industry’s first” | 〔0923-We5-B-Arista p1、p6、p7〕 |
 | 9 | iPronics（含Lumentum收发器） | 0921-Mo3-A1 / F4 | 增益控制硅光OCS上1.6T收发器链路 | ONE-32，增益10 dB；BER相对1e-12仅劣化1个数量级 | “Industry-first” | 〔0921-Mo3-A1-iPronics p14〕；〔0924-推定F4-iPronics p21〕 |

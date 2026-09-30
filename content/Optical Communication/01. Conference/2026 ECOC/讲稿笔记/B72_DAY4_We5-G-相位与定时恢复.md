@@ -34,7 +34,7 @@ tags:
 - 关键数据：
   - 双壳层星座 64 点 = 6 bit / 4D 符号：内壳 16 点（E1 = 1.07），外壳 48 点（E2 = 2.31） [p19]
   - 实验：2×25 GBaud，保护带 4 GHz，80 km SSMF，偏振复用（PDME 仿真），AWG 120 GSa/s，DSO 256 GSa/s；激光 Case I 1 MHz DFB（低成本）、Case II 100 kHz ECL [p21]
-  - 80 km 结果：BER 随 OSNR 23–30 dB 下降，实验点在 OSNR 约 27–28 dB 落在 20% SD-FEC 阈值（约 2×10^-2）之下；25–26 dB 附近实验点靠近/略高于阈值（具体数值看不清）；100 kHz ECL 的 BER 略低于 1 MHz DFB；实验与仿真趋势一致 [p23]
+  - 80 km 结果：BER 随 OSNR 23–30 dB 下降，1 MHz DFB 实验点 25 dB 约 2.6e-2 略高于 20% SD-FEC 阈值（约 2×10^-2），26 dB 起低于阈值；100 kHz ECL 同 OSNR 下 BER 略低（25 dB 约 2.2e-2、26 dB 约 1.3e-2）；两者均为无显式 CPR 的联合 4D 检测，实验与仿真趋势一致（读图估计，看图核实） [p23]
   - 线宽容忍（OSNR = 26 dB，线宽按单激光器计）：低线宽时 PS-16QAM + CPR BER 更低（0.5 MHz 处约 7×10^-4）；线宽增大后 PS-16QAM + CPR 在约 2 MHz 附近与联合 4D 交叉，此后急剧恶化（约 8–9 MHz 达 ~1.5×10^-1）；联合 4D 仿真在 0.1–0.5 MHz 约 1×10^-2，至约 9 MHz 约 4×10^-2，实验点 9 MHz 附近约 6×10^-2；PS-16QAM 无 CPR 全程 BER 约 3×10^-2 至 3×10^-1 [p24]
   - 大线宽下径向统计（100 kHz / 1 MHz / 9 MHz）：分布展宽，内壳均值外移，两壳重叠增大；作者认为色散补偿后的 EEPN 是残余失真来源之一 [p26]
   - 壳内/跨壳错误均存在，外壳 SER 更高 [p25]
@@ -61,7 +61,7 @@ tags:
 - 推荐配图页：p40（四种 DGD 下抖动 PDF/CCDF 对比）；p36（Diversified NL-MM 结构与 Poincaré 球 SOP 映射）
 
 ### 0923-We5-G-00-全场连拍.pdf（第42–52页；无单独 PDF）
-- 讲者/机构：Huawei Technologies（作者名单看不清） | 题目：Receiver-Side Compensation of TI-DAC Offset Mismatch in Optical Transceivers（We5-G4） | 类型：学术论文
+- 讲者/机构：Xuefeng Tang（报告人）, Meng Qiu, Yiki Fung, Chuandong Li / Huawei Technologies Canada（Ottawa）（p42 标题页看图核实） | 题目：Receiver-Side Compensation of TI-DAC Offset Mismatch in Optical Transceivers（We5-G4） | 类型：学术论文
 - 方向归属（主/次）：主 1（oDSP、高波特率器件 DAC 缺陷补偿）；次 3（电芯片）
 - 核心主张：
   1. 时间交织 DAC（TI-DAC）子 DAC 的偏置失配（OM）会在信号谱中产生杂散（spur），f_k = k·f_DAC/N，k 取 -N/2 到 N/2-1。
@@ -84,7 +84,7 @@ tags:
   3. 时域高斯噪声模型（temporal GN，方差随时间变化）可再现 EEPN 引起的突发式 SNR 劣化，并推广到任意 FDPE 补偿的性能预测；代码在 GitHub 上开源。
 - 关键数据：
   - 模型参数：单载波 180 GBd，上采样 2，RRC 滚降 0.05，光纤 6600 km，D = 23 ps/nm/km，1550 nm，SNR 13 dB，线宽 70 kHz；多载波 8 路并行流 [p56–57]
-  - 补偿效果（SNR 随时间图，0–0.55 μs）：无 EEPN 约 13 dB；仅载波相位恢复时 SNR 最低降到约 10.4 dB；定时恢复约 12.3–12.8 dB；N_comp = 7 的自适应线性滤波器接近无 EEPN 曲线 [p65]（该页图未标注是仿真还是实验，看不清）
+  - 补偿效果（SNR 随时间图，0–0.57 μs）：无 EEPN 约 12.8–13.2 dB；仅载波相位恢复时 SNR 最低降到约 10.4 dB；定时恢复约 12.2–12.8 dB；N_comp = 7 的自适应线性滤波器与无 EEPN 曲线基本重合（全通 FIR 补偿，阶数 0/1/≥2 分别对应相位恢复/定时恢复/自适应线性滤波）；该页未标注仿真或实验（看图核实）[p65]
   - 实验设置：DP-16QAM，130 GBd，Tx 线宽 30 kHz，LO 线宽 210 kHz，总光纤 1900 km（环路），累积 CD 36 ns/nm，块长 500；参考接收机线宽 <1 kHz、带宽 1 GHz、采样 3.125 GSa/s [p68]
   - SNR 序列：EEPN 突发使 SNR 由约 14 dB 降到约 11.7 dB（仿真与实验一致）；SotA 高斯噪声模型给出近似平坦的约 13 dB，低估影响 [p69]
   - 统计（CCDF）：SotA GN 模型与仿真静态 DSP 的相关系数 ρ = 0.01；temporal GN 模型与仿真静态 DSP ρ = 0.93；与实验自适应 DSP ρ = 0.53（自适应 DSP 部分补偿 EEPN，尾部被截短） [p71]

@@ -17,8 +17,8 @@ tags:
   - Southampton NANF 降损历程：1.3 dB/km（ECOC2018 PDP）-> 0.65（OFC2020 PDP，首个 sub-1 dB/km）-> 0.28（OFC2021 PDP，首个 sub-0.3）-> 0.22 dB/km（低于硅在850/1060 nm）[p24]。
   - DNANF（Jasion，OFC 2022 PD）：NANF 0.9 dB/km 对 DNANF 0.09 dB/km，泄漏损耗改善 >10x（幻灯片标注）[p25]。
   - <0.11 dB/km @1550 nm（Chen，OFC 2024 PDP Th4A.8）；0.09 dB/km（Petrovich，Nature Photonics 19, 1203 (2025)）[p28]。
-  - 2025 损耗谱：第1窗口 5T DNANF（ORC）、第2窗口 5T DNANF（YOFC）、4T-IT（LinFiber）、4T-IT DNANF（YOFC，曲线最低，图上读数约0.04 dB/km 量级，精确值看不清）[p30]。
-  - Hybrid window（Mahdiraji，OFC 2026 PDP Th4B.8）：管壁厚 第1窗口 t~450 nm（最大带宽）/ 第2窗口 t~1150 nm（最大良率）；同芯径27 μm，管径约31/26/12 μm下，Hybrid 在1550 nm 附近损耗低于第2窗口（曲线显示约0.07 dB/km 量级，精确值看不清）[p32, p33]。
+  - 2025 损耗谱：第1窗口 5T DNANF（ORC，Petrovich et al., Nat. Photon. 19, 1203 (2025)）、第2窗口 5T DNANF（YOFC，约 0.05 dB/km）、4T-IT（LinFiber，约 0.05–0.06 dB/km）、4T-IT DNANF（YOFC，曲线最低，约 0.04 dB/km @1570–1610 nm）；对照 PSCF Sato 2025 约 0.14 dB/km（读图，看图核实）[p30]。
+  - Hybrid window（Mahdiraji，OFC 2026 PDP Th4B.8）：管壁厚 第1窗口 t~450 nm（最大带宽）/ 第2窗口 t~1150 nm（最大良率）；同芯径27 μm，管径约31/26/12 μm；Hybrid（中管厚 5%、内管薄 5%）在约 1530 nm 最低约 0.075 dB/km，低于第2窗口约 0.095 dB/km，且低损耗带向短波扩展（读图，看图核实）[p32, p33]。
   - 良率：Mid Draw Contact 压力窗口下，第2窗口相对第1窗口良率提升 2.5–3x，Hybrid 再提升 +30%；图示可拉制长度标注 30 km / 90 km / 120 km（对应1st/2nd/Hybrid，@Fixed Tension，纵轴单位 km/m）[p34]。
   - 色散（1550 nm，30 μm芯）：损耗 0.099 dB/km，色散 0.00 ps/(nm·km)，色散斜率 +0.053 ps/(nm²·km)，外管壁厚 1.27 μm [p36]。
   - 125 μm 外径 mode-field 匹配 HCF（OFC24 M3J.5）：弯曲与模式良好，但损耗约 25 dB/km [p39]。
@@ -29,7 +29,7 @@ tags:
 - 推荐配图页：p28（HCF 与实芯光纤损耗随年份对比，HCF 十年降四个数量级并追平硅）；p30（2025 年各窗口 DNANF 损耗谱及 YOFC/LinFiber/Microsoft 结构）；p34（Hybrid window 良率）。
 
 ### 0921-Mo5-B2-待核-空芯光纤设计.pdf
-- 讲者/机构：Federico Melli, Lorenzo Rosa, Fetah Benabid, Annamaria Cucinotta, Luca Vincetti / Univ. Parma、Univ. Modena and Reggio Emilia、XLIM (Limoges)；幻灯片带 SOFIA Photonics 标识 | 题目：题目页未显示（内容为反谐振管型空芯光纤 confinement loss 分解：MCL 与 TTL 模型），英文原题看不清 | 类型：学术论文
+- 讲者/机构：Federico Melli（报告人，下划线）, Lorenzo Rosa, Fetah Benabid, Annamaria Cucinotta, Luca Vincetti / Univ. Parma、Univ. Modena and Reggio Emilia、XLIM (Limoges)；幻灯片带 SOFIA Photonics 标识 | 题目：A Unified Framework for Understanding Confinement Loss, and Engineering Bandwidth, and Modal-Dependent Loss in Hollow-Core Fibers（p1 看图核实） | 类型：学术论文
 - 方向归属（主/次）：主 1（高波特率/传输介质：空芯光纤设计）；次 无
 - 核心主张（1–3条）：
   1. 限制损耗（CL）可分解为模式耦合损耗（MCL，起决定长波端高损耗区）与管隧穿损耗（TTL，逐管求和）[p4, p16]。
@@ -44,7 +44,7 @@ tags:
 - 推荐配图页：p7（椭圆管 b/a 与带宽曲线，含 MCL 协同/对抗机制标注）；p3（嵌套管数量与 CL 谱）。
 
 ### 0921-Mo5-待定-长飞YOFC-超高模纯度与单模匹配的O波段混合反谐振空芯光纤.pdf
-- 讲者/机构：讲者姓名未显示 / YOFC（长飞） | 题目：题目页 OCR 乱码，按文件名与结论页为 O-band hybrid antiresonant HCF（HA-HCF）：ultrahigh modal purity and single-mode-matched（英文原题未完整核实）| 类型：学术论文（ECOC 2026）
+- 讲者/机构：Zihan Dong（报告人）等 / YOFC（长飞，光纤光缆制备技术国家重点实验室）（p1 看图核实） | 题目：Ultra-high Mode Purity and SMF-matched O-Band Hybrid Antiresonant Hollow Core Fiber for Intra Data Center Connection | 类型：学术论文（ECOC 2026）
 - 方向归属（主/次）：主 2（跨楼园区/DC内互连空芯光纤，短距）；次 3（Scale-out 光互连介质）
 - 核心主张（1–3条）：
   1. 首次实现小外径（OCD）、小 MFD、超短距单模的 HCF，适合未来高密度、低时延的数据中心内互连 [p10]。

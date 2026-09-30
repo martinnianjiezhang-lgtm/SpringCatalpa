@@ -6,7 +6,7 @@ tags:
 ---
 
 ### 0920-pm-Su4-C-04-Ciena-AI真正想要的光网络.pdf（第2–6页；p1为题目页，未看）
-- 讲者/机构：Ciena（讲者姓名未见） | 题目：题目页未看；wrap-up 页标题为 "The optical network AI actually wants" | 类型：Workshop（ECOC2026 Workshop: Will the AI workload require an end-to-end-optimized network infrastructure?）
+- 讲者/机构：Ciena（讲者姓名未见） | 题目：题目页未看；p2 为 "01 Scale-Across Architecture Demands ILA Site Evolution"（看图核实）；wrap-up 页标题为 "The optical network AI actually wants" | 类型：Workshop（ECOC2026 Workshop: Will the AI workload require an end-to-end-optimized network infrastructure?）
 - 方向归属（主/次）：主 2 Scale-across/FST/多rail；次 1 AI光网络
 - 核心主张：
   1. Scale-Across 架构要求 ILA 站点演进（Scale the Hut + Scale the Site）。
@@ -29,7 +29,7 @@ tags:
 - 讲者/机构：Ciena | 题目：与上一篇（C-04）为同一讲的另一版扫描，页面内容对应 p2 ILA 之后的部分 | 类型：Workshop（重复扫描，仅作OCR补充）
 - 方向归属（主/次）：同上（主 2；次 1）
 - 核心主张：同 C-04；OCR 另补充 "Move from 200Gbd > 300GBd > 400Gbd class modems for reach optimization"、"Integrate modem client & line, signal conditioning and with on-shelf integrated SW for workflow execution"，wrap-up 三点同 C-04（Collaborative network engineering；Photonics@Scale for the AI era；Automate operations with AI）。
-- 关键数据：与 C-04 一致，未另看图（OCR：192→32 managed devices，84% reduction；PMO-4 rails/rack → FMO-128 rails/rack；32x 管理流量）。
+- 关键数据：与 C-04 一致，p2 看图核实为 "03 Hyper Rail Photonics"：PMO 4 rails/rack → FMO 128 rails/rack（受机架功率限制）；EDFA 密度 32x、EDFA Raman 16x、功率 4x；每卡 4 路 C&L rail；嵌入式自动化与仪表，管理与通信流量 32x（另 OCR：192→32 managed devices，84% reduction）。
 - 提到的公司/客户/产品/标准：Ciena
 - 与业界对比或记录声明：无
 - 推荐配图页：不必，使用 C-04 p3–p4
@@ -41,9 +41,9 @@ tags:
   1. 光技术对扩展 AI 基础设施日益关键；数据中心网络（DCN）与 DCI 均向开放、可编程、云原生演进。
   2. 下一挑战：把 AI 工作负载与跨 DCN/DCI 的光资源无缝连接（workload-to-network 闭环）。
   3. 挑战项：通用意图/资源抽象；跨域可视与协调；不同控制时间尺度与运营边界。
-- 关键数据（OCR为主，未看图，无可核对的性能数字）：
+- 关键数据（p2 已看图核实；p3 仍以 OCR 为主，无可核对的性能数字）：
   - OCS：速率无关、按光纤交换、无 OEO、粗粒度；相对 EPS 功耗很低、可扩展性高，适合一对一通信；EPS 速率相关需 OEO，适合 any-to-any [p2]
-  - OCP OCS 子项目定义 OCS 型 AI 集群的 C-plane（SBI/NBI），已开始通用 YANG 模型；NTT 已开发面向 OCS DCN 的 SDN-C（引 Anazawa et al., JOCN, doi 10.1364/JOCN.558407，OCR） [p2]
+  - OCP OCS 子项目定义 OCS 型 AI 集群的 C-plane（SBI/NBI），已开始通用 YANG 模型；NTT 已开发面向 OCS DCN 的 SDN-C（引 Anazawa et al., JOCN, doi 10.1364/JOCN.558407）（看图核实）[p2]
   - Data Center Xchange：多厂商/多代设备、多对多、按链路长度与 QoT 选传输模式；以云原生原则运营 DCI；对比垂直集成转发器 vs. 白盒交换机（软件抽象 SAI/SDK、Kubernetes） [p3]
   - 引用 Nishizawa et al., "Leveraging digital twin technologies: AI-photonics networks-as-a-service for data center xchange in the era of AI [invited tutorial]", JOCN vol.18, pp. C49–C65, July 2026 [p3]
 - 提到的公司/客户/产品/标准：IOWN GF、OCP（OCS Subproject）、YANG、SDN-C、SAI、Kubernetes、CFP2
@@ -51,7 +51,7 @@ tags:
 - 推荐配图页：p3（垂直集成转发器 vs 白盒交换机、DC Xchange 云原生架构）；p4（workload-to-network 闭环与总结）
 
 ### 0920-pm-Su4-C-02-Nokia-用领域知识建高效网络.pdf
-- 讲者/机构：Nokia（讲者姓名OCR不可读） | 题目：标题页OCR乱码，看不清；主题为用领域知识建高效 AI 网络（中文文件名推断，原英文题看不清） | 类型：Workshop
+- 讲者/机构：Annalisa Morea（Consulting Engineer）/ Nokia（p1 看图核实） | 题目：How to build efficient optical networks for AI using domain intelligence | 类型：Workshop
 - 方向归属（主/次）：主 1 AI光网络；次 2 Scale-across/ZR
 - 核心主张：
   1. AI 模型生命周期：大型超算商训练（大 DC 间需高容量、良好同步）到小型/企业/元城域 DC 推理（低时延、功耗、占地）——两类场景对网络要求不同 [p2]
@@ -73,12 +73,12 @@ tags:
   3. OTN-Proxy（支持 RDMA proxy 的 OTN 转发器）实现与距离无关的 scale-across 链路；数据/算力分离保障数据安全 [p6–p7]
 - 关键数据：
   - OCS+SW 稀疏 super-pod：动态时延 500ns+；网络时延降 30%、推理性能提升 10%；super-pod 扩展至 16K [p4]
-  - 趋势：参数量 1.6T → 28T → 5–10T（原文如此，OCR核对不完全）；EP experts 384 → 896 → 1024；TPOT 50ms → 20ms → 5ms（OCR，看不清完全） [p4]
+  - 趋势：参数量 1.6T → 2.8T → 5–10T；EP experts 384 → 896 → 1024；TPOT 50ms → 20ms → 5ms；OCS 支持超节点扩展至 16K、网络时延降 30%、推理性能升 10%（看图核实）[p4]
   - AF 分离推理：AF 算力池按小时/天依据平均序列长度调整，OCS 动态优化带宽；SU 平面跑 EP/FSDP 高流量、SO 平面跑跨 super-pod 多副本 DP 低流量 [p4]
   - HCF：插入损耗已低于实芯 SMF；已在 DCI 和金融专线商用部署；四项特性低时延/低损耗/低非线性/低色散；挑战：气体吸收峰（S/C/L）、模间干扰 IMI、弱瑞利散射（约 -30 dB）致 OTDR 难、拉丝长度有限 [p5]
   - Full Spectrum Transponder：单系统 25.6T/光纤（C96），C96+L96 时 51.2T，不牺牲可靠性；4-Rail OA @1U，集成度提高 75%，达到单 rail 级可靠性 [p5]
   - 传统 DCI vs Scale-Across：流量 ~200Tb/s → >10Pb/s；扩容粒度 per wavelength → per fiber；rails ~10 → >100；设备 现网 → 新高集成设备 [p5]
-  - OTN-Proxy：支持 >100 Tb/s，作为 XPU proxy；RTT 约 2.5ms 场景（OCR）；结果图显示带 OTN Proxy 时吞吐与 DCI 距离基本无关（曲线数值看不清） [p6]
+  - OTN-Proxy：支持 >100 Tb/s，作为 XPU proxy（RDMA proxy + CCL engine，SAI/SONiC，vLLM 中间件）；动机场景 240 km、RTT 约 2.5 ms 的 RDMA Write；结果图显示带 OTN Proxy 时吞吐与 DCI 距离（0–500 km）基本无关（曲线数值小字不清，看图核实） [p6]
   - 实网分布式训练/推理测试：首末层在本地卡，中间层放云端；部分场景算力效率损失 <5% [p7]
 - 提到的公司/客户/产品/标准：Huawei（Al-OTN、ION-2030、AI-FAN、OTN-Proxy）、Microsoft（Fairwater 式 AI superfactory，引用）、vLLM、SAI/SONiC、NCCL/HCCL、CUDA/CANN、OpenAI GPT-6（引用背景）
 - 与业界对比或记录声明（SOTA/首次/record）：未明确用 record 字样；"HCF 插损已低于实芯 SMF" [p5]

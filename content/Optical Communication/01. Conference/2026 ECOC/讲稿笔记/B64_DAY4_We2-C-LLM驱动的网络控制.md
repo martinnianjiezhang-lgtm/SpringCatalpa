@@ -16,22 +16,22 @@ tags:
   - 相对基线 Agent token 减少 86%；在所评估的光纤故障场景下 RCA（根因分析）准确率 100% [p13]
   - 评估设计：光纤断裂与光纤弯曲两类场景；基线 Agent 与 Skill 增强 Agent 使用同一 NMS 接口和相同故障条件；跨不同跨段随机化测试 100 次 [p12]
   - SOP 四步：Step2 告警预分析（Alarm Analysis Skill）、Step3 根因分析（Topology Matching / RCA Skill）、Power verification（Optical Power Query Skill：端口名→查询RESID→构造API请求→解析响应→Tx/Rx功率）、Step4 根因输出（Evidence+Conclusion）[p8]
-- 提到的公司/客户/产品/标准：Ciena（测试床 NMS 侧图中出现 Ciena 字样，OCR识别，未核图）；agentskills.io（Agent Skills 规范）[p7, p12]；REST/Callback、Query/Config、SET/POST 接口 [p12]
+- 提到的公司/客户/产品/标准：测试床 NMS 侧（p12 看图核实：图中未见 Ciena 字样，此前 OCR 识别有误；为 NETCONF + REST Callback/APIs + Qwen 智能体、SOP Workflow、Digital Twin）；agentskills.io（Agent Skills 规范）[p7, p12]；REST/Callback、Query/Config、GET/POST 接口 [p12]
 - 与业界对比或记录声明（SOTA/首次/record）：未声明SOTA；仅对比自身基线 Agent [p13]
 - 推荐配图页：p8（SOP 四步流程与 Skill 内部执行链）；p13（结论与 86%/100% 数字）
 
 ### 0923-We2-C2-1339-符合T-API的ReAct智能体环.pdf
-- 讲者/机构：讲者未在OCR中识别；Chalmers University of Technology（页脚 CHALMERS） | 题目：A T-API-Compliant ReAct Agentic Loop for Optical Networks | 类型：学术论文
+- 讲者/机构：Morteza Ahmadian（报告人）, Paolo Monti, Carlos Natalino / Chalmers University of Technology（p1 看图核实；VINNOVA、SUSTAINET advance 资助） | 题目：A T-API-Compliant ReAct Agentic Loop for Optical Networks: Generic vs. Domain-Specific Tool Abstractions | 类型：学术论文
 - 方向归属（主/次）：主 1（AI光网络）；次 无
 - 核心主张：
   1. 构建符合 Transport API（T-API）的 ReAct 智能体环，比较三种工具抽象：Generic（原始 request 调用 T-API/内部接口）、Single-Call Tools（原子工具，如 estimate_qot、provision_service）、Multi-Call Tools（复合工具，如 find_best_modulation）[p7–p8]。
   2. 抽象层级更高可提升成功率但涉及 token 消耗权衡；指令微调（instruction-tuned）模型优于推理（reasoning）模型 [p13]。
   3. AI agent 未必取代网络专家，而是让其聚焦高风险决策；“AI agent 是否可用于生产？——尚未（Not yet）” [p13]。
 - 关键数据：
-  - 实验平台：1× NVIDIA RTX PRO 6000（96 GB VRAM）；CORONET CONUS 拓扑数字孪生（75 节点，99 链路 [OCR“TS nodes 99 links”，节点数看不清]，198 条 fiber 链路、546 条有向连接、2,088 件设备；GNPy 物理层模型；C 波段）；本地模型 Qwen2.5 32B Inst、Qwen3.5 35B、9B、4B；任务含查询/开通/分析 [p6]
+  - 实验平台：1× NVIDIA RTX PRO 6000（96 GB VRAM）；CORONET CONUS 拓扑数字孪生（75 节点、99 链路；198 条光纤链路、546 条有向连接、2,088 件设备；GNPy 物理层模型；C 波段）；本地模型 Qwen2.5 32B Instruct、Qwen3.5 35B、9B、4B（均未针对光学任务微调，单 GPU 可跑）；上下文 16k tokens；抽象层级 Generic/Atomic/Composite；10 个任务场景含查询/开通/分析（看图核实）[p6]
   - Eval pass（Generic / Single-Call / Multi-Call）：Qwen2.5 32B Inst 57% / 36% / 90%；Qwen3.5 35B 58% / 27% / 55%；Qwen3.5 9B 57% / 27% / 54%；Qwen3.5 4B 20% / 18% / 28% [p9–p11]
   - 每次运行平均总 token（Generic / Single / Multi）：Qwen2.5 32B Inst 30.3k / 10.1k / 10.6k；Qwen3.5 35B 31.5k / 21.3k / 45.0k；9B 37.6k / 16.6k / 21.1k；4B 35.9k / 39.2k / 18.8k [p12]
-  - 开通示例（Abilene—Dallas）：依次尝试 DP-64QAM/DP-16QAM 均因 QoT/GSNR 余量不足失败，DP-QPSK 通过后开通；对比页标注 5K tokens 与 8K tokens（对应哪种变体看不清，未看图核对）[p8，OCR]
+  - 开通示例（Abilene—Dallas）：Atomic 方式依次调用 estimate_qot 尝试 DP-64QAM/DP-16QAM 均因余量不足失败、DP-QPSK 通过后 provision_service，共约 8K tokens；Composite 方式用 find_best_modulation 内部依次检查后直接返回 DP-QPSK 再开通，约 5K tokens（看图核实）[p8]
 - 提到的公司/客户/产品/标准：Transport API（T-API）、GNPy、CORONET CONUS、Qwen 系列 [p6]
 - 与业界对比或记录声明（SOTA/首次/record）：无；结论承认尚未达生产可用 [p13]
 - 推荐配图页：p11（三种工具变体 × 四个模型的 Eval pass 对比，最能体现 32B Inst + Multi-Call 达 90%）；p12（token 消耗对比）
@@ -44,15 +44,15 @@ tags:
   2. 现有集合通信库（CCL）面向数据中心内部（均匀高带宽假设），跨 DC 需专门的 CCL，且 CCL 重配置（慢）与 WAN 重配置（快）需联合优化 [p10–p13]。
   3. 结论：最终目标是消除数据搬运瓶颈——跨层可重构、IP+光+计算协同设计（可能借助 LLM）[p27]；LLM 在光网络管理中当前现实的应用为代码生成（TAPI、NETCONF）、意图翻译、数字孪生编排、故障管理、规划流程；“零接触 LLM Agent”和低时延 M2M 应用目前不现实 [p24]。
 - 关键数据：
-  - 跨区域训练降低吞吐（GPU 空转），引用 Strati 等 2024（2 Region, US 与 US-EU 场景，具体数值未看图）[p8]
+  - 跨区域训练降低吞吐（GPU 空转），引用 Strati 等 2024：VGG19 在 1 DC 约 0.81 iters/s，2 区域 US 约 0.42，US-EU 约 0.17；ConvNext-Large 约 0.43/0.26/0.115；ViT-H-14 约 0.10/0.065/0.03（读图估计，看图核实）[p8]
   - Scale-CCL 对比（含 WAN 延迟 50 µs/10 km、500 µs/100 km、1000 µs/200 km，16 GPU inter-DC）：与 TE-CCL 最大差距 ≤ 8.9%（4 MB 时约 3–4%）；完成时间比 NCCL 低约 50%，比 SPH（最短路径）低约 60%；调度执行时间比 TE-CCL 快约 1000×（1348 s → 0.22 s）[p16]
-  - TE-CCL（ILP）在 16 GPU inter-DC 网络上执行约 3 小时（Intel i9-13900K，128 GB DDR4）；加入 sub-chunking 后不可扩展 [p15，OCR]
+  - TE-CCL（ILP）在 16 GPU inter-DC 网络上执行约 3 小时（Intel i9-13900K，128 GB DDR4）；加入 sub-chunking 后不可扩展；CCL ≈ 虚拟网络嵌入 + 调度两个 NP 难问题（Liu 等 SIGCOMM 2024）（看图核实）[p15]
   - HCF 空芯光纤传播时延低约 30%；客户到 DC 时延约束 400 µs 下：0% HCF→6 个 DC，4% HCF→4 个 DC，21% HCF→3 个 DC（来自 Ibrahimi 等 TNSM 2025）[p22]
   - 网络编码（光 XOR）用于 AllGather：带宽节省 10–20%；共享链路传输减少 50%（N3→N4 由 2 次降为 1 次）；传输轮数 4→3；资源占用示意 Multicast ≈60%、AllGather 无编码 ≈240%、有编码 ≈190%（Xin Wang 等，JLT 2026）[p23]
-  - Llama 3 405B 预训练 54 天中断根因：Faulty GPU 148 次占 30.1%；引出集合通信网络保护开放问题及延迟备份预留（deferred protection）思路 [p17–p18，OCR，其余占比看不清]
-  - 一个 30 kbyte prompt 可产生 10 Gbyte KV-cache（Prefill/Decode 拆分部署）[p21，OCR]
-  - LLM 规模趋势：万亿神经元规模模型 → 100K GPU [p4，OCR]
-- 提到的公司/客户/产品/标准：NCCL、TE-CCL、SCALE-CCL、RDMA over WAN（iWARP、OmniDMA）、Llama 3、NVLink/NVSwitch、ZR/ZR+、空芯光纤（合作方 FiberCop [OCR]）、TAPI、NETCONF、ECOC 2024 相关 LLM 配置论文（Di Cicco、C. Sun 等）[p5, p9, p25–p27]
+  - Llama 3 405B 预训练 54 天中断根因：Faulty GPU 148 次占 30.1%、GPU HBM3 72 次 17.2%、软件缺陷 54 次 12.9%、网络交换机/线缆 35 次 8.4%、主机维护 32 次 7.6%，其余均 ≤4.5%；引出集合通信网络保护开放问题及延迟备份预留（deferred protection）思路（看图核实）[p17–p18]
+  - 一个 30 kbyte prompt 可产生 10 Gbyte KV-cache（Prefill/Decode 拆分部署；边云连续体部署方式含 Cloud-only、Full edge、Semantic front-end + cloud、Small-edge/large-cloud cascade、Stage-disaggregated，引 R. Morabito 等投稿中论文）（看图核实）[p21]
+  - LLM 规模趋势：GPT-3 175B 用 1K GPU×35 天 → GPT-4 1.8T 用 16K GPU×10 天 → GPT-5 5–10T（估计）用 50–100K GPU×10 天；万亿神经元规模模型 → 100K GPU（看图核实）[p4]
+- 提到的公司/客户/产品/标准：NCCL、TE-CCL、SCALE-CCL、RDMA over WAN（iWARP、OmniDMA）、Llama 3、NVLink/NVSwitch、ZR/ZR+、空芯光纤（合作方 FiberCop，p9 看图核实；G. Sticca 等 ECOC 2026 混合 SMF/HCF 双向 HCF 选择性部署）、TAPI、NETCONF、ECOC 2024 相关 LLM 配置论文（Di Cicco、C. Sun 等）[p5, p9, p25–p27]
 - 与业界对比或记录声明（SOTA/首次/record）：Scale-CCL 相对 TE-CCL 调度 1000× 加速且差距 ≤8.9% [p16]
 - 推荐配图页：p16（Scale-CCL 完成时间与执行时间对比）；p22（HCF 使边缘 DC 由 6 减至 3）；p27（结论页：IP+光+计算协同栈图）
 

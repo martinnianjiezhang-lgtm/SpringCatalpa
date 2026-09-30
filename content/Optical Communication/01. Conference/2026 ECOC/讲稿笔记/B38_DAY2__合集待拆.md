@@ -34,7 +34,7 @@ tags:
   - 距离泛化：约 60 km 以内与常规 DSP 相近（SNR 约 20 dB 量级）；约 60 km 后开始下降，约 95 km 处超网络约 8 dB，对照约 13–14 dB；讲者归因于 CD 引起的信道冲激响应长度 [p34]
   - 发射功率泛化：在线性区（约 -10 至 +10 dBm 量级）与常规性能一致，峰值 SNR 约 20 dB [p35]
   - 复杂度：超网络原始约 4M 实数乘法，剪枝+聚类后约 300k RM（与 RLS 相当），进一步剪枝和架构简化后目标约 25k RM（与 LMS 相当但收敛时间固定，属于"本文之外"）；FPGA 实现收敛 75 ns [p36]
-  - OCR 索引（未经图片核对）：常规迭代算法对残余 CD 敏感，LMS 尤其差，RLS/LS 更稳健但难以硬件实现 [p27]
+  - 常规迭代算法对残余 CD 敏感：RLS/LS 约 900 ps/nm 以内 SNR 约 19.8 dB 平坦、1,300 ps/nm 降至约 15 dB；LMS 约 500 ps/nm 起快速劣化，1,300 ps/nm 约 8 dB（50 km SSMF 约 850 ps/nm）；RLS/LS 更稳健但受精度约束难以硬件实现，且需先验链路信息（UCL Mo5-F2，看图核实）[p27]
 - 提到的公司/客户/产品/标准：Marvell Aquila、Marvell/Lumentum（OFC 2026 光交换演示）、CableLabs CPON 规范；J. Zhou et al. arXiv:2410.10080；资助：UKRI/EPSRC（TRANSNET 等）
 - 与业界对比或记录声明（SOTA/首次/record）：未声称 SOTA；对比对象为常规 DA-DSP（RLS+full DA-CFC）。复杂度层级（4M → 300k → 25k RM）中，仅 300k RM 对应本文结果 [p36]
 - 推荐配图页：p36（复杂度阶梯与 FPGA 实物，75 ns 收敛）；p34（距离泛化 SNR 曲线，显示 60 km 后下降）；p31（DSP 模块图，标注迭代/前馈/需外部信息）
@@ -52,7 +52,7 @@ tags:
   - AIR（bit/QAM 符号）vs 每信道每偏振功率：峰值处 Seq-NPAS++ 约 4.47 @ 约 7–7.5 dBm；比 ESS+Seq. Sel. 高约 0.05 bit/QAM 符号；比均匀 64QAM（峰值约 4.27 @ 约 6.5 dBm）高约 0.2 bit/QAM 符号；ESS 峰值约 4.41，ESS+Seq.Sel. 约 4.43，NPAS++ 约 4.46 [p60]
   - 训练：Gumbel-softmax 采样、失配高斯解映射器、BCE 损失；损失 L++ = L_NPS + R_loss + λ·D_KL(p(x) || p_MB(x)) [p50, p55]
 - 提到的公司/客户/产品/标准：Nokia Bell Labs；参考 Civelli et al. OFC 2023 sequence selection；Böcherer et al. PAS（1.53 dB 线性整形增益上限，AWGN 信道）[p41]；ESS（枚举球整形）作为基线
-- 与业界对比或记录声明（SOTA/首次/record）：讲者称在更低复杂度下优于 sequence selection [p61]；未见 record 声明
+- 与业界对比或记录声明（SOTA/首次/record）：UBC 结论页（看图核实）：速率损失须显式优化而非事后测量；Seq-NPAS 为定长序列式联合分布学习方案；在更低复杂度下优于 sequence selection [p61]；未见 record 声明
 - 推荐配图页：p60（AIR 对功率曲线，比较均匀/ESS/ESS+Seq.Sel./NPAS++/Seq-NPAS++）；p58（速率损失对块长）；p55（Seq-NPAS 问题公式与损失函数）
 
 ### 0921-合集待拆-全场-Mo5-F全场连拍.pdf（第62–76页）

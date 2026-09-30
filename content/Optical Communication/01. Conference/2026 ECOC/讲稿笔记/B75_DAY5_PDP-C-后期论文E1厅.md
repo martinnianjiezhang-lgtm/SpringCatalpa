@@ -17,7 +17,7 @@ tags:
   - 偏振编码器 H,V,R,L，符号率 100 Mbaud；焦平面阵列（FPA）波束成形，91 个 SMF 芯天线单元，35 µm 间距，插损 1.6 dB；自由空间 30 cm [p8]
   - 光预算 13.2 dB，SMF 0.25 dB/km 且计入 5.2 dB FSO 损耗时约 32 km；FPA 相对单 SMF 改善 0.8 dB 耦合；光源限制 μ=0.015 光子/符号（Δν=200 GHz）；相对外部光源无性能代价 [p11]
   - 80 °C 工作：发射功率降约 1 dB，QBER 代价 1.3%；温升致耦合变差，手动重对准可将 QBER 恢复到 7% [p11]
-  - 光源带宽/去偏振：Δλ=16 nm 仅 4.9 km，10 nm 仅 9.2 km；Δλ=1.6 nm 无去偏振代价，单 SMF OHS 27.2 km，FPA OHS 32 km；Δλ=5 nm 时 36.5 km（OCR）；最优约 4 nm（OCR）[p12–p13]
+  - 光源带宽/去偏振：Δλ=16 nm 仅 4.9 km，10 nm 仅 9.2 km（即便 µ=0.1 光子/符号）；Δλ=1.6 nm 无去偏振代价，单 SMF OHS 27.2 km，FPA OHS 32 km（对应 O-RAN 7.2 分割单向上限）；Δλ=5 nm 时 36.5 km（µ 过补偿致 SKR 异常）；最优约 4 nm；WDM：15.2 km 内 1531.1–1576.2 nm 可用 29 个 200 GHz 信道，27 个信道足以为 TLS 1.3 下 256-bit AES-GCM 的 1 Tb/s 提供密钥（看图核实）[p12–p13]
   - WDM：1531.1–1576.2 nm 间最多 29 个 200 GHz 信道，15.2 km SMF；27 个信道产生的密钥足以按 TLS 1.3 / AES-GCM-256 保护 1 Tb/s [p13]
   - 共存实验：5 Gb/s RoF，下行 1305.98 nm、上行 1309 nm，光子上变频到 21 GHz（下行）/27 GHz（上行）；14.3 km 双馈线 + 512 m 共享分支光纤；QKD 通道 Δλ=1.6 nm，1550.12 nm [p14]
   - 经典信号功率达 -18 dBm 时仍有正 SKR；QBER 极限 11% 前共存裕量 3.8 dB；BER 10^-3（图中标注）：SOA+PIN -27.4 dBm，APD -28.3 dBm [p15]
@@ -26,7 +26,7 @@ tags:
 - 推荐配图页：p11（光预算与 QBER/RKR 曲线、温度依赖）；p13（WDM 信道数与去偏振对前传距离的影响）
 
 ### 0924-PDP-C-5-NokiaBellLabs-双单边带传输实现340ps每nm色散容限的单波超速率200G直检PON下行.pdf
-- 讲者/机构：M. Adib 等（Nokia Bell Labs） | 题目：Dual single-sideband transmission for 340 ps/nm CD tolerance, single-wavelength 200G direct-detection PON downstream（页面无完整英文题名，据文件名与内容推断；p1 OCR 乱码，未看图） | 类型：学术论文（PDP-C-5）
+- 讲者/机构：M. Adib, W. Lanneer, L. Breyne, C. Füllner（Nokia Bell Labs Fixed Network Research）与 R. Bonk（Nokia CTO Organization） | 题目：First Single-λ Super-Rated 200G DD PON Downstream with 340-ps/nm CD Tolerance Enabled by Dual-SSB Transmission（p1 看图核实） | 类型：学术论文（PDP-C-5）
 - 方向归属（主/次）：主 5 固定与无线接入（PON）；次 3 调制器/直检
 - 核心主张：
   1. 200 Gb/s DD-PON 面对 GPON 共存需要高色散容限，使用双波长会增加硬件复杂度 [p16]

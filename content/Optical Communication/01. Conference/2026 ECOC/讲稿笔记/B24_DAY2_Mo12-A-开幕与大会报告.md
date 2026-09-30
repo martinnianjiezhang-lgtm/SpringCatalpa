@@ -6,7 +6,7 @@ tags:
 ---
 
 ### 0921-Mo12-A3-Ciena-AI集群通信.pdf（共33页，单讲）
-- 讲者/机构：讲者姓名未见；Ciena | 题目：AI 集群通信主题的大会报告（英文原题页未拍到；末页标题 "Top Three Take-Aways"，主线为 Scaling AI is all about scaling I/O）| 类型：邀请报告（大会报告）
+- 讲者/机构：Peter Winzer / Ciena（p1 题目页看图核实） | 题目：AI Cluster Scaling – It's All About Interconnect（末页标题 "Top Three Take-Aways"，主线为 Scaling AI is all about scaling I/O）| 类型：邀请报告（大会报告）
 - 方向归属（主/次）：主 4 Scale-up/in CPO/NPO/XPO/WSE/OCS；次 3（Scale-out 224G/448G）、2（Scale-across/多rail）
 - 核心主张：
   1. 扩展 AI 就是扩展 I/O：die-to-die 带宽 100%、内存带宽 10%、scale-up 带宽 1%、scale-out/scale-across 带宽 0.1%（按幻灯片相对比例）[p33]
@@ -22,21 +22,21 @@ tags:
   - 交换容量趋势 40%/年，per-lane switch I/O 20%/年（图中标 200G→(400G) 至 2030）；448G 电/光眼图对比；提出 Co-Packaged Copper I/O (CPC)（图源 Samtec）[p21]
   - Open CPX 模块（Ciena Vesta 200，6.4T CPX 挂 100T 交换 ASIC）：模块尺寸 30 mm × 16 mm；示波器读数 平均光功率 3.01 dBm、Outer ER 4.079 dB、TDECQ 2.23 dB [p24]
   - Open CPX：51.2 Tbps XPU scale-up&out；204.8 Tbps 交换机；"N x 200 Tbps 1OU XPU 与交换托盘" [p25]
-  - 两级 scale-up 网络：Tier-1 域 512 x 4 racks 用铜；Tier-2 512 个交换机机架用光 [p30]；另一页 OCR 显示 100k XPU、768 交换机机架（未看图，OCR 索引）[p31]
+  - 两级 scale-up 网络：Tier-1 域 512 x 4 racks 用铜；Tier-2 512 个交换机机架用光 [p30]；扁平 XPU 层级：100k XPU 经光连到单一两级交换集群（768 个交换机架，铜/光混合）[p31，看图核实]；scale-across：4×12.8T XPO 共 51.2 Tbps C+L、每机架 128 对放大光纤，10–10,000 km [p32]
   - Scale-across：4x 12.8T XPO = 51.2 Tbps C+L 波段；每机架 64x C+L 客户侧与线路侧容量；Multi-Rail：每机架 128 个放大光纤对；标注 "10 to 10,000 km, 1000's of parallel fibers" [p32]
-- 提到的公司/客户/产品/标准：Ciena（Nitro、Vesta 200、XPO）；Open CPX MSA（成员 logo 含 Ciena、Coherent、Marvell、Molex、Lumentum、Credo、Eoptolink、Intel、Amphenol、Accton 等，其余看不清）[p23]；OCI-MSA [p26]；Google TPU v8i、Cerebras WSE-3 [p7]；Nvidia B200、Google TPUv1、Condor Galaxy（roofline 图，p4 OCR）；Micron HBM（p5）；Corning（可拆卸光纤，p27）；Samtec（CPC 图源）；Meta（园区图源，p32）
+- 提到的公司/客户/产品/标准：Ciena（Nitro、Vesta 200、XPO）；Open CPX MSA（6.4T/7.2T 可插拔接口；创始 Ciena、Coherent、Marvell、Molex、Samtec、TeraHop；贡献者含 Accton、AOPT、Alpha、Amphenol、Astera Labs、Avicena、ColorChip、Credo、Eoptolink、FIT、Intel、Ligent、Lightmatter、Lotes、Lumentum、Murata、NextHop AI、Ruijie、Source Photonics、TE、TFC、VIAVI 等，p23 看图核实）；OCI-MSA [p26]；Google TPU v8i、Cerebras WSE-3 [p7]；Nvidia Rubin/B200、Google TPUv1、Cerebras Condor Galaxy、Groq LPU3、Fugaku（roofline 图，p4）；Micron HBM（12+1 叠层 36 GB，p5）；Corning（可拆卸光纤，p27）；Samtec（CPC 图源）；Meta（园区图源，p32）
 - 与业界对比或记录声明：无 SOTA/record 声明；论点为 "铜至少用到 400G 世代""最终走向 chiplet 集成光" [p21][p33]
 - 推荐配图页：p17（retimer/免 retimer 两栏对比表，覆盖 DAC/ACC/AEC/LPO/CPX 的 reach 与 pJ/bit）；p33（三条结论页）；p18（混合铜扩展 72→256 XPU）；p32（XPO scale-across）
 
 ### 0921-Mo12-A4-IMEC-集成光子支撑AI扩展.pdf（共25页，单讲）
-- 讲者/机构：讲者姓名未见（照片为一名男性）；imec | 题目：集成光子支撑 AI 扩展（英文原题页未看清；p1 标题页显示 "Future AI infrastructure is under tension"）| 类型：邀请报告（大会报告）
+- 讲者/机构：讲者姓名幻灯片未显示（照片为一名男性）；imec | 题目：集成光子支撑 AI 扩展（英文原题页未拍到；p1 看图核实为 "Future AI infrastructure is under tension" 页）| 类型：邀请报告（大会报告）
 - 方向归属（主/次）：主 4 Scale-up/in CPO/NPO/XPO/WSE/OCS（3D 集成光学=scale-in）；次 3（调制器/PD/400G 每 lane）
 - 核心主张：
   1. AI 基础设施受"性能（更多加速器/内存/带宽）"与"功耗热（功率密度、热极限、供电）"双向挤压；电互连遇到封装尺寸与带宽墙 [p1][p5]
   2. 400G/lane 的 scale-out 可插拔与 scale-up CPO 可由 Ge-on-Si PD/APD 与 GeSi EAM 支撑 [p8][p11][p12]
   3. 面向 chip-to-chip "scale-in" 的 3D 集成光学（晶圆级 SiN 波导、D2W 键合）+ 新材料调制器，目标 <1 pJ/bit；从 pathfinding 走向平台化（iSiPP200/300，即将推出 iSiPP400G）[p14–p19][p21]
 - 关键数据：
-  - O-band Ge PIN PD：BW >110 GHz，R = 0.9 A/W；Ge APD：BW ~90 GHz，R = 1.9 A/W；眼图 160 GBaud、180 GBaud（O-band，V=?，Pin=-7 dBm，读数偏小，电压看不清）；用于 "scale-out 可插拔 400 Gbps/lane"（引 Coughlin & Shahin, OFC 2026 及未发表数据）[p8]
+  - O-band Ge PIN PD：BW >110 GHz，R = 0.9 A/W；Ge APD：BW ~90 GHz，R = 1.9 A/W；眼图 160 GBaud、180 GBaud（O-band，偏压与输入功率小字看图仍不清）；用于 "scale-out 可插拔 400 Gbps/lane"（引 Coughlin & Shahin, OFC 2026 及未发表数据）[p8，看图核实]
   - LNO 调制器 7 mm vs SOH 调制器 50 um 长度对比；材料比：LNO 电极距 few um，OEO 电极距 <200 nm；OEO 的 r/ε 比约 60，LNO 约 1（读图，字小）[p9]
   - GeSi 电吸收调制器（EAM）：23 颗 die 的 S21 调制带宽曲线，Bias 2 V、λ=1560 nm，100 GHz 内滚降约 -2 dB；眼图 212.5 GBaud（PAM4，分四电平），"scale-up CPO at 400 Gbps/lane"（标注 IEDM/ECOC 2025）[p11]
   - "世界首个 100 GHz、低电压 Ge/Si APD"用于 400G/lane 传输：链路为 GeSi FK EAM → Ge APD；425 Gbps 眼图；BER 图 425 Gb/s（6.25% FEC 开销）与 448 Gb/s（12% FEC 开销）两点，BER 约 1e-3–1e-2 区间（读图估计）；引 A. Shahin et al., ECOC 2026 [p12]
@@ -51,7 +51,7 @@ tags:
 - 页码说明：Ge PD/APD p8；OEO/SOH 调制器 p9；GeSi EAM p11；APD 400G 链路 p12；路线图 p13；SiN 波导 p14；D2W 键合 p15；BTO/III-V p17；架构图 p19；平台化 p21。
 
 ### 0921-Mo12-A5-华为-从光创新到NPO与CPO.pdf（共14页，单讲）
-- 讲者/机构：讲者姓名未见；华为 | 题目：从光创新到 NPO 与 CPO（照片版原题页未清晰拍到；主线为 NPO vs CPO "多回合"辩论，结论 "NPO is the Optimal Solution for the 200G/Lane Era!"；最末页标题 "The Ubiquitous Optical Interconnect: Illuminating the Entire AI Network"）| 类型：产业发布/邀请报告（大会报告）
+- 讲者/机构：讲者姓名幻灯片未显示；华为 | 题目：从光创新到 NPO 与 CPO（原题页未拍到；p1 看图核实为倒拍的 "Three Physical Walls of AI Era: Compute, Memory, and Network"；主线为 NPO vs CPO "多回合"辩论，结论 "NPO is the Optimal Solution for the 200G/Lane Era!"；最末页标题 "The Ubiquitous Optical Interconnect: Illuminating the Entire AI Network"）| 类型：产业发布/邀请报告（大会报告）
 - 方向归属（主/次）：主 4 Scale-up/in CPO/NPO/XPO/WSE/OCS；次 3（224G Scale-out）
 - 核心主张：
   1. 传统可插拔带来功耗/热极限（高功耗限制系统扩展与可靠性）与前面板密度极限（面板空间、端口数受限）[p2]
@@ -60,19 +60,19 @@ tags:
   4. 224G+ 之后，能效与密度的下一前沿为 NPO → CPO → OIO（光 I/O）演进；CPO 与 OIO 各有工程挑战 [p11][p12][p13]
 - 关键数据：
   - Round 2（可插拔与维护）、Round 3（能效与集成）：NPO——高能效、板级组装、厘米级走线插损；CPO——极致能效、2.5D/3D 封装、毫米级直连以最小化损耗（定性，无数值）[p4][p5]
-  - Round 5：6.4T/12.8T NPO Project 时间线：Project Start 2026.5（读图，字小）、Baseline 2026H2（读图不确定）、Ballot、Publication 2027H2–2028H1（读图不确定）；标准组织名称未见 [p6]
+  - Round 5：6.4T/12.8T NPO Project 时间线：Project Start 2026.5、Baseline 2026H2、Ballot、Publication 2027H2–2028H1（看图核实，与全场连拍版 p97 一致）；NPO 胜，总比分 4:1；标准组织名称页面未显示 [p6, p7]
   - Hi-ONE：号称"业界首个内置激光源的 7.2T NPO 光引擎"（High-density Optical-interconnect-Node Engine），已量产；对比 1.6T 光模块（读图）：带宽 4.6X（7.2T）、可靠性故障率下降 90%（10 A-fit → 1 A-fit，读图）、时延下降 90%（100 ns → 10 ns，读图）、功耗下降 66%（15 pJ/bit → 5 pJ/bit，读图）；柱图数值字很小，均需原图复核 [p9]
   - Hi-ONE 设计要点："τ-Scaling Law"（几何尺度 L(nm) → 时间尺度 τ(ps)，System→Data Center/SuperPOD/Rack/Module&Board/Chip/Circuit/Device）；线性架构降低电链路时延与功耗；ILS(外置光源)+EIC+PIC 联合设计降低外部激光功率与插损 [p10]
   - CPO 工程挑战：亚微米高密度设计（对准容差、自动化瓶颈、热漂移）；测试挑战（电光协同仿真测试、协同测试标准缺失、设备短缺）；故障隔离与冗余（光冗余、系统隔离、预测性监控）[p12]
   - OIO 挑战：中介层级 3D 光子布线（多层硅波导、串扰抑制、弯曲损耗最小化）；信号完整性与异质阻抗（测试瓶颈、阻抗匹配、热翘曲缓解）；热敏感与调谐代价（被动热稳定、高调谐功耗、高速局部补偿）[p13]
   - 全网络光互连视图：Scale-in(Intra-Chip)→Scale-up(Intra-Tray/Rack/POD)→Scale-out(DCN)→Scale-Across(DCI) [p14]
-- 提到的公司/客户/产品/标准：华为 Hi-ONE（7.2T NPO 光引擎）；NPO 6.4T/12.8T 标准项目（标准组织看不清）；NPO、CPO、OIO 概念
+- 提到的公司/客户/产品/标准：华为 Hi-ONE（7.2T NPO 光引擎）；NPO 6.4T/12.8T 标准项目（标准组织名称页面未显示）；NPO、CPO、OIO 概念（p11–p13 看图核实：CPO 挑战为亚微米对准/自动化/热漂、光电协同测试标准与设备缺口、故障隔离与冗余；OIO 挑战为中介层 3D 光路由、信号完整性与异质阻抗、热敏感与调谐功耗）
 - 与业界对比或记录声明："Industry's 1st 7.2T NPO With a Built-in Laser Source""World's first 7.2 Tbps NPO optical engine"[p9]；"Round 5 Winner 4:1"（自评）[p7]
 - 推荐配图页：p9（Hi-ONE 7.2T 对比 1.6T 的带宽/可靠性/时延/功耗柱图，注意需高清复核）；p6（NPO 标准时间线与开放生态对比）；p14（全 AI 网络光互连分层图，注意该页图片方向颠倒）
-- 页码说明：p2 为传统可插拔瓶颈；p4=Round 2；p5=Round 3；p6=Round 5；p7=Round 5 获胜；p8=结论；p9=Hi-ONE；p10=τ-Scaling；p11=224G 以后 NPO/CPO/OIO；p12=CPO 挑战；p13=OIO 挑战；p14=全网络光互连。Round 1、Round 4 页未见到（p1 为标题页，p3 与 p2 重复主题）。
+- 页码说明：p2/p3 为传统可插拔瓶颈（同页两次拍摄）；p4=Round 2；p5=Round 3；p6=Round 5；p7=Round 5 获胜（总比分 4:1）；p8=结论；p9=Hi-ONE；p10=τ-Scaling；p11=224G 以后 NPO/CPO/OIO；p12=CPO 挑战；p13=OIO 挑战；p14=全网络光互连。本 PDF 无 Round 1、Round 4 页（p1 为 "Three Physical Walls" 倒拍页）；两回合内容见 B23 全场连拍版 p91–p96（均 NPO 胜）。
 
 ### 0921-Mo12-A6-PsiQuantum-光子量子计算.pdf（共34页，单讲）
-- 讲者/机构：讲者姓名未见；PsiQuantum | 题目：光子量子计算（英文原题页未拍到；p5 页 "How to build a scalable photonic quantum computer"）| 类型：邀请报告（大会报告）
+- 讲者/机构：Mark Thompson（Co-Founder & CTO，据同场全场连拍版题目页）；PsiQuantum | 题目：Photonics for quantum computing（本 PDF 未拍题目页；p5 页 "How to build and scalable photonic quantum computer"，看图核实）| 类型：邀请报告（大会报告）
 - 方向归属（主/次）：主 6 QKD/量子/光纤传感DAS；次 4（OCS）、3（光电子/低损耗 SiN）
 - 核心主张：
   1. 规模化量子计算的四大挑战：量子比特、可制造性（需制造并测试百万级元件）、互连（芯片间高保真传输量子比特→模块化）、制冷功率与控制电子；光子路线以半导体制造与光子学解决 [p4][p5]
@@ -89,9 +89,9 @@ tags:
   - OCS 原型（8×8）：基数 8，插损均值 ~1.0 dB（最大 ~1.7 dB，差异归因于 de-embedding MPO 连接器损耗），串扰均值 ~60 dB（最小 ~55 dB），重构时间 <1 ms；严格无阻塞、偏振跟踪、全无源（无光放大）[p25]
   - 下一代 4×64 OCS（研发中）：4 个光子交换 PIC，256 个光 I/O 端口（4×64），1U 机架式，全互联严格无阻塞，重构 "sub-ms 至 sub-μs"（小字），无光放大器、低驱动电压 [p26]
   - 模块间量子比特互连：Daresbury 英国站点两个模块间 250 m 光纤、time-bin 编码/解码，实验室间互连保真度 ">99.7"（右侧文字被裁切，未稳定化光纤）[p28]
-  - 单光子探测（超导纳米线 SNSPD，OCR 文字）：探测效率 ~100%，灵敏度 -160 dBm(~1 aW)，抖动 <5 ps，死时间 ~1 ns，暗计数 <1 Hz，工作温度 ~4 K [p16]（仅 OCR，未看图）
-  - 测试规模：室温测试 2,400,000/月，低温测试 130,000（末位数 OCR 不全）/月 [p7]（仅 OCR）
-- 提到的公司/客户/产品/标准：PsiQuantum、GlobalFoundries（p5 OCR "GLOBALFOUNDRIES" 可能）、Nature 论文、Google Willow / Quantinuum H1 / Google Echo（p2/p3 背景引用）、Illinois Quantum & Microelectronics Park (IQMP)，2025 年 10 月芝加哥动工 [p33]、Frontier 超算机架（对比尺度）[p27]
+  - 单光子探测（超导纳米线 SNSPD，NbN on SiN）：探测效率 ~100%，灵敏度 -160 dBm(~1 aW)，抖动 <5 ps，死时间 ~1 ns（GHz 级工作），暗计数 <1 Hz，工作温度 ~4 K [p16，看图核实]
+  - 测试规模：室温测试 2,400,000/月，低温测试 130,000/月 [p7，看图核实]
+- 提到的公司/客户/产品/标准：PsiQuantum、GlobalFoundries（p5 看图核实，另有 Linde 低温柜）、Nature 论文、Google Willow / Quantinuum H1 / Google Echo（p2/p3 背景引用，看图核实）、Illinois Quantum & Microelectronics Park (IQMP)，2025 年 10 月芝加哥动工、伊州政府承诺 5 亿美元；2026 年 6 月布里斯班动工、澳联邦与昆州政府投资 6.5 亿美元 [p33，看图核实]、Frontier 超算机架（对比尺度）[p27]
 - 与业界对比或记录声明：无正式 SOTA 声明；边耦合器从 2024 到 2025 损耗减半（127 → 65 mdB）[p14]；引用业界观点 "多数领域仍认为有用机器需 5–10 年" [p3]
 - 推荐配图页：p9（三项量子电路保真度）；p25（OCS 原型性能指标与损耗/串扰散点图）；p26（4×64 OCS 系统结构）；p15（62 端口 FAU 贴装损耗分布）
 

@@ -13,7 +13,7 @@ tags:
   2. 提出 TSVD-LS：物理引导的截断指标 m_c（由空间相关函数导出，给定链路仅由信号带宽决定，与色散、带宽、链路长度相关）+ Tukey 窗软截断，抑制硬截断 Gibbs 振荡 [p6, p7, p10]。
   3. 实现细粒度（数十米量级）纵向功率监测：仿真 Δz=50 m，实验 Δz=75 m [p10]。
 - 关键数据：
-  - 仿真：80 GBaud PS-64QAM，DP，3 span，GN-EDFA 增益 10 dB（OCR 读数，看不清具体项），与 RLS（大正则项）对比：RLS 曲线过平滑并有功率偏移，TSVD-LS 可靠 [p8]。
+  - 仿真：80 GBaud PS-64QAM，双偏振，3×50 km SMF，EDFA 增益 10 dB、NF 5 dB，α 0.2 dB/km，γ 1.3 /W/km，16 组×2^16 符号并引入 Tukey 窗；与 RLS（大正则项）对比：RLS 曲线过平滑并有功率偏移（约 1.43/2.11 dB），TSVD-LS 可靠（看图核实） [p8]。
   - 实验：80 GBaud PS-64QAM，120 GSa/s AWG，256 GSa/s 示波器，链路 50 km + 20 km + 30 km + 50 km SMF 环路，中间插入 3 dB 损耗；每组 2^16 符号、平均 400 组 [p9]。
   - TSVD-LS 检出 3 dB 损耗；RLS 存在 1.83 dB 检测误差 [p9]。
   - 光纤衰减系数 0.197、0.174、0.187、0.195 dB/km（各段）[p9]。
@@ -30,7 +30,7 @@ tags:
   2. 三类影响：符号率（1 Sps）数据使扰动矩阵构造的 CD 运算不准；粗步长使 eRP1 模型精度下降；HD 数据的判决错误使功率下降随 BER 增大 [p16]。
   3. 提出实用框架：硬判决 + 加权 RP1（WRP1）+ 分布加权（Distribution Weighting）+ LS PPE，兼顾超低复杂度与 HD 数据 [p17, p21]。
 - 关键数据：
-  - 数值验证：DP-16QAM，80 GBaud，色散系数 21.7 ps²/km（OCR 读数，标注为 β 参数附近，需核对），衰减 0.2 dB/km，5×50 km [p18]。
+  - 数值验证：DP-16QAM，80 GBaud，色散参数 −21.7 ps²/km（即 β2），衰减 0.2 dB/km，非线性系数 1.4 /W/km，5×50 km，125 km 处插入损耗；1 Sps HD 数据 RMSE 约 3.4–6.4 dB，而 WRP1+分布加权约 0.2–0.3 dB；步长 5 km 时时间节省约 10 倍（看图核实） [p18]。
   - 1 Sps HD 数据 + 5 km 步长直接使用：RMSE 3.8 dB；所提方案 RMSE 降至 0.32 dB，计算时间减少 75% [p19]。
   - 误差直方图与 2 Sps Tx 数据（2.5 km 步长）相近，95% 误差在 1 dB 以内 [p19]。
   - 异常检测：在 125 km 处插入损耗 0.9、2.1、5.0 dB，方案均可识别，估计损耗与插入损耗吻合 [p20]。
@@ -63,7 +63,7 @@ tags:
   3. 前人工作仅在均匀光纤链路估计光纤参数，本工作为异质光纤定位与色散估计 [p41]。
 - 关键数据：
   - 实验：1549.31 nm，6 span × 50.5 km，共 303.0 km，SSMF/NZ-DSF，256 GSa/s 相干接收，DSO；SSMF 测得色散 16.3 ps/nm/km，NZ-DSF 4.0 ps/nm/km（Keysight 86038B 测量）[p50, p52]。
-  - 色散估计：NZ-DSF 在第 1、4、5 span 时，估计值均值/中位数约 4.0 ps/nm/km，可清晰区分 SSMF 与 NZ-DSF（OCR 读到 4.6/4.7、3.9/3.8、4.6/4.6，未核图）[p52, p53]。
+  - 色散估计：NZ-DSF 在第 1、4、5 span 时，估计均值/中位数分别为 4.6/4.7、3.9/3.8、4.6/4.6 ps/nm/km（实测 D_N 4.0、D_S 16.3 ps/nm/km），可清晰区分 SSMF 与 NZ-DSF（看图核实，UOsaka）[p52, p53]。
   - 定位：第 1/4/5 span 的估计误差分别为 7.3 km、1.4 km、13.2 km，均在 ±25 km（半个 span）内；z_min 分别 -1.3 km、156.3 km、221.4 km [p55]。
   - 仿真（span 50.5 km×6/10、80 km×10；D_N=0/4）：定位误差在 10.7 km 内，D_N 估计误差在 0.2 ps/nm/km 内 [p56–59]。
 - 提到的公司/客户/产品/标准：KDDI 基金、Shimadzu、Fujikura 基金、JSPS 资助；仪器 Keysight 86038B；引用 Eto ECOC 2023、Takahashi OECC 2025、Sasai LPM
@@ -79,7 +79,7 @@ tags:
   3. 关键弱点：只估计自信道干扰 SCI，总 NLI 需 XCI 修正；随符号率升高该问题会变弱 [p93]。
 - 关键数据：
   - 异质链路实验：约 1,483 km；SSMF 65 km ×8 + PSCF 110 km ×4 + SSMF 65 km ×8；18×118 GBd QPSK，Acacia CIM-8 收发；光纤 SMF D=16.5 ps/nm/km、Aeff=80 µm²，PSCF D=20.5 ps/nm/km、Aeff=120 µm² [p67]。
-  - NLI 估计：LPM 估计的 SNR_NLI 标记与 OSA 测量（1/SNR_NLI = 1/SNR − 1/SNR_TRX − 1/SNR_ASE）在 191.5–195 THz 内总体吻合，SNR_NLI 范围约 14–23 dB（不同发射功率，图例 14.5/16.4/18.5/20.3 dBm，OCR 读数，未逐一核对），边缘信道偏差稍大 [p90, p91]。
+  - NLI 估计：LPM 估计的 SNR_NLI 标记与 OSA 测量（1/SNR_NLI = 1/SNR − 1/SNR_TRX − 1/SNR_ASE）在 191.5–195 THz 内总体吻合，SNR_NLI 范围约 14–23 dB（发射功率 14.5/16.4/18.5/20.3 dBm 分别约 21.4–23、20–21.6、17–19、14.1–16.3 dB），边缘信道偏差稍大（约 1 dB）（看图核实；Pilori et al., OFC 2026 W2A.49 与 JLT 2026）[p90, p91]。
   - 其他应用展示：PDL 定位（2/3/4 dB PDL 可定位）[p75]；WSS 滤波偏移估计与定位（0/±3/±6 GHz）[p77]；拉曼放大监测、部分色散补偿链路 [p71]；PPE 用于发射功率优化 [p12/G5-67]。
   - 对比其他 NLI 测量：时域法（CPR 自相关、ANC、PDL 统计、星座 ML）被动、无需改发射机但需训练与校准；频域法（光谱分析、扰动法、导频音）精确稳健但需改发射 DSP/光学 [p82]。
 - 提到的公司/客户/产品/标准：Fujitsu（OFC 2024 首提 LPM 估计 NLI；Tanimura ECOC 2019 PDP）、Acacia CIM-8、Sasai、Poggiolini（GN 模型）、Curri、Keysight 无、Links Foundation

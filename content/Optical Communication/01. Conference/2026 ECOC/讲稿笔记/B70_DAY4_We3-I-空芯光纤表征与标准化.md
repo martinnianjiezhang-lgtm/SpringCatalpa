@@ -18,12 +18,12 @@ tags:
   - 早期首次 HCF OFDR：219 m NANF，SMF 约 -76 dB/m，NANF 低约 45 dB（约 -121 dB/m），1 m 分辨率，参考 Optica 8, 216（2021）[p14 图像页]。
   - 长距 OFDR 硬件：约 10 台原型；激光器 OE-Waves、NKT X15、NIST 真空腔外部稳频；硅光 PIC 相干收发；FPGA 到 GPU 100 GB/s GPUDirect；调制带宽 250 MHz 对应理论 0.3 m；已测量 >4 条海缆；除激光器外可量产 [p15 图像页]。
   - 啁啾脉冲压缩：100 km 长啁啾脉冲压缩约 1,000,000 倍至 0.5 m，相对短脉冲 OTDR 约 60 dB SNR 增益 [p18]。
-  - 100 km HCF OFDR：前向/后向发射反射谱，端面回波 FWHM 约 25 m，图中标注 3 m、10 m FWHM 事件，标注约 50 dB 与约 90 dB 动态范围（条件看不清）[p7]。
+  - 100 km HCF OFDR：前向/后向发射反射谱，端面回波 FWHM 约 25 m，图中标注 3 m、10 m FWHM 反射事件，标注 +50 dB 与 +90 dB 动态范围（反射轴 −60 至 −160 dB/m）（看图核实）[p7]。
   - 衰减与散射分离：2.5log10(F/B) 得衰减，示例拟合约 0.2 dB/km；10log10(F×B) 得散射系数，与 R^-6 成正比，讲者称"极重要的拉丝工艺信息" [p20 图像页]。
   - 扫频 OFDR（OFDR #2）：>100 nm 幅相传递函数，光谱分辨 <20 MHz，扫速 2000 nm/s；HCF 实现用 20–200 nm 扫频、10–40 nm/s，处理 800 GHz 段得 124 µm 分辨率 [p24, p27]。
   - 550 m HCF 测量（124 µm 分辨率），斜率反映局部散射系数与积分损耗，含散斑振荡与双折射引起的偏振起伏 [p29–30]。
   - 热敏感：HCF 光谱移位对温度的敏感度比 SMF 小 22 倍（拟合 y=0.045x，SMF 移位 0–约55 GHz 对应 HCF 0–约2.4 GHz）[p35 图像页]；热光系数影响 SMF 模式，热膨胀对二者均有，且小 10–30 倍 [p34]。
-  - 5 km HCF 双折射：光谱移位 0.02–0.075 GHz，前向与反向测量吻合；对应拍长数值被截断，看不清 [p41 图像页]。
+  - 5 km HCF 双折射：光谱移位 0.02–0.075 GHz，前向与反向测量吻合；幻灯文字"等效拍长介于 5…"在照片中被截断，拍长数值无法读取（看图核实）[p41]。
   - 100 km AR-HCF C+L 链路上的 FDM-OTDR：135 GBd、800 Gb/s、PCS-16QAM，150 GHz 间隔，C 1524.30–1572.27 nm、L 1575.16–1626.43 nm；OTDR 脉冲 6 µs、峰值 20 dBm、FDM 9 路、160–240 MHz、Δf=10 MHz、1510 nm、重复周期 1 ms；放大 OTDR 可测单跨损耗 >约 20 dB，分辨率 45–900 m（OFC'25 Th3F.7、PDP Th4A.3）[p13 图像页]。
   - 海缆用例：6000 km 约 1000 dB 损耗由 >100 个放大器补偿，反射信号约 -112 dB/m（SMF 72 dB/m + 40 dB 环回损耗）[p6]。
   - 海底地震跟踪：6.3 级、Ferndale 附近，5.2 km/s，6000 km 跨大西洋追踪（引自 M. Mazur, OFC 2024 PDP）[p4–5]。
@@ -41,11 +41,11 @@ tags:
 - 关键数据：
   - 方法：偏振敏感反射计（PSR），至少两个不同输入 SOP，测背散射 SOP，解微分方程得双折射矢量 [p48–50]。
   - P-OTDR（NANF）：2 ns 脉冲、1550 nm、每 2 µs 一个、3 种输入 SOP；SNSPD 探测（探测效率 >85%、暗计数 <100 Hz、恢复时间 <100 ns、到达时间精度 >10 ps）；空间分辨率约 30 cm，采样 15 cm（1 ns），单次测量 60 s，脉冲数 30×10^6 [p53–54 图像页]。
-  - P-OTDR（DNANF，620 m 样品）：700 ps 脉冲，每 2.5 µs；分辨率约 10 cm，采样约 5 cm（300 ps）；测量 120 s；脉冲数 48×10^？（指数看不清）[p61–62]。
-  - NANF 分布式双折射 β 约 0–2.5 rad/m（长度轴 z 数值看不清），前/后向测量高度吻合；绕线直径 d1=159 mm 与 d2=76 mm 对比，弯曲使 β 增大，在图中数值约 0.2–1.5 rad/m 范围随弯曲方向变化 [p59 图像页]。
+  - P-OTDR（DNANF，620 m 样品）：1550 nm、700 ps 脉冲，每 2.5 µs；分辨率约 10 cm，采样约 5 cm（300 ps）；测量 120 s；每次测量脉冲数 48×10^6；SNSPD + 时间标记器探测（看图核实）[p61–62]。
+  - NANF 分布式双折射 β 约 0.3–2.3 rad/m，前/后向测量高度吻合；绕线直径 d1=159 mm 与 d2=76 mm 对比（无弯曲约 0.5 rad/m），β 随弯曲方向变化：d1 约 0.25–0.7、d2 约 0.15–1.5 rad/m（看图核实；长度轴 z 刻度页面未标）[p59]。
   - 扭转诱导双折射 Bs 近零，说明扭转贡献可忽略；DNANF 同样观察到近零并且前后向吻合 [p57, p63–64]。
   - 背散射来源引用：表面粗糙度与充气分子（Slavik, Opt. Express 2022）[p51]。
-- 提到的公司/客户/产品/标准：Univ. of Padova、Univ. of Southampton（Poletti 组）、Microsoft Azure Fiber、SNSPD 设备（品牌看不清）；5-tube NANF 与 DNANF。
+- 提到的公司/客户/产品/标准：Univ. of Padova（We3-I2/1089，silvia.zampato@unipd.it）、Univ. of Southampton（Poletti 组）、Microsoft Azure Fiber、SNSPD 设备（品牌页面未标）；5-tube NANF 与 DNANF（看图核实）。
 - 与业界对比或记录声明（SOTA/首次/record）：First complete distributed measurement of local birefringence vector in NANF and DNANF [p65]。
 - 推荐配图页：p59（NANF 分布式双折射前后向重合与弯曲仿真对比）；p54（P-OTDR 装置与 SNSPD 参数）
 

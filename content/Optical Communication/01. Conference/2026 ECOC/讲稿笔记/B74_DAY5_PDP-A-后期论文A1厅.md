@@ -14,14 +14,14 @@ tags:
   3. 零色散使 IM-DD（PAM4）传输距离/误码显著改善并有望省成本；对传感、计量、授时、量子网络也有潜力。
 - 关键数据：
   - 常规 HCF 色散约 2.5–5 ps/nm/km，SMF 约 17 ps/nm/km；100 km SMF 累积 CD 约 1,700 ps/nm [p3–p4]
-  - 第一窗口设计强行搬 ZDW 到 C 波段损耗约 0.10→0.39 dB/km（约 4 倍代价）；第二窗口 0.16→0.34 dB/km；混合窗口（Hybrid DNANF，OFC26 Th4B.8 提出）0.13→0.16 dB/km [p8–p11，OCR]
+  - 第一窗口设计强行搬 ZDW 到 C 波段损耗约 0.10→0.39 dB/km（约 4 倍代价）；第二窗口 0.16→0.34 dB/km；混合窗口（Hybrid DNANF，外管约 1.15 µm + 嵌套管约 0.5 µm，OFC26 Th4B.8 提出）0.13→0.16 dB/km（看图核实）[p8–p11]
   - HF-2：t≈1.25 µm，37.1 km，色散降 50%，损耗 0.1 dB/km @1.55 µm；色散斜率 0.050 ps/nm²/km [p18]
   - HF-4：t≈1.28 µm，15.0 km，C 波段内过零（约 1533 nm 附近），1.55 µm 处损耗 0.196 dB/km（最小 0.175 dB/km），斜率 0.063 ps/nm²/km，与 SMF 斜率相当 [p18]
   - HF-5：t≈1.29 µm，14.9 km，1550 nm 附近零色散，1.55 µm 处 0.23 dB/km（最小 0.22 dB/km），斜率 0.090 ps/nm²/km [p18]
   - 六根新纤 HF-1…HF-6 长度 10.0–37.1 km；参考纤 HF-ref t=1.18 µm 色散约 +5 ps/nm/km，损耗约 0.1 dB/km [p15–p16]
   - 系统实验：56 GBd（112 Gb/s）PAM4，约 15 km，1530–1570 nm，IM+PD+示波器；HF-5 BER 约 2–4×10⁻⁴，HCF 约 2–4×10⁻³，SMF 约 3×10⁻¹；即比标准 HCF 低约一个数量级，比 SMF 低数个数量级 [p20]
-  - 展望（仿真，非实测）：30 µm 纤芯，1550 nm 损耗 0.057 dB/km，色散 +3.98 ps/nm/km，斜率 +0.013 ps/nm²/km，外管壁厚 1.11 µm——该设计尚未过零；讲者结论称更大纤芯可在保持零色散下达约 0.1 dB/km [p21，p23 OCR]
-- 提到的公司/客户/产品/标准：Microsoft Azure Fiber、南安普顿大学 ORC；参考文献含 Petrovich Nat. Photon. 2025、Ding ECOC 2025；DNANF/混合 DNANF 结构；引用 DSP 占收发器功耗 40–60%（相干）、零色散最多降约 30% 功耗（OCR，p4，看不清细节）
+  - 展望（仿真，非实测）：30 µm 纤芯，1550 nm 损耗 0.057 dB/km，色散 +3.98 ps/nm/km，斜率 +0.013 ps/nm²/km，外管壁厚 1.11 µm——该设计尚未过零；讲者结论称更大纤芯可在保持零色散下达约 0.1 dB/km（看图核实）[p21，p23]
+- 提到的公司/客户/产品/标准：Microsoft Azure Fiber、南安普顿大学 ORC；参考文献含 Petrovich Nat. Photon. 2025、Ding ECOC 2025；DNANF/混合 DNANF 结构；对比表（p4 看图核实）：相干 DSP 占收发器功耗 40–60%（SMF），HCF 降 5–10%，零色散 HCF 最多降约 30%；100 km 累积色散 SMF 约 1,700 ps/nm、HCF 约 100 ps/nm、零色散 HCF 约 0；IMDD PAM4 距离 HCF 延长约 10 倍、零色散 HCF 延长一个数量级（受 OSNR 限制）
 - 与业界对比或记录声明：标题即"First demonstration"零色散 HCF 且电信级损耗 [p1, p23]；空芯光纤损耗现状 <0.1 / 0.05 / 0.03 dB/km 的对比见 [p2]
 - 推荐配图页：p18（三根光纤的测量色散曲线+损耗谱+截面，最核心）；p20（IM-DD BER 对比+眼图）；p16（壁厚—色散/损耗设计定律）
 
@@ -36,11 +36,11 @@ tags:
   - 106.1 km 链路，244×32 GBd DP-PS-16QAM，50 GHz 间隔，覆盖 45 nm / 12.15 THz，GMI 估计总吞吐约 53.3 Tb/s [p6, p14]
   - 1 µm HCF：第二反谐振窗口（膜厚约 750 nm），9 段纤（纤芯约 25–26 µm）拼成 106.1 km，1060 nm 处链路损耗约 19.6 dB；多段最小损耗约 0.08 dB/km（1–1.1 µm），约 930–1130 nm（约 57 THz）损耗低于 0.2 dB/km [p9]
   - 传输结果：波长 >约 1050 nm 时 AIR 约 220 Gb/s/通道、SNR 约 12.5 dB；1030 nm 附近降到约 180 Gb/s、约 9 dB，归因于 BPD 响应度滚降与调制器偏置稳定性 [p13]
-  - YDFA 两级+中间增益平坦滤波，1030–1080 nm 增益较平，NF <5 dB；booster 发射功率设为 25 dBm（每通道略高于 1 dBm）[p11，OCR]
-  - TFLN IQ-MZM（商用平台，350 nm LN 膜/硅）：3 dB EO 带宽超过 110 GHz 测量极限，但封装 Si RF 中介层限制封装带宽 <20 GHz；1 µm 下 Pockels 相移比 1550 nm 约强 50% [p10，OCR]
+  - YDFA 两级+中间增益平坦滤波，1030–1080 nm 增益较平（BA 约 20.5–21.5 dB、PA 约 24.3–25.6 dB），NF <5 dB；booster 发射功率设为 25 dBm（每通道略高于 1 dBm，"much more possible"）（看图核实）[p11]
+  - TFLN IQ-MZM（商用平台，350 nm LN 膜/硅）：3 dB EO 带宽超过 110 GHz 测量极限，但封装 Si RF 中介层限制封装带宽 <20 GHz；1 µm 下 Pockels 相移比 1550 nm 约强 50%（A. Aimone 等 Mo4-P-34）（看图核实）[p10]
   - 可扩展：放大器输出可达 36 dBm，文献有 100 W 放大器 [p13]
   - 对比：此前 1 µm 最高为 7.12 Tb/s MDM 传输 20.5 km G.652（31 通道×24.5 GBd×3 模，Aparecido, SPPCom 2026）；多为 VCSEL/强度调制、数 km [p6]
-  - 讲者提及 Sunday Workshop 上报道的 HCF 损耗 0.032 dB/km（C 波段）[p7，OCR]
+  - 讲者提及 Sunday Workshop 上报道的 HCF 损耗 0.032 dB/km（C 波段），并称低损可为 660/850/1060 nm 等新光谱窗口设计（看图核实）[p7]
 - 提到的公司/客户/产品/标准：Microsoft、Amonics（YDFA）、Nokia Bell Labs；DNANF；HITRAN 气体吸收数据库；生态短板：WSS、环形器等 1 µm 电信级器件缺乏
 - 与业界对比或记录声明：自称"first full coherent metro-scale system utilizing a record-low-loss 1 µm HCF"；53.3 Tb/s@106.1 km 对比此前 7.12 Tb/s@20.5 km [p6, p14]
 - 推荐配图页：p6（1 µm 历史工作与本工作的容量-距离散点）；p9（1 µm HCF 9 段纤损耗谱）；p13（AIR/SNR 随波长）
@@ -53,13 +53,13 @@ tags:
   2. 记录净吞吐：有 ROPA 30.66 Tb/s，无 ROPA 15.73 Tb/s。
   3. HCF 的低损耗同时惠及信号传播与远端泵浦，是超长无中继链路的关键使能（陆地、海缆、远程连接）。
 - 关键数据：
-  - 光纤：YOFC GTA-ST-HCF，1550 nm 损耗 0.032±0.003 dB/km（45.26 km）；纤芯 29 µm，包层 230 µm，涂覆 370 µm（OCR）；IMI −63.6 dB/km（OCR）[p10–p11]
-  - 链路：2×266 km GTA-ST-HCF = 532 km，总跨段损耗 57.2 dB；266 km 处斜率 −0.098 dB/km（OCR）[p15, p17]
+  - 光纤：YOFC GTA-ST-HCF，1550 nm 损耗 0.032±0.003 dB/km（45.26 km；OSA 三次 0.0292/0.0297/0.0297，OTDR 双向与光源光功率计均 0.035）；纤芯 29 µm，包层 230 µm，涂覆 370 µm；IMI −63.6 dB/km（看图核实）[p10–p11]
+  - 链路：2×266 km GTA-ST-HCF = 532 km，总跨段损耗 57.2 dB；266 km 处斜率 −0.098 dB/km（往返 OTDR 类曲线）；回波低于 SMF/HCF 适配器约 50 dB 的离散反射，用两个 AOM 切换（信号进入 HCF 约 1.7 ms 后切换）避免适配器串扰（看图核实）[p15, p17]
   - SMF/HCF 接口反射串扰抑制：两个声光调制器（AOM）交替切换，约 1.7 ms 后信号进入 HCF 时切换，接收端在 CUT 停发后采集 532 km 传播信号；反射通常约 −50 dB 量级会淹没 57.2 dB 跨损后的回波 [p17]
   - 发射：256 GS/s DAC（3 dB @ 75 GHz），EYDFA（铒镱共掺）booster，ASE 噪声加载 [p13–p14]
   - 无 ROPA：35 通道 PDM-QPSK，净总容量 15.73 Tb/s；每通道净速率约 415–470 Gb/s，频段 191.3–196.3 THz [p18]
   - 有 ROPA：37 通道 PDM-16QAM，净总容量 30.66 Tb/s；每通道约 660–900 Gb/s，频段 191.1–196.1 THz [p22]
-  - ROPA：到达 ROPA 的信号约 −15 dBm；泵浦 24–34.77 dBm（光纤端），泵浦路径含复用器与环形器约 15 dB 损耗；泵浦波长 1485 nm（OCR，p21）[p20]
+  - ROPA：84 km HCF + ROPA + 182 km HCF 布局；到达 ROPA 的信号约 −15 dBm；泵浦 24–34.77 dBm（光纤端），泵浦路径含复用器与环形器约 15 dB 损耗；泵浦波长 1485 nm；接收 256 GS/s、113 GHz 示波器（看图核实）[p20, p21]
   - 泵浦功率降低 10 倍（约 34.8→24 dBm），平均仅损失约 10.15% 容量（191.25/193.59/195.65 THz 三通道）[p23]
   - 对比 SOTA（仅 C 波段无中继）：此前最高约 407 km（ref [12] Busson，32 Tb/s PCS-16QAM，实时）；本工作距离提高 120+ km（+30.7%）[p24–p25]
   - 单信道更长距离先例：ref[16] Feng OFC 2026 M2C.3 HCF 上 400G/800G/1.2T 分别 726.1/611.9/436.1 km（仅 EDFA）；ref[8] Qiu 746.69 km（100G）[p24]
@@ -80,7 +80,7 @@ tags:
   - 2024 km O+C 双向：O 波段前向 22.7 Tb/s、后向 22.9 Tb/s；C 波段前向 29.2 Tb/s、后向 31.0 Tb/s；GMI 合计 51.9 Tb/s（FW）+ 53.9 Tb/s（BW）；解码 47.3 + 49.7 Tb/s [p14]
   - 调制格式：O 波段 QPSK，C 波段气体吸收线（GLA）受影响信道用 16QAM，其余 64QAM；O 波段约 100 Gb/s/通道，C 波段 150–250 Gb/s/通道 [p14]
   - 4500 km C 波段双向（拆除 O/C WDM 耦合器降损耗）：GMI 21.5 + 22.2 Tb/s，通道 100–200 Gb/s；6750 km：16.6 + 17.2 Tb/s，GLA 影响信道 <100 Gb/s [p15]
-  - DSP/系统（OCR）：32 GBd，101 抽头导频/41 抽头盲 DD-LMS，GLA 补偿/频谱平坦化算法；34 dBm 高功率 booster，31 dBm 高功率 BDFA；AOM 零频移 [p12–p13，OCR，未逐项核对]
+  - DSP/系统：32 GBd、1.33 GHz 间隔、1% 滚降 RRC，101 抽头导频/41 抽头盲 DD-LMS，GLA 补偿/频谱平坦化算法（Sillekens & Sohanpal OFC 2026 Th2A.50），自适应码率解码（约 0.01 粒度）；34 dBm 高功率 booster，31 dBm 高功率 BDFA（Lightera）；AOM 零频移；112 km HCF 双向环路，O 波段 257 路 8.56 THz（30.8 dBm）、C 波段 135 路 4.50 THz（34.5 dBm）（看图核实）[p12–p13]
   - ASN 在 ECOC 2026 Workshop 的引述（p9）："6000 km: HCF can reduce the energy per bit by 2x and potentially double capacity. However, spatial constraints prevent translating this fibre-advantage into the same system-level gain." [p9]
 - 提到的公司/客户/产品/标准：Microsoft、UCL、Lightera；铋掺杂光纤放大器（BDFA，O 波段）；EDFA；对比文献 Ali OFC25、Feng OFC26、Hong ECOC25、Boddeda OFC26 Th4B.7、Zhang CLEO26、Han Opt. Express 35（2026）、Yang ECOC26 We2-D1、Mardoyan ECOC26 We3-H2
 - 与业界对比或记录声明：自称 "First long-distance bi-directional optical fibre transmission"；p9 散点图显示本工作 2024 km 双向聚合约 100+ Tb/s，高于 [6][7][8][9] 的重复传输结果 [p9, p16]
@@ -96,13 +96,13 @@ tags:
 - 关键数据：
   - 450 GBd 需要约 225 GHz 带宽，"no device reaches it" [p8]
   - 3.83 Tb/s：PS 64-QAM，熵 5.3 bit/符号，450 GBd，B2B；SNR X/Y = 13.95/13.88 dB；NGMI 0.8795/0.8768，软判决 FEC 阈值 NGMI 0.8714；10 km SSMF 点约 0.873（图示，略高于阈值）；发射信号约 226 GHz×2 频谱切片 [p13]
-  - 发射机：TFLN I/Q 调制器，2 cm 电极，6 dB 带宽 >110 GHz，Vπ=2 V @2 GHz（OCR）[p9]
-  - 接收机：OAWM（光学任意波形测量）——375 GHz PM 梳，两根相距 225 GHz 的线作 LO；两个相干接收机 256 GSa/s、113 GHz 各；偏振用 TDM 检测（4 µs 开关、PBS、400 m 延迟），PDM 用 10 m 仿真器；10 km SSMF [p10，OCR]
-  - DSP：widely-linear 8×2 MIMO（校正 I/Q 时偏与频响、两个频谱切片拼接、镜像抑制、偏振解复用），三阶 Volterra 均衡（记忆 385/25/13 抽头）；DBI-DAC 非线性；离线处理 [p12，OCR]
+  - 发射机：DBI-DAC 对（226 GHz 分 90/40/45/51 GHz 四段，经 88/128/226.5 GHz 上变频合路）+ TFLN I/Q 调制器，2 cm 电极，6 dB 带宽 >110 GHz，Vπ≈2 V @2 GHz（看图核实）[p9]
+  - 接收机：OAWM（光学任意波形测量）——37.5 GHz PM 梳，两根相距 225 GHz 的线作 LO；两个相干接收机 256 GSa/s、113 GHz 各；偏振用 TDM 检测（4 µs 开关、PBS、400 m 延迟），PDM 用 10 m 仿真器；10 km SSMF（看图核实；此前 OCR 读作 375 GHz 有误）[p10]
+  - DSP：widely-linear 8×2 MIMO（校正 I/Q 时偏与频响、两个频谱切片拼接、镜像抑制、偏振解复用，内嵌数字锁相环），三阶 Volterra 均衡（记忆 385/25/13 抽头）；上采样 512 GSa/s、频谱切片 ±112.5 GHz 重定位、重采样 900 GSa/s；DBI-DAC 非线性；离线处理（看图核实）[p12]
   - 历史记录：2.42 Tb/s（ECOC'23）、2.52 Tb/s（ECOC'25，约 250 GBd）；OFC 2025 PDP 440 GBd 1-D ASK 单维 1.04 Tb/s（PS-16ASK，3.4 bit/符号）[p8]
-  - 功耗趋势：模块功耗/100G 随 CMOS 节点下降；全 C 波段 25.6 Tb/s 收发器功耗 95–180 W；可用 10×450 GBd 替代 32×800ZR（118 GBd）覆盖 4.8 THz（OIF 800ZR 栅格）[p14, p15；p14 OCR]
+  - 功耗趋势：模块功耗/100G 随代际下降（100G MSA 约 80 W → 1600ZR 约 2.2 W，早期 −25%/年，此后 −8%/年至 0.75 W 或 −13%/年至 0.38 W @2040），450 GBaud 产品约 2030 年后；全 C 波段 25.6 Tb/s 收发器功耗 95–180 W；可用 10×450 GBd 替代 32×800ZR（118 GBd）覆盖 4.8 THz（OIF 800ZR 栅格），单封装含微梳、片上 EDWA 与 10 路 I/Q 调制器（看图核实）[p14, p15]
   - 结构提议：Si₃N₄ 微谐振腔梳 + 片上铒放大器（EDWA）→ 解复用 → 10 个 I/Q 调制器 → 复用 → EDWA booster，一个封装 [p15]
-- 提到的公司/客户/产品/标准：Nokia Bell Labs；400ZR/800ZR/1600ZR（OIF）；CFP/CFP2-DCO；100G 5×7" MSA；IEEE 802.3df；光频梳（OAWG/OAWM）；Yamazaki JLT 2024 单载波 CSRZ-OTDM InP 芯片 2.5 Tb/s（OCR，p4，看不清）
+- 提到的公司/客户/产品/标准：Nokia Bell Labs；400ZR/800ZR/1600ZR（OIF）；CFP/CFP2；100G MSA；IEEE 802.3df；光频梳（OAWG/OAWM）；历史超通道 Y. Ma OFC 2009、S. Chandrasekhar ECOC 2009；Yamazaki JLT 2024 单载波 CSRZ-OTDM InP 芯片 2.5 Tb/s；H. Peng ECOC 2025 微梳 OAWG 400 GBd 32QAM（p4 看图核实）；D. Che OFC 2026 教程
 - 与业界对比或记录声明：图示标为 "this work" 3.83 Tb/s，高于此前单波长相干 ≥1.6 Tb/s 记录（最高 2.52 Tb/s）[p8]；同一团队早先 440 GBd 1-D ASK 为单维记录 [p8]
 - 推荐配图页：p8（单波长速率 vs 波特率，含 3.83 Tb/s）；p13（3.83 Tb/s 频谱/星座/NGMI）；p7（实验室领先时间缩短曲线）；p15（10×450 GBd 全 C 波段封装愿景）
 
@@ -118,10 +118,10 @@ tags:
   - 均匀 PAM-4：BER 0.0225，NGMI 0.9143；PS PAM-6（H=2.4）：BER 0.0331，NGMI 0.8785；眼图单符号宽 2.27 ps [p8]
   - 此前 IM-DD 最高：NTT 248 GBd、660 Gb/s 净（ECOC 2025）；440 GBd ASK/相干（Nokia OFC 2025）需 LO，非 IM-DD [p2]
   - 发射：Keysight 256 GSa/s AWG + DBI-DAC（频带 DC–90/90–130/130–175/175–221 GHz，含 87/128/222 GHz 上变频），1550 nm，薄膜 LiNbO₃ MZM，EDFA；接收：PD+偏置器，DBI-ADC（DC–130、130–180、180–221 GHz），512 GSa/s（180 GHz）实时示波器；光谱宽度 441.8 GHz（440×1.004）[p7]
-  - MUTC 光电二极管（引用上海科技大学 Nat. Photon. 19, 1301 (2025)）：206 GHz、0.81 A/W，BEP 数值看不清；本实验器件约 190 GHz、0.46 A/W（含耦合，5 mA）[p5，OCR]
-  - 色散反射（OCR，p9）：C 波段 SSMF 826.6 Gb/s 可到约 30 m，50 m 处约 0.7 dB SNR 代价；预测 3 dB 衰落距离：C 波段 SSMF（17 ps/nm/km）约 38 m，HCF（约 3 ps/nm/km）约 200 m，O 波段 SSMF（|D|≈1 ps/nm/km）约 0.9 km（OCR，未核对），O 波段近零色散可达数 km [p9]
-  - scale-up 场景：10–50 m，数百条 2–32 Gb/s 通道，microLED/无 DSP/无 FEC，约 10 ns 延迟/芯粒，<1 pJ/bit；举例 Avicena、Ayar Labs、Intel OCI [p11，OCR]
-  - coherent-lite：Zhao OFC 2025 硅光收发器 925 Gb/s 净（1.12 Tb/s 线速率），无 Rx 激光器，10 km HCF 上锁定 Tx 激光；偏振手动跟踪，CDR 数字仿真 [p12，OCR]
+  - MUTC 光电二极管（引用上海科技大学 L. Li 等 Nat. Photon. 19, 1301 (2025)）：206 GHz、0.81 A/W、BEP 133.5 GHz；本实验器件约 190 GHz、0.46 A/W（含耦合，5 mA）；关键设计：模斑转换器、InP cliff 层、焊盘下低 k BCB（看图核实）[p5]
+  - 色散限制（看图核实）：C 波段 SSMF 826.6 Gb/s 可到约 30 m，50 m 处约 0.7 dB SNR 代价（440 GBaud，3 dB 衰落约 40 m@221 GHz）；预测 3 dB 衰落距离：C 波段 SSMF（17 ps/nm/km）约 38 m，HCF（约 3 ps/nm/km）约 200 m，O 波段 SSMF（|D|≈1 ps/nm/km）约 0.9 km，O 波段近零色散可达数 km；固定色散下距离 ∝ 1/B²，800G/lane IM-DD 可满足亚 km scale-up [p9]
+  - scale-up 场景：10–50 m，数百条 2–32 Gb/s 通道，microLED（无需激光）/无 DSP（模拟后端判决 NRZ）/无 FEC（约 10 ns 延迟/芯粒）/无 SerDes，<1 pJ/bit；举例 Avicena、Ayar Labs、Intel OCI；"快 IM-DD 上有 coherent-lite、下有慢而宽"（看图核实）[p11]
+  - coherent-lite：目标看起来像四条 IM-DD 通道（模拟偏振解复用 + 光学载波恢复 OPLL，剩每通道时钟恢复与前馈均衡）；Zhao OFC 2025 硅光收发器无尽偏振跟踪；Brodnik Nat. Photon. 2021 Rx 激光经光纤锁定 Tx 激光；Wang 等 ECOC 2026 PDP-C-6：10 km HCF 上 925 Gb/s 净（1.12 Tb/s 线速率），偏振手动设定，CDR 数字仿真（看图核实）[p12]
 - 提到的公司/客户/产品/标准：Nokia Bell Labs、上海科技大学、Keysight、NTT（对比）、Avicena/Ayar Labs/Intel OCI（scale-up 举例）；IEEE P802.3df；LR4 IM-DD vs LR coh-lite
 - 与业界对比或记录声明：827 Gb/s（页面写法）为 IM-DD 单通道最高，此前最高 660 Gb/s 净（NTT，248 GBd）[p2]；讲者指出瓶颈在接收机（PD & ADC），因为直接检测无法光学拼接频谱 [p2]
 - 推荐配图页：p2（IM-DD 速率 vs 波特率总览，标出 827 Gb/s）；p7（DBI-DAC/ADC 频带方案与实验装置）；p8（NGMI–熵曲线+眼图）；p13（结论页）

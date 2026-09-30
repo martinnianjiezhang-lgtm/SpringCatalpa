@@ -6,7 +6,7 @@ tags:
 ---
 
 ### 0920-am-Su1-H-01-Telefonica-开放数据基础设施.pdf
-- 讲者/机构：讲者姓名未见；Telefónica（ETSI TC DATA 相关） | 题目：未见完整英文原题（页面主题：Open/Distributed Data Infrastructure；ETSI TC DATA 活动） | 类型：Workshop（Su1-H 联邦光测试床/数据空间）
+- 讲者/机构：讲者姓名幻灯片未显示；Telefónica（ETSI TC DATA 相关） | 题目：未见完整英文原题（p1 为 "The Motivation" 页，看图核实；主题 Open/Distributed Data Infrastructure；ETSI TC DATA 活动） | 类型：Workshop（Su1-H 联邦光测试床/数据空间）
 - 方向归属（主/次）：主 1（AI光网络/数据基础设施）；次 6 不适用
 - 核心主张：
   - 数据应像分布式计算一样，摆脱集中化与单一访问模式，需要“分布式、开放、可信”的数据方案 [p1]
@@ -30,7 +30,7 @@ tags:
 - 推荐配图页：p5（IP层症状与光层根因对照的 flapping 链路案例）；p2（光传输 AI/自治用例分类总表）
 
 ### 0920-am-Su1-H-04-NEC-数据空间支撑数字孪生.pdf
-- 讲者/机构：讲者姓名未见（OCR 见 NEC Corporation） | 题目：Data Space for Digital Twin（IOWN，页面主题；完整英文原题看不清） | 类型：Workshop
+- 讲者/机构：讲者姓名幻灯片未显示；NEC Corporation（p1 看图核实，浏览器标签为 "03_Flavio.pdf"） | 题目：Data Space / Digital Twin（IOWN，页面主题；完整英文原题未显示） | 类型：Workshop
 - 方向归属（主/次）：主 1（AI光网络/数字孪生）
 - 核心主张：
   - 数据空间提供可信、受治理的数据共享，数字孪生把数据转化为预测、仿真和决策，形成持续价值闭环 [p10]
@@ -54,19 +54,19 @@ tags:
   - NICT EDFA 1 增益形状误差：Open Ireland 模型未适配 0.36 dB；假设平坦谱 0.19 dB；测量噪声 0.03 dB；10 次本地测量适配后 0.046 dB，同类型 NICT 模型 0.037 dB；20 次测量两者均达测量噪声；少于 5 次时仅用本地数据优于迁移模型；测量顺序为先满载再对半再三分之一 [p5]
   - Splice：发现 14,428 条路径（Lumentum、Adtran、Juniper 设备），其中 12,359 条可读；11 个固定工具，对各厂商同一接口 [p8]
   - 13 天无人值守噪声系数采集，2026 年 4 月 12 日起，每 3 分钟一次测量；agent 发现某厂商收发器改频后不生效，需 off-on 循环，当次即修复；大故障经 Discord/Slack 告警通知人 [p9]
-- 提到的公司/客户/产品/标准：Lumentum ROADM、Adtran TeraFlex 收发器、Juniper（页面标注为 in-line amplifier 一栏，对应关系较乱，看不清）、Cisco；NICT、Fraunhofer HHI；Optical Testbed Data Space、COSMOS、CORAL、YANG、gNMI；Splice 开源（github.com/Open-Ireland-Testbed/splice）[p2][p8][p10]
+- 提到的公司/客户/产品/标准：Lumentum ROADM、Adtran TeraFlex 收发器、Juniper in-line amplifier（p8 看图核实：Splice 在三家设备上发现 14,428 条 YANG 路径、12,359 条可读，Agent 用 11 个固定工具）、Cisco；NICT、Fraunhofer HHI；Optical Testbed Data Space、COSMOS、DTU 公开数据集、YANG、gNMI；Splice 开源（github.com/Open-Ireland-Testbed/splice）；H. Akbari et al., ECOC 2026 demo [p2][p8][p10]
 - 与业界对比或记录声明（SOTA/首次/record）：无明确 record 声明；称“我们与 HHI 分别用了 NICT 数据、跑了 TCD 放大器模型”[p2]
 - 推荐配图页：p5（增益形状误差 vs 本地测量次数曲线，含 0.36/0.19/0.03 dB 基线）；p9（agent 无人值守 13 天实验闭环）
 
 ### 0920-am-Su2-H-03-FraunhoferHHI-电信数据空间.pdf
-- 讲者/机构：Angela Mitrovska / Fraunhofer HHI | 题目：完整英文原题看不清（主题为网络自动化中跨组织闭环与 Optical Testbed Data Space, OTDS） | 类型：Workshop
+- 讲者/机构：Angela Mitrovska / Fraunhofer HHI（邮箱见 p5） | 题目：From Data Sharing to Federated Operations: The Expanding Role of Telco Data Spaces（p1 看图核实） | 类型：Workshop
 - 方向归属（主/次）：主 1（AI光网络/数据空间）
 - 核心主张：
   - 迈向自动化阶梯需跨组织闭环（Awareness→Analysis→Decision→Execution），受厂商专有 IP、运营商保密及监管限制，跨方共享受信任缺失阻碍 [p2][p3][p4]
   - 以数据空间原则做治理：数据主权+策略引擎（谁、何时何地、如何、为何用途），分别治理数据（OTDS）、设备（所有权感知 YANG/ODRL 策略）、计算（多域 QoT 安全多方计算）[p5][p6][p7][p8]
   - 现场演示：IPoWDM 相干可插拔控制架构对比，及 OTDS 跨 HHI/Open Ireland(TCD)/NICT+Cisco 共享数据与数字孪生模型 [p9]
 - 关键数据：无定量结果。多域 GSNR 端到端估计用加密份额的安全多方计算，各域不泄露自身 GSNR（引自 OFC 2026）[p8]；演示时间 2026-09-22 11:00–12:30，Pavilion 1 Area 1065 [p9]
-- 提到的公司/客户/产品/标准：NICT、TCD/Open Ireland、Cisco、Telia（页面公司名较模糊）、Infosim；YANG + ODRL 策略扩展、NETCONF、IPoWDM、TM Forum 自治等级、Optical Testbed Data Space；引用 OFC 2023、JOCN 2025、OFC 2026 两篇 [p5][p6][p7][p8][p9]
+- 提到的公司/客户/产品/标准：NICT、TCD/Open Ireland、Cisco、Adtran Networks SE、Telia Company AB、Infosim、TU Berlin（p9 demo 作者机构看图核实）；Edgecore SONiC、400G ZR+ 相干可插拔；YANG + ODRL 策略扩展、NETCONF、IPoWDM、NDGC（Network Data Governance Connector）、安全多方计算 GSNR 估计、TM Forum 自治等级、Optical Testbed Data Space；引用 OFC 2023、JOCN 2025、OFC 2026 两篇 [p5][p6][p7][p8][p9]
 - 与业界对比或记录声明（SOTA/首次/record）：无
 - 推荐配图页：p6（OTDS 数据交换与 DT 模型交换双流程图）；p8（多域 QoT 的安全多方计算架构）
 

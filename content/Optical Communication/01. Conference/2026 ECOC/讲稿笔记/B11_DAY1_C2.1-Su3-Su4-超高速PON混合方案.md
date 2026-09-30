@@ -15,7 +15,7 @@ tags:
   2. 混合 DD/相干架构（同一系统内混合直检与相干）是"有意思但研究不足"的选项，相对纯 IMDD 与纯相干。
   3. 目标：让混合、纯 IMDD、纯相干与器件专家同台辩论，评估技术可行性与商业可行性，判断 ITU-T 可能的走向。
 - 关键数据：
-  - 开场投票 Q1"VHSP 应选哪种技术"选项为 IMDD/Coherent/Hybrid/混合其他/其他；结果图上三个可读百分比为 42%、31%、27%，柱与选项的对应关系图上看不清，不下结论 [p6]
+  - 开场投票 Q1"VHSP 应选哪种技术"：IMDD 27%、Coherent 31%、Hybrid 42%、混合其他 0%、其他 0%（看图核实）[p6]
   - "混合"定义：IM-Tx + 相干接收；先进 Tx（SSB、BGPC、Duobinary 等）+ 直检；上下行可选不同技术 [p4]
   - Session 1 六讲：Verizon、Coherent、Altice Labs、KIT、Sumitomo、MaxLinear，后接 Panel（主持 Rene Bonk）[p7]
 - 提到的公司/客户/产品/标准：ITU-T、Verizon、Coherent、Altice Labs、KIT、Sumitomo Electric、MaxLinear、Mentimeter
@@ -34,7 +34,7 @@ tags:
   - 波长规划 WP-A 1290–1330 nm、WP-B 1330–1370 nm、WP-C C 波段 [p8]
   - 候选符号率：PAM4 1×200 GBd；PAM2 固定 1×100/N×100/N×50 GBd，可调 N×100 GBd；SSB/OSSB 1×120、2×120 GBd；DP-QPSK 1×60 或 1×120 GBd；PTBC 可调 n×30/n×60 GBd [p7]
   - 时间线：VHSP 2022 立项、2025 G.Sup88 批准、2027 各类别选技术、2028 最终技术选择、2028–2033 标准、2035+ 商用；对比 50G-PON 2016 立项、2026 商用，NG-PON2 2010 立项、2019 商用 [p11]
-  - FSAN 路线：VHS-PON（2030+）200G；未来 PON 2035+ [p10，OCR]
+  - FSAN 路线：G-PON(2004) 2.5G → XG(S)-PON 10G → NG-PON2 4x10G → HSP TDM(2021) 50G → WDM PON(2023) 20x25G → HSP TWDM(2027+) Nx50G → VHS-PON（2030+）200G → 未来 PON 2035+；BiDi PtP 2024 年 100G、2029+ 200G；2026+ 动因含时敏业务、6G 承载、工业 PON、光纤传感 [p10，看图核实]
 - 提到的公司/客户/产品/标准：G.Sup88、G.sup.ION-aiBB、XGS-PON、50G-PON、NG-PON2、10G-EPON、25GS-MSA、FSAN
 - 与业界对比或记录声明（SOTA/首次/record）：无
 - 推荐配图页：p7（技术候选树与符号率）；p11（VHSP 与 50G-PON、NG-PON2 时间线对比）
@@ -47,7 +47,7 @@ tags:
   2. 全 IMDD 最简单最便宜，但灵敏度与传输距离在 VHSP 速率下成为主要约束；全相干 ONU 技术强大但对成本敏感 ONU 可能过度。
   3. 获胜者未必性能最优，而是"百万用户规模下每美元性能最好"的方案。
 - 关键数据：
-  - 比较了 6 种 ONU 架构：1 IMDD、2 全相干、3 相干 intradyne/homodyne Rx+IMDD Tx、4 偏振分集外差数字 I/Q、5 单偏振外差数字 I/Q+IMDD Tx、6 全相干 Tx+IMDD Rx；用雷达图比较 DSP 负载、DSP 复杂度、Rx 灵敏度、PIC 复杂度/面积、ADC 带宽、制造复杂度、成本、功耗、Reach（各轴数值看不清）[p5–p8]
+  - 比较了 6 种 ONU 架构：1 IMDD、2 全相干、3 相干 intradyne/homodyne Rx+IMDD Tx、4 偏振分集外差数字 I/Q、5 单偏振外差数字 I/Q+IMDD Tx、6 全相干 Tx+IMDD Rx；用雷达图（0–6 刻度）比较 DSP 负载、DSP 复杂度、Rx 灵敏度、PIC 复杂度/面积、ADC 带宽、制造复杂度、成本、功耗、Reach：IMDD 各轴约 1–2 但灵敏度与距离受限；全相干多数轴约 5–6"对成本敏感 ONU 过度"；方案 3 在保持低成本 ONU Tx 的同时获得高灵敏下行接收；方案 5 把复杂度从光学移到高速 ADC/DSP（ADC 带宽轴最高）（看图核实，雷达图读数为估计）[p5–p8]
   - 方案3 被评为"比全相干收发更适合 PON：高灵敏下行 + 低成本 ONU Tx" [p7]
   - 方案5 把复杂度从光学移到很高速 ADC 与 DSP [p8]
 - 提到的公司/客户/产品/标准：无
@@ -67,7 +67,7 @@ tags:
   - EML+SOA（50G）：49.7664 Gb/s NRZ，TLD=45℃，Vpp=1.8 V，无 FFE。条件1/条件2：LD 电流 120/70 mA，SOA 电流 100/50 mA，EA 电压 −1.15 V，波长 1341.7/1341.1 nm，Mask margin 19/8.9%，Pave 13.58/11.94 dBm，Poma 15.04/13.54 dBm，消光比 7.52/7.92 dB，功耗 333.7/159.8 mW；另图示眼图 ER 4.96 dB、TDECQ 1.81 dB [p6]
   - 半可调 EML：C/L 波段约 6–8 信道，25 Gb/s；调谐波长约 1528→1538 nm 随调谐功率 0–90 mW（读图）；线宽@100 MHz 约 0.7–1.1 MHz（读图）；CoC 功耗约 160–250 mW（读图）[p9]
   - 数据中心激光器数量增长图：EML CAGR=48%，CW CAGR=110%；另一曲线 CAGR=23.5%（坐标为读图，未核对）[p5]
-  - PCSEL（未来）：波长约 1.3 µm 级单模面发射，发散角约 1°，适合阵列 [p10，OCR，未看图]
+  - PCSEL（未来）：≥1.3 µm 单模面发射，发散角约 1°，适合 1D/2D 阵列（1 mm 见方 4 波长）；CW 25°C 输出 800 mW，SMSR >78 dB，RIN −150 dB/Hz（400 mW），白噪声线宽 πSf = 20 kHz（看图核实）[p10]
 - 提到的公司/客户/产品/标准：Yole Group、InP EML、高功率 CW DFB、可调激光器、PCSEL、SiPh/TFLN、NG-PON2、APN
 - 与业界对比或记录声明（SOTA/首次/record）：无
 - 推荐配图页：p6（100 Gbd EML 带宽响应、眼图与 EML+SOA 参数表）；p9（半可调 EML 的调谐、功耗与线宽）
@@ -83,8 +83,8 @@ tags:
   - 相干可插拔现状：400ZR（QSFP-DD）2020 年首次大规模采用；可插拔出货量 2022 年起超过嵌入式；2025 年可插拔收入 \$2B（Cignal AI）；估计出货超 600,000 件；2026 年嵌入式仍约 33% 份额（LightCounting）；800ZR 正大规模部署，1600ZR 预计 2028 年 [p2]
   - 4 dB 消光比的 EML（100G/lane IMDD 可插拔常用）相对 BPSK 增加约 14 dB 灵敏度代价；曲线显示 NRZ 相对 BPSK 代价约 15 dB@ER 3 dB 降至约 5 dB@ER 14 dB（读图）[p6]
   - ZR / CL / VHSP 相干 PON 对比表：FEC 限 ZR 4e-3–2e-2、CL 8e-3 或 1.1e-2、CPON 1e-2 或 2e-2；数据率 ZR 100/400/800/1600、CL 800/1600/3200、CPON 至少 200G；Tx 功率 ZR 0/−8 dBm、CL −9.5 dBm（800G OIF）、CPON 至少 0 dBm（待定）；激光器 ITLA 150/300 kHz、固定 DFB 1 MHz、固定 DFB；光功率预算 ZR 22 dB（100ZR），29 dB 可支持，CL 7–14 dB，CPON 29–35 dB；链路 ZR 放大 80–1000 km，CL 无放大 10–20 km，CPON 20 km [p7]
-  - 带 booster SOA 的相干 PON（K. Vijayan, OFC 2025）：链路预算 400 Gb/s 为 29 dB（4-QAM/16-QAM 图内分别标注，具体调制对应看不清）、200 Gb/s 为 41 dB；标准 400ZR+ 模块的 QPSK 模式可支持 200 Gb/s [p8]
-  - 100G ZR QSFP28："业界首个"，Steelerton DSP 低于 2 W [p4，OCR]
+  - 带 booster SOA 的相干 PON（K. Vijayan, OFC 2025）：链路预算 400 Gb/s（16-QAM）为 29 dB、200 Gb/s（4-QAM）为 41 dB；可免去 OLT 突发模式 TIA/DSP；标准 400ZR+ 模块的 QPSK 模式可支持 200 Gb/s [p8，看图核实]
+  - 100G ZR QSFP28："业界首个"，Steelerton DSP 低于 2 W，配功耗优化可调激光器与高集成硅光 PIC（2023 Lightwave Innovation Reviews 5.0）[p4，看图核实]
   - 缺口与对策表：激光器（固定但频率受控 DFB）、OLT 需突发 TIA/DC 耦合（ONU 突发 booster SOA）、下行预算（OLT booster SOA）等 [p9]
 - 提到的公司/客户/产品/标准：400ZR、800ZR、1600ZR、400ZR+、100G ZR QSFP28、Steelerton DSP、Coherent Lite（CL）、OIF、Cignal AI、LightCounting
 - 与业界对比或记录声明（SOTA/首次/record）："industry's first and only DSP under 2W"（Coherent 100G ZR）[p4]
@@ -114,7 +114,7 @@ tags:
   3. 混合方案看起来有吸引力，需进一步研究。
 - 关键数据：
   - 目标：最大 200 Gbit/s 净速率 [p2]
-  - IMDD NRZ 200G：O 波段两波长各 120 Gbaud NRZ；符号率接收，两个 120 GS/s ADC（5 bit，每波长一个）；21 抽头 FFE（约 5×10^12 MAC/s，数值 OCR 略有不确定）+ BCJR + 软输入 LDPC [p4]
+  - IMDD NRZ 200G：O 波段两波长各 120 Gbaud NRZ；符号率接收，两个 120 GS/s ADC（5 bit，每波长一个）；21 抽头 FFE（5×10^12 MAC/s）+ BCJR + 软输入 LDPC；时钟恢复关键，CDPC 会使下行信号呈突发（看图核实）[p4]
   - CDPC：10 抽头、双波长约 2.4×10^12 MAC/s；问题：Tx 信号变为突发不连续影响时钟恢复；光纤长度已知但零色散波长（ZDW）未知，难识别正确 CDPC 组 [p6]
   - PAM-4 CD 容忍度好但 OMA 灵敏度差；单波长 120 GBaud 灵敏度预计更差（待定）[p7]
   - 全相干 DP-QPSK 60 GBaud 达 200G；T/2 均衡时 4 个 ADC 120 GS/s（对比 NRZ 两个 120 GS/s）；2×2 MIMO 均衡 42 抽头，约 80×10^12 MAC/s [p9]
@@ -159,9 +159,9 @@ tags:
   2. NRZ 在 100–120 Gb/s 时色散容忍度将工作波段限制在零色散波长附近（1290–1330 nm），不需要 GPON 共存时可接受。
   3. 需要 GPON 共存则用混合"IM-DD"技术：增加 OLT 复杂度/成本，换取 ONU 保持经典低成本 IM-DD。
 - 关键数据：
-  - 三档方案："Plan A" 1290–1330 nm 全 IMDD（OLT+ONU，最低成本，无 GPON 共存）；"Plan B" 1330–1370 nm，DS 为 ODB-DD/SSB-DD/DCPC-DD 类，US IM-DD 或 IM-COH（ONU 全 IM-DD，OLT 更贵，可与 GPON 共存）；"Plan C" C 波段相干（ONU、OLT 成本最高）[p8，DS/US 具体分栏对应部分看不清]
+  - 三档方案："Plan A" 1290–1330 nm 全 IMDD（DS/US 均 IM-DD，OLT+ONU 成本最低，无 GPON 共存）；"Plan B" 1330–1370 nm，DS 为 ODB-DD/SSB-DD/DCPC-DD，US 为 IM-COH（ONU 全 IM-DD、成本最低，OLT 更贵，可与 GPON 共存）；"Plan C" C 波段，DS 相干、US 相干或 IM-COH（ONU、OLT 成本最高，可共存）[p8，看图核实]
   - 混合选项优缺点：ODB @OLT Tx（JLT 2024，100 Gb/s DS，38 dB 预算，收益有限）；OLT 预补偿 CD（需 IQ 调制器，2 个嵌套 MZM，线性度要求高）；SSB @OLT（可用单 DD-MZM 实现，需至少驱动一臂模拟信号；ECOC 2026 MoS-G1）；OLT 相干接收（CD 代价约 0，需全相干突发接收机与 OLT 侧波长严格对准 ONU；ECOC 2026 MoS-G2）[p7]
-  - 引用：V. Houtsma 等 ECOC 2025 100–120G IM-DD PON 32 dB 预算 [p4，OCR]
+  - 引用：V. Houtsma 等 ECOC 2025 "100–120G IM-DD PONs with 32 dB power budget and TDEC with DFE based reference receiver"；100–120 Gb/s NRZ 色散容限把 VHSP 工作波长限制在零色散附近 1290–1330 nm [p4，看图核实]
 - 提到的公司/客户/产品/标准：ITU-T G.Sup88、FSAN Roadmap 3.0、R. Borkowski 等 OFC PDP 2025 突发相干 PON 上行（20 nm 快速 LO 调谐）
 - 与业界对比或记录声明（SOTA/首次/record）：无
 - 推荐配图页：p7（四种混合 IM-DD 技术的优缺点与框图）；p8（Plan A/B/C 分类表）
@@ -177,7 +177,7 @@ tags:
   - 100G PAM-4 C 波段下行 20 km 连续传输：对光纤长度失配的容忍约 ±2 km，但 ITU-T PON ODN 要求 0–20 km 运行 [p7]
   - 多用户 PON 100 Gbps PAM-4 载荷，BER 目标 2×10^-2：ODN 损耗 >31 dB@20 km；CD 容忍 ±40 ps/nm（C 波段）、±53 ps/nm（O 波段）；0 km 时 ODN 损耗峰值约 35 dB，11.5 km 约 34 dB，20 km 约 32–33 dB；对照线 Class N1 = 29 dB [p8]
   - PAM-2 + 相干接收（Mo4-P-79）：ECL 与 DFB 激光器下，相干接收（20 km、40 km COH）在 BER 2×10^-2 处的 ODN 损耗约 46 dB（读图），DD 接收 10 km 约 38–40 dB、20 km 约 40–41 dB（读图）；需修改相干 DSP 以处理"完全偏振、带强光直流分量"的信号 [p10]
-  - DCPC 容忍度：PAM 的 CD 预补偿容忍度约翻倍（CD_PC = 2·CD_PAM，OCR）[p5]
+  - DCPC 容忍度：按 CD^PAM_max 精确预补偿时，PAM 的 CD 容限翻倍（CD^DCPC_max = 2·CD^PAM_max；CD^Residual = CD^Accumulated − CD^DCPC）[p5，看图核实]
   - 关联论文：MoS-G3/613（MPI 与 DGD 容忍）、Mo4-P-79/154、Mo4-P-86/486（PAM2-SSB+DCPC，2×100 Gb/s/λ VHSP 下行）[p12]
 - 提到的公司/客户/产品/标准：Huawei Munich、ITU-T PON ODN 0–20 km、Class N1
 - 与业界对比或记录声明（SOTA/首次/record）：其 2020 年首个 C 波段 PAM-4 结果（"100+ Gbps/λ 50 km C-Band Downstream PON"）[p7]
@@ -194,7 +194,7 @@ tags:
   - 50 Gbaud NRZ SSB 实验：Tx 功率 +10 dBm，61 抽头 FFE，25G 级 APD，CD 系数 17 ps/nm/km；灵敏度优于 −18 dBm（BER=1e-2）时 CD 代价小于 4 dB，累积 CD 最高 680 ps/nm（对应 40 km）；无 CD 时灵敏度约 −21 dBm（读图）[p7]
   - 线性近似距离表（E 波段 4 ps/nm/km；C 波段 17 ps/nm/km）：50G：E 波段 2 dB 代价 60 km、3.5 dB 代价 170 km；C 波段 14 km（实测）/40 km（实测）；100G：E 30/85 km，C 7/20 km；200G：E 15/42.5 km，C 3.5/10 km [p8]
   - 若容忍 4 dB 代价：100 Gbps 20 km、200 Gbps 10 km 在所有波段可实现；结合 DCPC 可进一步减小代价 [p8]
-  - 功率衰落陷波示例：0 km 时首个陷波约 14.26 GHz（18 km 相关幻灯片），24 km 时 12.35 GHz（OCR）[p5–p6]
+  - 功率衰落陷波示例（DSB 50 GBd NRZ）：18 km 时首个陷波 14.26 GHz、40 km 时 9.56 GHz；另一图 24 km 时 12.35 GHz；SSB 仿真谱无陷波，P_out ∝ cos²(πDλ²Lf²/c)（看图核实）[p5–p6]
   - 光学 SSB（OSSB）：LD+EA/MZM+光滤波器，边带抑制高，需精确控制滤波器与激光波长 [p9]
 - 提到的公司/客户/产品/标准：50G-TWDM-PON、E 波段（LWP 光纤）、O 波段已全部占用、ECOC 2025 IQ-MZM SSB 下行
 - 与业界对比或记录声明（SOTA/首次/record）：无

@@ -56,7 +56,7 @@ tags:
 - 推荐配图页：p24（多Agent数字孪生参考架构，含MCP网关与ZR+开通Agent）；p23（读/写Agent分离与受治理执行流程）
 
 ### 0923-We-F-00-标准化专场II连拍.pdf（第26–32页）
-- 讲者/机构：中国电信（讲者姓名未见，标题页未拍到） | 题目：（无标题页；内容为 China Telecom All-optical Network 3.0 / ION-2030 for AI 数据中心）| 类型：邀请报告/标准
+- 讲者/机构：中国电信（讲者姓名页面未显示，标题页未拍到） | 题目：（无标题页；内容为 China Telecom All-optical Network 3.0 / ION-2030 for AI 数据中心；p26 看图核实：引 Omdia 预测 2033 年 AI 流量占全球网络流量 62%）| 类型：邀请报告/标准
 - 方向归属（主/次）：主 2 Scale-across/FST/跨楼园区；次 4 Scale-up/in（OCS替代super-spine），5 接入（50G-PON/OSU）
 - 核心主张：
   - AI负载重塑数据中心网络，光网络从“连接DC”走向围绕DCA/DCN/DCI组织算力连接（All-Optical Network 3.0）[p27][p28]
@@ -74,7 +74,7 @@ tags:
 - 推荐配图页：p31（DCI：跨城多DC训练效率>97%与WSON 50ms恢复）；p30（OCS替代super-spine及17%/20%收益）
 
 ### 0923-We-F-00-标准化专场II连拍.pdf（第34–46页）
-- 讲者/机构：ETSI ISG F5G 代表，Post Luxembourg（讲者姓名未见） | 题目：（OCR/图片未见完整标题；内容为 ETSI ISG F5G 演进、F5G-Advanced 与 F6G 愿景，含“How Will AI Evolve?”）| 类型：标准
+- 讲者/机构：ETSI ISG F5G 代表，Post Luxembourg（讲者姓名页面未显示） | 题目：（完整标题页未拍到；p34 看图核实为 "Evolution du Groupe ISG F5G"：2019 成立→2021 R1→2023 R2→2024 F5G-Adv R3→2026 R4→2027 R5，活动迁入 TC ATTM F5G，另办 F6G Workshop；内容含 F5G-Advanced 与 F6G 愿景、“How Will AI Evolve?”）| 类型：标准
 - 方向归属（主/次）：主 5 固定与无线接入 PON/FTTR/AI-FAN；次 1 AI光网络
 - 核心主张：
   - AI走向感知-行动闭环与Agent（Perception-Action Loop、Agent-to-Agent通信），带来无处不在的数据中心/边缘与分布式智能，网络成为互连、协调与编排的平台 [p38][p39][p40][p43]
@@ -101,9 +101,9 @@ tags:
   - 用于scale-up扩展的光开关：紧凑（每1U 3–4个开关）、低成本约\$100/port、亚毫秒级重构速度 [p50]
   - 现有3D-MEMS类OCS方案多为每1U 32–40端口，导致2U/4U/8U机架单元（页面原文）；对比厂商含 Coherent（Triple-Stone 320x320，中国）、POLATIS(H&S)、Eoptolink、Molex 等 [p51]
   - 芯片：ONE-32，增益控制硅光OCS，严格无阻塞32端口，偏振透明，>4,000个集成开关单元，兼容WDM光学，片上遥测 [p57]
-  - 芯片代际：32x32（约2,000单元）、32x32 v2（约4,000单元/4,000驱动信号）、64x64（约6,000单元，偏振透明）、>100端口（约10,000单元，设计中，标注2027，25x25 mm²）；管芯尺寸20x23 mm²（各代具体对应关系看不清）[p58]
+  - 芯片代际：32x32（2,000 开关单元/2,000 驱动/500 监测信号）→ 32x32 v2（偏振透明，4,000 单元/4,000 驱动/1,000 监测）→ 64x64（偏振透明，6,000 单元/6,000 驱动/1,000 监测）三代管芯均 20x23 mm²；>100 端口约 10,000 单元、25x25 mm²，2027 年，设计中（看图核实）[p58]
   - 与Lumentum 1.6Tbps 2x DR4（200G/lane）retimed硅光收发器（BER 1e-12）联测：OCS增益10 dB；前置VOA 0–3 dB，后置VOA 0–10 dB网络损耗仿真；相对10^-12基线BER劣化约1个数量级（页面原文“1-decade BER degradation from 10^-12 baseline”）；图中典型工作窗口接收功率约0到+4 dBm，BER平台约10^-11；对前后网络损耗稳健 [p60]
-  - 3 dB分路器/交叉损耗随PDK迭代下降（波长1280–1340 nm，具体数值看不清）[p56]
+  - 3 dB 分路器/交叉损耗随 PDK 迭代下降（1270–1340 nm）：分路器 Foundry PDK 约 0.15–0.6 dB → iPronics PDK C 约 0.03–0.05 dB；交叉 Foundry 约 0.1–0.12 dB → 3D PDK D 约 0.005 dB（读图估计，看图核实；Gómez-Hidalgo et al., Nanophotonics 2026）[p56]
   - 系统卖点：2x链路成本降低、嵌入式链路增益与遥测、ps级时间（原文“ps-time”，含义不明）；生态问题：CW-WDM MSA？OCI-MSA？波长数、栅格、速率、方向性 [p61]
 - 提到的公司/客户/产品/标准：iPronics ONE32/ONE Series、Lumentum、Coherent、POLATIS、Eoptolink、Molex、CW-WDM MSA、OCI-MSA、NPO/CPO/光互连器件；引用 npj Nanophotonics 3, 8 (2026)、JLT 44 (2026) [p48][p53]
 - 与业界对比或记录声明（SOTA/首次/record）：标题声明“Industry-first results of link-quality of 1.6 Tbps transceivers for AI datacenters over gain-controlled silicon-photonics OCS” [p60]

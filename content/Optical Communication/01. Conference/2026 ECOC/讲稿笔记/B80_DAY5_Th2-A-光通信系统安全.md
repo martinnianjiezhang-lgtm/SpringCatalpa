@@ -14,16 +14,16 @@ tags:
   3. HLPUF 认证协议可与 QKD 融合，"今天即可实现"；另可实现统计安全的 bit commitment 与 coin flipping。[p36]
 - 关键数据：
   - 在线协议安全性：Pr[V accept_A]=(1/2+δ·sqrt((1+4δ²)/2))^m ≈ negl(m)；图中 δ=0.01/0.04/0.07/0.1 四条曲线，m 约 20 以上 p_guess 趋近 0（插图纵轴 0–0.0015，m 至 60）[p32]
-  - 离线协议：每个认证比特消耗一对 Bell 对，一轮共 m 对；被扰动 Bell 对下仍可保持指数安全（安全界公式 OCR 看不清）[p30，仅 OCR]
-  - 两个 QPUF 识别协议均"多项式轮数、指数安全"；低资源验证者协议为经典验证+单向量子通信 [p21，仅 OCR]
-  - 认证决策树（Battarbee, Goswami, Kashefi, Doosti，arXiv 编号 OCR 为 2606.30636，看不清）[p19，仅 OCR]
+  - 离线协议：每个认证比特消耗一对 Bell 对，一轮共 m 对；P 按 PUF 输出选基测量并只公布结果、V 同基测量核对一致性；被扰动 Bell 对下仍可保持指数安全，安全界 Pr[V accept_A] ≤ (1/2 + η/2 + δη/2)^m [p30，看图核实]
+  - 两个 QPUF 识别协议均"多项式轮数、指数安全"，可用不同测试算法（SWAP/GSWAP）；低资源验证者协议为经典验证+单向量子通信（Doosti 等 ACM TQC 2021；看图核实）[p21]
+  - 认证决策树（Battarbee, Goswami, Kashefi, Doosti，"Authentication in Quantum Networks"，arXiv 2606.30636，2026-06-29 投稿；按无条件/永久安全、可否预共享密钥、是否信任计算/硬件假设、有无 PKI 等给出 UHF、DSS、KEM、OWF-based DSS、HPUF 等推荐，看图核实）[p19]
   - 实验：基于纠缠的 QKD 光路（泵浦整形、PPKTP、SNSPD、Alice/Bob），无具体速率/距离数字 [p33]
-- 提到的公司/客户/产品/标准：AMD Versal/Spartan UltraScale+ PUF、Microchip SRAM-PUF、Samsung 手机（PUF 已商用示例）；SRAM/环振/仲裁器 PUF；光学 PUF（散射、集成光子、复用材料）；QKD；NSA 对 QKD 的异议（Renner & Wolf 反驳文章）[p9–11, p18，OCR]
+- 提到的公司/客户/产品/标准：AMD Versal/Spartan UltraScale+ PUF、Microchip SRAM-PUF/安全 MCU、Samsung 手机（PUF 已商用示例）；SRAM/环振/仲裁器/存储器/涂层传感 PUF；光学 PUF（随机散射、集成光子、复用材料/超表面）；QKD；NSA 对 QKD 的异议（Renner & Wolf 反驳文章）[p9–11, p18，看图核实]
 - 与业界对比或记录声明：称 Dunnill & Doosti 为"首个基于量子硬件假设、互不信任设定下的协议"，首个基于硬件的 coin-flipping [p35]；Laurent-Puig 等称实验实现"完全信息论安全认证的纠缠式 QKD，无需预共享密钥" [p33]
 - 推荐配图页：p33（HLPUF 消息认证→认证 QKD 流程及实验光路）；p32（在线协议安全性曲线）
 
 ### 0924-Th2-A2-AdvaNetworkSecurity-量子密钥管理系统加固措施的性能评估.pdf
-- 讲者/机构：讲者姓名未在幻灯中看清 / Adva Network Security GmbH | 题目：（英文原题未拍到清晰题目页，p1 OCR 乱码；内容为 Performance evaluation of hardening measures for Quantum Key Management Systems，中文题名据文件名） | 类型：学术论文
+- 讲者/机构：Jonas Berl（Adva Network Security GmbH / KIT，题目页下划线标注）；合作者 Mario Wenning, Helmut Grießer, Tobias Fehenberger | 题目：Performance Evaluation of Hardening Measures for Quantum Key Management Systems（p1 看图核实；德国联邦研究、技术与航天部资助） | 类型：学术论文
 - 方向归属（主/次）：6 QKD/量子
 - 核心主张：
   1. 在 QKMS 中用四种措施降低对可信节点的信任：秘密共享（节点不相交路径）、QKMS 层 QKD+PQC 混合、基于 PQC 的路径传递证明（PoT）、TEE 机密计算。[p3/p4]
@@ -59,5 +59,5 @@ tags:
 - A3 明确指出 QKD 只解决密钥分发、不解决 AES 数据加密的侧信道，与 A1/A2 把 QKD 网络继续加固的思路形成对照（A3 p12 vs A1/A2）。
 - QKD 网络实用化的趋势是"混合化"：A2 在 QKMS 层混合 QKD 与 PQC，A1 让 HLPUF 认证为 QKD 提供无需预共享密钥的认证，均为叠加而非替换（A1、A2）。
 - A2 的时延数据表明中继时延以网络传播为主、加密加固处理开销小，德国 17 节点拓扑上 5 个 key share 时延约数十 ms（A2 p7–p8，读图近似）。
-- A3 中前放（50 km 预放大）使所需轨迹数从 >5e4 降到约 3e3，说明光接收灵敏度是攻击可行性的关键变量；PON 场景仅以示意图讨论，未见实测（A3 p10, p13）。
+- A3 中前放（50 km 预放大）使所需轨迹数从 >5e4（50 km 无前放 5 万条仅约 25% 成功率）降到约 2–3e3，说明光接收灵敏度是攻击可行性的关键变量；PON 场景（OLT–1×128 分光–ONU，攻击者在分光支路窃听）仅以示意图讨论，无实测（A3 p10, p13，看图核实）。
 - A1 的实验证据很少，主要是理论与综述；OCR 中的部分公式与 arXiv 编号看不清，已标注。

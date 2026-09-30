@@ -21,7 +21,7 @@ tags:
   - FFE21/MLSE 比 FFE21/DFE3 灵敏度约好 2–3 dB（图读数），两者曲线形状相同，说明并非只靠 MLSE [p19]
   - OCR 页4：GPON 共存需要 120 ps/nm 色散容限（仅 OCR，未看图）
 - 提到的公司/客户/产品/标准：ITU-T VHSP supplement、GPON、XG(S)-PON、25GS-PON、50G-PON；VLAIO FALCON 项目/欧盟资助
-- 与业界对比或记录声明（SOTA/首次/record）：无明确 record 声明；对比对象为 IQM/SSB 方案（复杂度与插损更高） [p5–p8 OCR]
+- 与业界对比或记录声明（SOTA/首次/record）：无明确 record 声明；对比对象为 IQM/SSB 方案（IQM 插损高、电路复杂；SSB 边带抑制受 MZM 设计、驱动时延/幅相失衡、数字滤波抽头数影响），本方案以 DD-MZM + V2 模拟/数字延时生成 VSB，并选择偏置点 Vb+/Vb− 优化啁啾 [p5–p8，看图核实]
 - 推荐配图页：p14（各累积色散下灵敏度 vs 数字延时曲线，展示 VSB/DSB 区分）；p12（实验装置+DSB/VSB 频谱+偏置点）
 
 ### 0921-合集待拆-全场-C2.2厅PON专场连拍.pdf（第21–32页）
@@ -36,9 +36,9 @@ tags:
   - 120 Gb/s NRZ 带宽受限 COH：BER=2e-2、ER=8.5 dB 时灵敏度 -23.1 dBm；20 km SMF 后 OPP <0.4 dB（CD 在定时恢复前补偿） [p29]
   - 120 Gb/s NRZ 带宽受限 DD（EDFA-滤波-PIN）：BER=2e-2、ER=8.5 dB 时 -28.7 dBm；讲者称 OA-DD 实际优于 COH（ER 惩罚小、系统带宽受限、集成相干接收机附加损耗） [p30]
   - ER=6 dB 现实检查：COH 120G 灵敏度 -20.8 dBm（BER=2e-2）；29 dB 光预算、假设 0.3 dB CD 罚值 → ONU 平均发射功率最低 +8.5 dBm [p31]
-  - 25 Gb/s 全带宽 COH：ER=24.5 dB 时 -41 dBm（BER=2e-2）；SP-BPSK -44.2 dBm、SP-QPSK -42.5 dBm（25 GBd）（源自 OCR p28，未看图，仅参考）
+  - 25 Gb/s 全带宽 COH：ER=24.5 dB 时 -41 dBm（BER=2e-2）；SP-BPSK -44.2 dBm、SP-QPSK -42.5 dBm（25 GBd）；ER 降至 13.6/7.9/5.0/3.4 dB 时灵敏度依次劣化；理论上 ER→∞ 的 NRZ 应接近 QPSK、比 BPSK 差 3 dB（看图核实）[p28]
 - 提到的公司/客户/产品/标准：50G-PON 标准（APD 接收机假设）、ITU-T VHSP、GPON；EDFA/SOA-PIN、64 GBaud/32 GBaud 相干接收机
-- 与业界对比或记录声明（SOTA/首次/record）：p24 OCR 称首次给出 ER 惩罚的简化解析式并做多波特率/多ER 详细研究（“not been reported in such detail before”）[p24]
+- 与业界对比或记录声明（SOTA/首次/record）：p24 称首次给出 ER 惩罚的简化解析式并做多波特率/多ER 详细研究（“which has not been reported in such detail before”，看图核实）；并称以 DD 型 DSP 实现带宽受限相干检测 IM 信号可降低相干接收机带宽与成本 [p24]
 - 推荐配图页：p31（实测灵敏度 vs ER，COH 与 DD 两类接收机+理论曲线）；p29/p30（120G COH 与 DD 的 BER 曲线对比）
 
 ### 0921-合集待拆-全场-C2.2厅PON专场连拍.pdf（第33–51页）
@@ -67,7 +67,7 @@ tags:
 - 关键数据：
   - 下行：灵敏度 -25 dBm，发射 +7 dBm 对应 32 dB 光预算（BER 阈值 SD-LDPC FEC）；-20 dBm 以上出现误码平台，25 km 后平台升高（推测为光纤非线性引起相位调制）；上行开启（1.5 / 6.5 dBm）灵敏度不受影响 [p66, p68]
   - 下行接收：数字版 Glance 接收机，1 PBS+1 PM 耦合器+2 PD+TIA；DS 星座 EVM 约 13/15%（Sx/Sy） [p59, p63]
-  - 上行（LO 复用，外调制器强度调制）：HD-LDPC FEC 灵敏度 -31.5 dBm → 33 或 38 dB 预算；以太网 FEC 极限 -26 dBm → 27.5 或 32.5 dB；未见平台；开启下行罚值 <1 dB（以太网 FEC 处） [p69]
+  - 上行（LO 复用，外调制器强度调制，Universidad Zaragoza）：HD-LDPC FEC 灵敏度 -31.5 dBm → 33 或 38 dB 预算；以太网 FEC 极限 -26 dBm → 27.5 或 32.5 dB；未见平台；开启下行罚值 <1 dB（以太网 FEC 处）（看图核实）[p69]
   - US 概念验证：两个 DSB multiCAP 4QAM 5 GHz 频带，20 Gb/s；DS 与 US 装入 100 GHz DWDM 信道；另有 50 Gbps multiCAP IM 25 km 准相干接收海报 We4-P81 [p64]
   - 背景：VHSP 需 32–35 dB 预算、20–30 km；FSAN 路线图 VHSP 约 2030+，200 Gb/s 或 2×100 Gb/s [p53]
 - 提到的公司/客户/产品/标准：FSAN 路线图、ITU-T VHSP、Glance 接收机、50G-PON、25G MSA、XGS-PON/GPON/TWDM 波长规划
@@ -89,7 +89,7 @@ tags:
   - DCPC-ODB：ODB 3 dB OPP 处累积 CD 约 44 ps/nm；ODB+DCPC 约 90 ps/nm，仍不足 1370 nm 所需 120 ps/nm；加第二个预补偿值（35 与 90 ps/nm 两组）可容忍至 120 ps/nm；含 SPM（Tx +14 dBm）时 90 ps/nm 组出现罚值但 120 ps/nm 仍有余量 [p94]
   - SSB：优化 CSPR 后 120 ps/nm 处罚值 <1.5 dB；3 dB 罚值下可容忍至 320 ps/nm，可在 1515 nm 传 20 km（最坏 CD）；仅 13-tap FFE 在 120 ps/nm 罚值 <2 dB [p98]
   - SSB+DCPC(150 ps/nm)：曲线更平坦，相对 SSB 增加约 1.5 dB 罚值（归因于更高 PAPR）；总罚值 3.5 dB 时 C 波段可行；含 SPM 时 <325 ps/nm 约有 0.5 dB 增益 [p101]
-  - 单个复数 FIR（cFIR）可同时实现 DCPC 与 SSB [OCR p100]
+  - 单个复数 FIR（cFIR）可同时实现 DCPC 与 SSB（两功能可顺序叠加，得到 CD 预补偿的 SSB 信号；Huawei，看图核实）[p100]
 - 提到的公司/客户/产品/标准：Huawei、Politecnico di Torino 合作文献（ECOC 2025 Rizzelli/Kharbich/Andrenacci；ECOC 2026 Kharbich MPI/DGD；ECOC 2026 Andrenacci PAM2-SSB(+DCPC) 2×100Gb/s/λ）、OFC 2026（Uchiyama 上行突发反推 DCPC 系数；Kharbich 可变距离 DCPC）、ITU-T G.9804.3、G.Suppl.88、Acacia（Malik 的 IMDD vs 相干分界图）、FSAN 路线图
 - 与业界对比或记录声明（SOTA/首次/record）：无 record 声明；对比 DCPC/ODB/SSB/SSB+DCPC 在色散容限上的递进 [p94, p98, p101]
 - 推荐配图页：p103（DCPC vs SSB 总结）；p87（DCPC 逐步移动最低罚值点的三联图）；p101（SSB+DCPC 与含SPM 罚值曲线）

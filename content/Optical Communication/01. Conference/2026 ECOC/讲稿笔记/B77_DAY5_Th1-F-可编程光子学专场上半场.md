@@ -6,7 +6,7 @@ tags:
 ---
 
 ### 0924-推定F1-根特大学-可编程光子学的现状导论.pdf
-- 讲者/机构：讲者姓名页面未见（幻灯片为根特大学/imec，F6 页脚称引用 Wim Bogaerts 的 ECOC26 workshop 讲稿，讲者是否即其本人未确认） | 题目：Programmable Photonics: Architectures, Control and Applications（副标题引自首页 OCR：Programmable Integrated Photonics (PIP) for a flexible, efficient, intelligent optical future，OCR 不完整） | 类型：Workshop（特邀专场导论）
+- 讲者/机构：Wim Bogaerts（Ghent University – imec；p1 标题页看图核实） | 题目：Programmable Photonics: What's in a name?（Special Symposium "Programmable Photonics: Architectures, Control and Applications — Programmable Integrated Photonics (PIP) for a flexible, efficient and intelligent optical future" 导论，2026-09-24） | 类型：Workshop（特邀专场导论）
 - 方向归属（主/次）：主 4（OCS/可编程光交换，偏平台层面）；次 5（微波光子/5G-6G 波束成形）、次 6（QKD、光纤光栅传感）
 - 核心主张：
   1. 可编程光子学是"一族技术"，从单功能可调 PIC 到通用"光子 FPGA"，需要芯片、封装、光电（含 RF）与软件/算法的系统级协同 [p35]。
@@ -15,17 +15,17 @@ tags:
 - 关键数据：
   - 从想法到产品 6–7 年；一次原型循环 1–2 年（芯片设计 6–9 个月、晶圆制造 6 个月、测试封装 6 个月）；PIC 原型需 3–4 轮循环 [p31]。
   - 扩展网格对 2×2 门的要求清单：小尺寸、短光程（FSR）、低光损耗、低电功耗、线性响应、CMOS 兼容驱动电压、快速（MHz–GHz）、无电/热串扰、可与其他硅光功能集成（仅列需求，无数值）[p17]。
-  - 光电集成路线四类：wire-bonding（灵活、连接数有限）、interposer/co-packaged chiplets（标准 chiplet）、flip-chip/3D stacking（连接数多、很强）、monolithic（复杂工艺/设计）；标注"100s–1000s connections"[p21，OCR 核对，未看图]。
+  - 光电集成路线四类：wire-bonding（灵活、连接数有限）、interposer/co-packaged chiplets（标准 chiplet、可扩展）、flip-chip/3D stacking（连接数多、需定制 ASIC）、monolithic（工艺/设计复杂、能力很强）；标注"100s–1000s connections"（看图核实）[p21]。
 - 提到的公司/客户/产品/标准：Ghent University、imec；Nature Comms. 2025 可编程微波光子处理器（Hong Deng，doi:10.1038/s41467-025-60100-0）[p7]；Bogaerts et al., Nature 2020 综述 [p10]。
 - 与业界对比或记录声明（SOTA/首次/record）：无 record 声明；应用域图列举：机架顶交换机、可编程收发器、FTTH 用户、xDSL、5G-6G 微波波束成形、FMCW LiDAR 测距引擎、QKD/光哈希、光纤光栅传感、微波雷达、多传感器读出 [p30]。
 - 推荐配图页：p6（从单功能 PIC 到通用可编程 PIC 的演进示意）；p31（想法到产品 6–7 年时间线）；p30（应用域全景）
 
 ### 0924-推定F2-Lightmatter-面向AI信息处理的光子学互连与内存带宽.pdf
-- 讲者/机构：Lightmatter（讲者姓名页面未见） | 题目：标题页 OCR 乱码；按文件名为面向 AI 的光子互连与内存带宽，幻灯片主线为 Passage M1000 3D 光子"superchip"平台（英文原题看不清） | 类型：产业发布（含邀请报告性质）
+- 讲者/机构：Darius Bunandar（Co-Founder, Chief Scientist）/ Lightmatter（p1 看图核实） | 题目：Photonics for AI Information Processing: Interconnect and Memory Bandwidth Before Computation；幻灯片主线为 Passage M1000 3D 光子"superchip"平台 | 类型：产业发布（含邀请报告性质）
 - 方向归属（主/次）：主 4（3D 光互连/光互连中介层/CPO/OCS）；次 3（微环调制器/收发器微缩）
 - 核心主张：
   1. "今天 AI 是互连受限"，仅靠互连就能加速训练与推理：训练时间 3x 缩短、预填充 TTFT 3x 缩短、解码 2x 更快（结论页） [p5]。
-  2. 计算随面积增长而 I/O 随周长增长，芯片越大差距越大，I/O 必须随算力扩展 [p6，OCR 核对]。
+  2. 计算随面积增长而 I/O 随周长增长，芯片越大差距越大（2000→2030 封装尺寸示意），I/O 必须随算力扩展 [p6，看图核实]。
   3. Passage M1000 以 3D 光子中介层 + 可重构光波导网络/OCS 提供 114 Tbps 带宽，并借光电路交换实现冗余与可编程 [p9][p16-p19]。
 - 关键数据：
   - 训练万亿参数 MoE 相对时间（越低越好）：铜基线 14.4 Tbps scale-up、4×128-GPU pods = 1.00x；光子等带宽 14.4 Tbps、1×512-GPU pod = 0.60x；光子加带宽 32 Tbps scale-up、1×512-GPU pod = 0.37x [p2]。
@@ -52,14 +52,14 @@ tags:
   - SiPAM 相对基线：最高 3.5x 加速；基线为 B100 GPU、固定 192 GB HBM、总内存带宽 8 TBps；SiPAM 按工作负载优化算力、内存带宽、容量和网络带宽；负载含 Megatron-126M/5B/22B/40B、Anthropic 52B、Chinchilla-64B、GPT3-175B；推理图中 126M 内存利用率 53%，1T 内存利用率 95%（图上标注） [p7]。
   - 基线迭代时间（归一化，SiPAM=1，读图估计）：训练约 3.5/2.2/1.7/1.8（126M/5B/175B/1T），推理约 3.5/2.6/1.9/3.4 [p7]。
   - ACTINA：GPT3-175B、4096 H100 GPU 集群，通信时间实时重构相对 one-shot 最高 2.3x 提升，重构延迟约 10^-4 s 以下才有收益（图中 real-time 通信时间约 0.2 s，one-shot 约 0.5 s，重构延迟 ≥ 约 10^-3 s 后升至约 0.85 s，读图估计） [p12]；结论页写"Up to 2.3x speedup over SoTA one-shot strategy at low reconfiguration latencies"，"Demonstrated 2.3x performance acceleration on 4096 GPUs" [p14]。
-  - 网络层级：scale-up 同一 NVLink 域最多 256 GPU；GPU-HBM4 25.6 TBps，GPU-CPU (C2C) 900 GBps；能效标注 <50 fJ/bit 与 >20 pJ/bit（分属不同互连层，OCR 未能对应，看不清） [p2，仅 OCR]。
-  - GPU 内存：2025 年 288 GB HBM3e、8 TB/s、1400 W；对比 H200 141 GB HBM3e 4.8 TB/s 700 W 等（OCR，未看图核对） [p3]。
+  - 网络层级：多级网络全系统 128× 带宽锥度；scale-up 同一 NVLink 6.0 域最多 256 GPU、每 GPU 3.6 TBps、约 5 pJ/bit；节点内 GPU-HBM4 25.6 TBps、GPU-CPU (C2C) 900 GBps、<50 fJ/bit；scale-out NIC 1.6 Tbps/GPU、可插拔光模块 >20 pJ/bit（看图核实） [p2]。
+  - GPU 内存：H100（2022）80 GB HBM3、3.3 TB/s、700 W；H200（2023）141 GB HBM3e、4.8 TB/s、700 W；B200（2024）192 GB、8 TB/s、1000 W；B300（2025）288 GB HBM3e、8 TB/s、1400 W；LLM 模型尺寸与 GPU 显存差距 >2 个数量级（模型按 16 字节/参数）（看图核实） [p3]。
 - 提到的公司/客户/产品/标准：NVIDIA（NVLink、B100、H100、GB300、OCS Testbed）、Google Jupiter、Google TPUv4 Pod、Helios、RotorNet、SiP-ML/TeraPHY；文献：SiPAM（IEEE Micro 2026，HOTI 2025）、ACTINA（SC25） [p5][p8][p14]。
 - 与业界对比或记录声明（SOTA/首次/record）：相对 SoTA one-shot 策略最高 2.3x [p14]；SiPAM 最高 3.5x [p7]；均为仿真/系统级建模结果。
 - 推荐配图页：p7（SiPAM 训练/推理迭代时间柱图）；p8（六种 OCS 可重构系统对比）；p12（重构延迟 vs 通信时间曲线）
 
 ### 0924-推定F4-iPronics-面向光交换的可编程光子学.pdf
-- 讲者/机构：iPronics（讲者姓名页面未见；幻灯片引用 Torrijos-Morán、Pérez-López 等） | 题目：页面无明确总题目；主题为面向 AI 数据中心的硅光可编程 OCS（Programmable photonics for optical switching） | 类型：产业发布/邀请报告
+- 讲者/机构：Daniel Pérez-López, Luis Torrijos-Morán 等 / iPronics（p1 标题页看图核实） | 题目：Programmable photonics for Optical Switching（Th1-F 可编程光子学专场） | 类型：产业发布/邀请报告
 - 方向归属（主/次）：主 4（OCS）；次 3（scale-out 网络、1.6T 收发器链路兼容性）
 - 核心主张：
   1. AI 数据中心扩展是网络挑战；光交换用于 scale-up 扩展，相对现有方案 20x 更紧凑、3x–5x 更具成本效益、亚毫秒级重构 [p4]。
@@ -67,28 +67,28 @@ tags:
   3. 提供增益控制的固态硅光 OCS（ONE-32），已投产，并给出业界首个 1.6 Tbps 收发器经该 OCS 的链路质量结果 [p18][p21]。
 - 关键数据：
   - 系统对比：20x more compact（每 1U 4 个交换机）；3x–5x more cost effective；sub-ms 重构速度 [p4]。
-  - 现有 3D 光学 OCS 方案多为每 1U 32–40 端口，形成 2U/4U/8U 机架单元 [p5，OCR]。
+  - 现有 3D 光学 OCS 方案多为每 1U 32–40 端口，形成 2U/4U/8U 机架单元（看图核实）[p5]。
   - 硅光集成度趋势图：晶体管/执行器数 10^2–10^4 量级（光子）对比电子至约 10^10，横轴 1970–2030 [p9]。
   - 交换架构权衡：Benes family、Banyan family、PILOSS 分别在严格无阻塞、低集成密度、光损耗与串扰可扩展性之间取舍（J. Lightwave Technol. 44, 2026）[p14]。
   - 64×64 偏振无关硅光 OCS 示例（路径 In1/In52 → Out1/Out28）[p16]。
   - ONE-32 光子芯片：严格无阻塞 32 端口、偏振透明、>4,000 个集成开关单元、兼容 WDM 光学、片上遥测；增益控制硅光 OCS [p18]。
   - 链路测试：Lumentum 1.6 Tbps 2×DR4（200G/lane）带 retimer 硅光收发器，基线 BER 1e-12；网络损耗仿真器 VOA1 0–3 dB、VOA2 0–10 dB；结论：预 FEC BER 相对 10^-12 基线只劣化 1 个数量级，对前后网络损耗稳健 [p21]。
-  - OFC 演示界面（4 端口）：Power Tx/Rx 与 BER — Port0 -0.251/-0.4 <1e-12；Port1 -1.431/-1.17 1.136e-05；Port2 0.083/1.15 <1e-12；Port3 -0.226/-0.39 <1e-12（单位 dBm 未标，看不清）[p13]。
+  - OFC 演示界面（4 端口）：Power Tx/Rx 与 BER — Port0 −0.251/−0.4 <1e-12；Port1 −1.431/−1.17 1.136e-05；Port2 0.083/1.15 <1e-12；Port3 −0.226/−0.39 <1e-12（功率单位界面未标，推测为 dBm；看图核实）[p13]。
   - 系统页：ONE 系列，多平台多格式、2x 链路成本降低、内嵌链路增益与遥测、µs 级 [p23]。
-  - 技术栈页：纯硅光标准工艺、无移动部件、专有 PDK 与交换网络、板载增益控制补偿损耗（OCR）[p20]。
-- 提到的公司/客户/产品/标准：iPronics ONE-32 / ONE Series；Lumentum（1.6T 2×DR4 收发器）；OCS 供应商图列出 Coherent、Triple-Stone（320×320，中国）、POLATIS（H&S）、Eoptolink、Molex 等 [p5，OCR]；兼容 pluggable、NPO、光学中介层、CPO [p23]。
+  - 技术栈页：纯硅光标准工艺、无移动部件、专有 PDK 与交换网络架构（低损低串扰）、软硬件协同（驱动监测电子 + 偏振控制/监测阵列/交换核心/信号处理 + LNOA 放大阵列）、板载增益控制补偿损耗并提供光遥测、快速重构（看图核实）[p20]。
+- 提到的公司/客户/产品/标准：iPronics ONE-32 / ONE Series（链路成本降 2 倍、内置链路增益与遥测、µs 级）；Lumentum（1.6T 2×DR4 收发器）；OCS 供应商图列出 Lumentum、Coherent、Triple-Stone（320×320，中国）、POLATIS（H&S）、Eoptolink、Glsun、Molex [p5，看图核实]；兼容 pluggable、NPO/光 I/O、光学中介层、CPO [p23]。
 - 与业界对比或记录声明（SOTA/首次/record）：明确写"Industry-first results of link-quality of 1.6 Tbps transceivers ... over gain-controlled silicon-photonics OCS" [p21]。
 - 推荐配图页：p21（1.6T 收发器经 ONE32 OCS 链路测试框图与结论）；p4（三项对比指标）；p18（ONE-32 芯片）；p9（光子学摩尔定律图）
 
 ### 0924-推定F6-丹麦科技大学-物理信息机器学习建模并补偿热串扰.pdf
-- 讲者/机构：DTU（丹麦技术大学），合作方含 iPronics、Politecnico di Torino；成果署名 I. Teofilovic 等，讲者姓名页面未明确 | 题目：Physics-informed machine learning for modelling and compensating thermal crosstalk（标题页 OCR 乱码，按文件名与内容推断，英文原题未确认） | 类型：学术论文/邀请报告
+- 讲者/机构：Francesco Da Ros 与 Isidora Teofilovic / DTU（丹麦技术大学 MLiPS 组），合作方含 iPronics（Daniel Perez）、Politecnico di Torino（A. Carena/P. Bardella）（p1 看图核实） | 题目：Physics-Informed Machine Learning to model and compensate thermal crosstalk | 类型：学术论文/邀请报告
 - 方向归属（主/次）：主 4（可编程光子网格/MZI、MRR 热控）；次 1（无直接关系，仅高性能器件建模）
 - 核心主张：
   1. 光子 FPGA 与电子 FPGA 不同：元件为模拟 MZI/MRR，被热串扰耦合，设置依赖器件，需在线"设置→测量→再调"，无标准语言，"我们需要模型 / 光子编译器是什么" [p3]。
-  2. 纯数据驱动模型精度高但需大量数据且易过拟合，纯物理模型泛化好但欠拟合；物理信息数据驱动结合二者，并可基于单单元模型同时补偿多单元 [p19，OCR]。
+  2. 纯数据驱动模型精度高但需大量数据且易过拟合，纯物理模型泛化好但欠拟合；物理信息数据驱动（灰盒 L_total = L_data + k·L_physics）结合二者，并可基于单单元模型同时补偿多单元（看图核实）[p19]。
   3. 热串扰在网格内线性叠加，基于 MRR5 的 PILR 模型可完全补偿 [p18]。
 - 关键数据：
-  - MZI 网格性能对比（预测误差 RMSE）：忽略串扰的拟合模型 3.26 dB；含串扰的拟合模型 1.44 dB；学习得到的黑盒模型 0.53 dB（数值据 OCR，图形未逐一核对，3×3 MZI 网格，ASE 光源、DAC 驱动）[p7][p8]。
+  - MZI 网格性能对比（预测误差 RMSE）：忽略串扰的拟合模型 3.26 dB；含串扰的拟合模型 1.44 dB；学习得到的黑盒模型（NN 18→83→131→9）0.53 dB（A. Cem 等 JLT 2023；另引 G. Cavicchioli APL Photonics 2026 数据驱动控制器）（看图核实）[p7][p8]
   - MRR 谐振波长偏移建模测试 RMSE：线性拟合 0.52 pm；热衰减模型 ThDM 0.41 pm；线性回归/NN 0.34 pm（I. Teofilovic, JLT 2024）[p13]。
   - 泛化：MRR 4/MRR 5 上 RMSE(pm)：ThDM 0.90/0.72；LR 0.90/0.93；PILR (k=0.5) 0.63/0.61；k 取 0.5–0.6 附近最优，k=0 时约 0.93/0.89、k=1 时约 0.72/0.90 [p17]。
   - 损失函数：L_total = (1−k)·L_data + k·L_physics，灰盒建模 [p15]。

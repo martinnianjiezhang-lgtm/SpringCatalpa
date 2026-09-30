@@ -10,7 +10,7 @@ tags:
 说明：`0923-We2-I-00-全场连拍.pdf` 为整场连拍（84页），含6位讲者；其余5个单讲PDF（NTT/PCRL/光通信技术与网络实验室/北邮/华为加拿大）是同一批幻灯的分讲版本，大量页为连拍页的重复。页码 pN 均指该PDF内的页码（连拍页码在连拍节内）。数值以图片核对为准。
 
 ### 0923-We2-I-00-全场连拍.pdf（第1–11页，第1讲）
-- 讲者/机构：Tao Zeng 等（Ziqing Liu、Ming Luo、Ming Li、Xi Xiao、Hanbing Li 等）/ 光通信技术与网络全国重点实验室（State Key Lab of Optical Communication Technologies and Networks, CICT，武汉）与烽火通信 | 题目：100G coherent PON 实时突发模式无收敛DSP（页面标题"Convergence-Free DSP Architecture"，完整英文原题看不清）| 类型：学术论文
+- 讲者/机构：Tao Zeng（报告人，zengtao@cict.com）等（Yimei Pan、Chen Wang、Te Ke、Botao Yang、Ziye Zhong、Ziqing Liu、Ming Luo、Ming Li、Xi Xiao、Hanbing Li）/ 光通信技术和网络全国重点实验室（CICT，武汉）与烽火通信 | 题目：Real-Time 100G Burst-Mode Coherent Receiver with Convergence-Free DSP（p1 看图核实）| 类型：学术论文
 - 方向归属（主/次）：主 5 固定与无线接入（相干PON）；次 1 oDSP
 - 核心主张：
   1. 上行突发难点在每个ONU突发都有独立CFO、随机SOP和异步时钟，迭代式DSP的反馈延迟会吃掉短突发前导；目标是"消除突发起始处的迭代收敛"[p3][p4]。
@@ -48,12 +48,12 @@ tags:
   3. 单片FPGA上实现无中断、细粒度速率切换，净速率96–179.2 Gb/s，资源占用低，为更强FEC和光DSP集成留余量[p23]。
 - 关键数据：
   - 整形容量：相对均匀16QAM，在2.80 bit/symbol处增益约0.49 dB，在3.76 bit/symbol处约0.25 dB；细粒度整形的峰值速率损失 0.181 bit/symbol（发生在3.0873 bit/symbol）[p18]。
-  - 速率切换实验：pre-FEC BER 在12–16 ms内随速率台阶上升（约10^-2量级），post-FEC BER约10^-4至10^-3，未见切换引起的突发错误尖峰[p19]。
+  - 速率切换实验（XCVU13P FPGA 端到端）：12–16 ms 内随速率台阶上升，pre-FEC BER 约 1e-2 → 2e-2，post-FEC BER 约 4e-5 → 5e-4，post-DM BER 约 1.3e-4 → 2e-3，未见切换引起的突发错误尖峰（看图核实）[p19]。
   - 误差传播：post-DM BER相对整形前放大最高12.20倍（R_DM=0.1016），最低3.83倍（R_DM=0.8828），整形越强错误传播越大但仍保持HiDM有限突发误码特性[p20]。
   - 信道仿真：FPGA内10 bit AWGN仿真器；逐级下扫，取在重复10 s窗口内持续零误码的第一个速率；净速率96 Gb/s至179.2 Gb/s，随SNR 11–18 dB上升（图上读数）[p21]。
   - 硬件：Xilinx Virtex UltraScale+ XCVU13P；HiDM级350 MHz运行、44.8 Gbaud符号率；总占用CLB LUT 89687（5.19%）、FF 51846（1.50%）、BRAM 59（2.19%）、DSP 512（4.17%，主要为AWGN），总功耗7.048 W（AWGN占3.879 W）；Flex-LUT HiDM本身8482 LUT、0.083 W，Flex-LUT inv-HiDM 22398 LUT、0.649 W[p22]。
 - 提到的公司/客户/产品/标准：Xilinx Virtex UltraScale+ XCVU13P；RS码；参考文献含OFC 2024 W4C1、OFC 2025 Tu2F（同组前作）。
-- 与业界对比或记录声明（SOTA/首次/record）：p14对比了多种整形方案（含CCDM、Flex-LUT HiDM等）在容量增益/低复杂度/细粒度上的权衡，本工作定位为不中断速率自适应 + 低复杂度[p14]（表内细节看不清）。
+- 与业界对比或记录声明（SOTA/首次/record）：p14 对比 ESS、CCDM、MTO、HiDM、PCDM、BWDM 等整形方案在容量增益/速率自适应/低复杂度部署三方面的权衡，本工作基于 Flex-LUT HiDM（Z. Liu 等 OFC 2025 Tu2F），定位为不中断速率自适应 + 低复杂度实现（看图核实）[p14]。
 - 推荐配图页：p18（整形容量与速率损失曲线）；p22（FPGA布局图与资源表）；p21（SNR-净速率阶梯曲线）。
 
 ### 0923-We2-I-北邮-实时信号处理.pdf（第1–11页）
@@ -120,7 +120,7 @@ tags:
 - 推荐配图页：本PDF p20（传输结果）、p19（谱图）。
 
 ### 0923-We2-I-00-全场连拍.pdf（第74–84页，第6讲）
-- 讲者/机构：George Brestas、Christoph Fultner、Robert Borkowski、Maria Spyropoulou、Dimitris Apostolopoulos、Giannis Kanakis、Hercules Avramopoulos / Nokia Bell Labs 与 PCRL（页面为Nokia、Bell Labs、pcrl标识；具体隶属看不清，Argotech字样出现在芯片板上）| 题目：First-Ever Burst-Capable Adaptive Optical Signal Processor for Next-Generation PON Upstream Links | 类型：学术论文
+- 讲者/机构：George Brestas、Christoph Füllner、Robert Borkowski、Maria Spyropoulou、Dimitris Apostolopoulos、Giannis Kanakis（报告人，下划线）、Hercules Avramopoulos / Nokia Bell Labs 与 PCRL（p74 标题页看图核实；Argotech 字样出现在芯片板上）| 题目：First-Ever Burst-Capable Adaptive Optical Signal Processor for Next-Generation PON Upstream Links | 类型：学术论文
 - 方向归属（主/次）：主 5 固定与无线接入（PON上行）；次 3 光源/调制器/电芯片（InP光子集成）
 - 核心主张：
   1. 首个可突发的自适应光信号处理器（AOP）：单片InP PIC，纳秒级逐突发重构，比热调光均衡器快多个数量级[p84]。

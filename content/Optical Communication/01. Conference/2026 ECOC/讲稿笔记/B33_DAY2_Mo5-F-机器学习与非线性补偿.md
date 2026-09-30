@@ -18,7 +18,7 @@ tags:
   - 80 km 传输，同熵 8.063 bit/2D-sym，入纤功率 6 dBm 时净速率 2.10 Tb/s（扫描 2–10 dBm，10 dBm 时降至约 2.06）[p8]
   - 实验装置：薄膜铌酸锂（TFLN）IQM 由 256-GSa/s AWG（带宽约 80 GHz）直驱，摆幅远低于 2Vπ；光纤损耗 0.152 dB/km，Aeff 150 μm²；相干接收 BPD 带宽 90 GHz，DSO 256 GSa/s、带宽 113 GHz；信号带宽 168 GHz [p5]
 - 提到的公司/客户/产品/标准：NTT；TFLN IQM；256-GSa/s AWG；引用 Volterra 原用于 RF 功放（Morgan 2006）、光发射端过采样 Volterra（Berenguer 2016）。
-- 与业界对比或记录声明：Intro 图在"净速率–信息速率（bit/4D symbol）"平面上与 NTT 及他组先前工作（125–250 GBd 参考线）对比，本工作位于约 168 GBd 线附近、净速率约 2.1–2.2 Tb/s；未见"record"字样（页面未明说）[p2]
+- 与业界对比或记录声明：Intro 图在"净速率–信息速率（bit/4D symbol）"平面上与 NTT 及他组先前工作（125–250 GBd 参考线，引文 [1]–[11]）对比，本工作 168 GBd PCS-324QAM 净速率 B2B 2.18 Tb/s、80 km 2.10 Tb/s，样本域 Volterra DPD 带来 0.7 dB 峰值 SNR 增益；未见"record"字样（看图核实）[p2]
 - 推荐配图页：p2（净速率 vs 信息速率对比散点图，含 125–250 GBd 参考线）；p7（PCS-QAM 熵扫描与 2.18 Tb/s 星座）
 
 ### 0921-Mo5-F6-国立清华大学-物理感知的稀疏Volterra均衡剪枝.pdf
@@ -39,7 +39,7 @@ tags:
 - 推荐配图页：p15（BER vs 每符号乘法数：全 VE / MP-VE / PCG-VE 与 -92%、-36.5% 标注）；p14（稀疏度与能量压缩）
 
 ### 0921-Mo5-待定-华南理工大学-无监督域自适应的学习子带扰动非线性补偿.pdf
-- 讲者/机构：Xuan Tang, Wanzhen Guo, Hao Deng, Jian Zhao（华南理工大学，广州）| 题目：题目页 OCR 乱码，据内容与文件名推断为"学习型子带扰动非线性补偿（LSP-NLC）+ 基于无监督域自适应（UDA）的信道跟踪"（英文原题看不清）| 类型：学术论文（场次编号待定，Mo5 F 组）
+- 讲者/机构：Xuan Tang（报告人）, Wanzhen Guo, Hao Deng, Jian Zhao（华南理工大学，广州）| 题目：Unsupervised-Domain-Adaptation Enhanced Learned Subband-based Perturbation Nonlinear Compensation for Optical Transmission Systems（p1 看图核实，2026-09-21）| 类型：学术论文（场次编号待定，Mo5 F 组）
 - 方向归属（主/次）：主 [1 相干/长途/oDSP]；次 [1 AI光网络（ML 非线性补偿）]
 - 核心主张：
   1. 提出 LSP-NLC：把色散补偿、子带分解/合成与子带扰动非线性补偿（P-NLC）做成可训练网络，CD 参数 β2、非线性系数 γ 和扰动系数 C 由神经网络训练得到，无需精确链路信息。
@@ -60,4 +60,4 @@ tags:
 - 非线性补偿位置不同：NTT 在发射端（TFLN IQM 直驱，样本域 Volterra 预失真），NTHU 在 IM/DD 接收端均衡，SCUT 在相干长途接收端 DSP；三者层次互补。
 - 高波特率下预失真需在样本域（高 PAPR 波形）进行：NTT 样本域 VF 比符号域多 0.7 dB SNR，对 200 GBd+ 及 TFLN 直驱的器件路线有参考意义（NTT）。
 - 场景差异：NTT 面向 ~2.1 Tb/s 单载波（168 GBd，80 km），NTHU 面向 100G PAM4 短距 IM/DD（4.2 km），SCUT 为 40 GBaud 多跨段 WDM（至 1200 km）；后两者验证速率相对偏低，向 200G/lane 与更高波特率的可扩展性尚未验证（NTHU、SCUT）。
-- 数据说明：SCUT 部分曲线数值为读图估计，题目页看不清；NTT 净速率对比图未见明确 record 声明（NTT）。
+- 数据说明：SCUT 部分曲线数值为读图估计（题目页已看图核实）；NTT 净速率对比图未见明确 record 声明（NTT，看图核实）。

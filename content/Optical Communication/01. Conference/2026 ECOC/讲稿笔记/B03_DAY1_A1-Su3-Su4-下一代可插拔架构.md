@@ -17,12 +17,12 @@ tags:
   2. 四类网络段（scale-in、scale-up、scale-out、scale-across）对互连要求各异；scale-up 互连"contested"，铜与光并存；scale-out 走 SiPh，448G/lane，可插拔为主、部分 CPO。
   3. CPO/OE 进入半导体体系后，光学制造责任转移（对准与测试从模块厂移到 OSAT/晶圆级），是"产业测试流程的结构性转变"，模块不会消失。
 - 关键数据：
-  - 硅光占收发器销售额首次超 50%（2026），图示 2022–2031 年按硅光/InP/GaAs/TFLN-LiNbO3 分类的销售额堆叠柱，2031 年 TFLN/LiNbO3 占比明显上升；纵轴具体数值看不清 [p3]
+  - 硅光占收发器销售额首次超 50%（2026），图示 2022–2031 年按硅光/InP/GaAs/TFLN-LiNbO3 分类的销售额堆叠柱，2031 年 TFLN/LiNbO3 占比明显上升；纵轴无刻度数值（看图核实）[p3]
   - 四段网络：scale-in 毫米级，"Perhaps optical in the future"；scale-up 约 1 米，限制为边缘/引脚/瓦特，"Copper and optical, Pluggable/CPx"；scale-out 数十至数百米，"SiPh: 448G per lane, Pluggable, some CPO"；scale-across 500 米至公里级，"SiPh integration: full spectrum coherent transponder, Pluggable back to embedded" [p5]
   - 引用 Microsoft Paolo Costa（ACM SIGCOMM 2026 HotOptics 工作坊）提出的"打破封装墙"光互连目标：<10 ns 延迟、<1 pJ/bit、>10 Tbps/mm、<<10 FIT、10 m 覆盖 [p10]
-  - "强 scale-up CPO 增长"情景：按单位数（M）分 Non-AI & Front-end / AI scale-out / AI scale-across / AI scale-up 及 "scale-up upside"，2029 起 scale-up 出现并扩大，2031 最大；纵轴刻度看不清 [p11]
-  - p12 引用 Latitude Design Systems CTO Terence Chen（2026 Taiwan AI 光通信与先进封装论坛）：CPO 时代对准责任从模块厂光学线转到 OSAT 先进封装线，测试从模块级变为晶圆级（OSAT 为 CPO 新建）（OCR 文字，未开图）[p12]
-  - p4 表列出各类厂商市值与 CMOS 节点（OCR 数字乱码，未采信）；p8/p9 为云厂商 capex 与收发器销售增速相关性图，数值看不清
+  - "强 scale-up CPO 增长"情景（基于正增长但放缓的 Capex）：按单位数（M）分 Non-AI & Front-end / AI scale-out / AI scale-across / AI scale-up 及 "scale-up upside"，2029 起 scale-up 出现并扩大，2031 最大；纵轴无刻度数值（看图核实）[p11]
+  - p12 引用 Latitude Design Systems CTO Terence Chen（2026 Taiwan AI 光通信与先进封装论坛）：CPO 时代对准责任从模块厂光学线转到 OSAT 先进封装线，测试从模块组装后变为晶圆级光测试（OSAT 为 CPO 新建），良率反馈从模块级变为晶圆级；模块不会消失，市场由 SiPh 光引擎主导（看图核实）[p12]
+  - p4 表：2025 年末市值 TSMC 1570、Samsung 542.1、Intel 172.7、GF 19.4–19.9、ST 23.2、Tower 13.7（\$Bn），CMOS 节点 2/2/1.8/12/18/45 nm；p8/p9：云厂商 Capex 2026 约 \$1.0T、2031 约 \$2.1T，增速 2024 约 73% 降至 2027 约 27%；Ethernet 收发器与 Top4 CSP Capex 增速高度相关（看图核实）
 - 提到的公司/客户/产品/标准：Microsoft（Paolo Costa）、Latitude Design Systems、OSAT、代工厂、CPO/NPO、LPO/LRO；LightCounting 报告：May 2026 Silicon Photonics LPO/LRO and CPO/NPO；May 2026 Optical Vendor Landscape；July 2026 Cloud Data Center Optics
 - 与业界对比或记录声明（SOTA/首次/record）：硅光收发器份额首次超 50%（2026）[p3]
 - 推荐配图页：p3（硅光份额转折堆叠柱图）；p5（四类网络段互连要求表）；p10（打破封装墙及 5 项目标）
@@ -37,7 +37,7 @@ tags:
 - 关键数据：
   - 自研加速器 Jalapeno 的 scale-up 系统：本地域 128 颗 Jalapeno 通过 Broadcom TH6；全局域 2048 颗 Jalapeno，经 TH6 rail 0–rail 7；"Half flattened" 两级 Clos 拓扑；张量并行需更高带宽、专家并行带宽较低、两者都要低延迟（OpenAI, Hot Chips 2026）[p7]
   - 系统对比 GB300 MTP：混合吞吐（mixed tokens/s/kW）纵轴到 20,000；Jalapeno 最小端到端请求延迟 1.65 s，GB300 MTP 为 3.69 s；同等混合吞吐点约 "≈1.8× lower latency"；解码速度可到约 700 tokens/s/user，超出 GB300 MTP 限制（约 330 tokens/s/user 处标线）[p8]
-  - 请求分三种硬件形态：Prefill（注意力重、计算受限，通信容易）、Decode（MoE 需存储带宽，通信呈突发）、Speculate（小模型、超低批量，网络带宽低但极端延迟敏感）（OCR 辅助）[p5]
+  - 请求分三种硬件形态：Prefill（编码上下文，注意力重、计算受限，内存带宽需求低，通信平滑）→ Draft model 推测（小模型、超低批量，网络带宽低但极端延迟敏感）→ Spec-verify 解码（GQA 与推测 token 下注意力受算力约束，MoE 需 HBM 带宽，通信呈突发）；关键指标为满足 SLA 延迟下的 requests/second/watt（看图核实）[p5]
   - 指标：TTLT（time to last token）、单用户延迟、Energy/token = tokens/Joule；低延迟通常每 token 能耗更高 [p3]
   - 互连四选项对比表：铜（短距机架内好；受距离与通道损耗、线缆体积/走线/风道限制）；可插拔（可更换、生态成熟、可选距离；主机通道损耗、前面板功耗/密度、LPO/LRO 主机负担与故障隔离、功效）；NPO（电路径短、光组件分离；内部维护与散热、激光处理、插座/生态/可靠性认证、功效）；CPO（封装内路径短、光 I/O 密集、I/O 功耗潜在节省；封装与良率、热耦合、激光、光引擎修复、生态/可靠性认证）[p10]
   - 共设计架构：每个 core slice 与一个 HBM slice 配对（本地路径最快）；集体网络（高带宽低延迟）+ 通用 NoC（较低带宽较高延迟）；含 scale-up Ethernet bridge [p6]
@@ -49,36 +49,36 @@ tags:
 - 讲者/机构：Oracle（OCI；讲者姓名未在页面中出现） | 题目：Photonic interconnects for modern AI superclusters | 类型：邀请报告
 - 方向归属（主/次）：主 [3 Scale-out 224G/448G/光源/调制器/电芯片/OCS]；次 [4 Scale-up/in CPO/NPO/XPO]、[2 Scale-across/ZR/ZR+]
 - 核心主张：
-  1. 下一代网络最终要解的是 TCO：电力效率与成本（CapEx）（OCR 辅助 p5）；OCI 已大规模部署 800G LPO，线性驱动接口"不引入代价，反而链路更稳定"。
+  1. 下一代网络最终要解的是 TCO：可靠性/可用性（上线时间、MFU、避免服务赔付）、电力效率（让出更多功率给计算）与成本（网络相对计算的支出逐年上升，不可持续）（看图核实 p5）；OCI 已大规模部署 800G LPO，线性驱动接口"不引入代价，反而链路更稳定"。
   2. 1.6T 时 LPO 难以同时满足 SI 与互通要求，LRO 是当前最佳低功耗方案。
   3. 224G/lane 是 NPO/CPO 的成熟点，"现在是开始试用 CPO 的时候"；>224G 时 CPO/NPO 可能是唯一出路；同时 NPO（含 OpenCPX MSA）可缓解 CPO 缺点。
 - 关键数据：
   - OCI AI 集群规模：2020 年 16,384 GPU（1×）→ 32,768（2×）→ 65,536（4×）→ 131,072 GPU（8×，2026）；支撑：Zettascale RDMA、超低延迟、高网络韧性、先进流量负载均衡 [p2]
   - 800G LPO：约 35 万条链路（LPO-LPO n=156,591；FRO-FRO n=202,042）；中位 pre-FEC BER LPO 1.1E-11 对 FRO 1.4E-11；p99 BER 5E-10 对 3E-8；至少发生一次 down transition 的链路：LPO 3.244% 对 FRO 5.681%；文字称 FRO 链路 flap 为 LRO 的 1.75 倍（原文写作 LRO，疑为 LPO 之笔误）；注意：短/中/高损耗端口需优化调参，LPO 互通数据有限 [p7]
-  - 1.6T LRO：26 dB 通道，16 W 功耗（10 pJ/bit）；支持 DR4+（4 dB）和 FR4 上层链路；不同供应商与多厂 3 nm DSP 已演示互通；2 nm LRO DSP 成熟后功耗可更低；pre-FEC BER：3 厂平均 FRO 约 8.4E-13 对 LRO 约 3.7E-12（图中小字，数字略模糊）；FEC bin P50：LRO 1、FRO 1；P95：LRO 2、FRO 1 [p8]
+  - 1.6T LRO：LPO 在 1.6T 难以满足 SI 与互通要求；LRO 26 dB 通道，16 W 功耗（10 pJ/bit）；支持 DR4+（4 dB）和 FR4 上层链路；不同供应商与多厂 3 nm DSP 已演示互通；2 nm LRO DSP 成熟后功耗可更低；pre-FEC BER（FRO/LRO）：厂商1 6.38E-13/4.73E-12，厂商2 9.40E-13/2.46E-12，厂商3 9.56E-13/9.56E-13，3 厂平均 8.41E-13/3.73E-12（看图核实）；FEC bin P50：LRO 1、FRO 1；P95：LRO 2、FRO 1 [p8]
   - CPO：功耗最多可比全重定时可插拔系统（200G/lane 代）节省 50%；理论成本效率 30%（假设量产）；误操作收发器是主要故障模式，CPO 将人排除在部署/运维之外；系统 FIT 预期高于可插拔；但当前 CPO 方案专有、供应链受限、配置不灵活（引用 Meta S. Amirzadeh OCP 2025 等）[p9, p10]
-  - NPO（p11 OCR）：多厂光生态、更轻的 RMA、可后绑定光 PMD（DR/FR 和/或 flyover cable CPC，甚至 ZR 类前面板可插拔）；示例为新发布的 OpenCPX MSA；须证明可靠性与功效与焊接式 CPO 相当
-  - DCI：OCI 区域内 DWDM 互连约 60 km 跨段，用 DCI 优化的相干可插拔与线路系统；400ZR → 800ZR → 1600ZR；参与 1600ZR/1600ZR+/CMIS，并发起 1.6T 相干可插拔的 MACsec 支持项目（OCR 文字）[p12]
+  - NPO（p11 看图核实）：多厂光生态、更轻的 RMA、可后绑定光 PMD（DR/FR 和/或 flyover cable CPC，甚至 ZR 类前面板可插拔）；示例为新发布的 OpenCPX MSA；须证明可靠性与功效与焊接式 CPO 相当
+  - DCI：OCI 区域内 DWDM 互连约 60 km 跨段，用 DCI 优化的相干可插拔与线路系统；400ZR → 800ZR → 1600ZR；参与 1600ZR/1600ZR+/CMIS，并发起 1.6T 相干可插拔的 MACsec 支持项目（看图核实）[p12]
   - 224G/lane（1.6T）：可插拔（FRO、LRO、ZR）为计划路线（POR）且已在途；224G 适合 NPO/CPO；>224G 时 CPO/NPO 或为唯一途径 [p13]
 - 提到的公司/客户/产品/标准：OCI/Oracle、Meta（OCP 2025 数据）、NVIDIA 与 Broadcom（CPO 图示来源）、OpenCPX MSA、CMIS、MACsec、OIF ZR、400ZR/800ZR/1600ZR/1600ZR+、LPO/LRO/FRO、DR4+/FR4、3 nm/2 nm DSP、RDMA
 - 与业界对比或记录声明（SOTA/首次/record）：约 35 万链路规模的 LPO 现网统计（大规模现网数据，非记录声明）[p7]
 - 推荐配图页：p7（LPO vs FRO 现网 BER 直方图及 down-transition 比例）；p8（1.6T LRO 三厂 BER 与功耗）；p2（OCI GPU 集群 2020–2026 规模增长）
 
 ### 0920-pm-Su3-A-04-OrioleNetworks-数据中心光交换.pdf
-- 讲者/机构：Oriole Networks（Director of Photonic Integration，姓名 OCR 不清，疑为"Alvallotis"类，未采信） | 题目：A Pure Photonic Network for the AI Era | 类型：产业发布
+- 讲者/机构：Pantelis Alvallotis（Director of Photonic Integration，按 p1 标题页拼写，看图核实）/ Oriole Networks | 题目：A Pure Photonic Network for the AI Era | 类型：产业发布
 - 方向归属（主/次）：主 [4 Scale-up/in CPO/NPO/XPO/WSE/OCS]；次 [3 Scale-out 224G/448G/光源/调制器/电芯片/OCS]
 - 核心主张：
-  1. 计算增长速度约为网络带宽的 100 倍（过去十年），网络成为瓶颈（OCR：p2）。
+  1. 过去十年计算增长速度约为网络带宽的 100 倍，网络跟不上，已成为计算的关键组成部分（看图核实：p2）。
   2. 用全光、无交换层（tier-less）的全连接光网络取代电分组交换（EPS）网络；OCS 的价值取决于交换时间与收发器再锁定时间之和。
   3. 同规模 32,000 GPU 集群，元件与功耗大幅下降。
 - 关键数据：
   - 停机时间比较：Oriole PRISM SiP 超快交换 + 超快收发器再锁定 >90% 吞吐；自由空间开关（数十 ms）+ 标准收发器 <1%；SiP 热光开关（约 100 µs）+ 标准收发器 <1%；SiP 极快开关（<10 µs）+ 标准收发器 <1%；SiP 电光超快开关（<10 ns）+ 标准收发器 <1%——瓶颈是收发器再锁定 [p9]
-  - 推理尾延迟：Oriole 曲线"有界、可预测"，EPS 可变不可预测（延迟轴 0.5 至数十~数百，单位看不清）；训练：EPS 活跃 40%/空闲 60%，Oriole 活跃 99%/空闲 1%；能耗：EPS 计算 80% + 网络 20%，Oriole 计算 48% + 网络 5%，图中标"2×"降低；标题称"延迟为 1/1000" [p10]
+  - 推理尾延迟：Oriole 曲线"有界、可预测"，EPS 可变不可预测（延迟轴 0.5、1 至 10s–100s，单位符号在照片中不清）；训练：EPS 活跃 40%/空闲 60%，Oriole 活跃 99%/空闲 1%；能耗：EPS 计算 80% + 网络 20%，Oriole 计算 48% + 网络 5%，图中标"2×"降低；标题称"延迟为 1/1000"（看图核实）[p10]
   - 32,000 GPU 集群参考架构 vs Oriole：网络层数 3 对 1；叶交换机 1024 对 0；脊交换机 1024 对 0；核心交换机 512 对 0；总交换机 2,560 对 0；节点收发器 32,768 对 32,768；交换机收发器 163,840 对 0；收发器总数 196,608 对 32,768；网络功耗图中标注降低 81%（参考架构含 800G/400G 收发器与叶/脊/核心交换机功耗）[p12]
-  - 公司 80+ 员工，办公室：Palo Alto、Bangalore、UK（Paignton & London）（OCR）[p13]
-  - 产品栈：XCCL 软件插件、Photonic NIC、XTR 收发器、无源光核心 [p6，OCR]
+  - 公司 80+ 员工、4 个办公室：Palo Alto、Bangalore、UK（Paignton & London）；人才来自 Arm、Ericsson、Huawei、Intel、Lumentum、Semtech、Qualcomm（看图核实）[p13]
+  - 产品栈：XCCL 软件插件、Photonic NIC、XTR 收发器、无源光核心（"A Platform, Not a Part"）[p6，看图核实]
 - 提到的公司/客户/产品/标准：Oriole PRISM/PRISM Ultra（白皮书 oriolenetworks.com/prism-ultra-whitepaper）、XCCL、Photonic NIC、XTR Transceiver；人才来源公司 logo：Arm、Ericsson、Huawei、Intel、Lumentum、Semtech、Qualcomm 等
-- 与业界对比或记录声明（SOTA/首次/record）：宣称"世界首个"纯光网络（p4 OCR 残缺，仅见 "world's first"，主体不清）；可靠性、供应商数据均为公司宣称，无第三方对比
+- 与业界对比或记录声明（SOTA/首次/record）：宣称 PRISM 为"世界首个纯光子 AI 网络"（p4 看图核实）；可靠性、供应商数据均为公司宣称，无第三方对比
 - 推荐配图页：p9（各类 OCS 交换时间 + 收发器再锁定的吞吐对比条形图）；p12（32k GPU 集群元件数与功耗 -81% 对比表）；p10（推理/训练/能耗三联图）
 
 ### 0920-pm-Su3-A-05-NVIDIA-CPO对可插拔的优势.pdf
@@ -92,10 +92,10 @@ tags:
   - 光网络功耗约占算力资源的 10%；传统云数据中心 10 万台服务器收发器功耗 2.3 MW，AI 工厂 10 万台服务器 40 MW；CPO 约 4 pJ/b，节省约 72% 收发器功耗 [p8]
   - "世界最先进 200G CPO"：Quantum-X（InfiniBand）与 Spectrum-X（Ethernet）集成硅光；标注 2× 吞吐、1.6× 带宽密度、63× 信号完整性、4× 更少激光器、10× 更好激光可靠性、替代 64 个可插拔收发器；这些倍数的基准对象图中未标明，需以原稿为准 [p9]
   - 微环调制器（MRM）发射机：212.5 Gbps/通道，眼图展示；16 通道在 OFC 2026 展会以 212 Gbps 连续运行 3 天，总 BER < 1E-14 [p13]
-  - CPO 可插拔/插座化 vs 焊接：CPO 插座化（利于初始部署与 OSAT 返修，但增成本、面积、影响信号完整性）；焊接 CPO 信号完整性好、封装最小但返修受限（OCR，p14）
-  - 未来 AI 工厂："Gigawatt 时代"，网络占总功率 6–8% → CPO 将降 5×；网络中断可累积每天 300 万美元收入损失 → CPO 将消除此项 [p16，OCR]
-  - CPO 箱体组装时间短，可插拔箱体组装时间长（p11，OCR 残缺）；NVL72 with Quantum-X InfiniBand Photonics scale-out（p15 图注）
-  - p3–p6 介绍 Vera Rubin 协同设计（含 Groq 3 LPX）、NVLink 第六代 scale-up、Spectrum-X 带 102.4T 交换系统与 1.6T SuperNIC（OCR，数字未开图）
+  - CPO 可插拔/插座化 vs 焊接：CPO 插座化（利于初始部署与 OSAT 返修、尾纤方案必需，但增成本、面积、影响信号完整性与散热）；焊接 CPO 信号完整性好、封装最小、成本最低但实现难、返修受限；插座化不等于可现场更换或按需扩容（看图核实，p14）
+  - 未来 AI 工厂："Gigawatt 时代"，网络占总功率 6–8% → CPO 将降 5×；网络中断可累积每天 300 万美元收入损失 → CPO 将基本消除此项 [p16，看图核实]；未来扩展选项：400 Gb/s（200 GBaud PAM4）、偏振与光 BiDi 再 2x、CWDM/LWDM 2x/4x400G、DWDM、coherent lite [p15]
+  - CPO 箱体组装时间短，可插拔箱体组装时间长（p11，看图核实）；NVL72 with Quantum-X InfiniBand Photonics scale-out（p15 图注）
+  - p3–p6 介绍 Vera Rubin 协同设计（NVL72、Groq 3 LPX、Vera CPU、BlueField-4 STX 存储、Spectrum-6 SPX）、AI 工厂网络分层（scale-up/上下文存储/scale-out/scale-across）、NVLink 6（每 GPU 3.6 TB/s，延迟低 3x、包率高 10x、130 TFLOPS 网内计算）、Spectrum-X 102.4T 交换系统与 1.6T SuperNIC（RDMA 带宽 1.6x、多租户 2.2x、抖动低 1.3x）（看图核实）
 - 提到的公司/客户/产品/标准：NVIDIA Vera Rubin、Groq 3 LPX、NVLink、Spectrum-X（含 Ethernet Photonics）、Quantum-X InfiniBand Photonics、BlueField-4、ConnectX、TSMC COUPE、micro-ring modulator、OFC 2026 展示
 - 与业界对比或记录声明（SOTA/首次/record）：自称"World's Most Advanced 200G Co-Packaged Optics"；CPO 已进入 full production [p9, p10]
 - 推荐配图页：p8（传统云 vs AI 工厂收发器功耗与 CPO 省 72%）；p13（MRM 与 212.5 Gbps 眼图，OFC 2026 3 天 BER<1E-14）；p9（CPO 六项倍数收益）；p15（CPO 未来扩展路线）
@@ -108,11 +108,11 @@ tags:
   2. 200G/L→400G/L 改变可插拔设计点：在约 212.5+ GBd 下电/光边界必须联合设计，主机通道成为关键限制。
   3. "AI 连接将收敛到可插拔架构组合，按延迟、功耗、覆盖、密度与互通优化"；保留可插拔性，DSP 是主力，整条链路（SerDes、电通道、DSP、FEC、光、封装、遥测）作为一个系统优化。
 - 关键数据：
-  - 分层：DCI/Scale-across >10 km：C 波段相干 1.6T ZR/ZR+；Scale-across 2–10 km+：O 波段 Coherent-Lite 1.6T | 3.2T，平衡功耗/延迟/成本；Scale-out 100 m–2 km：200G/L PAM4 → 400G/L PAM4；Scale-up 10 m–100 m（讲稿标 10 m~100 m）：200G/lane PAM4 → 400G/L PAM4，AOC/光收发器，低功耗低延迟 [p5]；p4 版本另列 "Slow and Wide Optics: uEmitter、uLED、uVCSEL"（OCR，p5 末）
+  - 分层：DCI/Scale-across >10 km：C 波段相干 1.6T ZR/ZR+；Scale-across 2–10 km+：O 波段 Coherent-Lite 1.6T | 3.2T，平衡功耗/延迟/成本；Scale-out 100 m–2 km：200G/L PAM4 → 400G/L PAM4；Scale-up 10 m–100 m：200G/lane PAM4 → 400G/L PAM4，AOC/光收发器，低功耗低延迟 [p4–p5]；p5 版本另列 Scale In 1–10 m："Slow and Wide Optics: uEmitter、uLED | uVCSEL"（看图核实）
   - 架构组合：TRO|NPO（最低延迟、最低 DSP 开销，scale-up）；PAM4 FRO|TRO DSP（覆盖+裕量、互通，scale-out 主力）；FRO|Coherent-Lite（O 波段覆盖、较低复杂度，园区/scale-across）；FRO|ZR/ZR+（DWDM 覆盖、强 DSP+FEC，DCI/scale-across）[p6]
   - 3.2T 对 scale-up/out：主机侧每 400G C2M 通道（CPC，Die escaping、TX/RX routing、OSFP 连接器）；448G 时 FRO：C2M PAM6|PAM4，光侧 PAM4；TRO：C2M PAM4，光侧 PAM4；光学 PAM4 | QAM16；FRO 用 PAM DSP | Coh-Lite DSP，TRO|NPO 用 PAM DSP [p13]
-  - 400G/L 下"一阶问题"：主机电通道覆盖、封装/PCB 损耗与反射、FEC 延迟与编码增益、模块功耗与散热余量（OCR 辅助 p8）
-  - 结论页：可插拔的核心价值是可维护性、互通、生态规模与供应链灵活；设计目标是"更多 Tb/s 每交换机、更低 pJ/bit，同时保持大规模可部署性"（OCR p18）[p22]
+  - 400G/L 下"一阶问题"：主机电通道覆盖、封装/PCB 损耗与反射、ADC/DSP 均衡深度、FEC 延迟与编码增益、模块功耗与散热余量；约 212.5+ GBd 时电/光边界须协同设计，"更快的可插拔不只是更快的 DSP，而是新的链路划分"（看图核实 p8）
+  - 结论页：可插拔 DSP 仍是互通、可制造与现场更换场景的默认主力——互通（标准化主机/线路行为）、运维规模（前面板可维护与供应多样）、链路余量（DSP+FEC 吸收通道与光学波动）、成本曲线（大批量生态降低 \$/Gb）；设计目标是"更多 Tb/s 每交换机、更低 pJ/bit，同时保持大规模可部署性"（看图核实 p18）[p22]
   - 未给出具体功耗/延迟数值
 - 提到的公司/客户/产品/标准：Marvell、OSFP、CPC（copper flyover）、TRO/FRO/NPO、PAM4/PAM6/QAM16、Coherent-Lite、ZR/ZR+、uLED/uVCSEL/uEmitter、"OCI/scale-across" 用例（p6 图注）
 - 与业界对比或记录声明（SOTA/首次/record）：无（架构性观点）
@@ -128,7 +128,7 @@ tags:
 - 关键数据：
   - 距离尺度：1 mm 铜、1 m、1 km、1000 km；铜/IMDD 光/相干三种星座与眼图示意，前线 1–2 m 与 2–10 km [p2]
   - 零重传：每个 3.2 Tb/s 链路在 20 km 需 1.3 Gb ARQ 存储；10T 参数数据集在 BER=1E-12 下会丢 160 个包；使用压缩 FEC 后 BER < 1E-24 [p5]
-  - 液冷 400ZR OSFP 运行流量、冷却演进（自然对流 → 强制风冷 → 液冷）（p3–p4 仅见标题，未开图）
+  - 液冷 400ZR OSFP 运行流量、冷却演进（自然对流 → 强制风冷 → 液冷）（p3–p4 看图核实，为演进示意图与设备实拍，无数值）
   - Coherent-Lite：2 nm CMOS，DFB，光子集成；示例 2×1.6T Coherent-Lite OSFP；误码 <1E-24 [p6]
   - 12.8T Coherent-Lite XPO：3.2T Coherent-Lite ASIC、双 1.6T ICR、双 1.6T MZM/驱动、双 DFB O 波段激光；功耗 <240 W（液冷 XPO 可承受 400 W）；BER <1E-24 [p7]
 - 提到的公司/客户/产品/标准：Ciena、400ZR OSFP、Coherent-Lite OSFP、XPO、ARQ、Compressed FEC
@@ -136,7 +136,7 @@ tags:
 - 推荐配图页：p7（12.8T Coherent-Lite XPO 内部结构及 <240 W）；p5（零重传数据：1.3 Gb ARQ、160 包、BER<1E-24）
 
 ### 0920-pm-Su4-A-03-Acacia-PAM4-DSP竞争.pdf
-- 讲者/机构：Tom Williams，Acacia（Cisco 旗下）（姓名依题目页 OCR "dom Williams" 推断，未完全确定） | 题目：FRO, ERO, T/LRO, XPO, ...（副题 A vendor perspective on architectural evolution；OCR 题名残缺） | 类型：邀请报告
+- 讲者/机构：Tom Williams，Acacia（Cisco 旗下）（p1 标题页看图核实） | 题目：CPO, LPO, T/LRO, XPO, EIEIO….（副题 A vendor perspective on architectural evolution） | 类型：邀请报告
 - 方向归属（主/次）：主 [2 Scale-across/FST/多rail/ZR/ZR+/CL/跨楼园区]；次 [1 相干/DCI]、[4 Scale-up/in CPO/NPO/XPO]
 - 核心主张：
   1. AI 推动一切：供应链规模与管理、性能（转化为利润与更稳健链路）、质量成为光学新重点；"成本/bit 仍重要，但为 GPU 利用率优化才是成功关键指标"。
@@ -144,11 +144,11 @@ tags:
   3. 相干走向更短距离：IMDD 的色散容忍度随波特率平方下降，400G/lane 时超过 2 km 就需要相干。
 - 关键数据：
   - 800ZR+ 出货 >75,000 只，Acacia 为领先供应商；图引用 Meta（OFC 2026 Exec Forum）DC-DC 同步与 GW 级集群流量增长（2026 投影最大），以及 Cignal AI 的相干代际普及曲线（横轴为引入后第 1–5 年，800ZR+ 曲线明显高于其他，第 5 年约 650k 台/年的量级；纵轴单位"Thousands"，读数为估读）[p3]
-  - Top 15 云厂商 capex 与光收发器季度销售额（LightCounting 数据），纵轴数值看不清 [p2]
+  - Top 15 云厂商 capex（1Q17–1Q26）与光收发器季度销售额（1Q23–2Q26E）（LightCounting 数据），纵轴无刻度数值；结论"成本/bit 仍重要，但优化 GPU 利用率是成功关键指标"（看图核实）[p2]
   - IMDD 在 200G/lane 的极限约 10 km；400G/lane 时 >2 km 需相干；IEEE 800GBASE-ER1（20 km）与 800GBASE-ER1-20（图上写 40 km 链路，文字标"支持 20 km 和 40 km 链路"）沿用 ZR 技术；1600G/lane 相干可支持 >2 km 园区 DCI；相干优势：4× 每 lane/波长容量、数字色散补偿、支持 DWDM、可少用放大器 [p5]
-  - 光学架构分类（Module-centric 到 Integrated Optics）引用 A. Ghiasi 等，IEEE 802.3 400GPL Study Group，2026 年 9 月（OCR）[p6]
+  - 光学架构分类（Module-centric 到 Integrated Optics：FRO→LPO→NPO→XPO→CPO→OCI，OCI Gen1 200G/方向、Gen2 400G/方向 BiDi）引用 A. Ghiasi 等，IEEE 802.3 400GPL Study Group，2026 年 9 月（看图核实）[p6]
   - 未来路线：0–2 年：200G/lane、OSFP 为主、硅光、CPO 试点；2–5 年：400G/lane、NPO/CPO 与可插拔并存、scale-up 网络用光、Coherent-lite 园区；5–10 年：800G/lane、多数 NPO/CPO、新材料、数据中心内相干 [p9]
-  - p7（OCR）：按 Switch/Rack、Campus、Metro 尺度权衡供应链多样性 vs 功耗/性能优化、前面板或内部可维护性、相干-lite 在光纤容量上的价值
+  - p7（看图核实）：按 Switch/Rack → Row/Building → Campus → Metro 尺度依次为 CPO/NPO（供应链多样性 vs 功耗/性能、前面板或内部可维护）、LPO/LRO（距离、可靠性、互通 vs 功耗与成本）、FRO（IMDD/相干折中）、Coherent-lite 与 ZR/ZR+（光纤容量）
 - 提到的公司/客户/产品/标准：Acacia/Cisco、Meta、Cignal AI、LightCounting、IEEE 802.3（800GBASE-ER1、400GPL SG）、OIF ZR、CPO/NPO/LPO/LRO/XPO
 - 与业界对比或记录声明（SOTA/首次/record）：800ZR+ 为"历史上增长最快的相干技术"；Acacia 领先，>75,000 800ZR+ 模块出货 [p3]
 - 推荐配图页：p5（IMDD 到相干的速率-距离图与色散平方论证）；p9（0–2/2–5/5–10 年数据中心光学路线图）；p3（Meta 流量与 800ZR+ 普及曲线）
@@ -178,13 +178,13 @@ tags:
   2. 如果 IM/DD 不能突破信道零点，Coherent-lite 将主导 2 km 以上。
   3. 应严肃研究面向 IM/DD 的光域/光电域均衡，复杂度远低于模拟相干光学（ACO）：如 1 抽头光延迟线、成对传输（pairwise transmission）。
 - 关键数据：
-  - 拓扑图：400G/lane（约 200 GBd）IM-DD PAM4/PAM6 与 Coherent-Lite（约 260 GBd+，O 波段，16QAM）、数字相干 ZR/ZR+（C 波段）并列；800G/1.6T/3.2T 各速率列出 IM-DD PAM4（100G/lane 50 GBd 等）与相干（约 64/130/260 GBd）对应关系，覆盖 scale-up/scale-out/scale-across（OCR，未开图 p2）
+  - 拓扑图（看图核实 p2）：400G：IM-DD PAM4 100G/lane（50 GBd）DR4/FR4/LR4/ER8 与数字相干 ~64 GBd（400ZR/OpenZR+）；800G：IM-DD PAM4 100G/lane（802.3df）、Coherent-Lite 低功耗 DSP（ER）、~130 GBd 800ZR；1.6T：IM-DD PAM4 200G/lane（100 GBd，802.3dj）、Coherent-Lite 16QAM 130 GBd/DP-QPSK（LR/ER）、~130–260 GBd 1.6T ZR；3.2T：IM-DD PAM4/PAM6 400G/lane（200 GBd，或需新光纤）、Coherent-Lite 16QAM ~260 GBd（O/C 波段 FR/LR/ER）、概率整形 ~260 GBd+ C/L 波段；6.4T：IMDD 存疑、多波长 Coherent-Lite（并行相干/梳状光源）、>400 GBd 超高波特率相干；距离 DR<500 m、FR<2 km、LR<10 km、ER<40 km、ZR<120 km、ZR+>120 km，覆盖 scale-up/scale-out/scale-across 与约 20 km 大园区/短距 DCI、边缘 DCI/AI-RAN
   - O 波段色散：基于 ITU-T G.652.D，零色散波长均值 1312 nm（标准差 2 nm），斜率均值 0.086 ps/(nm²·km)（标准差 0.0015），分段长度 2.5 km；1260–1360 nm 范围 20 km 时累积色散约 ±80–100 ps/nm；1331 nm 处示例 2/5/10/20 km 总色散分布；色散代价 = D×L×BW²，例：16 ps/nm×(50 GHz)² = 2 ps/nm×(200 GHz)² [p3]
   - 224 Gbaud、2 km，判据 <20 抽头且 <4 dB SNR 代价：IM/DD FFE 仅约 45% 波段可用，FFE+1 抽头 DFE 约 70%；相干 FFE 抽头很少（<5）、几乎全波段可用 [p6]
   - 可用带宽随距离（20-tap EQ、4-dB 代价）：O 波段可用谱 2 km 后 <45%，20 km 后 <5%；相干 FFE 在约 15 km 内保持约 100 nm，20 km 处约 77 nm；Broadcom J. Johnson（ITU-T/IEEE，2026 年 7 月）报告更严重结果（2 km 时 <10%）[p9]
   - 1 抽头光延迟线：低 DSP 复杂度纪录（C 波段 100 Gbaud，80/100 km，全 C 波段 WDM 工作）；BiDi 操作（P. Zhu et al., ECOC'26, We3-E2）；图注称"约 100 km @224 Gbaud，即使在 O 波段边缘" [p12]
-  - 成对传输（空时编码，跨多 lane）：适用条件为衰落抑制增益大于复用与 O-E 编码的 SNR 代价；已在光纤束（OFC 2025）、多芯光纤 MCF（ECOC 2025，标 3 与 6 Tb/s·km 曲线）、WDM（OFC 2026）上验证；光纤束图中 BER 在 10–40 km 处成对方案低于传统 OOK/PAM4（纵轴 1E-2~1E-5，具体值看不清）[p14]
-- 提到的公司/客户/产品/标准：NICT、Hamamatsu、UCLA；ITU-T G.652.D；Broadcom（J. Johnson 数据）；IEEE 802.3df；OIF 800ZR/1.6T ZR；相关文献 P. Zhu OFC'24/JOCN 2024/OFC'25/ECOC'25/OFC'26/ECOC'26 We3-E2；Photonic reservoir、negative chirp（MRM）、diversity reception 等技术路线（p11 OCR/缩略图）
+  - 成对传输（空时编码，跨多 lane，如 OOK→PAM4）：适用条件为衰落抑制增益远大于复用与 O-E 编码的 SNR 代价；已在光纤束（OFC 2025）、多芯光纤 MCF（ECOC 2025，本工作点超出 3 与 6 Tb/s·km 曲线）、WDM（OFC 2026）上验证；光纤束图中传统 OOK/PAM4 在 10–20 km 即超出 HD-FEC 门限，成对方案到 40 km 仍在门限附近（看图核实）[p14]
+- 提到的公司/客户/产品/标准：NICT、Hamamatsu、UCLA；ITU-T G.652.D；Broadcom（J. Johnson 数据）；IEEE 802.3df/dj；OIF 400ZR/800ZR/1.6T ZR；相关文献 P. Zhu OFC'24/JOCN 2024/OFC'25/ECOC'25/OFC'26/ECOC'26 We3-E2；Photonic reservoir（Shastri 2022、Takano 2018、Sozos 2022）、negative chirp（MRM，Iovanna 2022、Chan 2022）、diversity reception（Zhang 2023、Li 2021）等技术路线（p11 看图核实）
 - 与业界对比或记录声明（SOTA/首次/record）：C 波段 100 Gbaud 80/100 km "记录级低 DSP 复杂度"（作者自述，引 OFC'24）[p12]
 - 推荐配图页：p9（IM/DD 与相干的可用带宽 vs 距离曲线，核心结论图）；p6（224 Gbaud 2 km 下抽头数-SNR 代价-波长）；p12（1 抽头光延迟线原理与三项验证）；p14（成对传输三类验证）
 

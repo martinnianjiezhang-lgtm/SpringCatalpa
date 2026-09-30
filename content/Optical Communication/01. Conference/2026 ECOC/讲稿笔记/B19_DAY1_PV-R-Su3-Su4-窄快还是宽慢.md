@@ -21,7 +21,7 @@ tags:
   - 相干路线图：1.6T pre-OIF，200 GBd，2波长/4波长，已可用；1600 CL/ZR/ZR+，240–270 GBd（2027/28）开发中；2.4T，280 GBd（2028）开发中；3.2T，400 GBd（2029?）；3.2T ZR，450–500 GBd（early 2030s） [p7]
   - 2026年共6个MSA：XPO（64×200G电接口，12.8T可插拔）、CPX（铜或光输出，近封装且可维护）、400G Optics MSA（400G光通道，500 m，快窄）、OCI（慢宽，如200G→4×50G，WDM+BiDi，与CPO/NPO相关）、SDM4 MCF（空分复用）、Expanded Beam Optics（光纤连接自动化/可制造性） [p9, p12]
   - AI算力需求增长速度（月）远快于电/光速率翻倍（年） [p8]
-- 提到的公司/客户/产品/标准：Finisar、XPO、CPX、OCI、SDM4 MCF、Expanded Beam Optics MSA；xAI Colossus 2（p4，OCR/图像不清，仅见标题级信息）；OIF（相干 pre-OIF）
+- 提到的公司/客户/产品/标准：Finisar、XPO、CPX、OCI、SDM4 MCF、Expanded Beam Optics MSA；xAI Colossus 2（p4 看图核实：>500K GPU、>500 MW、约 2026；此前 Colossus 100k H100 → 150k H100+50k H200+30k GB200 @250 MW）；OIF（相干 pre-OIF）
 - 与业界对比或记录声明（SOTA/首次/record）：无 SOTA 声明；观点性结论“The architecture is a bet, widening is not” [p12]
 - 推荐配图页：p7（IMDD 与相干的速率/通道数路线图）；p12（六大MSA在平台/架构/制造三层的分层对冲图）
 
@@ -62,7 +62,7 @@ tags:
 - 推荐配图页：p4（铜墙与光学前沿的功耗-距离图，含 LPO/L-CPO/P-CPO 定位）；p7（Lumentum VCSEL + Corning + Qualcomm UCIe光D2D 实物demo）
 
 ### 0920-pm-Su3-I-05-Ciena-系统侧的选择.pdf
-- 讲者/机构：Bilal Riaz / Ciena | 题目：（首页OCR不清；页面内容为 fast/narrow vs slow/wide 的系统侧选择） | 类型：Workshop（邀请报告）
+- 讲者/机构：Bilal Riaz（Sr. Director, Product Line Management）/ Ciena | 题目：Beyond Channel Speed: Rethinking Interconnect Scaling（p1 看图核实） | 类型：Workshop（邀请报告）
 - 方向归属（主/次）：主 4 Scale-up/in CPO/NPO/XPO/WSE/OCS；次 2 Scale-across/FST/多rail/ZR/ZR+/CL/跨楼园区
 - 核心主张（原文结论页 p10）：
   1. 慢宽听起来更安全，但宽度带来封装面积、连接器和复杂度，难以回退；动量仍在通道速率，推到448G及以上，快窄仍是规模化最短路径 [p10]
@@ -75,11 +75,11 @@ tags:
   - 互连演进：当前 ASIC到前面板 retimed光学，100T ASIC额外约1 kW用于retimed光学；Emerging 单厂商CPO（在生产，供应链“some risk”）；Optimized 2027 ramp，Open CPX MSA，6.4T模块标准化，多厂商供应 [p9]
   - 关键问题页：OCI若胜出，VCSEL与uLED能否建立生态或规模竞争（“Slow forces a single-technology bet”） [p4]
 - 提到的公司/客户/产品/标准：Ciena、Open CPX MSA、OCI MSA、UCIe、ZR/ZR+、Coherent-Lite、hyper-rail/multi-rail、OCS
-- 与业界对比或记录声明（SOTA/首次/record）：无；“448G demos through OFC 2025”为讲者结论页文字（OCR，页面较小） [p10]
+- 与业界对比或记录声明（SOTA/首次/record）：无；“448G demos through OFC 2025”为讲者结论页文字（p10 看图核实；同页：200G 无源铜缆约 1.5 m、全重定时可插拔约 30 W/18.5 pJ/bit、CPO scale-out 约 2026、scale-up 2027/28，机架 72 → 576+ XPU） [p10]
 - 推荐配图页：p5（DSP/LRO/LPO/NPO/CPO 功耗梯度示意，含pJ/bit）；p9（互连三代演进与供应链红绿灯评估）
 
 ### 0920-pm-Su3-I-07-Marvell-DSP与波特率路线.pdf
-- 讲者/机构：Lenin Patra / Marvell | 题目：（首页OCR不清；内容为DSP与AI光互连各域的路线，未确认英文原题） | 类型：Workshop（邀请报告/产业）
+- 讲者/机构：Lenin Patra（Senior Vice President – Data Center Architecture）/ Marvell | 题目：The Optical I/O Continuum: Architecting Connectivity from Scale-In to Scale-Across（p1 看图核实） | 类型：Workshop（邀请报告/产业）
 - 方向归属（主/次）：主 3 Scale-out 224G/448G/光源/调制器/电芯片/OCS；次 2 Scale-across/FST/多rail/ZR/ZR+/CL/跨楼园区
 - 核心主张（结论页 p14）：
   1. AI每年驱动光学更新换代
@@ -93,7 +93,7 @@ tags:
   - 3.2T scale-out：C2M 400G；448G下FRO电PAM6|PAM4、光PAM4；TRO 电PAM4、光PAM4；Coherent-Lite DSP 电PAM6|PAM4、光Coh-Lite（光调制QAM16） [p11]
   - Scale-across：DCI连接前端网络约1k–2k端口，400G；Scale-across扩展后端网络约10k–20k端口，800G/1.6T，“10x DCI bandwidth” [p12]
   - 1.6T ZR/ZR+ scale-across 模块：Marvell称“Industry 1st 1.6T ZR DSP Constellation – in the ECOC show-floor”；光学为 Marvell TFLN-based Optics [p13]
-- 提到的公司/客户/产品/标准：Marvell、ESUN/UALink/NVLink/Ethernet（p5 标准列表，OCR部分）、OCI MSA、XPO、NPO/CPC/CPX/CPO、Photonic Fabric、Google（OCS拓扑来源）、TSMC CoWoS
+- 提到的公司/客户/产品/标准：Marvell、ESUN/UAL（演进中）与 NVLink/Ethernet（成熟）（p5 看图核实）、OCI MSA、XPO、NPO/CPC/CPX/CPO、Photonic Fabric、OCP MGX/ORV3、Google（OCS拓扑来源）、TSMC CoWoS
 - 与业界对比或记录声明（SOTA/首次/record）：“Industry 1st 1.6T ZR DSP”（ECOC展厅星座图展示）[p13]
 - 推荐配图页：p12（DCI vs scale-across 端口与带宽对比）；p11（3.2T PAM与Coherent-lite在448G的电/光调制格式对照）
 
@@ -137,7 +137,7 @@ tags:
 - 推荐配图页：p6（Jalapeño 128/2048 两级Clos scale-up拓扑与机架照）；p13（OCI 4λ×2方向单纤双向DWDM结构图）；p11/p12（快窄/慢宽/快宽对比表）
 
 ### 0920-pm-Su4-I-04-Coherent-器件路线.pdf
-- 讲者/机构：Chris Kocot / Coherent | 题目：（首页OCR为算力/互连受限图；未见明确英文题，内容围绕VCSEL阵列与DWDM的能耗/带宽比较） | 类型：Workshop（邀请报告）
+- 讲者/机构：Chris Kocot / Coherent | 题目：（p1 看图核实为 "Compute scaling is increasingly interconnect-constrained" 页，非题目页：算力需求每年 4.5x vs 芯片能效每两年 2x，引 Bain & Company 2025；未见明确英文题，内容围绕VCSEL阵列与DWDM的能耗/带宽比较） | 类型：Workshop（邀请报告）
 - 方向归属（主/次）：主 4 Scale-up/in CPO/NPO/XPO/WSE/OCS；次 3 Scale-out 224G/448G/光源/调制器/电芯片/OCS
 - 核心主张（Summary p8）：
   1. AI scale-up 受互连限制；铜到基本极限，光必须并行扩展

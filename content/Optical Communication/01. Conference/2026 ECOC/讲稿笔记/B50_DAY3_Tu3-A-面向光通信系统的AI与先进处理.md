@@ -6,7 +6,7 @@ tags:
 ---
 
 ### 0922-Tu3-A1-丹麦科技大学-AI时代的通信工程与收发机优化.pdf（第1–56页）
-- 讲者/机构：DTU（丹麦科技大学，署名致谢 Darko Zibar / Francesco Da Ros 团队；讲者姓名未在所看页确认） | 题目：AI时代的通信工程与收发机优化（英文原题看不清，OCR乱码；会场 Tu3-A “AI and advanced processing for optical communication systems”） | 类型：邀请报告（教程式综述）
+- 讲者/机构：Darko Zibar（DTU Electro，Machine Learning in Photonic Systems group, MLiPS；p1 看图核实） | 题目：Tutorial: Communication engineering in the age of AI: (optimization of optical transceivers)（会场 Tu3-A “AI and advanced processing for optical communication systems”） | 类型：邀请报告（教程式综述）
 - 方向归属（主/次）：主 1（AI光网络/oDSP/高波特率器件）；次 3（Scale-out 调制器/DML）
 - 核心主张：
   1. AI/ML 是光通信系统优化的强力工具；用于优化的数据驱动模型需同时满足：准确、训练与推理计算高效、可泛化、可微 [p56]
@@ -43,7 +43,7 @@ tags:
 - 推荐配图页：p10（BER vs 每波速率与眼图，BtB 对比）；p12（与光均衡/先进DSP的对比图）；p11（24波长 BER 与眼图）
 
 ### 0922-Tu3-A3-NokiaBellLabs-用时域酉变换生成220GBd相干波形.pdf（第1–15页）
-- 讲者/机构：Nokia Bell Labs（署名引用 C. Deakin, X. Chen；讲者姓名未在所看页确认） | 题目：Generating 220 GBd coherent waveforms with spectro-temporal (time-domain) unitary transformations（英文原题页看不清，据结论/参考文献页推断；参考文献 J. Lightwave Technol. 44, 4880–4889 (2026)） | 类型：学术论文（Tu3-A3）
+- 讲者/机构：Nokia Bell Labs（署名引用 C. Deakin, X. Chen；讲者姓名本批页面未显示） | 题目：Generating 220 GBd coherent waveforms with spectro-temporal (time-domain) unitary transformations（英文原题页未拍到，据结论/参考文献页推断；p1 看图核实为动机页：传统相干调制基于开关，受 MZM 与 RF 驱动电光带宽限制且调制损耗 >25 dB；参考文献 J. Lightwave Technol. 44, 4880–4889 (2026)） | 类型：学术论文（Tu3-A3）
 - 方向归属（主/次）：主 1（相干/高波特率器件）；次 3（调制器）
 - 核心主张：
   1. 用光谱-时间酉变换（交替相位调制 + 色散）可无损生成高波特率相干光波形，不严格受调制器带宽限制 [p15]

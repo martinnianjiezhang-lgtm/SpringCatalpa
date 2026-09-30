@@ -26,7 +26,7 @@ tags:
 **判断3：色散与接收端是 400G+ IM/DD 的物理天花板，光域处理与相干（Coherent-lite）成为 O 波段 2 km 以上的竞争者。**
 - 224 GBd，2 km，最坏色散，EQ 抽头 <20 且 SNR 代价 <4 dB：IM/DD FFE 仅约 45% 的 O 波段可用，FFE+1 抽头 DFE 约 70%；20 km 后 <5%；Broadcom 数据（J. Johnson，ITU-T/IEEE，2026-07）2 km 处 <10%（讲者引用）〔0920-pm-Su4-A-05-NICT p6, p9〕。
 - 出路之一：香港中文大学硅光光域均衡，144 GBd PAM8 每波 432 Gb/s（25% SD-FEC，实验，2 km SMF，C 波段），24 波合计 10.36 Tbps，功耗 <50 mW，时延 <75 ps〔0922-Tu3-A2-香港中文大学 p10-p11, p13〕。
-- 接收端：Nokia Bell Labs/上海科技大学 440 GBd PS-PAM6 单 PD 净速率 826.6 Gb/s（PDP，实验），受 C 波段 SSMF 色散限制只能到约 30 m（OCR）〔0924-PDP-A-6-NokiaBellLabs p8-p9〕。
+- 接收端：Nokia Bell Labs/上海科技大学 440 GBd PS-PAM6 单 PD 净速率 826.6 Gb/s（PDP，实验），受 C 波段 SSMF 色散限制只能到约 30 m（50 m 时 SNR 代价 0.7 dB；O 波段 SSMF 约 0.9 km、HCF 约 200 m）〔0924-PDP-A-6-NokiaBellLabs p8-p9〕。
 
 **判断4：光源正从"模块内一颗 DFB"变成独立子系统，高功率 CW 与多波长两条路线并行，InP 产能是共同约束。**
 - 需求侧：ELS 每波长 200 mW、光纤内 WPE >10%、RIN <-144 dBc/Hz、波长栅格 ±0.2 nm（Scintil 引 OIF ELSFP/OCI-MSA）〔0921-Mo3-待定-Scintil p1〕；Source Photonics CW 路线 70 mW（Q4 2025）→150 mW（Q3 2026）→200 mW（Q4 2026）→400 mW（Q1 2027，≤1600 mA @45 °C）（厂商路线图，自报）〔0922-MF-am-1020-SourcePhotonics p18〕。
@@ -50,7 +50,7 @@ tags:
 - 放量节奏：达到 1000 万只/年所需年数 10G 15 年、100G 10 年、400G 8 年、800G 5 年、1.6T 4 年（LightCounting，OFC 2026 引用）〔0923-We2-B1-Lumentum p6〕。
 
 **市场结构**
-- 硅光收发器 2026 年首次超过收发器销售额的 50%（LightCounting），2031 年 TFLN/LiNbO3 占比明显上升（纵轴数值看不清）〔0920-pm-Su3-A-01-LightCounting p3〕。Crealights 引用硅光渗透率 2025 年 38%、2026 年 50%、2030 年 73%；CPO/NPO 渗透率（TrendForce）2026 年 0.5%、2028 年 15%、2030 年 35%〔0922-MF-am-1200-Crealights p5-p6〕。
+- 硅光收发器 2026 年首次超过收发器销售额的 50%（LightCounting），2031 年 TFLN/LiNbO3 占比明显上升（纵轴无刻度，仅看相对份额）〔0920-pm-Su3-A-01-LightCounting p3〕。Crealights 引用硅光渗透率 2025 年 38%、2026 年 50%、2030 年 73%；CPO/NPO 渗透率（TrendForce）2026 年 0.5%、2028 年 15%、2030 年 35%〔0922-MF-am-1200-Crealights p5-p6〕。
 
 **架构分层（Scale-in / up / out / across）**
 - LightCounting：scale-out 数十至数百米，"SiPh：448G per lane，可插拔，部分 CPO"；scale-up 约 1 m 为"contested"（铜+光）；scale-across 500 m 至公里级为集成相干〔0920-pm-Su3-A-01-LightCounting p5〕。
@@ -125,7 +125,7 @@ tags:
 
 | 机构 | 方案 | 关键指标（条件） | 口径 | 索引 |
 |---|---|---|---|---|
-| Huawei | InP CW（UHP） | WPE >30% 直到 500 mW（50 °C），RIN <-150 dB/Hz；QD DFB 100 °C 下 200 mW@580 mA；多波长 8–16 λ、200–400 GHz 间隔；模块 WPE 需由 <10% 升至 >15%；OCR 显示倒装集成 >3M 已出货（存疑） | 自报 | 〔0920-am-Su1-A-03-华为 p5-p7〕 |
+| Huawei | InP CW（UHP） | WPE >30% 直到 500 mW（50 °C），RIN <-150 dB/Hz；QD DFB 100 °C 下 200 mW@580 mA；多波长 8–16 λ、200–400 GHz 间隔；模块 WPE 需由 <10% 升至 >15%；第一代倒装集成（自有、免隔离器、KGD）已出货 >3M | 自报 | 〔0920-am-Su1-A-03-华为 p5-p7〕 |
 | AMD | 光源方案权衡 | ELSFP 要求 ±0.2 nm、400 GHz、RIN -144 dB/Hz、线宽 <1 MHz；分立 InP DFB 主流；频梳间隔准但功率均匀性与效率待解；异质集成阵列功率扩展是挑战 | 讲者自报 | 〔0920-am-Su1-A-04-AMD p8-p9〕 |
 | Source Photonics | 硅光 CW DFB 路线 | 70 mW（≤300 mA @75 °C）→150 mW（DFB+SOA，≤650 mA）→200 mW（≤850 mA）→400 mW（≤1600 mA @45 °C，2000×500 μm） | 自报 | 〔0922-MF-am-1020-SourcePhotonics p18〕 |
 | Scintil | 异质 LEAF Light | 8 激光器（2025/09）→16 激光器（2026/09）+Mux+波长锁定；SHIP 200 mm 平台，85+ GHz TFLN 调制器；提出 10 亿颗量级制造问题 | 自报 | 〔0921-Mo3-待定-Scintil p1, p6, p8〕 |
@@ -142,7 +142,7 @@ tags:
 |---|---|---|---|---|
 | Lumentum | 模块功耗拆分 | DSP 占 49%；SerDes 40%、ADC/DAC 36%、核 24%；收发器功耗曲线 2016 年约 38→2025 年约 17 pJ/bit（读图） | 讲者引用 | 〔0923-We2-B1-Lumentum p8, p19〕 |
 | CUHK | 硅光光学均衡（IIR+格型 FIR） | 插损 <3 dB；对比动机：1.6T DSP 可插拔约 25 W（3 nm）/约 20 W（2 nm）；3 nm DSP 仅能把 112 GBd PAM4 的 O 波段边缘波长延伸到 2 km | 实验 | 〔0922-Tu3-A2-香港中文大学 p3-p4, p8〕 |
-| NICT/UCLA | 1 抽头光延迟线、成对传输 | C 波段 100 Gbaud 80/100 km 记录级低 DSP 复杂度（作者自述，OFC'24）；成对传输光纤束 BER 在 40 km 达约 HD-FEC 极限；MCF 最长约 85 km（读图） | 实验/自述 | 〔0920-pm-Su4-A-05-NICT p12, p14〕 |
+| NICT/UCLA | 1 抽头光延迟线、成对传输 | C 波段 100 Gbaud 80/100 km 记录级低 DSP 复杂度（作者自述，OFC'24）；成对传输光纤束 BER 在 40 km 达约 HD-FEC 极限；MCF 上约 80 km@100 Gb/s、50 km@150 Gb/s（读图） | 实验/自述 | 〔0920-pm-Su4-A-05-NICT p12, p14〕 |
 | NTHU | 物理感知稀疏 Volterra | 100G PAM4 IM/DD，4.2 km SMF；剪 92% 系数无 BER 代价；达 KP4 门限约 371→31 次乘法/符号；相对 MP-VE -36.5% | 实验 | 〔0921-Mo5-F6-清华 p14-p15〕 |
 | EPFL | 最大覆盖 Chase 译码 | oFEC（eBCH(256,239,2)，16-QAM）36 个 TEP 达到 Chase-Pyndiah 93 个的性能，最坏复杂度 -61.3%；RS-BCH 级联 -25% | 仿真 | 〔0924-Th2-H1-EPFL p10, p12〕 |
 
@@ -223,7 +223,7 @@ tags:
 | 16 | Southampton / YOFC | Tu1-B3 / Tu1-G4 | HCF 上 IM/DD 多阶 PAM 与 O 波段水汽稳健性首次实验验证 | 4.96 Tbit/s 31 路 11.6 km；YOFC 2 km 插损变化 ±0.1 dB/km 内 | 首次（YOFC 自称） | 〔0922-Tu1-B3-南安普顿 p10〕〔0922-Tu1-G4-长飞 p8, p11〕 |
 | 17 | NVIDIA | Th2-E1；Tu1-E5 | 4λ×64G 偏振分集微环 DWDM RX 无需 PMF；动态环分配省热调谐功耗 | PDL ±0.2 dB（252 点）；SNR 8.1→7.6 dB；0.8 Tb/s/mm、2.78 pJ/b | 实验 | 〔0924-Th2-E1-NVIDIA p8, p12〕〔0922-Tu1-E5-NVIDIA p4〕 |
 | 18 | Chalmers / Solinide；Columbia | OFC 2026 Th2A.13；CLEO 2026 Highlight | O 波段微梳与高功率灵活 FSR Kerr 梳 | 69% 效率（28 线 >1 mW）；63.6%（375 mW 泵浦，300 GHz） | 自报/CLEO Highlight | 〔0920-am-Su2-A-05-Chalmers p7〕〔0920-am-Su1-A-05-Columbia p8〕 |
-| 19 | Quintessent；Photon Bridge | Workshop | QD 8λ 单腔梳 200 mW；32 DFB 晶圆级 8 色集成"first chips out of fab"（OCR） | 2 dB 均匀度；±27 GHz | 首个（OCR） | 〔0920-am-Su2-A-02-Quintessent p12〕〔0920-am-Su2-A-03-PhotonBridge p6, p9〕 |
+| 19 | Quintessent；Photon Bridge | Workshop | QD 8λ 单腔梳 200 mW；32 DFB 晶圆级 8 色集成"first chips out of fab"（单芯片 8×8λ ELS：32 DFB + AWG MUX） | 2 dB 均匀度；±27 GHz | 首个（自报） | 〔0920-am-Su2-A-02-Quintessent p12〕〔0920-am-Su2-A-03-PhotonBridge p6, p9〕 |
 | 20 | imec | Th2-E3 | 免 CMP Ge PD 高可靠 | 500 h HTOL 无暗电流退化；65.3 GHz | 实验 | 〔0924-Th2-E3-imec p15〕 |
 
 ---
@@ -246,7 +246,7 @@ tags:
 - 修正方：光域均衡（CUHK 432G/λ，2 km）与 1 抽头 ODL；另有观点认为 Coherent-lite 在 800G/1.6T"没有市场"，机会在 1.6T 单波/3.2T 双波长〔0923-MF-00-四家连拍 p13〕。
 
 **5.4 CPO 何时、以何种形态**
-- NVIDIA：CPO 已量产，4× 更少激光器、5× 更低功耗、10× 更高 MTBI；网络中断可累计每天 \$3M 损失，CPO 将"近乎消除"（自报，OCR）〔0920-pm-Su3-A-05-NVIDIA p9, p16〕。
+- NVIDIA：CPO 已量产，4× 更少激光器、5× 更低功耗、10× 更高 MTBI；网络中断可累计每天 \$3M 损失，CPO 将"近乎消除"；网络占总功耗 6–8%，CPO 可降 5 倍（自报）〔0920-pm-Su3-A-05-NVIDIA p9, p16〕。
 - Oracle：系统 FIT 预期更高，方案专有，512×8 光纤 = 4096 个箱级 SPOF；NPO 更灵活〔0923-MF-00-四家连拍 p36-p38〕。
 - Source Photonics 认为 NPO 2027 起量；Applied Materials 称 CPO 将是"高性能、封闭生态、低量"，被某高管重命名为 CPO(CP-zero)〔0922-MF-am-1020-SourcePhotonics p16〕〔0920-pm-Su3-I-08-AppliedMaterials p5〕。
 

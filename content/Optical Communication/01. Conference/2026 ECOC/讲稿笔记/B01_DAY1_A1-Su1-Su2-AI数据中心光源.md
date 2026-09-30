@@ -14,7 +14,7 @@ tags:
 - 方向归属（主/次）：主 [4 Scale-up/in CPO/NPO/XPO/WSE/OCS]；次 [3 光源]
 - 核心主张：
   1. Scale-up 域从单机柜（<100 XPU）扩展到多机柜（100s~1000s XPU，铜+光，光最远约100 m），FOM = (Tbps/mm)/((pJ/bit)*(ns)) * reach(m) * MTTF [p2]
-  2. VCSEL LPO 已用于 Atlas 950 SuperPoD；NPO 形态的高密度光引擎是下一代选项；7.2T Hi-ONE NPO 采用板载免光纤（fiber-free）激光器 [p8 结论页，OCR核对]
+  2. VCSEL LPO 已用于 Atlas 950 SuperPoD；NPO 形态的高密度光引擎是下一代选项；7.2T Hi-ONE NPO 采用板载免光纤（fiber-free）激光器 [p8 结论页，看图核实]
   3. 未来需要 laser-on-PIC 进一步集成；量子点适合热环境恶劣场景；慢而宽（slow-and-wide）能效承诺需要持续创新 [p8]
 - 关键数据：
   - Atlas 900（2025）：384 NPU，6912x 400G SR8 VCSEL oDSP；Atlas 950（2026）：64~8196 NPU，4096x 800G SR8 VCSEL LPO（对应1024 NPU）；页面标注 Latency 降 90%、Power 降 60%（基线未明示，按页面原样）；光链路由 UnifiedBus 链路级重传 + 2x2 模块级交叉备份保护 [p3]
@@ -23,7 +23,7 @@ tags:
   - 板载内置激光器（7.2T Hi-ONE NPO，36x224G）：无PM光纤、AlQ MQW、FIT<1（1:1备份）[p5]
   - QD DFB（片上潜力）：100 °C 下 200 mW@580 mA；GaAs，2 mm；11x23°；>-25 dB 反射容忍；LI 曲线含 25/80/100 °C [p5]
   - 多波长（slow-and-wide）：O波段 8–16 λ、200–400 GHz 间隔、平坦低RIN；模块WPE 需由<10% 提升到>15%；图示 50G NRZ w/ TEC 下激光器贡献能耗 vs 光纤内光功率（1–11 dBm）：10% WPE 与 18% WPE 两条曲线，10% WPE 曲线在约 11 dBm 处约 4.5 pJ/bit，18% 约 2.4 pJ/bit（读图估值）；200 GHz 间隔 QD 梳状激光器 53G NRZ：ER=4.2 dB，TECQ=2.84 dB [p6]
-  - 激光器集成：第一代倒装集成（Huawei 自有），对标 TSMC COUPE；OCR 显示 >3M 已出货（该数字来自 OCR，未在图片中核对，存疑）[p7]
+  - 激光器集成：第一代倒装集成（Huawei 自有），免隔离器、已知良品裸片（KGD），已出货 >3M（看图核实）；下一代参照 TSMC COUPE 进一步缩小尺寸，热/可靠性代价靠高效散热、冗余与量子点缓解 [p7]
 - 提到的公司/客户/产品/标准：Huawei Atlas 900 / Atlas 950 SuperPoD、UnifiedBus、Hi-ONE NPO、TSMC COUPE、IEEE P802.3ds、Lighthera（数据来源）
 - 与业界对比或记录声明：无明确 SOTA/record 声明；强调 VCSEL LPO 已在超节点规模部署（Atlas 950）[p3]
 - 推荐配图页：p3（Atlas 900→950 两代 VCSEL 光互连及 Latency/Power 指标）；p4（3.2T VCSEL NPO 引擎及 EMB-reach 曲线）；p5（三类CW激光器：InP CW、板载、QD DFB）
@@ -53,7 +53,7 @@ tags:
   2. 波长域大规模并行（梳状光源 + DWDM）可实现 multi-Tbps 单链路、<1 pJ/b，且带宽与能耗/比特与距离无关 [p5]
   3. “更多并行波长 + 中等速率”（Wide and Slow）在带宽密度x能效上比“窄而快”有 ~100x 优势 [p9]
 - 关键数据：
-  - 网络层级（OCR核对）：GPU-HBM4 25.6 TBps；GPU-CPU 900 GBps；NVLink 6.0 3.6 TBps/GPU，最多256 GPU同一NVLink域；NIC 1.6 Tbps/GPU；scale-out 可插拔光模块 >20 pJ/bit（OCR，图片未单独核对）[p2–p3]
+  - 网络层级（看图核实）：GPU-HBM4 25.6 TBps；GPU-CPU (C2C) 900 GBps；片内 <50 fJ/bit；NVLink 6.0 3.6 TBps/GPU，最多 256 GPU 同一 NVLink 域，约 5 pJ/bit；NIC 1.6 Tbps/GPU；scale-out 可插拔光模块 >20 pJ/bit；系统内 128× 带宽锥度 [p2–p3]
   - 图：带宽密度x能效 [(Gbps/mm)/(pJ/b)] vs 最大链路距离，标注 UCIe 1.0-A/1.0-S、NVLink 6.0、Avicena LightBundle、Ayar TeraPHY、可插拔光学；Embedded Photonics 位于右上区域（目标区）[p4]
   - Kerr 梳链路（Nature Photonics 2023, Rizzo et al.）：multi-Tbps 单链路，<1 pJ/b [p5]
   - 高功率灵活FSR Kerr 梳（CLEO 2026 Highlight Talk，Cullen et al.），泵浦功率 375 mW：300 GHz 梳转换效率 63.6%，#Ch>5 dBm=25，#Ch>-3 dBm=36，3 dB 内通道数 19；200 GHz：48.1%，17，48，27；100 GHz：33.6%，—，73，57；眼图：300 GHz 梳 32 Gb/s，200 GHz 梳 24 Gb/s，100 GHz 梳 16 Gb/s [p8]
@@ -74,12 +74,12 @@ tags:
 - 关键数据：
   - Open CPX 1.0 规范（2026-09-16）：6.4/7.2 Tbps，32/36 lane，最高 212.5 Gbps/lane；两种激光选项：内置 ILM、外置 ELM（ELSFP）；通用 socket（机械/电/光/热/CMIS）；CPX 模块不要求热插拔 [p4]
   - OCI v1.0（200G OCI Line Interface Spec，2026-03-11）：每方向4波长，Group A 1308.00/1310.28/1312.58/1314.88 nm，Group B 1327.69/1330.05/1332.41/1334.78 nm，相邻间隔 2.28–2.37 nm，53.125 Gbaud NRZ，单 BiDi 光纤共8波长 [p5]
-  - 成本结构：封装/组装/测试约占 80%，芯片约 20%（OCR读出，图中饼图标注）[p7]
+  - 成本结构：封装/组装/测试约占 80%，芯片约 20%（看图核实，饼图标注）[p7]
   - 串行对准：单次对准+胶固化 5–10 分钟；8通道 40–80 分钟 [p8]
   - IMEC 晶圆级混合集成示例：300 mm Si 晶圆、倒装焊、商用 InP DFB；X 方向偏差均值 26 nm、3σ=254 nm（N=51）；Y 方向均值 13 nm、3σ=284 nm（Marinis et al., IEEE 2023，亚300 nm对准）[p10]
   - Dream Photonics 方案目标：5 M 连接/工具吞吐；性能耦合损耗 <1.2 dB；低背反；晶圆级混合或子组件；图示 kink-free LI 曲线与 SMSR 谱（波长约 1310 nm）[p18]
   - Intel 经验教训：混合集成在销量达到阈值前更优；过早上异质集成有 >\$100M 研发无法回收的风险，工艺昂贵、毛利薄（OCR，页p9文字清晰）
-  - InP QW vs GaAs QD 对比：GaAs QD 6 英寸衬底（InP 为 4 英寸）、100°C+ 热稳定、天然反射免疫、可免隔离器；受控自注入可稳定激光器（O. Esmaeeli, Nature Photonics, 2026年3月），无磁光隔离器 [p14–p15，OCR]
+  - InP QW vs GaAs QD 对比：InP 为 4 英寸易碎衬底、对反射敏感需隔离器、存在供应链问题；GaAs QD 用 6 英寸衬底、100°C+ 热稳定、天然反射免疫、可单/多波长并可在硅衬底上生长；受控自注入可稳定 DFB 激光器，无磁光隔离器（O. Esmaeeli, Nature Photonics, 2026年3月）[p14–p15，看图核实]
 - 提到的公司/客户/产品/标准：Open CPX MSA、OCI-MSA / 200G OCI Line Interface Specification、ELSFP、IMEC、Intel、CMIS、Dream Photonics、SiEPIC
 - 与业界对比或记录声明：无 SOTA 声明；引用 IMEC 亚300 nm 倒装对准精度 [p10]
 - 推荐配图页：p4（Open CPX 1.0 规范要点）；p5（OCI v1.0 两组各4波长的具体波长）；p8（激光耦合串行对准瓶颈）
@@ -111,15 +111,15 @@ tags:
   2. 悬臂式（cantilever）InP-on-SOI 耦合：有源用任意 III-V 外延，无源用厚 SOI 承受高功率 [p5]
   3. 8x8λ ELS 单芯片（32 颗 DFB + AWG MUX）已出片；高功率 DWDM 光源 2027年Q1 送样 [p6、p10]
 - 关键数据：
-  - CPO 使电通道损耗由 20 dB 降到 6 dB（OCR，p3）
+  - CPO 使电通道损耗由 20 dB 降到 6 dB，并降低功耗；外置光源便于维护、降低 TCO（看图核实，p3）
   - ELS 要求：每色 ≥15 dBm；目标配置：8λ x 8 光纤（200 GHz 间隔）、2x4λ（OCI MSA，双向）、2x8λ（200 GHz 间隔）[p4]
-  - 无源平台：厚 SOI 可处理 >1 W 光功率，1200 nm 至 >4000 nm 透明；有源：InP，1200–2000 nm；对准容差大、10x 更大 CD、i-line 无需 EUV（OCR，p5）
+  - 无源平台：厚 SOI 可处理 >1 W 光功率，1200 nm 至 >4000 nm 透明，高阻（未掺杂）支持 >110 GHz 互连；有源：InP，1200–2000 nm；热匹配、对准容差大、10x 更大 CD、i-line 无需 EUV（看图核实，p5）
   - 8λ InP DFB 阵列：200 GHz 间隔，单面最高 50 mW；LI 曲线在 25/50/65 °C（200 mA 时约 51/38/28 mW，读图估值）[p7]
   - 片上 AWG：8通道，设计间隔 200 GHz，实测平均通道间隔 197.4 GHz（SD 23.2 GHz），设计与测量中心波长偏差 70 GHz，平均 1 dB 带宽 115.8 GHz [p8]
   - 晶圆级结果：32 颗 DFB 带 64 输出耦合到 SOI；8色输出通道偏差在 ±27 GHz 内（rms 18–19 GHz）；所有 DFB 均在 AWG 通带内 [p9]
   - 产品目标：对齐 OCI MSA；>35 mW/色/光纤；可扩展 8/16/32 色；领先 InP 代工产能到位并可扩展多家；分布式激光架构使激光功率密度需求低 >2x；产品名 Palette-1 TOSA（DWDM 光纤输出），2027Q1 送样 [p10]
 - 提到的公司/客户/产品/标准：OCI MSA、Palette-1 TOSA、InP foundry（未点名）
-- 与业界对比或记录声明：“First chips out of fab”（8x8λ 单芯片）[p6，OCR]
+- 与业界对比或记录声明：“First chips out of fab”（单芯片 8×8λ ELS：32 个 DFB 激光器阵列 + AWG MUX，每纤 8 波长、每芯片 8 纤）[p6，看图核实]
 - 推荐配图页：p9（32 DFB 晶圆级 8色输出，±27 GHz）；p8（AWG 实测通道与 197.4 GHz 间隔）；p10（高功率 DWDM 光源规格与送样时间）
 
 ### 0920-am-Su2-A-04-NTT-薄膜激光器.pdf
@@ -134,10 +134,10 @@ tags:
   - 16通道薄膜 DML 阵列（SiO2/Si 衬底，1.11 mm x 2.75 mm）：Ith <1.3 mA，Pmax 约4 mW（片上），波长均匀性 <±0.2 nm，SMSR >50 dB，平均 f3dB 25.7 GHz（室温），能耗 0.33–0.65 pJ/bit，岸线密度约 1.6 Tbps/mm；56 GBaud PAM4（112 Gbps），室温，2 km 传输 [p7]
   - 4通道 x 400 Gbps PAM4 薄膜 EML 阵列（O 波段，55 °C，OFC 2026 PDP Th4A.1）：EAM 100 μm、激光 300 μm；消光比 3.8 dB/V（0–1 V 摆幅，55 °C）；3 dB 带宽 >100 GHz；驱动 0.5–1.0 V 摆幅；PIC 尺寸 2.0 mm x 0.5 mm [p10]
   - 55 °C 演示：400 Gbps PAM4 各通道 ER=3.5/3.6/3.0/3.3 dB；448 Gbps PAM4 各通道 ER=3.0/3.2/2.8/2.7 dB；面密度 1.6 Tbps/mm²，岸线密度 3.2 Tbps/mm，激光能耗 0.12 pJ/bit [p11]
-  - 集成路线：晶圆级直接键合（目前至4英寸，随市场增长可到 6–12 英寸）；芯片级微转印（MTP，4英寸 InP 转到 8–12 英寸 SOI，对准目标 ΔX,Y ±0.2 μm，Δθ 约 0.02°）[p6，OCR]
+  - 集成路线：晶圆级直接键合（目前至4英寸，随市场增长可到 6–12 英寸）；芯片级微转印（MTP，4英寸 InP 转到 8–12 英寸 SOI，对准目标 ΔX,Y ±0.2 μm，Δθ 约 0.02°）[p6，看图核实]
   - 汇总表（今天 / +5 年）：直接键合 2–3 英寸 MTP / 4–6 英寸 MTP；KGD：TBD / 芯片级 KGD（MTP）；功率/λ：+3~+13 dBm（CW）/ch / 增加通道数（2D 阵列、WDM）；可靠性 TBD；技术就绪度 Level 3-5（PoC 至部分规模原型）；封装：片上 PIC、绝热耦合；SMSR >40–50 dB（典型），RIN 取决于腔设计；良率/成本/代工：TBD，代工可用性：No [p14]
   - ECOC 2026 NTT 相关论文：We1-C2 薄膜 EAM 低偏振相关，PDL<1 dB，PAM4 256/300 Gbps（TE/TM/混合，ER 3.0–3.4 与 3.2–3.7 dB）；Tu3-D1 差分驱动薄膜 EAM 子组件 400 Gbps PAM4，1.0 V 差分摆幅，3 dB EO 带宽 >110 GHz；Tu3-D4 EA-DFB 光芯片链路 1.55 pJ/bit @ 64 Gbit/s PAM4 [p15]
-  - SOA（p12，OCR）：微转印 SOA，SOA 长 300 μm，有源区 0.6 x 0.1 μm²；覆盖 O/C/L 波段（视有源材料）
+  - SOA（p12，看图核实）：微转印 SOA，SOA 长 300 μm，有源区 0.6 x 0.1 μm²，限制因子 Γ 可由下层波导调控（10–50%）；覆盖 O/C/L 波段（视有源材料）；亦可微转印到 TFLN 波导上
 - 提到的公司/客户/产品/标准：NTT；引用 Hiraki/Nishi/Fujii/Maeda 等 JLT/Optica 论文；ELSFP
 - 与业界对比或记录声明：4ch x 400G PAM4（含448G）薄膜 EML 阵列为 OFC2026 PDP 成果 [p10–p11]
 - 推荐配图页：p5（ELS+分路器 vs 集成 LD+MOD+SOA 的功率预算）；p11（4ch x 400/448G PAM4 眼图与密度指标）；p14（现状/5年汇总表）
@@ -154,7 +154,7 @@ tags:
   - O 波段进展：半导体锁模激光器（Rautert et al., OFC Th4D.3 2025, Innolume/Axalume）：>1 mW/线，100 GHz 间隔 24 条线，2段 MLL，InAs/GaAs QD；O 波段微梳（Helgason et al., OFC Th2A.13 2026, Solinide Photonics）：75 mW 泵浦，200 GHz 间隔，28 条线 >1 mW，效率 69%（页面标注约70%光学转换效率），Si3N4 光子分子 + 放大 DFB 泵浦 [p7]
   - 超高效微梳（Helgason et al., Nature Photon. 2023）：100 GHz 梳，55% 转换效率，泵浦 8 mW，波段约 1480–1640 nm [p8]
   - 晶圆可扩展性（Girardi et al., Opt. Express 2025）：1450–1675 nm 波长范围，共 9283 个谐振；转换效率分布集中在约 50–60%（读图），少量器件低至约 20%；晶圆尺度约 1 cm 标尺图 [p9]
-  - 长期稳定性：24/7 运行孤子微梳，封装模块带光纤阵列，主动反馈稳定功率设定点（Rebolledo-Salgado et al., Opt. Lett. 49, 2325, 2024）[p10–p11，OCR]
+  - 长期稳定性：24/7 运行孤子微梳，封装模块带光纤阵列，主动反馈稳定功率设定点，30 小时重复频率/泵浦频率漂移平稳；产品化见 Solinide Photonics（OFC2026 展示）（Rebolledo-Salgado et al., Opt. Lett. 49, 2325, 2024）[p10–p11，看图核实]
   - Solinide 建模路线图（标注 Modelled Roadmap）：75 mW 泵浦、200G 间隔、28 条 >1 mW、69% 效率；150 mW 泵浦、200G 间隔、64 条 >1 mW、>70% 效率；300 mW 泵浦、100G 间隔、128 条 >1 mW、>70% 效率（波长范围约 1200–1400 nm）[p12]
 - 提到的公司/客户/产品/标准：Solinide Photonics、Innolume/Axalume、Nvidia（合作者）、AMICA（欧洲项目标识）、European Innovation Council
 - 与业界对比或记录声明：p7 将半导体 MLL 与 O 波段微梳并列比较；微梳效率 69%–70% 为自报指标，其中 64/128 线为建模路线图而非实测 [p12]
@@ -165,14 +165,14 @@ tags:
 - 方向归属（主/次）：主 [3 Scale-out 224G/448G/光源/调制器/电芯片/OCS]；次 [4 CPO/NPO]
 - 核心主张：
   1. III-V/Si 集成是 PIC 规模化的关键；InPoSi 借助晶圆键合克服异质外延难题，在 Si 界面附近实现高晶体质量 [p3、p5]
-  2. InPoSi 上 MQW 激光器性能与常规 InP 相当，且加速老化未见可测量退化 [p9]
+  2. InPoSi 上 MQW 激光器阈值电流密度（J_th 0.4 kA/cm²）与效率与常规 InP 相当，且 85 °C/100 mA 加速老化 3000 h 未见可测量退化 [p9，看图核实]
   3. 平台可扩展到 HBT、HEMT、SWIR 光电二极管，多用途有助商业化 [p13]
 - 关键数据：
   - 宽面 MQW 激光器 InPoSi_BSE vs InP：阈值电流密度 Jth = 0.4 kA/cm²（图中标注），脉冲状态下阈值与效率与 InP 参考相当 [p9]
   - 加速老化：先 100 °C、200 mA 老化（burn-in）18 h；再 85 °C、100 mA 老化 3000 h；老化前后 LI 曲线（0–200 mA，CW）基本重合，@100 mA 三颗激光器输出功率在 3000 h 内稳定（约 5–6 mW，读图）[p9]
   - 当前研究：InPoSi_BSE 上选择区域生长 SAG 激光阵列，5 通道覆盖约 155 nm 发射波长范围（约1500–1700 nm），CW 下 1515 nm 激射，20–70 °C LI 曲线；埋层激光器（SIBH 再生长）；InP-SOI 激光器利用 III-V/Si 光耦合，80 mA 下激射谱峰约 1543 nm 附近（读图）[p10–p11]
   - 拓展器件：HBT on InPoSi_SC：fT 380 GHz vs 350 GHz，fMAX 430 GHz vs 310 GHz（InP vs InPoSi，读图对应关系存在图例歧义，仅作参考），β=26，BVCEO=4.5 V，VCE=1.6 V，IC=5 mA/μm²；HEMT on InPoSi_SC（与 Chalmers 合作，Move2THz）；SWIR 光电二极管 on InPoSi_BSE：暗电流 J_dark 略高于 InP 参考 [p13]
-  - 工艺：背面刻蚀 BSE、Smart-Cut（Soitec）、InP 种子层等，100 mm 尺寸（OCR，p7）
+  - 工艺：背面刻蚀 BSE（III-V Lab、NTT、东京大学、DTU、上智大学、UCSB/HP 等路线）、Smart-Cut（Soitec，InP 晶圆可重复利用）、InP 种子层等，100 mm 与 200 mm 尺寸（看图核实，p7）
 - 提到的公司/客户/产品/标准：III-V Lab、Nokia Bell Labs、Thales、CEA LETI、Soitec（Smart-Cut）、Sophia University、Univ. of Tokyo、UCSB（工艺合作方图标）、Move2THz、Chalmers
 - 与业界对比或记录声明：无 SOTA/record 声明；InPoSi 与 InP 参考对比 [p9]
 - 推荐配图页：p9（InPoSi 与 InP 激光器 LI 对比与 3000 h 老化）；p10（SAG 多波长阵列与 InP-SOI 激光器）；p13（平台扩展到 HBT/HEMT/SWIR PD）
