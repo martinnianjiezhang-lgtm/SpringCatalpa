@@ -4,109 +4,151 @@ tags:
   - ECOC2026
 ---
 
-ECOC 2026 中主归属 **Scale Out** 的报告 75 篇，另有 114 篇次相关。点报告名跳到对应讲稿笔记。
+ECOC 2026 中主归属 **Scale Out** 的报告 75 篇，另有 114 篇次相关。按二级专题分组，点报告名跳到对应讲稿笔记。
 
-### DAY1（09-20 周日）
+| 二级专题 | 报告数 | 范围 |
+|---|---|---|
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Out 报告索引#调制器\|调制器]] | 9 | Si MZM/MRM、TFLN/TFLT、BTO、EML/EAM、等离子体等 |
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Out 报告索引#光DSP\|光DSP]] | 11 | IM-DD 均衡、MLSE/FEC、时钟恢复、光域处理 |
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Out 报告索引#电SerDes及连接器\|电SerDes及连接器]] | 10 | SerDes、DAC/ADC、驱动/TIA、LPO/LRO、电通道 |
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Out 报告索引#OCS\|OCS]] | 8 | 光电路交换、WSS/AWGR 交换、AI 集群光交换网络 |
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Out 报告索引#光源\|光源]] | 10 | 激光器、光梳、外置光源 |
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Out 报告索引#探测器与接收\|探测器与接收]] | 4 | Ge/InP 光电探测器、APD、接收机 |
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Out 报告索引#集成平台与无源器件\|集成平台与无源器件]] | 11 | 硅光/SiN/异质集成平台、耦合器、滤波器、复用器 |
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Out 报告索引#链路与系统\|链路与系统]] | 12 | 短距链路与系统级实验 |
 
-| 报告 | 题目 |
-|---|---|
-| [[B01_DAY1_A1-Su1-Su2-AI数据中心光源#0920-am-Su2-A-01-UBC-SiEPIC-硅光平台光源.pdf\|0920-am-Su2-A-01-UBC-SiEPIC-硅光平台光源]] | Hybrid laser integration using 3D-printed optics（首页副题：Datacenters will need billions of lasers. Connecting lasers is the bottleneck.） |
-| [[B01_DAY1_A1-Su1-Su2-AI数据中心光源#0920-am-Su2-A-02-Quintessent-量子点梳状光源.pdf\|0920-am-Su2-A-02-Quintessent-量子点梳状光源]] | O-Band Lasers Without InP |
-| [[B01_DAY1_A1-Su1-Su2-AI数据中心光源#0920-am-Su2-A-04-NTT-薄膜激光器.pdf\|0920-am-Su2-A-04-NTT-薄膜激光器]] | Membrane Lasers and Modulators on Si Platform for AI datacenters |
-| [[B01_DAY1_A1-Su1-Su2-AI数据中心光源#0920-am-Su2-A-05-Chalmers-克尔光频梳.pdf\|0920-am-Su2-A-05-Chalmers-克尔光频梳]] | Chip-scale microcombs for short-reach interconnects |
-| [[B01_DAY1_A1-Su1-Su2-AI数据中心光源#0920-am-Su2-A-06-IIIVLab-磷化铟异质集成光源.pdf\|0920-am-Su2-A-06-IIIVLab-磷化铟异质集成光源]] | InPoSi Integration Platform for Laser Sources: Achievements and Perspectives |
-| [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第24–38页）\|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第24–38页）]] | Photonic interconnects for modern AI superclusters（ECOC 2026 Workshop Su3-A） |
-| [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第40–52页）\|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第40–52页）]] | A Pure Photonic Network for the AI Era |
-| [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第71–86页）\|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第71–86页）]] | Meeting Diverse AI Connectivity Needs: Architectural Choices for Next-Generation Pluggable Transceivers |
-| [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第129–147页）\|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第129–147页）]] | Can Photonic Signal Processing Simplify DSP?: Breaking the Fiber Dispersion Barrier in IM/DD |
-| [[B03_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3-A-03-Oracle-AI超集群光互连.pdf\|0920-pm-Su3-A-03-Oracle-AI超集群光互连]] | Photonic interconnects for modern AI superclusters |
-| [[B03_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su4-A-01-Marvell-下一代相干DSP.pdf\|0920-pm-Su4-A-01-Marvell-下一代相干DSP]] | Meeting Diverse AI Connectivity Needs: Architectural Choices for Next-Generation Pluggable Transceivers（讲稿 2026-09-20；PDF 名含"相干 DSP"但内容为可插拔架构组合） |
-| [[B03_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su4-A-05-NICT-光域处理替代DSP.pdf\|0920-pm-Su4-A-05-NICT-光域处理替代DSP]] | Can Photonic Signal Processing Simplify DSP?: Breaking the Fiber Dispersion Barrier in IM/DD |
-| [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su1-B-03-amsOSRAM-慢而宽互连.pdf\|0920-am-Su1-B-03-amsOSRAM-慢而宽互连]] | How Can We Overcome The Optical Power Wall?（首页；OCR为"Overcome the Optical Power Wall"） |
-| [[B14_DAY1_E1-Su1-Su2-集成光子产品化#0920-am-Su1-C-02-imec-IClink-欧洲芯片设计平台与MPW.pdf\|0920-am-Su1-C-02-imec-IClink-欧洲芯片设计平台与MPW]] | Photonics Riding the AI Wave: the role of EuroCDP in the photonics innovation cycle（封面写“ECOC 2027”，原样记录） |
-| [[B14_DAY1_E1-Su1-Su2-集成光子产品化#0920-am-Su1-C-03-STMicro-硅光平台.pdf\|0920-am-Su1-C-03-STMicro-硅光平台]] | Fostering industrial scalability and fast innovation with STMicroelectronics silicon photonics solutions |
-| [[B14_DAY1_E1-Su1-Su2-集成光子产品化#0920-am-Su2-C-01-Cadence-光电协同设计.pdf\|0920-am-Su2-C-01-Cadence-光电协同设计]] | （无标题页；主题为电光协同设计；案例论文A 4-λ × 32-Gb/s Silicon Micro-Ring-Resonator-Based DWDM Receiver with On-Chip Temperature Controller） |
-| [[B14_DAY1_E1-Su1-Su2-集成光子产品化#0920-am-Su2-C-02-Luceda-面向良率的电路设计.pdf\|0920-am-Su2-C-02-Luceda-面向良率的电路设计]] | Photonic circuit design for manufacturing and yield |
-| [[B14_DAY1_E1-Su1-Su2-集成光子产品化#0920-am-Su2-C-03-GhentImec-可编程光子做原型.pdf\|0920-am-Su2-C-03-GhentImec-可编程光子做原型]] | （封面OCR乱码；主题为Programmable photonics for prototyping，ECOC 2026, Malaga, 20 Sept 2026） |
-| [[B14_DAY1_E1-Su1-Su2-集成光子产品化#0920-am-Su2-C-04-BrightPhotonics-快速原型板.pdf\|0920-am-Su2-C-04-BrightPhotonics-快速原型板]] | （无明确题目页；议程为Why Photonic Integration / Idea-to-Product Map / Walking the Stages / Why Products (and Startups) Stall） |
-| [[B17_DAY1_E2-Su3-Su4-6G与边缘融合#0920-pm-Su4-H-01-ETH-等离子体太赫兹通信.pdf\|0920-pm-Su4-H-01-ETH-等离子体太赫兹通信]] | Plasmonic devices approaching 1 THz（据议程页） |
-| [[B18_DAY1_PV-R-Su1-Su2-绿色AI数据中心与接入#0920-am-Su1-I-06-TUe-光子集成交换省能.pdf\|0920-am-Su1-I-06-TUe-光子集成交换省能]] | Photonic integrated switching solutions for energy-efficient high-capacity interconnects networks |
-| [[B18_DAY1_PV-R-Su1-Su2-绿色AI数据中心与接入#0920-am-Su2-I-02-UCDavis-光交换与光计算.pdf\|0920-am-Su2-I-02-UCDavis-光交换与光计算]] | Photonic Switching and Computing in Future AI and Data Systems |
-| [[B19_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su3-I-02-LightCounting-AI光模块市场数据.pdf\|0920-pm-Su3-I-02-LightCounting-AI光模块市场数据]] | Hedging bets while conceding to width（副标题：Can fast and narrow channels keep rising without limit or will slow and wide become the winner?） |
-| [[B19_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su3-I-03-Arista-交换机侧的选择.pdf\|0920-pm-Su3-I-03-Arista-交换机侧的选择]] | Fast-and-Narrow and Slow-and-Wide: The Optimum Depends on System Constraints |
-| [[B19_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su3-I-07-Marvell-DSP与波特率路线.pdf\|0920-pm-Su3-I-07-Marvell-DSP与波特率路线]] | （首页OCR不清；内容为DSP与AI光互连各域的路线，未确认英文原题） |
-| [[B19_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su3-I-08-AppliedMaterials-工艺与封装视角.pdf\|0920-pm-Su3-I-08-AppliedMaterials-工艺与封装视角]] | Fast Narrow for Real Products & Slow Wide for AI Investment Bubble Fantasies |
-| [[B19_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su4-I-05-HyperLight-薄膜铌酸锂路线.pdf\|0920-pm-Su4-I-05-HyperLight-薄膜铌酸锂路线]] | （首页无清晰文字；内容为 TFLN 在快窄/慢宽/快宽中的定位） |
-| [[B20_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su4-I-08-XscapePhotonics-多波长路线.pdf\|0920-pm-Su4-I-08-XscapePhotonics-多波长路线]] | 未见完整题目页（页1、2 未查看/内容不清）；主题为 AI 互连的多波长光源（Serial Cu vs Parallel Cu、Serial vs Parallel SM optics） |
+## 调制器
 
-### DAY2（09-21 周一）
+9 篇 · Si MZM/MRM、TFLN/TFLT、BTO、EML/EAM、等离子体等
 
-| 报告 | 题目 |
-|---|---|
-| [[B22_DAY2_MF-0921-下午-模块与子系统#0921-MF-pm-1320-Oracle-GW级AI部署的经验.pdf\|0921-MF-pm-1320-Oracle-GW级AI部署的经验]] | Lessons from GW-scale AI deployments（据文件名，标题页未看） |
-| [[B22_DAY2_MF-0921-下午-模块与子系统#0921-MF-pm-1400-NexthopAI-200G-PAM4之后的纵向与横向扩展.pdf\|0921-MF-pm-1400-NexthopAI-200G-PAM4之后的纵向与横向扩展]] | Scale-up and scale-out beyond 200G PAM4（据文件名；标题页未看） |
-| [[B22_DAY2_MF-0921-下午-模块与子系统#0921-MF-pm-1420-PhotonBridge-纵向扩展互连与DWDM光源架构.pdf\|0921-MF-pm-1420-PhotonBridge-纵向扩展互连与DWDM光源架构]] | Scale-up interconnect and DWDM light source architecture（据文件名；标题页未细看） |
-| [[B22_DAY2_MF-0921-下午-模块与子系统#0921-MF-pm-1540-Omdia-AI超级周期与地缘政治重塑供应链.pdf\|0921-MF-pm-1540-Omdia-AI超级周期与地缘政治重塑供应链]] | AI super cycle and geopolitics reshaping the supply chain（据文件名） |
-| [[B23_DAY2_Mo12-A-开幕与大会报告#0921-Mo12-00-全场-开幕与大会报告全场连拍.pdf（第37–84页，imec大会报告）\|0921-Mo12-00-全场-开幕与大会报告全场连拍（第37–84页，imec大会报告）]] | Integrated photonics at the heart of a scalable AI revolution（p37题目页） |
-| [[B25_DAY2_Mo3-A-面向接入与AI集群的光子架构#0921-Mo3-A1-iPronics-可编程光子在AI数据中心.pdf\|0921-Mo3-A1-iPronics-可编程光子在AI数据中心]] | Photonics to scale AI datacenters（首页题；副标题未见） |
-| [[B25_DAY2_Mo3-A-面向接入与AI集群的光子架构#0921-Mo3-A3-KDDIResearch-无DSP可插拔能否用于光交换.pdf\|0921-Mo3-A3-KDDIResearch-无DSP可插拔能否用于光交换]] | Is DSP-Free Pluggable Optical Module Suitable for Optical Circuit Switching?（Mo3-A3） |
-| [[B27_DAY2_Mo3-F-高频谱效率与空分的DSP#0921-Mo3-F1-华为-带双二进制预编码的Turbo均衡.pdf\|0921-Mo3-F1-华为-带双二进制预编码的Turbo均衡]] | Turbo Equalization with Duobinary Precoding for High-Speed Bandwidth-limited IM/DD Transmission Systems |
-| [[B29_DAY2_Mo3-I-AI互连之争-第一场#0921-Mo3-待定-Nokia-AI互连路径.pdf\|0921-Mo3-待定-Nokia-AI互连路径]] | AI 互连路径（英文原题未见；内容为 pluggable/LPO/LRO/NPO/CPO 演进与能效） |
-| [[B29_DAY2_Mo3-I-AI互连之争-第一场#0921-Mo3-待定-ScintilPhotonics-AI互连路径.pdf\|0921-Mo3-待定-ScintilPhotonics-AI互连路径]] | AI 互连路径 / 面向 scale-up 的外置激光源 ELS（英文原题未见；页标题 "What must a scale-up ELS deliver?"） |
-| [[B30_DAY2_Mo4-I-AI互连之争-第二场#0921-Mo4-待定-Marvell-每一层都用硅光.pdf（第1–9页）\|0921-Mo4-待定-Marvell-每一层都用硅光（第1–9页）]] | 未见完整原题（OCR/图中为 "AI is everywhere" 起始；文件名概括为"每一层都用硅光"） |
-| [[B33_DAY2_Mo5-F-机器学习与非线性补偿#0921-Mo5-F6-国立清华大学-物理感知的稀疏Volterra均衡剪枝.pdf\|0921-Mo5-F6-国立清华大学-物理感知的稀疏Volterra均衡剪枝]] | Physics-Aware Contribution-Guided Pruning for Low-Complexity Sparse Volterra Equalization in 100-Gb/s PAM4 IM/DD Links（Paper #867，Mo5-F6） |
-| [[B34_DAY2_PF-0921-产品聚焦#0921-PF-待定-CommScope-高密低损自清洁连接器.pdf\|0921-PF-待定-CommScope-高密低损自清洁连接器]] | Introducing the FastSelfClean™ connector technology — Self-cleaning fiber-optic connector for high-density AI factory connectivity |
-| [[B34_DAY2_PF-0921-产品聚焦#0921-PF-待定-Nokia-数据中心内互连演进的光器件.pdf\|0921-PF-待定-Nokia-数据中心内互连演进的光器件]] | （题目页OCR乱码；中文名"数据中心内互连演进的光器件"）主题为 Evolution of optical components for data center interconnects |
-| [[B35_DAY2__合集待拆#0921-合集待拆-全场-A1厅下午上半场连拍-Mo3-A.pdf（第36–47页，Mo3-A5）\|0921-合集待拆-全场-A1厅下午上半场连拍-Mo3-A（第36–47页，Mo3-A5）]] | Large-Scale Deployment of LPO in AI Clusters |
+| 日期 | 报告 | 题目 | 代际 |
+|---|---|---|---|
+| DAY1 | [[B01_DAY1_A1-Su1-Su2-AI数据中心光源#0920-am-Su2-A-04-NTT-薄膜激光器.pdf\|0920-am-Su2-A-04-NTT-薄膜激光器]] | Membrane Lasers and Modulators on Si Platform for AI datacenters | — |
+| DAY1 | [[B17_DAY1_E2-Su3-Su4-6G与边缘融合#0920-pm-Su4-H-01-ETH-等离子体太赫兹通信.pdf\|0920-pm-Su4-H-01-ETH-等离子体太赫兹通信]] | Plasmonic devices approaching 1 THz（据议程页） | — |
+| DAY1 | [[B19_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su4-I-05-HyperLight-薄膜铌酸锂路线.pdf\|0920-pm-Su4-I-05-HyperLight-薄膜铌酸锂路线]] | （首页无清晰文字；内容为 TFLN 在快窄/慢宽/快宽中的定位） | 448G |
+| DAY2 | [[B34_DAY2_PF-0921-产品聚焦#0921-PF-待定-Nokia-数据中心内互连演进的光器件.pdf\|0921-PF-待定-Nokia-数据中心内互连演进的光器件]] | （题目页OCR乱码；中文名"数据中心内互连演进的光器件"）主题为 Evolution of optical components for data center interconnects | — |
+| DAY4 | [[B63_DAY4_We2-B-硅光调制器#0923-We2-B2-80-硅微环调制器5.2THz FSR与69GHz带宽.pdf\|0923-We2-B2-80-硅微环调制器5.2THz FSR与69GHz带宽]] | 69 GHz EO Bandwidth for 3.2-Tbps DWDM Integrated Photonic Transmitters | 224G |
+| DAY4 | [[B63_DAY4_We2-B-硅光调制器#0923-We2-B3-1289-硅有机混合调制器超110GHz.pdf\|0923-We2-B3-1289-硅有机混合调制器超110GHz]] | Beyond 110 GHz Silicon Organic Hybrid (SOH) Modulators | — |
+| DAY4 | [[B63_DAY4_We2-B-硅光调制器#0923-We2-B4-163-激光修整微环调制器超100GBaud.pdf\|0923-We2-B4-163-激光修整微环调制器超100GBaud]] | Post-Fabrication Laser-Trimmed Microring Modulator Operating Beyond 100 Gbaud | 224G |
+| DAY4 | [[B68_DAY4_We3-D-高速IMDD信号处理#0923-We3-D2-苏黎世联邦理工-等离激元光学DAC.pdf\|0923-We3-D2-苏黎世联邦理工-等离激元光学DAC]] | Resonant Plasmonic Optical DAC for Low-Power IM/DD Links | 448G |
+| DAY5 | [[B75_DAY5_PDP-C-后期论文E1厅#0924-Th1-A2-EpiPhotonics-外延PLZT马赫曾德尔调制器低VpiL低损耗高速.pdf\|0924-Th1-A2-EpiPhotonics-外延PLZT马赫曾德尔调制器低VpiL低损耗高速]] | Epitaxial PLZT Mach–Zehnder Modulators with Low Vπ·L, Low Loss, and High-Speed Operation | — |
 
-### DAY3（09-22 周二）
+## 光DSP
 
-| 报告 | 题目 |
-|---|---|
-| [[B40_DAY3_MF-0922-上午-器件与IC与PIC与光纤#0922-MF-am-1020-SourcePhotonics-后1.6T时代哪种光方案会胜出.pdf\|0922-MF-am-1020-SourcePhotonics-后1.6T时代哪种光方案会胜出]] | 后 1.6T 时代哪种光方案会胜出（英文原题标题页看不清；内容为 1.6T era / N/X/CPO 与 400G/λ） |
-| [[B40_DAY3_MF-0922-上午-器件与IC与PIC与光纤#0922-MF-am-1200-Crealights-大规模硅光互连的趋势.pdf\|0922-MF-am-1200-Crealights-大规模硅光互连的趋势]] | Trends of Large-scale Silicon Photonics Interconnection（据 p3 “Background of Large Scale Silicon Photonics Interconnection”，OCR 推断） |
-| [[B40_DAY3_MF-0922-上午-器件与IC与PIC与光纤#0922-MF-am-1240-Lumentum-支撑新光子生态的激光器创新.pdf\|0922-MF-am-1240-Lumentum-支撑新光子生态的激光器创新]] | 支撑新光子生态的激光器创新（英文原题标题页看不清） |
-| [[B43_DAY3_Tu1-B-空芯光纤在光网络中的应用#0922-Tu1-B3-南安普顿大学-空芯光纤带来的光网络新机会.pdf\|0922-Tu1-B3-南安普顿大学-空芯光纤带来的光网络新机会]] | 空芯光纤（HCF）带来的光网络新机会（Tu1-B3，英文原题看不清；讲稿主题为 Hollow-core fibre opportunities for optical networks） |
-| [[B46_DAY3_Tu1-E-光开关与解复用器#0922-Tu1-E1-清华大学-Si3N4与TFLN集成激光器实现200Gbps相干光交换.pdf\|0922-Tu1-E1-清华大学-Si3N4与TFLN集成激光器实现200Gbps相干光交换]] | Fast coherent optical switching based on a wavelength-switchable Si3N4-TFLN laser（页面未见完整英文题目，据结论页概括） |
-| [[B46_DAY3_Tu1-E-光开关与解复用器#0922-Tu1-E4-OneTouch-薄膜钽酸锂8x8光电路交换.pdf\|0922-Tu1-E4-OneTouch-薄膜钽酸锂8x8光电路交换]] | An 8x8 Optical Circuit Switch in Thin-Film Lithium Tantalate |
-| [[B48_DAY3_Tu1-G-短距互连#0922-Tu1-G3-SantAnna-双偏振短距系统群速度色散参数的正则微扰.pdf\|0922-Tu1-G3-SantAnna-双偏振短距系统群速度色散参数的正则微扰]] | Regular Perturbation on the Group-Velocity Dispersion Parameter for Dual-Polarization Short-Reach Systems（Tu1-G3） |
-| [[B48_DAY3_Tu1-G-短距互连#0922-Tu1-G4-长飞-O波段空芯光纤的水汽稳健性.pdf\|0922-Tu1-G4-长飞-O波段空芯光纤的水汽稳健性]] | O 波段空芯光纤（HCF）对水汽的稳健性——页面标题被遮挡/OCR 乱码，英文原题看不清（内容为 O-band HCF robustness to water vapor，Tu1-G4） |
-| [[B50_DAY3_Tu3-A-面向光通信系统的AI与先进处理#0922-Tu3-A2-香港中文大学-24x432Gbps每波的全光均衡实现免DSP光互连.pdf（第1–14页）\|0922-Tu3-A2-香港中文大学-24x432Gbps每波的全光均衡实现免DSP光互连（第1–14页）]] | 24×432-Gbps/λ All-Optical Equalization for DSP-Free Optical Interconnects |
+11 篇 · IM-DD 均衡、MLSE/FEC、时钟恢复、光域处理
 
-### DAY4（09-23 周三）
+| 日期 | 报告 | 题目 | 代际 |
+|---|---|---|---|
+| DAY1 | [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第129–147页）\|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第129–147页）]] | Can Photonic Signal Processing Simplify DSP?: Breaking the Fiber Dispersion Barrier in IM/DD | 448G |
+| DAY1 | [[B03_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su4-A-05-NICT-光域处理替代DSP.pdf\|0920-pm-Su4-A-05-NICT-光域处理替代DSP]] | Can Photonic Signal Processing Simplify DSP?: Breaking the Fiber Dispersion Barrier in IM/DD | 448G |
+| DAY1 | [[B19_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su3-I-07-Marvell-DSP与波特率路线.pdf\|0920-pm-Su3-I-07-Marvell-DSP与波特率路线]] | （首页OCR不清；内容为DSP与AI光互连各域的路线，未确认英文原题） | — |
+| DAY2 | [[B27_DAY2_Mo3-F-高频谱效率与空分的DSP#0921-Mo3-F1-华为-带双二进制预编码的Turbo均衡.pdf\|0921-Mo3-F1-华为-带双二进制预编码的Turbo均衡]] | Turbo Equalization with Duobinary Precoding for High-Speed Bandwidth-limited IM/DD Transmission Systems | — |
+| DAY2 | [[B33_DAY2_Mo5-F-机器学习与非线性补偿#0921-Mo5-F6-国立清华大学-物理感知的稀疏Volterra均衡剪枝.pdf\|0921-Mo5-F6-国立清华大学-物理感知的稀疏Volterra均衡剪枝]] | Physics-Aware Contribution-Guided Pruning for Low-Complexity Sparse Volterra Equalization in 100-Gb/s PAM4 IM/DD Links（Paper #867，Mo5-F6） | — |
+| DAY3 | [[B48_DAY3_Tu1-G-短距互连#0922-Tu1-G3-SantAnna-双偏振短距系统群速度色散参数的正则微扰.pdf\|0922-Tu1-G3-SantAnna-双偏振短距系统群速度色散参数的正则微扰]] | Regular Perturbation on the Group-Velocity Dispersion Parameter for Dual-Polarization Short-Reach Systems（Tu1-G3） | — |
+| DAY3 | [[B50_DAY3_Tu3-A-面向光通信系统的AI与先进处理#0922-Tu3-A2-香港中文大学-24x432Gbps每波的全光均衡实现免DSP光互连.pdf（第1–14页）\|0922-Tu3-A2-香港中文大学-24x432Gbps每波的全光均衡实现免DSP光互连（第1–14页）]] | 24×432-Gbps/λ All-Optical Equalization for DSP-Free Optical Interconnects | 448G |
+| DAY4 | [[B68_DAY4_We3-D-高速IMDD信号处理#0923-We3-D1-1343-南安普顿ORC-PAM12调制编码.pdf\|0923-We3-D1-1343-南安普顿ORC-PAM12调制编码]] | PAM12 Modulation Coding Options Enabling High-Speed IM/DD Transmission in Bandwidth-Limited Systems | — |
+| DAY4 | [[B69_DAY4_We3-D-高速IMDD信号处理#0923-We3-D4-382-NokiaBellLabs-峰值受限线性预均衡.pdf（第1–16页；p10为p9重复）\|0923-We3-D4-382-NokiaBellLabs-峰值受限线性预均衡（第1–16页；p10为p9重复）]] | DAC-aware peak-amplitude-constrained (L1-constrained) MMSE linear transmit pre-equalization（页面未见完整英文原题，据内容概括；场次 We3-D4） | — |
+| DAY5 | [[B84_DAY5_Th2-H-超奈奎斯特与均衡编码#0924-Th2-H1-EPFL-光互连用最大覆盖Chase译码器.pdf\|0924-Th2-H1-EPFL-光互连用最大覆盖Chase译码器]] | Maximum Coverage Chase（"A low-complexity Chase Decoder for optical interconnects with improved TEP selection"，p4 副标题；完整英文原题看不清） | — |
+| DAY5 | [[B84_DAY5_Th2-H-超奈奎斯特与均衡编码#0924-Th2-H6-复旦大学-免自适应THP-FFDNN实现169GBaud超奈奎斯特PAM4传输.pdf\|0924-Th2-H6-复旦大学-免自适应THP-FFDNN实现169GBaud超奈奎斯特PAM4传输]] | Demonstration of 169-Gbaud Faster-Than-Nyquist PAM4 Transmission Using Adaptation-Free THP-FFDNN Under 37.9-GHz 3-dB Bandwidth Limitation | 448G |
 
-| 报告 | 题目 |
-|---|---|
-| [[B53_DAY4_MF-0923-市场聚焦#0923-MF-00-上午连拍.pdf（第23–38页）\|0923-MF-00-上午连拍（第23–38页）]] | Driving a 448Gbps Signaling Spec for AI |
-| [[B53_DAY4_MF-0923-市场聚焦#0923-MF-Credo-市场聚焦.pdf\|0923-MF-Credo-市场聚焦]] | Scaling Optical Reliability with Bandwidth Across AI Clusters |
-| [[B54_DAY4_MF-0923-市场聚焦#0923-MF-OIF-市场聚焦.pdf\|0923-MF-OIF-市场聚焦]] | OIF – Driving a 448G Spec for AI（页脚原文；p1 OCR 乱码） |
-| [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第8–13页）\|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第8–13页）]] | What's next in datacenter optics?（p8 议程页标题） |
-| [[B55_DAY4_MF-0923-市场聚焦#0923-MF-Semtech-市场聚焦.pdf（第1–12页；实际为 Samtec 幻灯，文件名"Semtech"疑有误）\|0923-MF-Semtech-市场聚焦（第1–12页；实际为 Samtec 幻灯，文件名"Semtech"疑有误）]] | AI Infra Cabling — How far can we go? |
-| [[B56_DAY4_PF-0923-产品聚焦#0923-PF-POET-外置激光源ECL.pdf（第1–7页，单场产品聚焦）\|0923-PF-POET-外置激光源ECL（第1–7页，单场产品聚焦）]] | POET Blazar: External Cavity hybrid laser（Product Focus，原题以封面为准） |
-| [[B57_DAY4_We-F-标准化专场#0923-We-F-00-标准化专场II连拍.pdf（第47–62页）\|0923-We-F-00-标准化专场II连拍（第47–62页）]] | Silicon photonics Optical switches for next gen AI datacenters（ITU-T ION-2030 Symposium Session 2） |
-| [[B63_DAY4_We2-B-硅光调制器#0923-We2-B1-Lumentum-800G与1.6T硅光发射机量产.pdf\|0923-We2-B1-Lumentum-800G与1.6T硅光发射机量产]] | 800G and 1.6T Silicon Photonics Transmitters in Volume Production（题目页OCR乱码，英文原题据文件名与内容推断，非逐字） |
-| [[B63_DAY4_We2-B-硅光调制器#0923-We2-B2-80-硅微环调制器5.2THz FSR与69GHz带宽.pdf\|0923-We2-B2-80-硅微环调制器5.2THz FSR与69GHz带宽]] | 69 GHz EO Bandwidth for 3.2-Tbps DWDM Integrated Photonic Transmitters |
-| [[B63_DAY4_We2-B-硅光调制器#0923-We2-B3-1289-硅有机混合调制器超110GHz.pdf\|0923-We2-B3-1289-硅有机混合调制器超110GHz]] | Beyond 110 GHz Silicon Organic Hybrid (SOH) Modulators |
-| [[B63_DAY4_We2-B-硅光调制器#0923-We2-B4-163-激光修整微环调制器超100GBaud.pdf\|0923-We2-B4-163-激光修整微环调制器超100GBaud]] | Post-Fabrication Laser-Trimmed Microring Modulator Operating Beyond 100 Gbaud |
-| [[B68_DAY4_We3-D-高速IMDD信号处理#0923-We3-D1-1343-南安普顿ORC-PAM12调制编码.pdf\|0923-We3-D1-1343-南安普顿ORC-PAM12调制编码]] | PAM12 Modulation Coding Options Enabling High-Speed IM/DD Transmission in Bandwidth-Limited Systems |
-| [[B68_DAY4_We3-D-高速IMDD信号处理#0923-We3-D2-苏黎世联邦理工-等离激元光学DAC.pdf\|0923-We3-D2-苏黎世联邦理工-等离激元光学DAC]] | Resonant Plasmonic Optical DAC for Low-Power IM/DD Links |
-| [[B69_DAY4_We3-D-高速IMDD信号处理#0923-We3-D4-382-NokiaBellLabs-峰值受限线性预均衡.pdf（第1–16页；p10为p9重复）\|0923-We3-D4-382-NokiaBellLabs-峰值受限线性预均衡（第1–16页；p10为p9重复）]] | DAC-aware peak-amplitude-constrained (L1-constrained) MMSE linear transmit pre-equalization（页面未见完整英文原题，据内容概括；场次 We3-D4） |
-| [[B71_DAY4_We5-B-光发射机与VCSEL#0923-We5-B-ST-光发射机与收发.pdf（第1–29页）\|0923-We5-B-ST-光发射机与收发（第1–29页）]] | （题目页 OCR 乱码，未打开；内容为 STMicroelectronics 300 mm 硅光平台 PIC100 及面向 CPO/NPO 的异质集成，英文原题看不清） |
-| [[B73_DAY4_We5-I VESEL#We5-I 东工大.pdf（第1–17页）\|We5-I 东工大（第1–17页）]] | 62-GHz Bandwidth 1060-nm Metal-Aperture VCSELs Enabling 256-Gbps PAM4 and Modal-Dispersion-Free SMF/MMF Links（We5-I.2，讲稿页写为 We5-12） |
+## 电SerDes及连接器
 
-### DAY5（09-24 周四）
+10 篇 · SerDes、DAC/ADC、驱动/TIA、LPO/LRO、电通道
 
-| 报告 | 题目 |
-|---|---|
-| [[B74_DAY5_PDP-A-后期论文A1厅#0924-PDP-A-6-NokiaBellLabs与上海科技大学-440GBaudPAM单光电二极管接收实现每通道净比特率超800Gbps.pdf\|0924-PDP-A-6-NokiaBellLabs与上海科技大学-440GBaudPAM单光电二极管接收实现每通道净比特率超800Gbps]] | IM-DD Net Bit Rate Beyond 800 Gb/s per Lane with Single-Photodiode Reception of 440-GBaud PAM |
-| [[B75_DAY5_PDP-C-后期论文E1厅#0924-Th1-A2-EpiPhotonics-外延PLZT马赫曾德尔调制器低VpiL低损耗高速.pdf\|0924-Th1-A2-EpiPhotonics-外延PLZT马赫曾德尔调制器低VpiL低损耗高速]] | Epitaxial PLZT Mach–Zehnder Modulators with Low Vπ·L, Low Loss, and High-Speed Operation |
-| [[B76_DAY5_Th1-C-光电探测器#0924-Th1-C3-NICT-免偏置200GHz带宽光电探测器面向800Gbps每通道.pdf（第1–11页；页码为PDF页，幻灯片角标=PDF页+2）\|0924-Th1-C3-NICT-免偏置200GHz带宽光电探测器面向800Gbps每通道（第1–11页；页码为PDF页，幻灯片角标=PDF页+2）]] | Bias-free operational 200 GHz PD for high-bandwidth TIA integration（PDF文件名对应“免偏置200GHz带宽光电探测器面向800Gbps每通道”，英文完整原题未见清晰题目页） |
-| [[B83_DAY5_Th2-E-接收机与光电探测器#0924-Th2-E1-NVIDIA-低PDL二维光栅耦合器实现4波64Gbps偏振分集硅光DWDM接收机.pdf\|0924-Th2-E1-NVIDIA-低PDL二维光栅耦合器实现4波64Gbps偏振分集硅光DWDM接收机]] | A 4-λ × 64 Gb/s Polarization-Diverse Silicon Photonic DWDM Receiver Using Low-PDL 2D Grating Couplers |
-| [[B83_DAY5_Th2-E-接收机与光电探测器#0924-Th2-E3-imec-数据中心光互连用高可靠免CMPGe-on-Si波导光电二极管.pdf\|0924-Th2-E3-imec-数据中心光互连用高可靠免CMPGe-on-Si波导光电二极管]] | Highly Reliable CMP-Free Ge-on-Si Waveguide Photodiodes for Data Center Optical Interconnects |
-| [[B84_DAY5_Th2-H-超奈奎斯特与均衡编码#0924-Th2-H1-EPFL-光互连用最大覆盖Chase译码器.pdf\|0924-Th2-H1-EPFL-光互连用最大覆盖Chase译码器]] | Maximum Coverage Chase（"A low-complexity Chase Decoder for optical interconnects with improved TEP selection"，p4 副标题；完整英文原题看不清） |
-| [[B84_DAY5_Th2-H-超奈奎斯特与均衡编码#0924-Th2-H6-复旦大学-免自适应THP-FFDNN实现169GBaud超奈奎斯特PAM4传输.pdf\|0924-Th2-H6-复旦大学-免自适应THP-FFDNN实现169GBaud超奈奎斯特PAM4传输]] | Demonstration of 169-Gbaud Faster-Than-Nyquist PAM4 Transmission Using Adaptation-Free THP-FFDNN Under 37.9-GHz 3-dB Bandwidth Limitation |
+| 日期 | 报告 | 题目 | 代际 |
+|---|---|---|---|
+| DAY1 | [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第24–38页）\|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第24–38页）]] | Photonic interconnects for modern AI superclusters（ECOC 2026 Workshop Su3-A） | 224G |
+| DAY1 | [[B03_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3-A-03-Oracle-AI超集群光互连.pdf\|0920-pm-Su3-A-03-Oracle-AI超集群光互连]] | Photonic interconnects for modern AI superclusters | 224G |
+| DAY2 | [[B22_DAY2_MF-0921-下午-模块与子系统#0921-MF-pm-1320-Oracle-GW级AI部署的经验.pdf\|0921-MF-pm-1320-Oracle-GW级AI部署的经验]] | Lessons from GW-scale AI deployments（据文件名，标题页未看） | 224G |
+| DAY2 | [[B22_DAY2_MF-0921-下午-模块与子系统#0921-MF-pm-1400-NexthopAI-200G-PAM4之后的纵向与横向扩展.pdf\|0921-MF-pm-1400-NexthopAI-200G-PAM4之后的纵向与横向扩展]] | Scale-up and scale-out beyond 200G PAM4（据文件名；标题页未看） | 448G |
+| DAY2 | [[B29_DAY2_Mo3-I-AI互连之争-第一场#0921-Mo3-待定-Nokia-AI互连路径.pdf\|0921-Mo3-待定-Nokia-AI互连路径]] | AI 互连路径（英文原题未见；内容为 pluggable/LPO/LRO/NPO/CPO 演进与能效） | — |
+| DAY2 | [[B34_DAY2_PF-0921-产品聚焦#0921-PF-待定-CommScope-高密低损自清洁连接器.pdf\|0921-PF-待定-CommScope-高密低损自清洁连接器]] | Introducing the FastSelfClean™ connector technology — Self-cleaning fiber-optic connector for high-density AI factory connectivity | — |
+| DAY2 | [[B35_DAY2__合集待拆#0921-合集待拆-全场-A1厅下午上半场连拍-Mo3-A.pdf（第36–47页，Mo3-A5）\|0921-合集待拆-全场-A1厅下午上半场连拍-Mo3-A（第36–47页，Mo3-A5）]] | Large-Scale Deployment of LPO in AI Clusters | 448G |
+| DAY4 | [[B53_DAY4_MF-0923-市场聚焦#0923-MF-00-上午连拍.pdf（第23–38页）\|0923-MF-00-上午连拍（第23–38页）]] | Driving a 448Gbps Signaling Spec for AI | 448G |
+| DAY4 | [[B54_DAY4_MF-0923-市场聚焦#0923-MF-OIF-市场聚焦.pdf\|0923-MF-OIF-市场聚焦]] | OIF – Driving a 448G Spec for AI（页脚原文；p1 OCR 乱码） | 448G |
+| DAY4 | [[B55_DAY4_MF-0923-市场聚焦#0923-MF-Semtech-市场聚焦.pdf（第1–12页；实际为 Samtec 幻灯，文件名"Semtech"疑有误）\|0923-MF-Semtech-市场聚焦（第1–12页；实际为 Samtec 幻灯，文件名"Semtech"疑有误）]] | AI Infra Cabling — How far can we go? | 448G |
 
-### 次相关报告（114）
+## OCS
+
+8 篇 · 光电路交换、WSS/AWGR 交换、AI 集群光交换网络
+
+| 日期 | 报告 | 题目 | 代际 |
+|---|---|---|---|
+| DAY1 | [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第40–52页）\|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第40–52页）]] | A Pure Photonic Network for the AI Era | — |
+| DAY1 | [[B18_DAY1_PV-R-Su1-Su2-绿色AI数据中心与接入#0920-am-Su1-I-06-TUe-光子集成交换省能.pdf\|0920-am-Su1-I-06-TUe-光子集成交换省能]] | Photonic integrated switching solutions for energy-efficient high-capacity interconnects networks | — |
+| DAY1 | [[B18_DAY1_PV-R-Su1-Su2-绿色AI数据中心与接入#0920-am-Su2-I-02-UCDavis-光交换与光计算.pdf\|0920-am-Su2-I-02-UCDavis-光交换与光计算]] | Photonic Switching and Computing in Future AI and Data Systems | — |
+| DAY2 | [[B25_DAY2_Mo3-A-面向接入与AI集群的光子架构#0921-Mo3-A1-iPronics-可编程光子在AI数据中心.pdf\|0921-Mo3-A1-iPronics-可编程光子在AI数据中心]] | Photonics to scale AI datacenters（首页题；副标题未见） | — |
+| DAY2 | [[B25_DAY2_Mo3-A-面向接入与AI集群的光子架构#0921-Mo3-A3-KDDIResearch-无DSP可插拔能否用于光交换.pdf\|0921-Mo3-A3-KDDIResearch-无DSP可插拔能否用于光交换]] | Is DSP-Free Pluggable Optical Module Suitable for Optical Circuit Switching?（Mo3-A3） | — |
+| DAY3 | [[B46_DAY3_Tu1-E-光开关与解复用器#0922-Tu1-E1-清华大学-Si3N4与TFLN集成激光器实现200Gbps相干光交换.pdf\|0922-Tu1-E1-清华大学-Si3N4与TFLN集成激光器实现200Gbps相干光交换]] | Fast coherent optical switching based on a wavelength-switchable Si3N4-TFLN laser（页面未见完整英文题目，据结论页概括） | 224G |
+| DAY3 | [[B46_DAY3_Tu1-E-光开关与解复用器#0922-Tu1-E4-OneTouch-薄膜钽酸锂8x8光电路交换.pdf\|0922-Tu1-E4-OneTouch-薄膜钽酸锂8x8光电路交换]] | An 8x8 Optical Circuit Switch in Thin-Film Lithium Tantalate | — |
+| DAY4 | [[B57_DAY4_We-F-标准化专场#0923-We-F-00-标准化专场II连拍.pdf（第47–62页）\|0923-We-F-00-标准化专场II连拍（第47–62页）]] | Silicon photonics Optical switches for next gen AI datacenters（ITU-T ION-2030 Symposium Session 2） | — |
+
+## 光源
+
+10 篇 · 激光器、光梳、外置光源
+
+| 日期 | 报告 | 题目 | 代际 |
+|---|---|---|---|
+| DAY1 | [[B01_DAY1_A1-Su1-Su2-AI数据中心光源#0920-am-Su2-A-01-UBC-SiEPIC-硅光平台光源.pdf\|0920-am-Su2-A-01-UBC-SiEPIC-硅光平台光源]] | Hybrid laser integration using 3D-printed optics（首页副题：Datacenters will need billions of lasers. Connecting lasers is the bottleneck.） | — |
+| DAY1 | [[B01_DAY1_A1-Su1-Su2-AI数据中心光源#0920-am-Su2-A-02-Quintessent-量子点梳状光源.pdf\|0920-am-Su2-A-02-Quintessent-量子点梳状光源]] | O-Band Lasers Without InP | — |
+| DAY1 | [[B01_DAY1_A1-Su1-Su2-AI数据中心光源#0920-am-Su2-A-05-Chalmers-克尔光频梳.pdf\|0920-am-Su2-A-05-Chalmers-克尔光频梳]] | Chip-scale microcombs for short-reach interconnects | 224G |
+| DAY1 | [[B01_DAY1_A1-Su1-Su2-AI数据中心光源#0920-am-Su2-A-06-IIIVLab-磷化铟异质集成光源.pdf\|0920-am-Su2-A-06-IIIVLab-磷化铟异质集成光源]] | InPoSi Integration Platform for Laser Sources: Achievements and Perspectives | — |
+| DAY1 | [[B20_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su4-I-08-XscapePhotonics-多波长路线.pdf\|0920-pm-Su4-I-08-XscapePhotonics-多波长路线]] | 未见完整题目页（页1、2 未查看/内容不清）；主题为 AI 互连的多波长光源（Serial Cu vs Parallel Cu、Serial vs Parallel SM optics） | — |
+| DAY2 | [[B22_DAY2_MF-0921-下午-模块与子系统#0921-MF-pm-1420-PhotonBridge-纵向扩展互连与DWDM光源架构.pdf\|0921-MF-pm-1420-PhotonBridge-纵向扩展互连与DWDM光源架构]] | Scale-up interconnect and DWDM light source architecture（据文件名；标题页未细看） | — |
+| DAY2 | [[B29_DAY2_Mo3-I-AI互连之争-第一场#0921-Mo3-待定-ScintilPhotonics-AI互连路径.pdf\|0921-Mo3-待定-ScintilPhotonics-AI互连路径]] | AI 互连路径 / 面向 scale-up 的外置激光源 ELS（英文原题未见；页标题 "What must a scale-up ELS deliver?"） | — |
+| DAY3 | [[B40_DAY3_MF-0922-上午-器件与IC与PIC与光纤#0922-MF-am-1240-Lumentum-支撑新光子生态的激光器创新.pdf\|0922-MF-am-1240-Lumentum-支撑新光子生态的激光器创新]] | 支撑新光子生态的激光器创新（英文原题标题页看不清） | 448G |
+| DAY4 | [[B56_DAY4_PF-0923-产品聚焦#0923-PF-POET-外置激光源ECL.pdf（第1–7页，单场产品聚焦）\|0923-PF-POET-外置激光源ECL（第1–7页，单场产品聚焦）]] | POET Blazar: External Cavity hybrid laser（Product Focus，原题以封面为准） | 448G |
+| DAY4 | [[B73_DAY4_We5-I VESEL#We5-I 东工大.pdf（第1–17页）\|We5-I 东工大（第1–17页）]] | 62-GHz Bandwidth 1060-nm Metal-Aperture VCSELs Enabling 256-Gbps PAM4 and Modal-Dispersion-Free SMF/MMF Links（We5-I.2，讲稿页写为 We5-12） | 448G |
+
+## 探测器与接收
+
+4 篇 · Ge/InP 光电探测器、APD、接收机
+
+| 日期 | 报告 | 题目 | 代际 |
+|---|---|---|---|
+| DAY5 | [[B74_DAY5_PDP-A-后期论文A1厅#0924-PDP-A-6-NokiaBellLabs与上海科技大学-440GBaudPAM单光电二极管接收实现每通道净比特率超800Gbps.pdf\|0924-PDP-A-6-NokiaBellLabs与上海科技大学-440GBaudPAM单光电二极管接收实现每通道净比特率超800Gbps]] | IM-DD Net Bit Rate Beyond 800 Gb/s per Lane with Single-Photodiode Reception of 440-GBaud PAM | 448G |
+| DAY5 | [[B76_DAY5_Th1-C-光电探测器#0924-Th1-C3-NICT-免偏置200GHz带宽光电探测器面向800Gbps每通道.pdf（第1–11页；页码为PDF页，幻灯片角标=PDF页+2）\|0924-Th1-C3-NICT-免偏置200GHz带宽光电探测器面向800Gbps每通道（第1–11页；页码为PDF页，幻灯片角标=PDF页+2）]] | Bias-free operational 200 GHz PD for high-bandwidth TIA integration（PDF文件名对应“免偏置200GHz带宽光电探测器面向800Gbps每通道”，英文完整原题未见清晰题目页） | 448G |
+| DAY5 | [[B83_DAY5_Th2-E-接收机与光电探测器#0924-Th2-E1-NVIDIA-低PDL二维光栅耦合器实现4波64Gbps偏振分集硅光DWDM接收机.pdf\|0924-Th2-E1-NVIDIA-低PDL二维光栅耦合器实现4波64Gbps偏振分集硅光DWDM接收机]] | A 4-λ × 64 Gb/s Polarization-Diverse Silicon Photonic DWDM Receiver Using Low-PDL 2D Grating Couplers | — |
+| DAY5 | [[B83_DAY5_Th2-E-接收机与光电探测器#0924-Th2-E3-imec-数据中心光互连用高可靠免CMPGe-on-Si波导光电二极管.pdf\|0924-Th2-E3-imec-数据中心光互连用高可靠免CMPGe-on-Si波导光电二极管]] | Highly Reliable CMP-Free Ge-on-Si Waveguide Photodiodes for Data Center Optical Interconnects | — |
+
+## 集成平台与无源器件
+
+11 篇 · 硅光/SiN/异质集成平台、耦合器、滤波器、复用器
+
+| 日期 | 报告 | 题目 | 代际 |
+|---|---|---|---|
+| DAY1 | [[B14_DAY1_E1-Su1-Su2-集成光子产品化#0920-am-Su1-C-02-imec-IClink-欧洲芯片设计平台与MPW.pdf\|0920-am-Su1-C-02-imec-IClink-欧洲芯片设计平台与MPW]] | Photonics Riding the AI Wave: the role of EuroCDP in the photonics innovation cycle（封面写“ECOC 2027”，原样记录） | — |
+| DAY1 | [[B14_DAY1_E1-Su1-Su2-集成光子产品化#0920-am-Su1-C-03-STMicro-硅光平台.pdf\|0920-am-Su1-C-03-STMicro-硅光平台]] | Fostering industrial scalability and fast innovation with STMicroelectronics silicon photonics solutions | — |
+| DAY1 | [[B14_DAY1_E1-Su1-Su2-集成光子产品化#0920-am-Su2-C-01-Cadence-光电协同设计.pdf\|0920-am-Su2-C-01-Cadence-光电协同设计]] | （无标题页；主题为电光协同设计；案例论文A 4-λ × 32-Gb/s Silicon Micro-Ring-Resonator-Based DWDM Receiver with On-Chip Temperature Controller） | — |
+| DAY1 | [[B14_DAY1_E1-Su1-Su2-集成光子产品化#0920-am-Su2-C-02-Luceda-面向良率的电路设计.pdf\|0920-am-Su2-C-02-Luceda-面向良率的电路设计]] | Photonic circuit design for manufacturing and yield | — |
+| DAY1 | [[B14_DAY1_E1-Su1-Su2-集成光子产品化#0920-am-Su2-C-03-GhentImec-可编程光子做原型.pdf\|0920-am-Su2-C-03-GhentImec-可编程光子做原型]] | （封面OCR乱码；主题为Programmable photonics for prototyping，ECOC 2026, Malaga, 20 Sept 2026） | — |
+| DAY1 | [[B14_DAY1_E1-Su1-Su2-集成光子产品化#0920-am-Su2-C-04-BrightPhotonics-快速原型板.pdf\|0920-am-Su2-C-04-BrightPhotonics-快速原型板]] | （无明确题目页；议程为Why Photonic Integration / Idea-to-Product Map / Walking the Stages / Why Products (and Startups) Stall） | — |
+| DAY2 | [[B23_DAY2_Mo12-A-开幕与大会报告#0921-Mo12-00-全场-开幕与大会报告全场连拍.pdf（第37–84页，imec大会报告）\|0921-Mo12-00-全场-开幕与大会报告全场连拍（第37–84页，imec大会报告）]] | Integrated photonics at the heart of a scalable AI revolution（p37题目页） | 448G |
+| DAY2 | [[B30_DAY2_Mo4-I-AI互连之争-第二场#0921-Mo4-待定-Marvell-每一层都用硅光.pdf（第1–9页）\|0921-Mo4-待定-Marvell-每一层都用硅光（第1–9页）]] | 未见完整原题（OCR/图中为 "AI is everywhere" 起始；文件名概括为"每一层都用硅光"） | — |
+| DAY3 | [[B40_DAY3_MF-0922-上午-器件与IC与PIC与光纤#0922-MF-am-1200-Crealights-大规模硅光互连的趋势.pdf\|0922-MF-am-1200-Crealights-大规模硅光互连的趋势]] | Trends of Large-scale Silicon Photonics Interconnection（据 p3 “Background of Large Scale Silicon Photonics Interconnection”，OCR 推断） | — |
+| DAY4 | [[B63_DAY4_We2-B-硅光调制器#0923-We2-B1-Lumentum-800G与1.6T硅光发射机量产.pdf\|0923-We2-B1-Lumentum-800G与1.6T硅光发射机量产]] | 800G and 1.6T Silicon Photonics Transmitters in Volume Production（题目页OCR乱码，英文原题据文件名与内容推断，非逐字） | 224G |
+| DAY4 | [[B71_DAY4_We5-B-光发射机与VCSEL#0923-We5-B-ST-光发射机与收发.pdf（第1–29页）\|0923-We5-B-ST-光发射机与收发（第1–29页）]] | （题目页 OCR 乱码，未打开；内容为 STMicroelectronics 300 mm 硅光平台 PIC100 及面向 CPO/NPO 的异质集成，英文原题看不清） | 224G |
+
+## 链路与系统
+
+12 篇 · 短距链路与系统级实验
+
+| 日期 | 报告 | 题目 | 代际 |
+|---|---|---|---|
+| DAY1 | [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第71–86页）\|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第71–86页）]] | Meeting Diverse AI Connectivity Needs: Architectural Choices for Next-Generation Pluggable Transceivers | 448G |
+| DAY1 | [[B03_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su4-A-01-Marvell-下一代相干DSP.pdf\|0920-pm-Su4-A-01-Marvell-下一代相干DSP]] | Meeting Diverse AI Connectivity Needs: Architectural Choices for Next-Generation Pluggable Transceivers（讲稿 2026-09-20；PDF 名含"相干 DSP"但内容为可插拔架构组合） | 448G |
+| DAY1 | [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su1-B-03-amsOSRAM-慢而宽互连.pdf\|0920-am-Su1-B-03-amsOSRAM-慢而宽互连]] | How Can We Overcome The Optical Power Wall?（首页；OCR为"Overcome the Optical Power Wall"） | 224G |
+| DAY1 | [[B19_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su3-I-02-LightCounting-AI光模块市场数据.pdf\|0920-pm-Su3-I-02-LightCounting-AI光模块市场数据]] | Hedging bets while conceding to width（副标题：Can fast and narrow channels keep rising without limit or will slow and wide become the winner?） | — |
+| DAY1 | [[B19_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su3-I-03-Arista-交换机侧的选择.pdf\|0920-pm-Su3-I-03-Arista-交换机侧的选择]] | Fast-and-Narrow and Slow-and-Wide: The Optimum Depends on System Constraints | 448G |
+| DAY1 | [[B19_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su3-I-08-AppliedMaterials-工艺与封装视角.pdf\|0920-pm-Su3-I-08-AppliedMaterials-工艺与封装视角]] | Fast Narrow for Real Products & Slow Wide for AI Investment Bubble Fantasies | 448G |
+| DAY2 | [[B22_DAY2_MF-0921-下午-模块与子系统#0921-MF-pm-1540-Omdia-AI超级周期与地缘政治重塑供应链.pdf\|0921-MF-pm-1540-Omdia-AI超级周期与地缘政治重塑供应链]] | AI super cycle and geopolitics reshaping the supply chain（据文件名） | — |
+| DAY3 | [[B40_DAY3_MF-0922-上午-器件与IC与PIC与光纤#0922-MF-am-1020-SourcePhotonics-后1.6T时代哪种光方案会胜出.pdf\|0922-MF-am-1020-SourcePhotonics-后1.6T时代哪种光方案会胜出]] | 后 1.6T 时代哪种光方案会胜出（英文原题标题页看不清；内容为 1.6T era / N/X/CPO 与 400G/λ） | 448G |
+| DAY3 | [[B43_DAY3_Tu1-B-空芯光纤在光网络中的应用#0922-Tu1-B3-南安普顿大学-空芯光纤带来的光网络新机会.pdf\|0922-Tu1-B3-南安普顿大学-空芯光纤带来的光网络新机会]] | 空芯光纤（HCF）带来的光网络新机会（Tu1-B3，英文原题看不清；讲稿主题为 Hollow-core fibre opportunities for optical networks） | — |
+| DAY3 | [[B48_DAY3_Tu1-G-短距互连#0922-Tu1-G4-长飞-O波段空芯光纤的水汽稳健性.pdf\|0922-Tu1-G4-长飞-O波段空芯光纤的水汽稳健性]] | O 波段空芯光纤（HCF）对水汽的稳健性——页面标题被遮挡/OCR 乱码，英文原题看不清（内容为 O-band HCF robustness to water vapor，Tu1-G4） | 448G |
+| DAY4 | [[B53_DAY4_MF-0923-市场聚焦#0923-MF-Credo-市场聚焦.pdf\|0923-MF-Credo-市场聚焦]] | Scaling Optical Reliability with Bandwidth Across AI Clusters | — |
+| DAY4 | [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第8–13页）\|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第8–13页）]] | What's next in datacenter optics?（p8 议程页标题） | 448G |
+
+## 次相关报告（114）
 
 | 报告 | 题目 | 主方向 |
 |---|---|---|

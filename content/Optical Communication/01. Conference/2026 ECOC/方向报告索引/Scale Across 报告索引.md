@@ -4,71 +4,112 @@ tags:
   - ECOC2026
 ---
 
-ECOC 2026 中主归属 **Scale Across** 的报告 37 篇，另有 63 篇次相关。点报告名跳到对应讲稿笔记。
+ECOC 2026 中主归属 **Scale Across** 的报告 37 篇，另有 63 篇次相关。按二级专题分组，点报告名跳到对应讲稿笔记。
 
-### DAY1（09-20 周日）
+| 二级专题 | 报告数 | 范围 |
+|---|---|---|
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Across 报告索引#产业需求\|产业需求]] | 10 | AI 训练跨 DC 需求、架构、经济性、保护与运维 |
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Across 报告索引#FST与Multi-Rail\|FST与Multi-Rail]] | 6 | 全谱转发器、多 rail 线路系统、光纤对为单位的扩容 |
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Across 报告索引#ZR、ZR+、CL\|ZR/ZR+/CL]] | 6 | 400ZR/800ZR/1600ZR(+)、相干可插拔、Coherent-Lite、IPoDWDM |
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Across 报告索引#低功耗DSP\|低功耗DSP]] | 3 | 低复杂度/波特率采样 DSP、FPGA 实时实现、时钟共享 |
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Across 报告索引#高波特率器件\|高波特率器件]] | 1 | 高波特率调制器/探测器/驱动/光 DAC |
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Across 报告索引#光源\|光源]] | 0 | 激光器、光梳、外置光源 |
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Across 报告索引#新型光纤介质\|新型光纤介质]] | 4 | 空芯/多芯/少模光纤用于 DC 互连 |
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Across 报告索引#星地FSO链路\|星地FSO链路]] | 7 | 星地/馈电激光链路、大气湍流与自适应光学（ECOC 2026 将其归入跨域互连） |
 
-| 报告 | 题目 |
-|---|---|
-| [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第87–97页）\|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第87–97页）]] | Coherent Technology for Data-center Applications |
-| [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第99–107页）\|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第99–107页）]] | CPO, LPO, T/LRO, XPO, EIEIO…. A vendor perspective on architectural evolution |
-| [[B03_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su4-A-03-Acacia-PAM4-DSP竞争.pdf\|0920-pm-Su4-A-03-Acacia-PAM4-DSP竞争]] | FRO, ERO, T/LRO, XPO, ...（副题 A vendor perspective on architectural evolution；OCR 题名残缺） |
-| [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su2-B-01-Google-ScaleAcross功耗.pdf\|0920-am-Su2-B-01-Google-ScaleAcross功耗]] | Power Efficient Scale Across – Scaling for the AI Era |
-| [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su2-B-02-Ciena-多轨光子破功耗墙.pdf\|0920-am-Su2-B-02-Ciena-多轨光子破功耗墙]] | Breaking the Power Wall with Multi-Rail Photonics and Optical Interconnect Innovation |
-| [[B06_DAY1_A2-Su3-Su4-无中继空芯光纤#0920-pm-Su4-B-05-MicrosoftAzure-长无中继系统要求.pdf\|0920-pm-Su4-B-05-MicrosoftAzure-长无中继系统要求]] | Requirements for long unrepeatered HCF systems（题目大意，p1 未看图） |
-| [[B09_DAY1_C2.1-Su1-Su2-星地链路大气湍流#0920-am-Su1-F-01+02-FraunhoferHHI+Durham-分集抗衰落与低时延星地链路商用门槛.pdf（第1–10页：Fraunhofer HHI 一讲）\|0920-am-Su1-F-01+02-FraunhoferHHI+Durham-分集抗衰落与低时延星地链路商用门槛（第1–10页：Fraunhofer HHI 一讲）]] | （无独立题目页；主题页为 "Atmospheric turbulence – Why do we need turbulence mitigation?"，副标题 Turbulence mitigation / Diversity combining） |
-| [[B09_DAY1_C2.1-Su1-Su2-星地链路大气湍流#0920-am-Su1-F-01+02-FraunhoferHHI+Durham-分集抗衰落与低时延星地链路商用门槛.pdf（第11–27页：Durham 大学一讲）\|0920-am-Su1-F-01+02-FraunhoferHHI+Durham-分集抗衰落与低时延星地链路商用门槛（第11–27页：Durham 大学一讲）]] | Challenges to resilient Low-Earth Orbit Feeder Links |
-| [[B09_DAY1_C2.1-Su1-Su2-星地链路大气湍流#0920-am-Su1-F-03-北邮-星地激光链路湍流影响.pdf\|0920-am-Su1-F-03-北邮-星地激光链路湍流影响]] | Impacts of Atmospheric Turbulence on Satellite-to-Ground Laser Communication Links and its Mitigation |
-| [[B09_DAY1_C2.1-Su1-Su2-星地链路大气湍流#0920-am-Su1-F-05-FraunhoferIOF-主镜到纤芯的光学天线.pdf\|0920-am-Su1-F-05-FraunhoferIOF-主镜到纤芯的光学天线]] | （题目页OCR乱码，副题为从主镜到光纤纤芯的光学天线，"The optical Antenna"、"The last metre"） |
-| [[B09_DAY1_C2.1-Su1-Su2-星地链路大气湍流#0920-am-Su1-F-06-DLR-可扩展自适应光学.pdf\|0920-am-Su1-F-06-DLR-可扩展自适应光学]] | Building the Next Generation of AO Systems – A Robust and Scalable Solution for High-Throughput FSOC |
-| [[B09_DAY1_C2.1-Su1-Su2-星地链路大气湍流#0920-am-Su2-F-01-NICT-日本星地激光通信实践.pdf\|0920-am-Su2-F-01-NICT-日本星地激光通信实践]] | Space Laser Communications Through the Atmosphere: NICT's Experience in Japan |
-| [[B09_DAY1_C2.1-Su1-Su2-星地链路大气湍流#0920-am-Su2-F-02-ANU-澳国立激光通信计划.pdf\|0920-am-Su2-F-02-ANU-澳国立激光通信计划]] | （无标题页；内容为 ANU 光通信计划、Artemis II 月地激光、DSOC 深空） |
-| [[B14_DAY1_E1-Su1-Su2-集成光子产品化#0920-am-Su1-C-00-全场-上半场速记.pdf（第10–17页，OVHcloud）\|0920-am-Su1-C-00-全场-上半场速记（第10–17页，OVHcloud）]] | AI Driven Traffic Evolution in the Optical Backbone: OVHcloud's Fibre Constrained Architecture（副题：An OVHcloud traffic vision PoP-DC and DC-DC in the AI era） |
-| [[B15_DAY1_E1-Su3-Su4-AI与端到端光网络#0920-pm-Su4-C-04-Ciena-AI真正想要的光网络.pdf（第2–6页；p1为题目页，未看）\|0920-pm-Su4-C-04-Ciena-AI真正想要的光网络（第2–6页；p1为题目页，未看）]] | 题目页未看；wrap-up 页标题为 "The optical network AI actually wants" |
-| [[B15_DAY1_E1-Su3-Su4-AI与端到端光网络#0920-pm-Su4-C-00-Ciena-另一版扫描.pdf（第1–4页）\|0920-pm-Su4-C-00-Ciena-另一版扫描（第1–4页）]] | 与上一篇（C-04）为同一讲的另一版扫描，页面内容对应 p2 ILA 之后的部分 |
-| [[B15_DAY1_E1-Su3-Su4-AI与端到端光网络#0920-pm-Su4-C-03-华为-算网一体设计.pdf\|0920-pm-Su4-C-03-华为-算网一体设计]] | Integrated Computing-Network Design for AIDC |
-| [[B18_DAY1_PV-R-Su1-Su2-绿色AI数据中心与接入#0920-am-Su1-I-01+02-主席+Telefonica-开场与运营商基础设施路线.pdf（第1–6页为主席开场，第7–14页为 Telefonica 讲稿）\|0920-am-Su1-I-01+02-主席+Telefonica-开场与运营商基础设施路线（第1–6页为主席开场，第7–14页为 Telefonica 讲稿）]] | Operator perspective on network infrastructure and roadmap towards scalability and sustainability |
+## 产业需求
 
-### DAY2（09-21 周一）
+10 篇 · AI 训练跨 DC 需求、架构、经济性、保护与运维
 
-| 报告 | 题目 |
-|---|---|
-| [[B21_DAY2_MF-0921-上午-模块与子系统#0921-MF-am-T01-1000-Acacia-跨域与横向扩展网络策略.pdf\|0921-MF-am-T01-1000-Acacia-跨域与横向扩展网络策略]] | Cross-domain / scale-across and scale-out network strategy（页内标题为 "AI is Driving Everything" 等，完整原题未见） |
-| [[B22_DAY2_MF-0921-下午-模块与子系统#0921-MF-pm-1340-NVIDIA-SpectrumX多平面网络的光模块.pdf\|0921-MF-pm-1340-NVIDIA-SpectrumX多平面网络的光模块]] | Optics for Spectrum-X multi-plane networks（据文件名；标题页未看） |
-| [[B32_DAY2_Mo5-B-空芯光纤设计#0921-Mo5-待定-长飞YOFC-超高模纯度与单模匹配的O波段混合反谐振空芯光纤.pdf\|0921-Mo5-待定-长飞YOFC-超高模纯度与单模匹配的O波段混合反谐振空芯光纤]] | 题目页 OCR 乱码，按文件名与结论页为 O-band hybrid antiresonant HCF（HA-HCF）：ultrahigh modal purity and single-mode-matched（英文原题未完整核实） |
-| [[B35_DAY2__合集待拆#0921-合集待拆-全场-A1厅下午上半场连拍-Mo3-A.pdf（第2–14页，Mo3-A2）\|0921-合集待拆-全场-A1厅下午上半场连拍-Mo3-A（第2–14页，Mo3-A2）]] | Demonstration of Ultra-high Link Budget, Low Cost/Latency Distributed AI Scale-across Network Enabled by C-band 3.2-Tb/s/lane IM-DD Transmission over 20-km AR-HCF（原题如印，"3.2 Tb/s/lane"字样按幻灯片原文；正文实验为32波×50 GBaud PAM4，总线速3.2 Tb/s） |
+| 日期 | 报告 | 题目 |
+|---|---|---|
+| DAY1 | [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su2-B-01-Google-ScaleAcross功耗.pdf\|0920-am-Su2-B-01-Google-ScaleAcross功耗]] | Power Efficient Scale Across – Scaling for the AI Era |
+| DAY1 | [[B14_DAY1_E1-Su1-Su2-集成光子产品化#0920-am-Su1-C-00-全场-上半场速记.pdf（第10–17页，OVHcloud）\|0920-am-Su1-C-00-全场-上半场速记（第10–17页，OVHcloud）]] | AI Driven Traffic Evolution in the Optical Backbone: OVHcloud's Fibre Constrained Architecture（副题：An OVHcloud traffic vision PoP-DC and DC-DC in the AI era） |
+| DAY1 | [[B15_DAY1_E1-Su3-Su4-AI与端到端光网络#0920-pm-Su4-C-03-华为-算网一体设计.pdf\|0920-pm-Su4-C-03-华为-算网一体设计]] | Integrated Computing-Network Design for AIDC |
+| DAY1 | [[B18_DAY1_PV-R-Su1-Su2-绿色AI数据中心与接入#0920-am-Su1-I-01+02-主席+Telefonica-开场与运营商基础设施路线.pdf（第1–6页为主席开场，第7–14页为 Telefonica 讲稿）\|0920-am-Su1-I-01+02-主席+Telefonica-开场与运营商基础设施路线（第1–6页为主席开场，第7–14页为 Telefonica 讲稿）]] | Operator perspective on network infrastructure and roadmap towards scalability and sustainability |
+| DAY2 | [[B22_DAY2_MF-0921-下午-模块与子系统#0921-MF-pm-1340-NVIDIA-SpectrumX多平面网络的光模块.pdf\|0921-MF-pm-1340-NVIDIA-SpectrumX多平面网络的光模块]] | Optics for Spectrum-X multi-plane networks（据文件名；标题页未看） |
+| DAY3 | [[B48_DAY3_Tu1-G-短距互连#0922-Tu1-G1-KDDIResearch-面向AI数据中心网络的可扩展大容量光传输.pdf\|0922-Tu1-G1-KDDIResearch-面向AI数据中心网络的可扩展大容量光传输]] | Scalable, High-Capacity Optical Transmission for AI Data Centre Networks（Tu1-G1） |
+| DAY4 | [[B54_DAY4_MF-0923-市场聚焦#0923-MF-OIF-CMIS管理接口.pdf\|0923-MF-OIF-CMIS管理接口]] | CMIS（Common Management Interface Specification）演进与增强固件管理（英文原题未见完整题目页，p1 OCR 乱码） |
+| DAY4 | [[B54_DAY4_MF-0923-市场聚焦#0923-MF-中国电信-市场聚焦.pdf\|0923-MF-中国电信-市场聚焦]] | 分布式 AI 对光网络的要求（p2 起始"AI computing is expanding from servers to networks"；总题目页 p1 为重复页未看，英文原题不确定） |
+| DAY4 | [[B57_DAY4_We-F-标准化专场#0923-We-F-00-标准化专场II连拍.pdf（第26–32页）\|0923-We-F-00-标准化专场II连拍（第26–32页）]] | （无标题页；内容为 China Telecom All-optical Network 3.0 / ION-2030 for AI 数据中心） |
+| DAY4 | [[B62_DAY4_We2-A-光纤传输新进展#0923-We2-A2-NTT-长跨高容量混合信号传输.pdf\|0923-We2-A2-NTT-长跨高容量混合信号传输]] | Mixed Signal Transmission for Long-Haul High-Capacity Optical Paths and Low Latency Optical Paths Using DSF Transmission Line and Inter-Band Wavelength Conversion Technology |
 
-### DAY3（09-22 周二）
+## FST与Multi-Rail
 
-| 报告 | 题目 |
-|---|---|
-| [[B40_DAY3_MF-0922-上午-器件与IC与PIC与光纤#0922-MF-am-1140-CignalAI-跨域扩展对相干市场的影响-另一版.pdf\|0922-MF-am-1140-CignalAI-跨域扩展对相干市场的影响-另一版]] | The Impact of Scale Across on the Coherent Market（2026-09-22） |
-| [[B48_DAY3_Tu1-G-短距互连#0922-Tu1-G1-KDDIResearch-面向AI数据中心网络的可扩展大容量光传输.pdf\|0922-Tu1-G1-KDDIResearch-面向AI数据中心网络的可扩展大容量光传输]] | Scalable, High-Capacity Optical Transmission for AI Data Centre Networks（Tu1-G1） |
-| [[B51_DAY3_Tu3-H-长距空芯光纤系统#0922-Tu3-H4-MicrosoftAzureFiber-全C波段400GZR经三跨段427.97km空芯光纤传输.pdf\|0922-Tu3-H4-MicrosoftAzureFiber-全C波段400GZR经三跨段427.97km空芯光纤传输]] | Demonstration of Full C-band 400G ZR Transmission over 3-Span 427.97-km Hollow-Core Fibre [p1] |
+6 篇 · 全谱转发器、多 rail 线路系统、光纤对为单位的扩容
 
-### DAY4（09-23 周三）
+| 日期 | 报告 | 题目 |
+|---|---|---|
+| DAY1 | [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su2-B-02-Ciena-多轨光子破功耗墙.pdf\|0920-am-Su2-B-02-Ciena-多轨光子破功耗墙]] | Breaking the Power Wall with Multi-Rail Photonics and Optical Interconnect Innovation |
+| DAY1 | [[B15_DAY1_E1-Su3-Su4-AI与端到端光网络#0920-pm-Su4-C-00-Ciena-另一版扫描.pdf（第1–4页）\|0920-pm-Su4-C-00-Ciena-另一版扫描（第1–4页）]] | 与上一篇（C-04）为同一讲的另一版扫描，页面内容对应 p2 ILA 之后的部分 |
+| DAY1 | [[B15_DAY1_E1-Su3-Su4-AI与端到端光网络#0920-pm-Su4-C-04-Ciena-AI真正想要的光网络.pdf（第2–6页；p1为题目页，未看）\|0920-pm-Su4-C-04-Ciena-AI真正想要的光网络（第2–6页；p1为题目页，未看）]] | 题目页未看；wrap-up 页标题为 "The optical network AI actually wants" |
+| DAY3 | [[B40_DAY3_MF-0922-上午-器件与IC与PIC与光纤#0922-MF-am-1140-CignalAI-跨域扩展对相干市场的影响-另一版.pdf\|0922-MF-am-1140-CignalAI-跨域扩展对相干市场的影响-另一版]] | The Impact of Scale Across on the Coherent Market（2026-09-22） |
+| DAY4 | [[B53_DAY4_MF-0923-市场聚焦#0923-MF-00-上午连拍.pdf（第65–78页）\|0923-MF-00-上午连拍（第65–78页）]] | The Future of Coherent Optics in the AI Era |
+| DAY4 | [[B53_DAY4_MF-0923-市场聚焦#0923-MF-Ciena-市场聚焦.pdf\|0923-MF-Ciena-市场聚焦]] | The Future of Coherent Optics in the AI Era |
 
-| 报告 | 题目 |
-|---|---|
-| [[B53_DAY4_MF-0923-市场聚焦#0923-MF-00-上午连拍.pdf（第54–64页）\|0923-MF-00-上午连拍（第54–64页）]] | Decoding OIF CMIS to Simplify Network Management for Coherent Pluggables |
-| [[B53_DAY4_MF-0923-市场聚焦#0923-MF-00-上午连拍.pdf（第65–78页）\|0923-MF-00-上午连拍（第65–78页）]] | The Future of Coherent Optics in the AI Era |
-| [[B53_DAY4_MF-0923-市场聚焦#0923-MF-Ciena-市场聚焦.pdf\|0923-MF-Ciena-市场聚焦]] | The Future of Coherent Optics in the AI Era |
-| [[B54_DAY4_MF-0923-市场聚焦#0923-MF-OIF-CMIS管理接口.pdf\|0923-MF-OIF-CMIS管理接口]] | CMIS（Common Management Interface Specification）演进与增强固件管理（英文原题未见完整题目页，p1 OCR 乱码） |
-| [[B54_DAY4_MF-0923-市场聚焦#0923-MF-中国电信-市场聚焦.pdf\|0923-MF-中国电信-市场聚焦]] | 分布式 AI 对光网络的要求（p2 起始"AI computing is expanding from servers to networks"；总题目页 p1 为重复页未看，英文原题不确定） |
-| [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第1–7页）\|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第1–7页）]] | （无题目页）首页标题 "Coherent technology foundation of scale across" |
-| [[B57_DAY4_We-F-标准化专场#0923-We-F-00-标准化专场II连拍.pdf（第26–32页）\|0923-We-F-00-标准化专场II连拍（第26–32页）]] | （无标题页；内容为 China Telecom All-optical Network 3.0 / ION-2030 for AI 数据中心） |
-| [[B62_DAY4_We2-A-光纤传输新进展#0923-We2-A2-NTT-长跨高容量混合信号传输.pdf\|0923-We2-A2-NTT-长跨高容量混合信号传输]] | Mixed Signal Transmission for Long-Haul High-Capacity Optical Paths and Low Latency Optical Paths Using DSF Transmission Line and Inter-Band Wavelength Conversion Technology |
-| [[B62_DAY4_We2-A-光纤传输新进展#0923-We2-A3-KDDI-数字子载波复用P2MP现网试验.pdf\|0923-We2-A3-KDDI-数字子载波复用P2MP现网试验]] | Field Trial of Digital Subcarrier Multiplexing-based P2MP over 170 km for Distributed Data Center Network Interconnect |
-| [[B71_DAY4_We5-B-光发射机与VCSEL#0923-We5-B-中兴-光发射机与收发.pdf（第1–15页；p8 为与 NVIDIA 讲稿重复页）\|0923-We5-B-中兴-光发射机与收发（第1–15页；p8 为与 NVIDIA 讲稿重复页）]] | 19.1-THz Tunable Wideband TFLN/SiPh Hybrid Integrated 800G CFP2 Transceiver for AIDC Scale-Across Clusters |
+## ZR、ZR+、CL
 
-### DAY5（09-24 周四）
+6 篇 · 400ZR/800ZR/1600ZR(+)、相干可插拔、Coherent-Lite、IPoDWDM
 
-| 报告 | 题目 |
-|---|---|
-| [[B78_DAY5_Th1-G-光网络中的AI训练#0924-Th1-G1-Corning-光纤时延对跨地域多数据中心AI训练计算通信重叠的影响建模.pdf\|0924-Th1-G1-Corning-光纤时延对跨地域多数据中心AI训练计算通信重叠的影响建模]] | Modeling the Impact of Fiber Latency on Compute-Communication Overlap in Geo-Distributed Multi-Datacenter AI Training |
-| [[B79_DAY5_Th1-H-相干系统#0924-Th1-H5-NTT-多域光直连边界的光模拟光波长转换器.pdf\|0924-Th1-H5-NTT-多域光直连边界的光模拟光波长转换器]] | Optical-Analog-Optical Wavelength Converter for Multi-Domain Optical Direct-Connect Boundaries: 100G/400G Multi-FEC Characterization and Network Demonstration |
+| 日期 | 报告 | 题目 |
+|---|---|---|
+| DAY1 | [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第87–97页）\|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第87–97页）]] | Coherent Technology for Data-center Applications |
+| DAY2 | [[B21_DAY2_MF-0921-上午-模块与子系统#0921-MF-am-T01-1000-Acacia-跨域与横向扩展网络策略.pdf\|0921-MF-am-T01-1000-Acacia-跨域与横向扩展网络策略]] | Cross-domain / scale-across and scale-out network strategy（页内标题为 "AI is Driving Everything" 等，完整原题未见） |
+| DAY3 | [[B51_DAY3_Tu3-H-长距空芯光纤系统#0922-Tu3-H4-MicrosoftAzureFiber-全C波段400GZR经三跨段427.97km空芯光纤传输.pdf\|0922-Tu3-H4-MicrosoftAzureFiber-全C波段400GZR经三跨段427.97km空芯光纤传输]] | Demonstration of Full C-band 400G ZR Transmission over 3-Span 427.97-km Hollow-Core Fibre [p1] |
+| DAY4 | [[B53_DAY4_MF-0923-市场聚焦#0923-MF-00-上午连拍.pdf（第54–64页）\|0923-MF-00-上午连拍（第54–64页）]] | Decoding OIF CMIS to Simplify Network Management for Coherent Pluggables |
+| DAY4 | [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第1–7页）\|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第1–7页）]] | （无题目页）首页标题 "Coherent technology foundation of scale across" |
+| DAY4 | [[B62_DAY4_We2-A-光纤传输新进展#0923-We2-A3-KDDI-数字子载波复用P2MP现网试验.pdf\|0923-We2-A3-KDDI-数字子载波复用P2MP现网试验]] | Field Trial of Digital Subcarrier Multiplexing-based P2MP over 170 km for Distributed Data Center Network Interconnect |
 
-### 次相关报告（63）
+## 低功耗DSP
+
+3 篇 · 低复杂度/波特率采样 DSP、FPGA 实时实现、时钟共享
+
+| 日期 | 报告 | 题目 |
+|---|---|---|
+| DAY1 | [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第99–107页）\|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第99–107页）]] | CPO, LPO, T/LRO, XPO, EIEIO…. A vendor perspective on architectural evolution |
+| DAY1 | [[B03_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su4-A-03-Acacia-PAM4-DSP竞争.pdf\|0920-pm-Su4-A-03-Acacia-PAM4-DSP竞争]] | FRO, ERO, T/LRO, XPO, ...（副题 A vendor perspective on architectural evolution；OCR 题名残缺） |
+| DAY5 | [[B79_DAY5_Th1-H-相干系统#0924-Th1-H5-NTT-多域光直连边界的光模拟光波长转换器.pdf\|0924-Th1-H5-NTT-多域光直连边界的光模拟光波长转换器]] | Optical-Analog-Optical Wavelength Converter for Multi-Domain Optical Direct-Connect Boundaries: 100G/400G Multi-FEC Characterization and Network Demonstration |
+
+## 高波特率器件
+
+1 篇 · 高波特率调制器/探测器/驱动/光 DAC
+
+| 日期 | 报告 | 题目 |
+|---|---|---|
+| DAY4 | [[B71_DAY4_We5-B-光发射机与VCSEL#0923-We5-B-中兴-光发射机与收发.pdf（第1–15页；p8 为与 NVIDIA 讲稿重复页）\|0923-We5-B-中兴-光发射机与收发（第1–15页；p8 为与 NVIDIA 讲稿重复页）]] | 19.1-THz Tunable Wideband TFLN/SiPh Hybrid Integrated 800G CFP2 Transceiver for AIDC Scale-Across Clusters |
+
+## 光源
+
+0 篇 · 激光器、光梳、外置光源
+
+（本次会议无）
+
+## 新型光纤介质
+
+4 篇 · 空芯/多芯/少模光纤用于 DC 互连
+
+| 日期 | 报告 | 题目 |
+|---|---|---|
+| DAY1 | [[B06_DAY1_A2-Su3-Su4-无中继空芯光纤#0920-pm-Su4-B-05-MicrosoftAzure-长无中继系统要求.pdf\|0920-pm-Su4-B-05-MicrosoftAzure-长无中继系统要求]] | Requirements for long unrepeatered HCF systems（题目大意，p1 未看图） |
+| DAY2 | [[B32_DAY2_Mo5-B-空芯光纤设计#0921-Mo5-待定-长飞YOFC-超高模纯度与单模匹配的O波段混合反谐振空芯光纤.pdf\|0921-Mo5-待定-长飞YOFC-超高模纯度与单模匹配的O波段混合反谐振空芯光纤]] | 题目页 OCR 乱码，按文件名与结论页为 O-band hybrid antiresonant HCF（HA-HCF）：ultrahigh modal purity and single-mode-matched（英文原题未完整核实） |
+| DAY2 | [[B35_DAY2__合集待拆#0921-合集待拆-全场-A1厅下午上半场连拍-Mo3-A.pdf（第2–14页，Mo3-A2）\|0921-合集待拆-全场-A1厅下午上半场连拍-Mo3-A（第2–14页，Mo3-A2）]] | Demonstration of Ultra-high Link Budget, Low Cost/Latency Distributed AI Scale-across Network Enabled by C-band 3.2-Tb/s/lane IM-DD Transmission over 20-km AR-HCF（原题如印，"3.2 Tb/s/lane"字样按幻灯片原文；正文实验为32波×50 GBaud PAM4，总线速3.2 Tb/s） |
+| DAY5 | [[B78_DAY5_Th1-G-光网络中的AI训练#0924-Th1-G1-Corning-光纤时延对跨地域多数据中心AI训练计算通信重叠的影响建模.pdf\|0924-Th1-G1-Corning-光纤时延对跨地域多数据中心AI训练计算通信重叠的影响建模]] | Modeling the Impact of Fiber Latency on Compute-Communication Overlap in Geo-Distributed Multi-Datacenter AI Training |
+
+## 星地FSO链路
+
+7 篇 · 星地/馈电激光链路、大气湍流与自适应光学（ECOC 2026 将其归入跨域互连）
+
+| 日期 | 报告 | 题目 |
+|---|---|---|
+| DAY1 | [[B09_DAY1_C2.1-Su1-Su2-星地链路大气湍流#0920-am-Su1-F-01+02-FraunhoferHHI+Durham-分集抗衰落与低时延星地链路商用门槛.pdf（第11–27页：Durham 大学一讲）\|0920-am-Su1-F-01+02-FraunhoferHHI+Durham-分集抗衰落与低时延星地链路商用门槛（第11–27页：Durham 大学一讲）]] | Challenges to resilient Low-Earth Orbit Feeder Links |
+| DAY1 | [[B09_DAY1_C2.1-Su1-Su2-星地链路大气湍流#0920-am-Su1-F-01+02-FraunhoferHHI+Durham-分集抗衰落与低时延星地链路商用门槛.pdf（第1–10页：Fraunhofer HHI 一讲）\|0920-am-Su1-F-01+02-FraunhoferHHI+Durham-分集抗衰落与低时延星地链路商用门槛（第1–10页：Fraunhofer HHI 一讲）]] | （无独立题目页；主题页为 "Atmospheric turbulence – Why do we need turbulence mitigation?"，副标题 Turbulence mitigation / Diversity combining） |
+| DAY1 | [[B09_DAY1_C2.1-Su1-Su2-星地链路大气湍流#0920-am-Su1-F-03-北邮-星地激光链路湍流影响.pdf\|0920-am-Su1-F-03-北邮-星地激光链路湍流影响]] | Impacts of Atmospheric Turbulence on Satellite-to-Ground Laser Communication Links and its Mitigation |
+| DAY1 | [[B09_DAY1_C2.1-Su1-Su2-星地链路大气湍流#0920-am-Su1-F-05-FraunhoferIOF-主镜到纤芯的光学天线.pdf\|0920-am-Su1-F-05-FraunhoferIOF-主镜到纤芯的光学天线]] | （题目页OCR乱码，副题为从主镜到光纤纤芯的光学天线，"The optical Antenna"、"The last metre"） |
+| DAY1 | [[B09_DAY1_C2.1-Su1-Su2-星地链路大气湍流#0920-am-Su1-F-06-DLR-可扩展自适应光学.pdf\|0920-am-Su1-F-06-DLR-可扩展自适应光学]] | Building the Next Generation of AO Systems – A Robust and Scalable Solution for High-Throughput FSOC |
+| DAY1 | [[B09_DAY1_C2.1-Su1-Su2-星地链路大气湍流#0920-am-Su2-F-01-NICT-日本星地激光通信实践.pdf\|0920-am-Su2-F-01-NICT-日本星地激光通信实践]] | Space Laser Communications Through the Atmosphere: NICT's Experience in Japan |
+| DAY1 | [[B09_DAY1_C2.1-Su1-Su2-星地链路大气湍流#0920-am-Su2-F-02-ANU-澳国立激光通信计划.pdf\|0920-am-Su2-F-02-ANU-澳国立激光通信计划]] | （无标题页；内容为 ANU 光通信计划、Artemis II 月地激光、DSOC 深空） |
+
+## 次相关报告（63）
 
 | 报告 | 题目 | 主方向 |
 |---|---|---|

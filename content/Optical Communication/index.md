@@ -27,3 +27,5 @@ tags:
 ## 会议
 
 - [[Optical Communication/01. Conference/2026 ECOC/index|ECOC 2026]]：十条技术判断、厂商地图、六个方向的综合洞察、445 篇讲稿笔记
+- [[Optical Communication/01. Conference/2026 OFC/index|OFC 2026]]：707 篇论文，六大场景 × 五个技术层索引、TOP5 趋势与纪录榜
+- [[Optical Communication/01. Conference/2025 ECOC/index|ECOC 2025]]：542 篇论文，六大场景 × 五个技术层索引、TOP5 趋势与纪录榜

@@ -4,111 +4,137 @@ tags:
   - ECOC2026
 ---
 
-ECOC 2026 中主归属 **Scale Up** 的报告 77 篇，另有 73 篇次相关。点报告名跳到对应讲稿笔记。
+ECOC 2026 中主归属 **Scale Up** 的报告 77 篇，另有 73 篇次相关。按二级专题分组，点报告名跳到对应讲稿笔记。
 
-### DAY1（09-20 周日）
+| 二级专题 | 报告数 | 范围 |
+|---|---|---|
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Up 报告索引#光源\|光源]] | 4 | 激光器、光梳、外置光源 |
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Up 报告索引#Narrow&Fast\|Narrow&Fast]] | 3 | 窄而快：少通道高速率（微环/DWDM/200G+ 调制） |
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Up 报告索引#Slow&Wide\|Slow&Wide]] | 16 | 宽而慢：多通道低速率（VCSEL/microLED/多芯并行） |
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Up 报告索引#SerDes及连接器\|SerDes及连接器]] | 11 | 电 SerDes、驱动/TIA、光纤阵列/耦合/连接器、基板 |
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Up 报告索引#异质集成\|异质集成]] | 2 | 3D 堆叠、键合、微转印、光学中介层、Chiplet |
+| [[Optical Communication/01. Conference/2026 ECOC/方向报告索引/Scale Up 报告索引#架构与系统\|架构与系统]] | 41 | Scale-up 网络架构、光交换、可靠性与运维 |
 
-| 报告 | 题目 |
-|---|---|
-| [[B01_DAY1_A1-Su1-Su2-AI数据中心光源#0920-am-Su1-A-03-华为-光源集成需求.pdf\|0920-am-Su1-A-03-华为-光源集成需求]] | Laser technologies for scale-up optical interconnects in AI supernodes |
-| [[B01_DAY1_A1-Su1-Su2-AI数据中心光源#0920-am-Su1-A-04-AMD-硅光片上光源.pdf\|0920-am-Su1-A-04-AMD-硅光片上光源]] | Lasers for Co-packaged Optics（Light sources for next-generation optical communication systems for AI datacenters） |
-| [[B01_DAY1_A1-Su1-Su2-AI数据中心光源#0920-am-Su1-A-05-Columbia-片上光源与系统.pdf\|0920-am-Su1-A-05-Columbia-片上光源与系统]] | AI System Drivers for Laser Sources |
-| [[B01_DAY1_A1-Su1-Su2-AI数据中心光源#0920-am-Su2-A-03-PhotonBridge-集成激光器.pdf\|0920-am-Su2-A-03-PhotonBridge-集成激光器]] | High-Power Lasers on Silicon: Scalable Multi-Wavelength Light Sources for CPO |
-| [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第2–13页）\|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第2–13页）]] | 未见完整英文原题；p3 议程标题为 “Navigating growth and uncertainty” |
-| [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第14–23页）\|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第14–23页）]] | AI [Cluster] Networks: Requirements for Reliable, High-Bandwidth-Density …（p14 标题 OCR 残缺，完整英文原题看不清） |
-| [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第53–67页）\|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第53–67页）]] | The Path for Co-Packaged Optics in the AI Ecosystem |
-| [[B03_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3-A-01-LightCounting-AI连接硬件市场.pdf\|0920-pm-Su3-A-01-LightCounting-AI连接硬件市场]] | How Will AI Shape the Connectivity Market（副标题 Meeting Diverse AI Connectivity Needs: Architectural Choices for Next Generation Pluggable Transceivers） |
-| [[B03_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3-A-02-OpenAI-ScaleUp互连需求.pdf\|0920-pm-Su3-A-02-OpenAI-ScaleUp互连需求]] | AI Scale-Up Networks: Requirements for Reliable, High-Bandwidth-Density Interconnects |
-| [[B03_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3-A-04-OrioleNetworks-数据中心光交换.pdf\|0920-pm-Su3-A-04-OrioleNetworks-数据中心光交换]] | A Pure Photonic Network for the AI Era |
-| [[B03_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3-A-05-NVIDIA-CPO对可插拔的优势.pdf\|0920-pm-Su3-A-05-NVIDIA-CPO对可插拔的优势]] | The Path for Co-Packaged Optics in the AI Ecosystem |
-| [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su1-B-01-Meta-AI数据中心功耗.pdf\|0920-am-Su1-B-01-Meta-AI数据中心功耗]] | Standard Optic's Perspective on Power Savings（首页标题；无独立总题页） |
-| [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su1-B-02-OpenAI-ScaleUp还能用铜吗.pdf\|0920-am-Su1-B-02-OpenAI-ScaleUp还能用铜吗]] | AI scale-up – Does copper still do the job? |
-| [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su1-B-04-Broadcom-AI集群高速IO.pdf\|0920-am-Su1-B-04-Broadcom-AI集群高速IO]] | High-Speed I/O in AI clusters |
-| [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su1-B-05-Arista-超密度可插拔XPO.pdf\|0920-am-Su1-B-05-Arista-超密度可插拔XPO]] | Pluggable Forever: Power-Efficient, Ultra-Dense XPO — Breaking the AI Network Power & Density Wall |
-| [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su1-B-06-AttoTude-介质波导做ScaleUp.pdf\|0920-am-Su1-B-06-AttoTude-介质波导做ScaleUp]] | AttoTude Thesis – ASICs over Dielectrics（p2标题；DiAx介质增强双绞线） |
-| [[B14_DAY1_E1-Su1-Su2-集成光子产品化#0920-am-Su1-C-05-Tyndall-封装在产品化中的角色.pdf\|0920-am-Su1-C-05-Tyndall-封装在产品化中的角色]] | （封面题目文字OCR乱码，主题为封装在光子产品化中的角色；页2标题“Why is packaging so important?”） |
-| [[B17_DAY1_E2-Su3-Su4-6G与边缘融合#0920-pm-Su4-H-04-Marvell-城域收发机.pdf\|0920-pm-Su4-H-04-Marvell-城域收发机]] | High-speed transceivers: from AI datacenters to the 6G network |
-| [[B18_DAY1_PV-R-Su1-Su2-绿色AI数据中心与接入#0920-am-Su2-I-01-NVIDIA-面向AI工厂的光子技术.pdf\|0920-am-Su2-I-01-NVIDIA-面向AI工厂的光子技术]] | Photonics-enabled technologies for AI factories |
-| [[B18_DAY1_PV-R-Su1-Su2-绿色AI数据中心与接入#0920-am-Su2-I-03-iPronics-可扩展光子集成ScaleUp.pdf\|0920-am-Su2-I-03-iPronics-可扩展光子集成ScaleUp]] | Scalable Photonic Integration for energy-efficient scale-up AI networking |
-| [[B19_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su3-I-04-Qualcomm-芯片侧的选择.pdf\|0920-pm-Su3-I-04-Qualcomm-芯片侧的选择]] | Beyond the SerDes: From Fast & Narrow to Reliable Connectivity at Scale |
-| [[B19_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su3-I-05-Ciena-系统侧的选择.pdf\|0920-pm-Su3-I-05-Ciena-系统侧的选择]] | （首页OCR不清；页面内容为 fast/narrow vs slow/wide 的系统侧选择） |
-| [[B19_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su4-I-02-OpenAI-ScaleUp需求.pdf\|0920-pm-Su4-I-02-OpenAI-ScaleUp需求]] | Fast/Narrow or Slow/Wide? Choosing for Bandwidth Density and Reliability |
-| [[B19_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su4-I-04-Coherent-器件路线.pdf\|0920-pm-Su4-I-04-Coherent-器件路线]] | （首页OCR为算力/互连受限图；未见明确英文题，内容围绕VCSEL阵列与DWDM的能耗/带宽比较） |
-| [[B20_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su4-I-06-LightMatter-光计算路线.pdf\|0920-pm-Su4-I-06-LightMatter-光计算路线]] | 未见题目页（页1、2 OCR为空，未查看）；讲稿主题为 "Fast and narrow has a ceiling. Slow and wide does not — when it's 3D."（回答 Workshop Question：fast, narrow channel 能否无限上升） |
-| [[B20_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su4-I-07-Credo-电互连路线.pdf\|0920-pm-Su4-I-07-Credo-电互连路线]] | 未见完整题目页（页1 OCR 残缺，未查看）；主题为 wide-parallel（宽并行）光互连，页标题 "When Wide-Parallel Could Bring Benefit" |
+## 光源
 
-### DAY2（09-21 周一）
+4 篇 · 激光器、光梳、外置光源
 
-| 报告 | 题目 |
-|---|---|
-| [[B21_DAY2_MF-0921-上午-模块与子系统#0921-MF-am-T02-1020-CignalAI-光电路交换的新应用.pdf\|0921-MF-am-T02-1020-CignalAI-光电路交换的新应用]] | New Applications for Optical Circuit Switching（据文件名；页内主标题看不清） |
-| [[B21_DAY2_MF-0921-上午-模块与子系统#0921-MF-am-T03-1040-Ciena-加速CPO的市场采用.pdf\|0921-MF-am-T03-1040-Ciena-加速CPO的市场采用]] | Accelerating Market Adoption of CPO（据文件名；页内 Keys for CPO/NPO ramp） |
-| [[B21_DAY2_MF-0921-上午-模块与子系统#0921-MF-am-T04-1100-华为-NPO与CPO的近期部署平衡.pdf\|0921-MF-am-T04-1100-华为-NPO与CPO的近期部署平衡]] | Balancing NPO and CPO for near-term deployment（据文件名） |
-| [[B21_DAY2_MF-0921-上午-模块与子系统#0921-MF-am-T06-1140-Coherent-先进材料与散热效率.pdf\|0921-MF-am-T06-1140-Coherent-先进材料与散热效率]] | Advanced materials and thermal efficiency（据文件名） |
-| [[B21_DAY2_MF-0921-上午-模块与子系统#0921-MF-am-T07-1200-Corning-先进光连接扩展AI互连-照片版.pdf（同场"非照片版"为同一讲的另一份拍摄，内容重复，合并记录）\|0921-MF-am-T07-1200-Corning-先进光连接扩展AI互连-照片版（同场"非照片版"为同一讲的另一份拍摄，内容重复，合并记录）]] | Advanced Optical Connectivity to Scale AI Interconnect（据文件名；页内 "Context: CPO/NPO becoming a reality"） |
-| [[B22_DAY2_MF-0921-下午-模块与子系统#0921-MF-pm-1300-Arista-光互连演进-从可插拔到XPO与CPO.pdf\|0921-MF-pm-1300-Arista-光互连演进-从可插拔到XPO与CPO]] | Optics interconnect evolution from pluggable to XPO and CPO（据文件名；标题页未看清） |
-| [[B22_DAY2_MF-0921-下午-模块与子系统#0921-MF-pm-1440-LIGENT-从可插拔到CPO-近封装光模块的角色.pdf\|0921-MF-pm-1440-LIGENT-从可插拔到CPO-近封装光模块的角色]] | From pluggable to CPO: the role of near-packaged optics（据文件名；标题页为空白） |
-| [[B22_DAY2_MF-0921-下午-模块与子系统#0921-MF-pm-1500-HeraeusCovantics-面向AI数据中心的下一代光纤.pdf\|0921-MF-pm-1500-HeraeusCovantics-面向AI数据中心的下一代光纤]] | Next-generation fiber technologies for AI DC（据页脚“…generation Fiber technologies for AI DC”，原题不完整） |
-| [[B23_DAY2_Mo12-A-开幕与大会报告#0921-Mo12-00-全场-开幕与大会报告全场连拍.pdf（第1–36页，Ciena大会报告）\|0921-Mo12-00-全场-开幕与大会报告全场连拍（第1–36页，Ciena大会报告）]] | 题目页OCR乱码，看不清；内容主线为 Scaling AI is all about scaling I/O（据p35结论页） |
-| [[B23_DAY2_Mo12-A-开幕与大会报告#0921-Mo12-00-全场-开幕与大会报告全场连拍.pdf（第85–107页，华为大会报告）\|0921-Mo12-00-全场-开幕与大会报告全场连拍（第85–107页，华为大会报告）]] | Scaling AI From Optical Innovation to NPO and CPO Solutions（p85） |
-| [[B24_DAY2_Mo12-A-开幕与大会报告#0921-Mo12-A3-Ciena-AI集群通信.pdf（共33页，单讲）\|0921-Mo12-A3-Ciena-AI集群通信（共33页，单讲）]] | AI 集群通信主题的大会报告（英文原题页未拍到；末页标题 "Top Three Take-Aways"，主线为 Scaling AI is all about scaling I/O） |
-| [[B24_DAY2_Mo12-A-开幕与大会报告#0921-Mo12-A4-IMEC-集成光子支撑AI扩展.pdf（共25页，单讲）\|0921-Mo12-A4-IMEC-集成光子支撑AI扩展（共25页，单讲）]] | 集成光子支撑 AI 扩展（英文原题页未看清；p1 标题页显示 "Future AI infrastructure is under tension"） |
-| [[B24_DAY2_Mo12-A-开幕与大会报告#0921-Mo12-A5-华为-从光创新到NPO与CPO.pdf（共14页，单讲）\|0921-Mo12-A5-华为-从光创新到NPO与CPO（共14页，单讲）]] | 从光创新到 NPO 与 CPO（照片版原题页未清晰拍到；主线为 NPO vs CPO "多回合"辩论，结论 "NPO is the Optimal Solution for the 200G/Lane Era!"；最末页标题 "The Ubiquitous Optical Interconnect: Illuminating the Entire AI Network"） |
-| [[B29_DAY2_Mo3-I-AI互连之争-第一场#0921-Mo3-待定-Corning-AI互连的纵向与横向扩展路径.pdf\|0921-Mo3-待定-Corning-AI互连的纵向与横向扩展路径]] | Fiber Bundle Connector Solutions for VCSEL-Based Optical Scale-Up Interconnects |
-| [[B29_DAY2_Mo3-I-AI互连之争-第一场#0921-Mo3-待定-Tyndall-AI互连路径.pdf\|0921-Mo3-待定-Tyndall-AI互连路径]] | Glass Wafer-Level Packaging（含后续 Electro-Optical Interposer） |
-| [[B30_DAY2_Mo4-I-AI互连之争-第二场#0921-Mo4-待定-Arista-题目未公布.pdf（第1–24页；p10/p11/p16为另一版重复页）\|0921-Mo4-待定-Arista-题目未公布（第1–24页；p10／p11／p16为另一版重复页）]] | 未公布（内容为 XPO 模块与 AI 互连五类场景，英文原题看不到） |
-| [[B30_DAY2_Mo4-I-AI互连之争-第二场#0921-Mo4-待定-Broadcom-为AI扩展光互连-走向大规模CPO集群.pdf（第1–17页；p9与p8内容相同）\|0921-Mo4-待定-Broadcom-为AI扩展光互连-走向大规模CPO集群（第1–17页；p9与p8内容相同）]] | Scaling Optical Interconnects for AI: Manufacturing Pathways to Massive CPO-Enabled Clusters |
-| [[B30_DAY2_Mo4-I-AI互连之争-第二场#0921-Mo4-待定-Cerebras-题目未公布.pdf（第1、9–16页；p2–p8为另一版重复页）\|0921-Mo4-待定-Cerebras-题目未公布（第1、9–16页；p2–p8为另一版重复页）]] | Heterogeneous Hybrid Bonding: A Path to Wafer-Scale Optical Systems |
-| [[B30_DAY2_Mo4-I-AI互连之争-第二场#0921-Mo4-待定-MicrosoftAzure-AI纵向扩展与通用算力的光互连用例.pdf（第1–10页）\|0921-Mo4-待定-MicrosoftAzure-AI纵向扩展与通用算力的光互连用例（第1–10页）]] | 未见原题（文件名：AI 纵向扩展与通用算力的光互连用例；英文原题看不到） |
-| [[B30_DAY2_Mo4-I-AI互连之争-第二场#0921-Mo4-待定-NVIDIA-纵向与横向扩展的光方案.pdf（第1–12页）\|0921-Mo4-待定-NVIDIA-纵向与横向扩展的光方案（第1–12页）]] | Optical Solutions for Scale-out & Scale-up Connectivity |
-| [[B34_DAY2_PF-0921-产品聚焦#0921-PF-待定-Marvell-面向AI纵向扩展网络的近封装光模块.pdf\|0921-PF-待定-Marvell-面向AI纵向扩展网络的近封装光模块]] | Near Packaged Optics for AI Scale-up Networks |
+| 日期 | 报告 | 题目 | 形态 |
+|---|---|---|---|
+| DAY1 | [[B01_DAY1_A1-Su1-Su2-AI数据中心光源#0920-am-Su1-A-03-华为-光源集成需求.pdf\|0920-am-Su1-A-03-华为-光源集成需求]] | Laser technologies for scale-up optical interconnects in AI supernodes | CPO/NPO/XPO |
+| DAY1 | [[B01_DAY1_A1-Su1-Su2-AI数据中心光源#0920-am-Su1-A-04-AMD-硅光片上光源.pdf\|0920-am-Su1-A-04-AMD-硅光片上光源]] | Lasers for Co-packaged Optics（Light sources for next-generation optical communication systems for AI datacenters） | CPO/NPO/XPO |
+| DAY1 | [[B01_DAY1_A1-Su1-Su2-AI数据中心光源#0920-am-Su1-A-05-Columbia-片上光源与系统.pdf\|0920-am-Su1-A-05-Columbia-片上光源与系统]] | AI System Drivers for Laser Sources | CPO/NPO/XPO |
+| DAY1 | [[B01_DAY1_A1-Su1-Su2-AI数据中心光源#0920-am-Su2-A-03-PhotonBridge-集成激光器.pdf\|0920-am-Su2-A-03-PhotonBridge-集成激光器]] | High-Power Lasers on Silicon: Scalable Multi-Wavelength Light Sources for CPO | CPO/NPO/XPO |
 
-### DAY3（09-22 周二）
+## Narrow&Fast
 
-| 报告 | 题目 |
-|---|---|
-| [[B40_DAY3_MF-0922-上午-器件与IC与PIC与光纤#0922-MF-am-1000-Coherent-支撑AI基础设施三种扩展的光技术.pdf\|0922-MF-am-1000-Coherent-支撑AI基础设施三种扩展的光技术]] | Photonics: from transport infrastructure to compute fabric（标题页看不清，据第2页大标题） |
-| [[B40_DAY3_MF-0922-上午-器件与IC与PIC与光纤#0922-MF-am-1040-fibeReality-光器件厂商的高风险对冲.pdf\|0922-MF-am-1040-fibeReality-光器件厂商的高风险对冲]] | 光器件厂商的高风险对冲（英文原题未见；含 “Verdict: Co-Packaged Optics Illusion Has Ended” 等观点页） |
-| [[B40_DAY3_MF-0922-上午-器件与IC与PIC与光纤#0922-MF-am-1120-Jabil-面向大批量制造的光子封装.pdf\|0922-MF-am-1120-Jabil-面向大批量制造的光子封装]] | 面向大批量制造的光子封装（英文原题标题页无 OCR/未看；内容为 photonics packaging for HVM） |
-| [[B40_DAY3_MF-0922-上午-器件与IC与PIC与光纤#0922-MF-am-1220-EBOMSA-EBOMSA可靠且可互通的光互连.pdf\|0922-MF-am-1220-EBOMSA-EBOMSA可靠且可互通的光互连]] | EBO MSA: Enabling Reliable and Interoperable Optical Connectivity for AI Data Centers |
-| [[B41_DAY3_MF-0922-下午-新兴技术#0922-MF-pm-1400-Broadcom-共封装光学之后再谈OCI.pdf\|0922-MF-pm-1400-Broadcom-共封装光学之后再谈OCI]] | Co-Packaged Optics and Beyond: Optical Compute Interconnect (OCI)（英文原题据文件名推断，题目页未见清晰；p1 为拍摄的 "AI Interconnect" 页，OCR 全为乱码） |
-| [[B42_DAY3_PF-0922-产品聚焦#0922-PF-0935-Advantest-硅光与共封装光学测试的量产化.pdf\|0922-PF-0935-Advantest-硅光与共封装光学测试的量产化]] | 未见完整原题（PDF名：硅光与共封装光学测试的量产化；内容为 SiPh/NPO/CPO HVM 测试） |
-| [[B42_DAY3_PF-0922-产品聚焦#0922-PF-1155-SalienceLabs-把OCS从横向扩展带到纵向扩展.pdf\|0922-PF-1155-SalienceLabs-把OCS从横向扩展带到纵向扩展]] | 未见完整原题（PDF名：把OCS从横向扩展带到纵向扩展；页内出现 "OCS in scale-up networks"） |
-| [[B42_DAY3_PF-0922-产品聚焦#0922-PF-1405-NewPhotonics-NPO互连作为CPO纵向扩展的务实策略.pdf\|0922-PF-1405-NewPhotonics-NPO互连作为CPO纵向扩展的务实策略]] | The Architecture of AI Scale-Up: Why Near-Packaged Optics (NPO) is the Permanent Hybrid Standard |
-| [[B46_DAY3_Tu1-E-光开关与解复用器#0922-Tu1-E2-浙江大学-2.5D环面拓扑的低损硅光MEMS开关阵列.pdf\|0922-Tu1-E2-浙江大学-2.5D环面拓扑的低损硅光MEMS开关阵列]] | Low-loss silicon photonic MEMS switch array with 2.5D Torus topology（据小节标题概括，完整原题页看不清） |
-| [[B46_DAY3_Tu1-E-光开关与解复用器#0922-Tu1-E3-Microsoft-宽而慢架构加microLED打破AI网络与内存墙.pdf\|0922-Tu1-E3-Microsoft-宽而慢架构加microLED打破AI网络与内存墙]] | Wide-and-slow architecture with microLED to break AI network and memory walls（据文件名与内容概括，原题页未见） |
-| [[B46_DAY3_Tu1-E-光开关与解复用器#0922-Tu1-E5-NVIDIA-时钟前传DWDM光链路的微环静态与动态分配.pdf\|0922-Tu1-E5-NVIDIA-时钟前传DWDM光链路的微环静态与动态分配]] | Static and Dynamic Ring Assignment in a Clock-Forwarded DWDM Optical Link |
+3 篇 · 窄而快：少通道高速率（微环/DWDM/200G+ 调制）
 
-### DAY4（09-23 周三）
+| 日期 | 报告 | 题目 | 形态 |
+|---|---|---|---|
+| DAY1 | [[B17_DAY1_E2-Su3-Su4-6G与边缘融合#0920-pm-Su4-H-04-Marvell-城域收发机.pdf\|0920-pm-Su4-H-04-Marvell-城域收发机]] | High-speed transceivers: from AI datacenters to the 6G network | CPO/NPO/XPO |
+| DAY1 | [[B19_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su3-I-04-Qualcomm-芯片侧的选择.pdf\|0920-pm-Su3-I-04-Qualcomm-芯片侧的选择]] | Beyond the SerDes: From Fast & Narrow to Reliable Connectivity at Scale | CPO/NPO/XPO |
+| DAY2 | [[B24_DAY2_Mo12-A-开幕与大会报告#0921-Mo12-A4-IMEC-集成光子支撑AI扩展.pdf（共25页，单讲）\|0921-Mo12-A4-IMEC-集成光子支撑AI扩展（共25页，单讲）]] | 集成光子支撑 AI 扩展（英文原题页未看清；p1 标题页显示 "Future AI infrastructure is under tension"） | oWSE/oPSE |
 
-| 报告 | 题目 |
-|---|---|
-| [[B53_DAY4_MF-0923-市场聚焦#0923-MF-00-上午连拍.pdf（第39–53页）\|0923-MF-00-上午连拍（第39–53页）]] | OIF: Developing AI Optical Interconnect Standards on the AI Timeline（页脚标注，23 Sep 2026） |
-| [[B54_DAY4_MF-0923-市场聚焦#0923-MF-康宁-市场聚焦.pdf\|0923-MF-康宁-市场聚焦]] | Meeting the deployment challenges of optical scale-up |
-| [[B54_DAY4_MF-0923-市场聚焦#0923-MF-美团-市场聚焦.pdf\|0923-MF-美团-市场聚焦]] | Rethinking Optical Interconnect for the AI Agent Era |
-| [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第14–32页）\|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第14–32页）]] | The Topic is Density, not Port Size（p14 首页）；主体为 XPO 模块介绍 |
-| [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第33–40页）\|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第33–40页）]] | Reality checking 1.6T+ AI interconnect solutions |
-| [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第41–45页）\|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第41–45页）]] | Optics for NVIDIA Spectrum-X Multiplane Network Architecture |
-| [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第46–54页）\|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第46–54页）]] | （标题页未见）内容涵盖 Optical connectivity expanding / Integrated optics requires a variety of technologies / Driving the future of pluggable transceivers |
-| [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第55–63页）\|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第55–63页）]] | Open CPX 相关（Open CPX supporting broad NPO and CPO use cases / Diablo-1 6.4T Open CPX engine），标题栏被裁切 |
-| [[B57_DAY4_We-F-标准化专场#0923-We-F-00-标准化专场II连拍.pdf（第11–19页）\|0923-We-F-00-标准化专场II连拍（第11–19页）]] | Optical Scale-Up AI Systems: progress in Standards |
-| [[B71_DAY4_We5-B-光发射机与VCSEL#0923-We5-B-Arista-光发射机与收发.pdf（第1–9页）\|0923-We5-B-Arista-光发射机与收发（第1–9页）]] | Industry's First 12.8T 8×DR8 High-Density Liquid-Cooled 64-Channel Pluggable XPO Optical Module for Scale-Up |
-| [[B71_DAY4_We5-B-光发射机与VCSEL#0923-We5-B-NVIDIA-高速VCSEL与共封装.pdf（第1–31页，其中 p18/p20/p28 为重复页）\|0923-We5-B-NVIDIA-高速VCSEL与共封装（第1–31页，其中 p18／p20／p28 为重复页）]] | Progress of High-speed VCSELs and VCSEL-based Co-Packaging for Short Reach Communications |
-| [[B73_DAY4_We5-I VESEL#We5-I Coherent.pdf（第1–12页）\|We5-I Coherent（第1–12页）]] | 2.3 Tbit/s Backside-Emitting 1060 nm VCSEL Array on Silicon Interposer for CPO Applications（Paper ID #504） |
-| [[B73_DAY4_We5-I VESEL#We5-I Lumentum.pdf（第1–18页）\|We5-I Lumentum（第1–18页）]] | 1060nm VCSEL Arrays for Scale-Up |
-| [[B73_DAY4_We5-I VESEL#We5-I 博升.pdf（第1–20页）\|We5-I 博升（第1–20页）]] | 1060 nm Back-Emitting VCSEL Modulated at 106 Gbps PAM4 Transmission over 100 m OM3 MMF for NPO Applications |
+## Slow&Wide
 
-### DAY5（09-24 周四）
+16 篇 · 宽而慢：多通道低速率（VCSEL/microLED/多芯并行）
 
-| 报告 | 题目 |
-|---|---|
-| [[B77_DAY5_Th1-F-可编程光子学专场上半场#0924-推定F1-根特大学-可编程光子学的现状导论.pdf\|0924-推定F1-根特大学-可编程光子学的现状导论]] | Programmable Photonics: Architectures, Control and Applications（副标题引自首页 OCR：Programmable Integrated Photonics (PIP) for a flexible, efficient, intelligent optical future，OCR 不完整） |
-| [[B77_DAY5_Th1-F-可编程光子学专场上半场#0924-推定F2-Lightmatter-面向AI信息处理的光子学互连与内存带宽.pdf\|0924-推定F2-Lightmatter-面向AI信息处理的光子学互连与内存带宽]] | 标题页 OCR 乱码；按文件名为面向 AI 的光子互连与内存带宽，幻灯片主线为 Passage M1000 3D 光子"superchip"平台（英文原题看不清） |
-| [[B77_DAY5_Th1-F-可编程光子学专场上半场#0924-推定F3-哥伦比亚大学-面向AI集群的可编程光子学.pdf\|0924-推定F3-哥伦比亚大学-面向AI集群的可编程光子学]] | Programmable photonics for AI clusters |
-| [[B77_DAY5_Th1-F-可编程光子学专场上半场#0924-推定F4-iPronics-面向光交换的可编程光子学.pdf\|0924-推定F4-iPronics-面向光交换的可编程光子学]] | 页面无明确总题目；主题为面向 AI 数据中心的硅光可编程 OCS（Programmable photonics for optical switching） |
-| [[B77_DAY5_Th1-F-可编程光子学专场上半场#0924-推定F6-丹麦科技大学-物理信息机器学习建模并补偿热串扰.pdf\|0924-推定F6-丹麦科技大学-物理信息机器学习建模并补偿热串扰]] | Physics-informed machine learning for modelling and compensating thermal crosstalk（标题页 OCR 乱码，按文件名与内容推断，英文原题未确认） |
+| 日期 | 报告 | 题目 | 形态 |
+|---|---|---|---|
+| DAY1 | [[B19_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su3-I-05-Ciena-系统侧的选择.pdf\|0920-pm-Su3-I-05-Ciena-系统侧的选择]] | （首页OCR不清；页面内容为 fast/narrow vs slow/wide 的系统侧选择） | CPO/NPO/XPO |
+| DAY1 | [[B19_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su4-I-04-Coherent-器件路线.pdf\|0920-pm-Su4-I-04-Coherent-器件路线]] | （首页OCR为算力/互连受限图；未见明确英文题，内容围绕VCSEL阵列与DWDM的能耗/带宽比较） | CPO/NPO/XPO |
+| DAY1 | [[B20_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su4-I-06-LightMatter-光计算路线.pdf\|0920-pm-Su4-I-06-LightMatter-光计算路线]] | 未见题目页（页1、2 OCR为空，未查看）；讲稿主题为 "Fast and narrow has a ceiling. Slow and wide does not — when it's 3D."（回答 Workshop Question：fast, narrow channel 能否无限上升） | CPO/NPO/XPO |
+| DAY1 | [[B20_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su4-I-07-Credo-电互连路线.pdf\|0920-pm-Su4-I-07-Credo-电互连路线]] | 未见完整题目页（页1 OCR 残缺，未查看）；主题为 wide-parallel（宽并行）光互连，页标题 "When Wide-Parallel Could Bring Benefit" | CPO/NPO/XPO |
+| DAY2 | [[B29_DAY2_Mo3-I-AI互连之争-第一场#0921-Mo3-待定-Corning-AI互连的纵向与横向扩展路径.pdf\|0921-Mo3-待定-Corning-AI互连的纵向与横向扩展路径]] | Fiber Bundle Connector Solutions for VCSEL-Based Optical Scale-Up Interconnects | CPO/NPO/XPO |
+| DAY2 | [[B30_DAY2_Mo4-I-AI互连之争-第二场#0921-Mo4-待定-MicrosoftAzure-AI纵向扩展与通用算力的光互连用例.pdf（第1–10页）\|0921-Mo4-待定-MicrosoftAzure-AI纵向扩展与通用算力的光互连用例（第1–10页）]] | 未见原题（文件名：AI 纵向扩展与通用算力的光互连用例；英文原题看不到） | CPO/NPO/XPO |
+| DAY2 | [[B30_DAY2_Mo4-I-AI互连之争-第二场#0921-Mo4-待定-NVIDIA-纵向与横向扩展的光方案.pdf（第1–12页）\|0921-Mo4-待定-NVIDIA-纵向与横向扩展的光方案（第1–12页）]] | Optical Solutions for Scale-out & Scale-up Connectivity | CPO/NPO/XPO |
+| DAY3 | [[B40_DAY3_MF-0922-上午-器件与IC与PIC与光纤#0922-MF-am-1000-Coherent-支撑AI基础设施三种扩展的光技术.pdf\|0922-MF-am-1000-Coherent-支撑AI基础设施三种扩展的光技术]] | Photonics: from transport infrastructure to compute fabric（标题页看不清，据第2页大标题） | CPO/NPO/XPO |
+| DAY3 | [[B46_DAY3_Tu1-E-光开关与解复用器#0922-Tu1-E3-Microsoft-宽而慢架构加microLED打破AI网络与内存墙.pdf\|0922-Tu1-E3-Microsoft-宽而慢架构加microLED打破AI网络与内存墙]] | Wide-and-slow architecture with microLED to break AI network and memory walls（据文件名与内容概括，原题页未见） | CPO/NPO/XPO |
+| DAY3 | [[B46_DAY3_Tu1-E-光开关与解复用器#0922-Tu1-E5-NVIDIA-时钟前传DWDM光链路的微环静态与动态分配.pdf\|0922-Tu1-E5-NVIDIA-时钟前传DWDM光链路的微环静态与动态分配]] | Static and Dynamic Ring Assignment in a Clock-Forwarded DWDM Optical Link | oWSE/oPSE |
+| DAY4 | [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第14–32页）\|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第14–32页）]] | The Topic is Density, not Port Size（p14 首页）；主体为 XPO 模块介绍 | CPO/NPO/XPO |
+| DAY4 | [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第46–54页）\|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第46–54页）]] | （标题页未见）内容涵盖 Optical connectivity expanding / Integrated optics requires a variety of technologies / Driving the future of pluggable transceivers | CPO/NPO/XPO |
+| DAY4 | [[B71_DAY4_We5-B-光发射机与VCSEL#0923-We5-B-NVIDIA-高速VCSEL与共封装.pdf（第1–31页，其中 p18/p20/p28 为重复页）\|0923-We5-B-NVIDIA-高速VCSEL与共封装（第1–31页，其中 p18／p20／p28 为重复页）]] | Progress of High-speed VCSELs and VCSEL-based Co-Packaging for Short Reach Communications | CPO/NPO/XPO |
+| DAY4 | [[B73_DAY4_We5-I VESEL#We5-I Coherent.pdf（第1–12页）\|We5-I Coherent（第1–12页）]] | 2.3 Tbit/s Backside-Emitting 1060 nm VCSEL Array on Silicon Interposer for CPO Applications（Paper ID #504） | oWSE/oPSE |
+| DAY4 | [[B73_DAY4_We5-I VESEL#We5-I Lumentum.pdf（第1–18页）\|We5-I Lumentum（第1–18页）]] | 1060nm VCSEL Arrays for Scale-Up | CPO/NPO/XPO |
+| DAY4 | [[B73_DAY4_We5-I VESEL#We5-I 博升.pdf（第1–20页）\|We5-I 博升（第1–20页）]] | 1060 nm Back-Emitting VCSEL Modulated at 106 Gbps PAM4 Transmission over 100 m OM3 MMF for NPO Applications | CPO/NPO/XPO |
 
-### 次相关报告（73）
+## SerDes及连接器
+
+11 篇 · 电 SerDes、驱动/TIA、光纤阵列/耦合/连接器、基板
+
+| 日期 | 报告 | 题目 | 形态 |
+|---|---|---|---|
+| DAY1 | [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su1-B-04-Broadcom-AI集群高速IO.pdf\|0920-am-Su1-B-04-Broadcom-AI集群高速IO]] | High-Speed I/O in AI clusters | CPO/NPO/XPO |
+| DAY1 | [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su1-B-06-AttoTude-介质波导做ScaleUp.pdf\|0920-am-Su1-B-06-AttoTude-介质波导做ScaleUp]] | AttoTude Thesis – ASICs over Dielectrics（p2标题；DiAx介质增强双绞线） | CPO/NPO/XPO |
+| DAY2 | [[B22_DAY2_MF-0921-下午-模块与子系统#0921-MF-pm-1500-HeraeusCovantics-面向AI数据中心的下一代光纤.pdf\|0921-MF-pm-1500-HeraeusCovantics-面向AI数据中心的下一代光纤]] | Next-generation fiber technologies for AI DC（据页脚“…generation Fiber technologies for AI DC”，原题不完整） | CPO/NPO/XPO |
+| DAY2 | [[B23_DAY2_Mo12-A-开幕与大会报告#0921-Mo12-00-全场-开幕与大会报告全场连拍.pdf（第1–36页，Ciena大会报告）\|0921-Mo12-00-全场-开幕与大会报告全场连拍（第1–36页，Ciena大会报告）]] | 题目页OCR乱码，看不清；内容主线为 Scaling AI is all about scaling I/O（据p35结论页） | CPO/NPO/XPO |
+| DAY2 | [[B29_DAY2_Mo3-I-AI互连之争-第一场#0921-Mo3-待定-Tyndall-AI互连路径.pdf\|0921-Mo3-待定-Tyndall-AI互连路径]] | Glass Wafer-Level Packaging（含后续 Electro-Optical Interposer） | oWSE/oPSE |
+| DAY2 | [[B34_DAY2_PF-0921-产品聚焦#0921-PF-待定-Marvell-面向AI纵向扩展网络的近封装光模块.pdf\|0921-PF-待定-Marvell-面向AI纵向扩展网络的近封装光模块]] | Near Packaged Optics for AI Scale-up Networks | CPO/NPO/XPO |
+| DAY3 | [[B40_DAY3_MF-0922-上午-器件与IC与PIC与光纤#0922-MF-am-1120-Jabil-面向大批量制造的光子封装.pdf\|0922-MF-am-1120-Jabil-面向大批量制造的光子封装]] | 面向大批量制造的光子封装（英文原题标题页无 OCR/未看；内容为 photonics packaging for HVM） | CPO/NPO/XPO |
+| DAY3 | [[B40_DAY3_MF-0922-上午-器件与IC与PIC与光纤#0922-MF-am-1220-EBOMSA-EBOMSA可靠且可互通的光互连.pdf\|0922-MF-am-1220-EBOMSA-EBOMSA可靠且可互通的光互连]] | EBO MSA: Enabling Reliable and Interoperable Optical Connectivity for AI Data Centers | CPO/NPO/XPO |
+| DAY3 | [[B42_DAY3_PF-0922-产品聚焦#0922-PF-0935-Advantest-硅光与共封装光学测试的量产化.pdf\|0922-PF-0935-Advantest-硅光与共封装光学测试的量产化]] | 未见完整原题（PDF名：硅光与共封装光学测试的量产化；内容为 SiPh/NPO/CPO HVM 测试） | CPO/NPO/XPO |
+| DAY4 | [[B53_DAY4_MF-0923-市场聚焦#0923-MF-00-上午连拍.pdf（第39–53页）\|0923-MF-00-上午连拍（第39–53页）]] | OIF: Developing AI Optical Interconnect Standards on the AI Timeline（页脚标注，23 Sep 2026） | CPO/NPO/XPO |
+| DAY4 | [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第55–63页）\|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第55–63页）]] | Open CPX 相关（Open CPX supporting broad NPO and CPO use cases / Diablo-1 6.4T Open CPX engine），标题栏被裁切 | CPO/NPO/XPO |
+
+## 异质集成
+
+2 篇 · 3D 堆叠、键合、微转印、光学中介层、Chiplet
+
+| 日期 | 报告 | 题目 | 形态 |
+|---|---|---|---|
+| DAY2 | [[B30_DAY2_Mo4-I-AI互连之争-第二场#0921-Mo4-待定-Cerebras-题目未公布.pdf（第1、9–16页；p2–p8为另一版重复页）\|0921-Mo4-待定-Cerebras-题目未公布（第1、9–16页；p2–p8为另一版重复页）]] | Heterogeneous Hybrid Bonding: A Path to Wafer-Scale Optical Systems | oWSE/oPSE |
+| DAY5 | [[B77_DAY5_Th1-F-可编程光子学专场上半场#0924-推定F2-Lightmatter-面向AI信息处理的光子学互连与内存带宽.pdf\|0924-推定F2-Lightmatter-面向AI信息处理的光子学互连与内存带宽]] | 标题页 OCR 乱码；按文件名为面向 AI 的光子互连与内存带宽，幻灯片主线为 Passage M1000 3D 光子"superchip"平台（英文原题看不清） | oWSE/oPSE |
+
+## 架构与系统
+
+41 篇 · Scale-up 网络架构、光交换、可靠性与运维
+
+| 日期 | 报告 | 题目 | 形态 |
+|---|---|---|---|
+| DAY1 | [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第14–23页）\|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第14–23页）]] | AI [Cluster] Networks: Requirements for Reliable, High-Bandwidth-Density …（p14 标题 OCR 残缺，完整英文原题看不清） | CPO/NPO/XPO |
+| DAY1 | [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第2–13页）\|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第2–13页）]] | 未见完整英文原题；p3 议程标题为 “Navigating growth and uncertainty” | CPO/NPO/XPO |
+| DAY1 | [[B02_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描.pdf（第53–67页）\|0920-pm-Su3+Su4-A-00-全场-A1下午全场扫描（第53–67页）]] | The Path for Co-Packaged Optics in the AI Ecosystem | CPO/NPO/XPO |
+| DAY1 | [[B03_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3-A-01-LightCounting-AI连接硬件市场.pdf\|0920-pm-Su3-A-01-LightCounting-AI连接硬件市场]] | How Will AI Shape the Connectivity Market（副标题 Meeting Diverse AI Connectivity Needs: Architectural Choices for Next Generation Pluggable Transceivers） | CPO/NPO/XPO |
+| DAY1 | [[B03_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3-A-02-OpenAI-ScaleUp互连需求.pdf\|0920-pm-Su3-A-02-OpenAI-ScaleUp互连需求]] | AI Scale-Up Networks: Requirements for Reliable, High-Bandwidth-Density Interconnects | CPO/NPO/XPO |
+| DAY1 | [[B03_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3-A-04-OrioleNetworks-数据中心光交换.pdf\|0920-pm-Su3-A-04-OrioleNetworks-数据中心光交换]] | A Pure Photonic Network for the AI Era | OCS |
+| DAY1 | [[B03_DAY1_A1-Su3-Su4-下一代可插拔架构#0920-pm-Su3-A-05-NVIDIA-CPO对可插拔的优势.pdf\|0920-pm-Su3-A-05-NVIDIA-CPO对可插拔的优势]] | The Path for Co-Packaged Optics in the AI Ecosystem | CPO/NPO/XPO |
+| DAY1 | [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su1-B-01-Meta-AI数据中心功耗.pdf\|0920-am-Su1-B-01-Meta-AI数据中心功耗]] | Standard Optic's Perspective on Power Savings（首页标题；无独立总题页） | CPO/NPO/XPO |
+| DAY1 | [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su1-B-02-OpenAI-ScaleUp还能用铜吗.pdf\|0920-am-Su1-B-02-OpenAI-ScaleUp还能用铜吗]] | AI scale-up – Does copper still do the job? | CPO/NPO/XPO |
+| DAY1 | [[B04_DAY1_A2-Su1-Su2-光通信功耗墙#0920-am-Su1-B-05-Arista-超密度可插拔XPO.pdf\|0920-am-Su1-B-05-Arista-超密度可插拔XPO]] | Pluggable Forever: Power-Efficient, Ultra-Dense XPO — Breaking the AI Network Power & Density Wall | CPO/NPO/XPO |
+| DAY1 | [[B14_DAY1_E1-Su1-Su2-集成光子产品化#0920-am-Su1-C-05-Tyndall-封装在产品化中的角色.pdf\|0920-am-Su1-C-05-Tyndall-封装在产品化中的角色]] | （封面题目文字OCR乱码，主题为封装在光子产品化中的角色；页2标题“Why is packaging so important?”） | CPO/NPO/XPO |
+| DAY1 | [[B18_DAY1_PV-R-Su1-Su2-绿色AI数据中心与接入#0920-am-Su2-I-01-NVIDIA-面向AI工厂的光子技术.pdf\|0920-am-Su2-I-01-NVIDIA-面向AI工厂的光子技术]] | Photonics-enabled technologies for AI factories | CPO/NPO/XPO |
+| DAY1 | [[B18_DAY1_PV-R-Su1-Su2-绿色AI数据中心与接入#0920-am-Su2-I-03-iPronics-可扩展光子集成ScaleUp.pdf\|0920-am-Su2-I-03-iPronics-可扩展光子集成ScaleUp]] | Scalable Photonic Integration for energy-efficient scale-up AI networking | OCS |
+| DAY1 | [[B19_DAY1_PV-R-Su3-Su4-窄快还是宽慢#0920-pm-Su4-I-02-OpenAI-ScaleUp需求.pdf\|0920-pm-Su4-I-02-OpenAI-ScaleUp需求]] | Fast/Narrow or Slow/Wide? Choosing for Bandwidth Density and Reliability | CPO/NPO/XPO |
+| DAY2 | [[B21_DAY2_MF-0921-上午-模块与子系统#0921-MF-am-T02-1020-CignalAI-光电路交换的新应用.pdf\|0921-MF-am-T02-1020-CignalAI-光电路交换的新应用]] | New Applications for Optical Circuit Switching（据文件名；页内主标题看不清） | OCS |
+| DAY2 | [[B21_DAY2_MF-0921-上午-模块与子系统#0921-MF-am-T03-1040-Ciena-加速CPO的市场采用.pdf\|0921-MF-am-T03-1040-Ciena-加速CPO的市场采用]] | Accelerating Market Adoption of CPO（据文件名；页内 Keys for CPO/NPO ramp） | CPO/NPO/XPO |
+| DAY2 | [[B21_DAY2_MF-0921-上午-模块与子系统#0921-MF-am-T04-1100-华为-NPO与CPO的近期部署平衡.pdf\|0921-MF-am-T04-1100-华为-NPO与CPO的近期部署平衡]] | Balancing NPO and CPO for near-term deployment（据文件名） | CPO/NPO/XPO |
+| DAY2 | [[B21_DAY2_MF-0921-上午-模块与子系统#0921-MF-am-T06-1140-Coherent-先进材料与散热效率.pdf\|0921-MF-am-T06-1140-Coherent-先进材料与散热效率]] | Advanced materials and thermal efficiency（据文件名） | CPO/NPO/XPO |
+| DAY2 | [[B21_DAY2_MF-0921-上午-模块与子系统#0921-MF-am-T07-1200-Corning-先进光连接扩展AI互连-照片版.pdf（同场"非照片版"为同一讲的另一份拍摄，内容重复，合并记录）\|0921-MF-am-T07-1200-Corning-先进光连接扩展AI互连-照片版（同场"非照片版"为同一讲的另一份拍摄，内容重复，合并记录）]] | Advanced Optical Connectivity to Scale AI Interconnect（据文件名；页内 "Context: CPO/NPO becoming a reality"） | CPO/NPO/XPO |
+| DAY2 | [[B22_DAY2_MF-0921-下午-模块与子系统#0921-MF-pm-1300-Arista-光互连演进-从可插拔到XPO与CPO.pdf\|0921-MF-pm-1300-Arista-光互连演进-从可插拔到XPO与CPO]] | Optics interconnect evolution from pluggable to XPO and CPO（据文件名；标题页未看清） | CPO/NPO/XPO |
+| DAY2 | [[B22_DAY2_MF-0921-下午-模块与子系统#0921-MF-pm-1440-LIGENT-从可插拔到CPO-近封装光模块的角色.pdf\|0921-MF-pm-1440-LIGENT-从可插拔到CPO-近封装光模块的角色]] | From pluggable to CPO: the role of near-packaged optics（据文件名；标题页为空白） | CPO/NPO/XPO |
+| DAY2 | [[B23_DAY2_Mo12-A-开幕与大会报告#0921-Mo12-00-全场-开幕与大会报告全场连拍.pdf（第85–107页，华为大会报告）\|0921-Mo12-00-全场-开幕与大会报告全场连拍（第85–107页，华为大会报告）]] | Scaling AI From Optical Innovation to NPO and CPO Solutions（p85） | CPO/NPO/XPO |
+| DAY2 | [[B24_DAY2_Mo12-A-开幕与大会报告#0921-Mo12-A3-Ciena-AI集群通信.pdf（共33页，单讲）\|0921-Mo12-A3-Ciena-AI集群通信（共33页，单讲）]] | AI 集群通信主题的大会报告（英文原题页未拍到；末页标题 "Top Three Take-Aways"，主线为 Scaling AI is all about scaling I/O） | CPO/NPO/XPO |
+| DAY2 | [[B24_DAY2_Mo12-A-开幕与大会报告#0921-Mo12-A5-华为-从光创新到NPO与CPO.pdf（共14页，单讲）\|0921-Mo12-A5-华为-从光创新到NPO与CPO（共14页，单讲）]] | 从光创新到 NPO 与 CPO（照片版原题页未清晰拍到；主线为 NPO vs CPO "多回合"辩论，结论 "NPO is the Optimal Solution for the 200G/Lane Era!"；最末页标题 "The Ubiquitous Optical Interconnect: Illuminating the Entire AI Network"） | CPO/NPO/XPO |
+| DAY2 | [[B30_DAY2_Mo4-I-AI互连之争-第二场#0921-Mo4-待定-Arista-题目未公布.pdf（第1–24页；p10/p11/p16为另一版重复页）\|0921-Mo4-待定-Arista-题目未公布（第1–24页；p10／p11／p16为另一版重复页）]] | 未公布（内容为 XPO 模块与 AI 互连五类场景，英文原题看不到） | CPO/NPO/XPO |
+| DAY2 | [[B30_DAY2_Mo4-I-AI互连之争-第二场#0921-Mo4-待定-Broadcom-为AI扩展光互连-走向大规模CPO集群.pdf（第1–17页；p9与p8内容相同）\|0921-Mo4-待定-Broadcom-为AI扩展光互连-走向大规模CPO集群（第1–17页；p9与p8内容相同）]] | Scaling Optical Interconnects for AI: Manufacturing Pathways to Massive CPO-Enabled Clusters | CPO/NPO/XPO |
+| DAY3 | [[B40_DAY3_MF-0922-上午-器件与IC与PIC与光纤#0922-MF-am-1040-fibeReality-光器件厂商的高风险对冲.pdf\|0922-MF-am-1040-fibeReality-光器件厂商的高风险对冲]] | 光器件厂商的高风险对冲（英文原题未见；含 “Verdict: Co-Packaged Optics Illusion Has Ended” 等观点页） | CPO/NPO/XPO |
+| DAY3 | [[B41_DAY3_MF-0922-下午-新兴技术#0922-MF-pm-1400-Broadcom-共封装光学之后再谈OCI.pdf\|0922-MF-pm-1400-Broadcom-共封装光学之后再谈OCI]] | Co-Packaged Optics and Beyond: Optical Compute Interconnect (OCI)（英文原题据文件名推断，题目页未见清晰；p1 为拍摄的 "AI Interconnect" 页，OCR 全为乱码） | CPO/NPO/XPO |
+| DAY3 | [[B42_DAY3_PF-0922-产品聚焦#0922-PF-1155-SalienceLabs-把OCS从横向扩展带到纵向扩展.pdf\|0922-PF-1155-SalienceLabs-把OCS从横向扩展带到纵向扩展]] | 未见完整原题（PDF名：把OCS从横向扩展带到纵向扩展；页内出现 "OCS in scale-up networks"） | OCS |
+| DAY3 | [[B42_DAY3_PF-0922-产品聚焦#0922-PF-1405-NewPhotonics-NPO互连作为CPO纵向扩展的务实策略.pdf\|0922-PF-1405-NewPhotonics-NPO互连作为CPO纵向扩展的务实策略]] | The Architecture of AI Scale-Up: Why Near-Packaged Optics (NPO) is the Permanent Hybrid Standard | CPO/NPO/XPO |
+| DAY3 | [[B46_DAY3_Tu1-E-光开关与解复用器#0922-Tu1-E2-浙江大学-2.5D环面拓扑的低损硅光MEMS开关阵列.pdf\|0922-Tu1-E2-浙江大学-2.5D环面拓扑的低损硅光MEMS开关阵列]] | Low-loss silicon photonic MEMS switch array with 2.5D Torus topology（据小节标题概括，完整原题页看不清） | OCS |
+| DAY4 | [[B54_DAY4_MF-0923-市场聚焦#0923-MF-康宁-市场聚焦.pdf\|0923-MF-康宁-市场聚焦]] | Meeting the deployment challenges of optical scale-up | CPO/NPO/XPO |
+| DAY4 | [[B54_DAY4_MF-0923-市场聚焦#0923-MF-美团-市场聚焦.pdf\|0923-MF-美团-市场聚焦]] | Rethinking Optical Interconnect for the AI Agent Era | CPO/NPO/XPO |
+| DAY4 | [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第33–40页）\|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第33–40页）]] | Reality checking 1.6T+ AI interconnect solutions | CPO/NPO/XPO |
+| DAY4 | [[B55_DAY4_MF-0923-市场聚焦#0923-MF-00-Marvell与Ciena与Arista与Oracle连拍.pdf（第41–45页）\|0923-MF-00-Marvell与Ciena与Arista与Oracle连拍（第41–45页）]] | Optics for NVIDIA Spectrum-X Multiplane Network Architecture | CPO/NPO/XPO |
+| DAY4 | [[B57_DAY4_We-F-标准化专场#0923-We-F-00-标准化专场II连拍.pdf（第11–19页）\|0923-We-F-00-标准化专场II连拍（第11–19页）]] | Optical Scale-Up AI Systems: progress in Standards | CPO/NPO/XPO |
+| DAY4 | [[B71_DAY4_We5-B-光发射机与VCSEL#0923-We5-B-Arista-光发射机与收发.pdf（第1–9页）\|0923-We5-B-Arista-光发射机与收发（第1–9页）]] | Industry's First 12.8T 8×DR8 High-Density Liquid-Cooled 64-Channel Pluggable XPO Optical Module for Scale-Up | CPO/NPO/XPO |
+| DAY5 | [[B77_DAY5_Th1-F-可编程光子学专场上半场#0924-推定F1-根特大学-可编程光子学的现状导论.pdf\|0924-推定F1-根特大学-可编程光子学的现状导论]] | Programmable Photonics: Architectures, Control and Applications（副标题引自首页 OCR：Programmable Integrated Photonics (PIP) for a flexible, efficient, intelligent optical future，OCR 不完整） | CPO/NPO/XPO |
+| DAY5 | [[B77_DAY5_Th1-F-可编程光子学专场上半场#0924-推定F3-哥伦比亚大学-面向AI集群的可编程光子学.pdf\|0924-推定F3-哥伦比亚大学-面向AI集群的可编程光子学]] | Programmable photonics for AI clusters | OCS |
+| DAY5 | [[B77_DAY5_Th1-F-可编程光子学专场上半场#0924-推定F4-iPronics-面向光交换的可编程光子学.pdf\|0924-推定F4-iPronics-面向光交换的可编程光子学]] | 页面无明确总题目；主题为面向 AI 数据中心的硅光可编程 OCS（Programmable photonics for optical switching） | OCS |
+| DAY5 | [[B77_DAY5_Th1-F-可编程光子学专场上半场#0924-推定F6-丹麦科技大学-物理信息机器学习建模并补偿热串扰.pdf\|0924-推定F6-丹麦科技大学-物理信息机器学习建模并补偿热串扰]] | Physics-informed machine learning for modelling and compensating thermal crosstalk（标题页 OCR 乱码，按文件名与内容推断，英文原题未确认） | CPO/NPO/XPO |
+
+## 次相关报告（73）
 
 | 报告 | 题目 | 主方向 |
 |---|---|---|
