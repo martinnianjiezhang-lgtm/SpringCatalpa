@@ -4,9 +4,22 @@ title: Welcome to SpringCatalpa
 
 ![[Gemini_Generated_Image_d2jn7od2jn7od2jn.jpeg]]                                Diligently, tirelessly and endlessly growing
 
+<div class="topic-cards">
+<div class="topic-card">
+<img src="attachments/banner-san-jose.jpg" alt="San Jose skyline at dusk" />
+<a class="tc-link" href="#一-专题optical-communication-光通信"><span class="tc-title">Optical Communication</span></a>
+<a class="tc-credit" href="https://commons.wikimedia.org/wiki/File:SJ_skyline_at_night_horizontal_(cropped).jpg">San Jose · Ben Loomis · CC BY 2.0</a>
+</div>
+<div class="topic-card">
+<img src="attachments/banner-stockholm.jpg" alt="Stockholm City Hall across Riddarfjärden at dusk" />
+<a class="tc-link" href="#二-专题无线与wifi通信"><span class="tc-title">Wireless Communication</span></a>
+<a class="tc-credit" href="https://commons.wikimedia.org/wiki/File:Sweden,_Stockholm,_View_Across_Riddarfjarden_From_Sodermalm_(Stockholm_City_Hall,_Center),_Panorama_150628-88.jpg">Stockholm · Richard Maack · CC BY 4.0</a>
+</div>
+</div>
 
 
-### [[Optical Communication/index|专题：Optical Communication 光通信]]
+
+### 一. [[Optical Communication/index|专题：Optical Communication 光通信]]
 
 #### 1. [[Optical Communication/01. Conference/2026 ECOC/index|洞察：2026年 ECOC 专题洞察]]
 
@@ -164,6 +177,18 @@ ECOC 2025（哥本哈根，2025 年 9 月 28 日–10 月 2 日），完整论�
 3. **IM-DD 单波逼近 650 Gb/s，400G/lane 开始成形**：Scale Out 101 篇：净 651 Gb/s〔Tu.03.06.1〕、GeSi EAM 224 GBd〔Th.03.01.4〕、TFLN/等离子体 400G+；光梳/微梳与 VCSEL 多芯作为宽而慢路线的光源。
 4. **PON 进入 VHSP 选型期**：Access 132 篇：IM-DD 超速率 100G/120 GBd 与相干 PON 200G 并行，互通参考接收机〔W.01.07.2〕、共存拉曼代价〔W.01.07.3〕、固移融合现场（PDP）〔Th.03.03.4〕。
 5. **光纤变成地球物理传感器**：新应用 97 篇：海缆地震/海啸观测（两篇 PDP）、SOP 与相位多技术现网观测站〔Th.02.05.2〕、DAS 与 800ZR 城域共存〔Tu.01.08.2〕；QKD 以现网共存为主线（Tu.04.09 Session）。
+
+### 二. [[Wireless Communication/index|专题：无线与WiFi通信]]
+
+#### 1. [[Wireless Communication/01. WiFi Architecture/index|洞察：基于 WiFi 架构的专题洞察]]
+
+以 Wi‑Fi 链路“从发到收”的全栈架构（天线 → FEM → 射频 → 混合信号 → PHY → MAC → 多 AP）为主线，挂接学术、产业、标准三类信息；[[Wireless Communication/01. WiFi Architecture/index#交互架构图|交互架构图]] 可逐层展开。截至 2026‑09‑30。
+
+| 部分 | 关键结论 |
+|---|---|
+| [[Wireless Communication/01. WiFi Architecture/01. Academic Research\|1）各技术领域最新学术研究]] | 研究重心从峰值速率转向可靠性与尾时延：多 AP 协作（MAPC）是 MAC 层第一热点，MLO 进入“怎么调度”阶段；AI/ML、WLAN 感知（11bf）和毫米波（11bq）成为跨层新方向；芯片难点在 320 MHz + 4K‑QAM 的线性度与功耗。 |
+| [[Wireless Communication/01. WiFi Architecture/02. Industry Landscape\|2）设备商、芯片商、射频与天线厂商]] | 2026 年 Wi‑Fi 8 芯片提前发布：MediaTek Filogic 8000（CES）、Broadcom BCM67xx / BCM47822 与 Wi‑Fi 8 + 50G PON 网关、Qualcomm FastConnect 8800（MWC）；华为发布 Pre Wi‑Fi 8 AP；Skyworks 与 Qorvo 合并获批，射频前端格局重塑。 |
+| [[Wireless Communication/01. WiFi Architecture/03. Standards and Evolution\|3）标准组织、代际演进与新技术]] | 802.11bn（Wi‑Fi 8 UHR）D2.0 投票中，目标 2028‑09 批准；802.11bf 感知于 2025‑09 发布，802.11bq 集成毫米波推进中，Wi‑Fi 9 愿景讨论已在 WNG 启动；中国 6 GHz 上半段划给 IMT，国内 Wi‑Fi 7/8 主要依赖 2.4/5 GHz 加 MLO。 |
 
 ## 目录
 
