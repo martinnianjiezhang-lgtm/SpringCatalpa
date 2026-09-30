@@ -38,7 +38,16 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      // 按文件夹/文件名排序（保留 00. 01. 02. 编号顺序），显示的仍是 index 页标题
+      sortFn: (a, b) => {
+        if (a.isFolder !== b.isFolder) return a.isFolder ? -1 : 1
+        return (a.slugSegment ?? "").localeCompare(b.slugSegment ?? "", undefined, {
+          numeric: true,
+          sensitivity: "base",
+        })
+      },
+    }),
   ],
   right: [
     Component.Graph(),
@@ -62,7 +71,16 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      // 按文件夹/文件名排序（保留 00. 01. 02. 编号顺序），显示的仍是 index 页标题
+      sortFn: (a, b) => {
+        if (a.isFolder !== b.isFolder) return a.isFolder ? -1 : 1
+        return (a.slugSegment ?? "").localeCompare(b.slugSegment ?? "", undefined, {
+          numeric: true,
+          sensitivity: "base",
+        })
+      },
+    }),
   ],
   right: [],
 }

@@ -1,0 +1,22 @@
+---
+title: Optical Communication
+tags:
+  - 光通信
+---
+
+光通信学习专题，按六大方向组织。
+
+## 六大方向
+
+| # | 方向 | 范围 | ECOC 2026 报告数 |
+|---|---|---|---|
+| 1 | [[Optical Communication/02. DataCenterNetwork/02. Scale across/index\|Scale Across]] | 跨楼/园区/区域 DC 互连 | 37 |
+| 2 | [[Optical Communication/02. DataCenterNetwork/01. Scale out/index\|Scale Out]] | 224G/448G、光源、调制器、OCS | 75 |
+| 3 | [[Optical Communication/02. DataCenterNetwork/00. Scale up/index\|Scale Up]] | CPO/NPO/XPO、晶圆级光 I/O | 77 |
+| 4 | [[Optical Communication/05. TransmissionNetwork/index\|Transport]] | 相干、海缆、长途、DCI、空芯光纤 | 138 |
+| 5 | [[Optical Communication/07. AccessNetwork/index\|Access]] | PON、FTTR、RoF、FSO/星地 | 75 |
+| 6 | [[Optical Communication/09. New Applications/index\|新应用]] | QKD/量子网络、光纤感知 | 32 |
+
+## 会议
+
+- [[Optical Communication/01. Conference/2026 ECOC/index|ECOC 2026]]：十条技术判断、厂商地图、六个方向的综合洞察、445 篇讲稿笔记
