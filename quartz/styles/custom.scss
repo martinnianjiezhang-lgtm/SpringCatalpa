@@ -97,7 +97,7 @@
 // ---- 首页专题卡片（Optical / Wireless） ----
 .topic-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin: 1.2rem 0 2rem;
 
@@ -108,7 +108,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  aspect-ratio: 3 / 1;
+  aspect-ratio: 2 / 1;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
@@ -137,10 +137,11 @@
       rgba(255, 255, 255, 0) 100%
     );
     color: #1f2d3a;
-    font-size: 1.25rem;
+    padding: 0.8rem 1.4rem;
+    font-size: clamp(0.95rem, 1.6vw, 1.2rem);
     font-weight: 700;
     letter-spacing: 0.02em;
-    white-space: nowrap;
+    text-align: center;
   }
   &:hover .tc-title {
     background: radial-gradient(
@@ -149,6 +150,11 @@
       rgba(255, 255, 255, 0.7) 55%,
       rgba(255, 255, 255, 0) 100%
     );
+  }
+
+  &.tc-plain {
+    background: linear-gradient(135deg, #0b2a4a 0%, #0e6383 55%, #1a9b8e 100%);
+    .tc-title { background: none; color: #fff; }
   }
 
   .tc-credit {
