@@ -19,11 +19,14 @@ title: Welcome to SpringCatalpa
 
 
 
+> [!tip] [[洞察总览|洞察总览：近期全部洞察一页汇总（2026 年 9–10 月）]]
+> 光通信会议洞察、专题深度洞察、产业链与研究机构索引、AI 数据中心、无线与 WiFi，以及本地 PPT/Word 交付物清单。
+
 ### 一. [[Optical Communication/index|专题：Optical Communication 光通信]]
 
 #### 1. [[Optical Communication/01. Conference/2026 ECOC/index|洞察：2026年 ECOC 专题洞察]]
 
-ECOC 2026（Málaga，9 月 20–24 日），445 篇讲稿笔记。另见 [[Optical Communication/01. Conference/2026 ECOC/00. ECOC 2026的十条技术判断|十条跨方向技术判断]] · [[Optical Communication/01. Conference/2026 ECOC/专题洞察/2026 光互连五大专题深度洞察|五大专题深度洞察]] · [[Optical Communication/01. Conference/2026 ECOC/专题洞察/ECOC 2026 全量技术洞察（六大方向）|ECOC 2026 全量技术洞察（六大方向，52 页）]]（Scale Across、OpenAI 芯片、NVIDIA×iPronics OCS、Slow & Wide、Cerebras CS-4 与光学晶圆级）。
+ECOC 2026（Málaga，9 月 20–24 日），445 篇讲稿笔记。另见 [[Optical Communication/01. Conference/2026 ECOC/00. ECOC 2026的十条技术判断|十条跨方向技术判断]] · [[Optical Communication/01. Conference/2026 ECOC/专题洞察/2026 光互连五大专题深度洞察|五大专题深度洞察]] · [[Optical Communication/01. Conference/2026 ECOC/专题洞察/ECOC 2026 全量技术洞察（六大方向）|ECOC 2026 全量技术洞察（六大方向，52 页）]] · [[Optical Communication/01. Conference/2026 ECOC/专题洞察/NVIDIA×iPronics 硅光 OCS 应用场景|NVIDIA × iPronics：硅光 OCS 应用场景]] · [[Optical Communication/01. Conference/2026 ECOC/专题洞察/光通信专业地图（五层光互连）|光通信专业地图（五层光互连）]]。五大专题为 Scale Across、OpenAI 芯片、NVIDIA×iPronics OCS、Slow & Wide、Cerebras CS-4 与光学晶圆级。
 
 **1. 光通信应用场景专题洞察**
 
@@ -193,6 +196,19 @@ ECOC 2025（哥本哈根，2025 年 9 月 28 日–10 月 2 日），完整论�
 #### 2. [[Wireless Communication/02. WiFi Technology Atlas/index|图谱：WiFi 全局架构与技术图谱]]
 
 以 Wi‑Fi 链路“从发到收”的系统架构为主线，把 238 个技术名词按 8 个架构层（天线 → FEM → 射频 → 混合信号 → PHY → Lower MAC → Upper MAC → 多 AP）和 3 个跨层方向（芯片、感知定位、频谱新频段）归档；[[Wireless Communication/02. WiFi Technology Atlas/index#全局架构图|全局架构图]] 可逐层展开，点击名词直达原理。每个方向分“总览（关键技术 + 产业链）”与“术语笔记”两部分。
+
+### 三. [[AI Infrastructure/index|专题：AI 数据中心与算力基础设施]]
+
+AI 数据中心的规划、选址、训练与推理布局，以及电力和投资。截至 2026‑10‑01。
+
+| 洞察 | 关键结论 |
+|---|---|
+| [[AI Infrastructure/AI 数据中心布局与训练推理流量调度\|AI 数据中心布局与训练/推理流量调度]] | 选址逻辑电力排第一；训练集中在少数 GW 级园区并开始跨站，推理贴近用户分布，二者对光互连的需求不同。 |
+| [[AI Infrastructure/全球与中国头部厂商数据中心规划与训推布局\|全球与中国头部厂商：规划、规模与训推布局]] | 全球与国内头部厂商的规划规模、园区与训推分工对照。 |
+| [[AI Infrastructure/Meta Google Microsoft OpenAI 数据中心地址与规模\|Meta、Google、Microsoft、OpenAI：地址、规划与规模]] | 四家园区清单按规划规模排序。 |
+| [[AI Infrastructure/AI 数据中心电力与投资分析\|AI 数据中心电力与投资分析]] | 1 GW 投资约 350–600 亿美元；100 MW 年电费从中国西部约 3 亿元到德国约 1.1 亿欧元；电费只占投资的 1–2.5%/年。 |
+
+数据与工具：[[AI Infrastructure/index#数据与工具|AI 数据中心全球分布图（交互网页）与园区清单（CSV）]]
 
 ## 目录
 
