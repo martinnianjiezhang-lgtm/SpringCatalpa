@@ -42,7 +42,7 @@ tags:
 
 ## 四、产业链
 
-[[Optical Communication/08. Industry Chain/index|产业链企业索引]]：AIDC 客户 / 运营商客户 / 设备商 / 模块与器件商 / 芯片商 / 初创企业 TOP30。
+[[Optical Communication/08. Industry Chain/index|产业链企业索引]]：AIDC 客户 / 运营商客户 / 设备商 / 模块与器件商 / 芯片商 / 初创企业。
 
 ## 五、研究机构
 

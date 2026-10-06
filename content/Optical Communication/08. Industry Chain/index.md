@@ -14,6 +14,6 @@ tags:
 | [[Optical Communication/08. Industry Chain/03.Venders/ECOC2026 厂商索引 · 设备商\|设备商]] | 23 |
 | [[Optical Communication/08. Industry Chain/04.Component/ECOC2026 厂商索引 · 模块与器件商\|模块与器件商]] | 56 |
 | [[Optical Communication/08. Industry Chain/05.Chips/ECOC2026 厂商索引 · 芯片商\|芯片商]] | 33 |
-| [[Optical Communication/08. Industry Chain/06.Startups/ECOC2026 厂商索引 · 初创企业\|初创企业 TOP30]] | 30（共出现 47 家） |
+| [[Optical Communication/08. Industry Chain/06.Startups/ECOC2026 厂商索引 · 初创企业\|初创企业]] | 48 |
 
 另见：[[ECOC2026 分析机构与标准组织|分析机构与标准组织]] · [[Optical Communication/10. Research Institutes/index|高校与研究机构]]
