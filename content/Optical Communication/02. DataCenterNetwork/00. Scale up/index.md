@@ -21,6 +21,8 @@ tags:
 
 全文：[[方向4 Scale Up 综合洞察]]
 
+系统组成与实物图：[[Optical Communication/01. Conference/2026 ECOC/专题洞察/CPO NPO XPO 端到端系统组成|CPO / NPO / XPO 端到端系统组成与实物标注]]
+
 > [!note]- 章节快速入口
 > - [[方向4 Scale Up 综合洞察#0. 一句话结论 + 5条核心判断|0. 一句话结论 + 5条核心判断]]
 > - [[方向4 Scale Up 综合洞察#1. 需求与网络架构|1. 需求与网络架构]]

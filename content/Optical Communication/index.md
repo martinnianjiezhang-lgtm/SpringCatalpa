@@ -20,6 +20,7 @@ tags:
 
 | 洞察 | 内容 |
 |---|---|
+| [[Optical Communication/01. Conference/2026 ECOC/专题洞察/CPO NPO XPO 端到端系统组成\|CPO / NPO / XPO 端到端系统组成与实物标注]] | 8 个子系统的 E2E 链路与 CPO/NPO/XPO 实物标注 |
 | [[Optical Communication/01. Conference/2026 ECOC/00. ECOC 2026的十条技术判断\|ECOC 2026 的十条技术判断]] | 跨方向判断 |
 | [[Optical Communication/01. Conference/2026 ECOC/专题洞察/ECOC 2026 全量技术洞察（六大方向）\|ECOC 2026 全量技术洞察（六大方向，52 页）]] | 按 PPT 页组织，每页含结论与论据 |
 | [[Optical Communication/01. Conference/2026 ECOC/专题洞察/2026 光互连五大专题深度洞察\|2026 光互连五大专题深度洞察]] | Scale Across、OpenAI 芯片、NVIDIA × iPronics OCS、Slow & Wide、Cerebras CS-4 与光学晶圆级 |

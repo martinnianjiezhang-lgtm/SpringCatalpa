@@ -1,0 +1,77 @@
+<svg viewBox="0 0 1120 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CPO NPO XPO 端到端链路组成">
+<text x="20" y="22" class="t-h">TX 发端 →</text><text x="1100" y="22" text-anchor="end" class="t-h">→ RX 收端</text>
+<rect x="314" y="22" width="86" height="30" rx="6" fill="#ea580c" opacity=".9"/><text x="357.0" y="42" class="t-n">⑤ 光源</text><line x1="357.0" y1="52" x2="357.0" y2="70" stroke="#ea580c" stroke-width="2" marker-end="url(#ar)"/>
+<style>.t-n{fill:#fff;font:700 14px sans-serif;text-anchor:middle}.t-s{fill:#fff;font:12px sans-serif;text-anchor:middle}.t-h{fill:#1f2328;font:700 14px sans-serif}.ln{stroke:#5b6470;stroke-width:2}.t-r{fill:#1f2328;font:800 15px sans-serif}.t-note{fill:#5b6470;font:13px sans-serif}.seg{stroke:#d0d0cc}.pk{fill:#fde2e4}.md{fill:#dbeafe}.el{fill:#e0f2fe}.as{fill:#ececec}.fp{fill:#dcfce7}.t-seg{fill:#1f2328;font:12px sans-serif;text-anchor:middle}</style><rect width="100%" height="100%" fill="#ffffff"/><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0L10,5L0,10z" fill="#5b6470"/></marker></defs>
+<rect x="20" y="70" width="86" height="54" rx="8" fill="#6b7280"/>
+<text x="63.0" y="92" class="t-n">① ASIC</text>
+<text x="63.0" y="112" class="t-s">SerDes</text>
+<line x1="106" y1="97" x2="118" y2="97" class="ln" marker-end="url(#ar)"/>
+<rect x="118" y="70" width="86" height="54" rx="8" fill="#2563eb"/>
+<text x="161.0" y="92" class="t-n">② 电通道</text>
+<line x1="204" y1="97" x2="216" y2="97" class="ln" marker-end="url(#ar)"/>
+<rect x="216" y="70" width="86" height="54" rx="8" fill="#7c3aed"/>
+<text x="259.0" y="92" class="t-n">③ DRV</text>
+<line x1="302" y1="97" x2="314" y2="97" class="ln" marker-end="url(#ar)"/>
+<rect x="314" y="70" width="86" height="54" rx="8" fill="#db2777"/>
+<text x="357.0" y="92" class="t-n">④ 调制器</text>
+<line x1="400" y1="97" x2="412" y2="97" class="ln" marker-end="url(#ar)"/>
+<rect x="412" y="70" width="86" height="54" rx="8" fill="#0891b2"/>
+<text x="455.0" y="92" class="t-n">⑥ 耦合</text>
+<line x1="498" y1="97" x2="510" y2="97" class="ln" marker-end="url(#ar)"/>
+<rect x="510" y="70" width="86" height="54" rx="8" fill="#16a34a"/>
+<text x="553.0" y="92" class="t-n">⑦ 光纤</text>
+<text x="553.0" y="112" class="t-s">连接器</text>
+<line x1="596" y1="97" x2="608" y2="97" class="ln" marker-end="url(#ar)"/>
+<rect x="608" y="70" width="86" height="54" rx="8" fill="#0891b2"/>
+<text x="651.0" y="92" class="t-n">⑥ 耦合</text>
+<line x1="694" y1="97" x2="706" y2="97" class="ln" marker-end="url(#ar)"/>
+<rect x="706" y="70" width="86" height="54" rx="8" fill="#db2777"/>
+<text x="749.0" y="92" class="t-n">④ PD</text>
+<line x1="792" y1="97" x2="804" y2="97" class="ln" marker-end="url(#ar)"/>
+<rect x="804" y="70" width="86" height="54" rx="8" fill="#7c3aed"/>
+<text x="847.0" y="92" class="t-n">③ TIA</text>
+<line x1="890" y1="97" x2="902" y2="97" class="ln" marker-end="url(#ar)"/>
+<rect x="902" y="70" width="86" height="54" rx="8" fill="#2563eb"/>
+<text x="945.0" y="92" class="t-n">② 电通道</text>
+<line x1="988" y1="97" x2="1000" y2="97" class="ln" marker-end="url(#ar)"/>
+<rect x="1000" y="70" width="86" height="54" rx="8" fill="#6b7280"/>
+<text x="1043.0" y="92" class="t-n">① ASIC</text>
+<text x="1043.0" y="112" class="t-s">SerDes</text>
+<text x="20" y="157" class="t-r">CPO</text><text x="80" y="157" class="t-note">电通道 &lt;5 dB；激光走外置 ELS（前面板）；无 DSP</text>
+<rect x="20" y="165" width="478" height="30" rx="6" class="seg pk"/>
+<text x="259.0" y="185" class="t-seg">同一封装基板：ASIC + 光引擎（3D 堆叠 EIC/PIC）</text>
+<rect x="510" y="165" width="86" height="30" rx="6" class="seg fp"/>
+<text x="553.0" y="185" class="t-seg">前面板连接器</text>
+<rect x="608" y="165" width="478" height="30" rx="6" class="seg pk"/>
+<text x="847.0" y="185" class="t-seg">同一封装基板：ASIC + 光引擎（3D 堆叠 EIC/PIC）</text>
+<text x="20" y="245" class="t-r">NPO</text><text x="80" y="245" class="t-note">电通道 7–12 dB；激光内置 ILS 或外置 ELS；线性或重定时</text>
+<rect x="20" y="253" width="86" height="30" rx="6" class="seg as"/>
+<text x="63.0" y="273" class="t-seg">ASIC 封装</text>
+<rect x="118" y="253" width="86" height="30" rx="6" class="seg el"/>
+<text x="161.0" y="273" class="t-seg">PCB + socket</text>
+<rect x="216" y="253" width="282" height="30" rx="6" class="seg md"/>
+<text x="357.0" y="273" class="t-seg">NPO 光引擎模块（socket 可换）</text>
+<rect x="510" y="253" width="86" height="30" rx="6" class="seg fp"/>
+<text x="553.0" y="273" class="t-seg">前面板光纤</text>
+<rect x="1000" y="253" width="86" height="30" rx="6" class="seg as"/>
+<text x="1043.0" y="273" class="t-seg">ASIC 封装</text>
+<rect x="902" y="253" width="86" height="30" rx="6" class="seg el"/>
+<text x="945.0" y="273" class="t-seg">PCB + socket</text>
+<rect x="608" y="253" width="282" height="30" rx="6" class="seg md"/>
+<text x="749.0" y="273" class="t-seg">NPO 光引擎模块（socket 可换）</text>
+<text x="20" y="333" class="t-r">XPO</text><text x="80" y="333" class="t-note">电通道约 22 dB 级（需飞线铜缆 / PAM6）；前面板热插拔；液冷</text>
+<rect x="20" y="341" width="86" height="30" rx="6" class="seg as"/>
+<text x="63.0" y="361" class="t-seg">ASIC 封装</text>
+<rect x="118" y="341" width="86" height="30" rx="6" class="seg el"/>
+<text x="161.0" y="361" class="t-seg">PCB / CPC</text>
+<rect x="216" y="341" width="282" height="30" rx="6" class="seg md"/>
+<text x="357.0" y="361" class="t-seg">XPO 可插拔模块（DSP+CW 激光）</text>
+<rect x="510" y="341" width="86" height="30" rx="6" class="seg fp"/>
+<text x="553.0" y="361" class="t-seg">MPO 光纤</text>
+<rect x="1000" y="341" width="86" height="30" rx="6" class="seg as"/>
+<text x="1043.0" y="361" class="t-seg">ASIC 封装</text>
+<rect x="902" y="341" width="86" height="30" rx="6" class="seg el"/>
+<text x="945.0" y="361" class="t-seg">PCB / CPC</text>
+<rect x="608" y="341" width="282" height="30" rx="6" class="seg md"/>
+<text x="749.0" y="361" class="t-seg">XPO 可插拔模块（DSP+CW 激光）</text>
+</svg>
