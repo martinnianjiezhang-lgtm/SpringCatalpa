@@ -1,11 +1,23 @@
 ---
-title: "会议洞察：ECOC 2026 · OFC 2026 · ECOC 2025"
+title: "会议洞察：OCP 2026 · ECOC 2026 · OFC 2026 · ECOC 2025"
 tags:
   - 光通信
   - 会议
 ---
 
-三次会议的场景结论、产业链与研究机构洞察、场景 × 技术层分布和 TOP5 趋势。返回 [[Optical Communication/index|光通信专题]]。
+四次会议的场景结论、产业链与研究机构洞察、场景 × 技术层分布和 TOP5 趋势。返回 [[Optical Communication/index|光通信专题]]。
+
+## 0. [[Optical Communication/01. Conference/2026 OCP/index|洞察：2026年 OCP 全球峰会专题洞察]]
+
+OCP Global Summit 2026，500 篇讲稿笔记（501 份 PDF + 6 场 Scale Across 视频转写）。按 AI Infra 四个尺度加基础设施底座组织：[[Optical Communication/01. Conference/2026 OCP/00. OCP 2026的十条技术判断|十条跨方向技术判断]] · [[Optical Communication/01. Conference/2026 OCP/专题洞察/OCP 2026 AI Infra 四尺度技术洞察|AI Infra 四尺度技术洞察（总报告）]]。
+
+| 方向 | 关键结论 |
+|---|---|
+| [[Optical Communication/01. Conference/2026 OCP/方向综合洞察/OCP 方向1 Scale Across 综合洞察\|Scale Across]] | 已是现网工程：Meta Prometheus 1 GW 跨站点运行、800ZR+ 全网升级；驱动是电力。分歧在长 RTT 下缓冲深浅（Broadcom 仿真 ≥1.5×BDP vs Meta RBB 浅缓冲 650 km 现网），SRv6 成为跨层路径控制。 |
+| [[Optical Communication/01. Conference/2026 OCP/方向综合洞察/OCP 方向2 Scale Out 综合洞察\|Scale Out]] | 重心从"链路更快"转到"拓扑更平、传输进 NIC"：102.4T 两层多平面覆盖十万级 GPU，MRC/UET/MetaRoCE/Falcon 并存；LPO 有现网可靠性数据，1.6T 转向 LRO/XPO。 |
+| [[Optical Communication/01. Conference/2026 OCP/方向综合洞察/OCP 方向3 Scale Up 综合洞察\|Scale Up]] | 协议层收敛到以太网（ESUN/SUE-T 量产、UALoE）；柜内铜、跨柜光；光化顺序为 LPO → NPO/XPO（2027 前后）→ XPU 侧 CPO（2028+），可靠性取代 pJ/bit 成为门槛。 |
+| [[Optical Communication/01. Conference/2026 OCP/方向综合洞察/OCP 方向4 Scale In 综合洞察\|Scale In]] | 重心转到内存层级：HBM 占 XPU 成本 >50%、封装热阻 57%；CXL 池化收益来自容量，PNM 有实验收益但卡在软件接口；封装内光 I/O 源于 shoreline 约束。 |
+| [[Optical Communication/01. Conference/2026 OCP/方向综合洞察/OCP 方向5 基础设施底座 综合洞察\|基础设施底座]] | 从"能否供电散热"转到"能否按电网规则接入、按工厂节奏交付"：800 VDC 进入设备排期，单相冷板已越过经济边界，机架重量与每柜光纤数成为新约束。 |
 
 ## 1. [[Optical Communication/01. Conference/2026 ECOC/index|洞察：2026年 ECOC 专题洞察]]
 
